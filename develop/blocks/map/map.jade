@@ -1,0 +1,26 @@
+mixin map(id)
+    +b.map(id='#{id}')
+        +e.info
+            +e.info-header Посетите наш уютный офис в Москве
+            +e.info-body.--hidden
+                +e.info-row
+                    +e.SPAN.icon-map
+                        +icon('map-icon', 'map')
+                    | Приезжайте по адресу:
+                +e.info-row.--path
+                    +e.P.text
+                        span.bold
+                            | г. Москва, м. Сухаревская<br>
+                        span
+                            | Большая Сухаревская площадь,<br>
+                            | дом 9, помещение 8, 2-ой этаж<br>
+                            | Бизнес центр “На Спасской”
+                    +e.P.text
+                        | Вход с ул. Большая Спасская
+                +e.info-row
+                    +e.SPAN.icon-time
+                        +icon('time', 'map')
+                    span.bold
+                        | Круглосуточно, 24/7
+        +e.inner.lazyload#map(data-src='images/map.jpg')
+        +e.fallback

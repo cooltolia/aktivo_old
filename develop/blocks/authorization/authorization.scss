@@ -1,0 +1,91 @@
+.authorization {
+    font-family: $segoe;
+    color: $darktext;
+}
+
+.authorization__login {
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: solid 1px #ebebeb;
+    background-color: white;
+    color: $darktext;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #464646;
+    transition: background-color 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        background-color: $themecolor;
+    }
+}
+
+.authorization__logged {
+    position: relative;
+    width: 180px;
+}
+
+.authorization__toggle {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    padding-right: 50px;
+    display: inline-block;
+    color: $lighttext;
+    background: #4ec673;
+    text-align: left;
+    border-radius: 3px;
+    border: none;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 8px solid white;
+        transition: transform 300ms ease;
+    }
+
+    &.active::after {
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+
+.authorization__list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+
+    background-color: #4ec673;
+    // border-radius: 3px;
+    overflow: hidden;
+
+}
+
+.authorization__link {
+    display: block;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    
+    transition: background-color 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #fff;
+        background-color: #6fde91;
+        text-decoration: none;
+    }
+}

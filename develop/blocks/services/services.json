@@ -1,0 +1,131 @@
+{
+    "services_fiz": [{
+        "link_modal": "#modal5",
+        "modal_button": "Заказать услугу",
+        "text": "Гражданские дела",
+        "price": "от 9 900 руб",
+        "inner_services": [
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Жилищные споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Семейные споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Земельные споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Имущественные споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Трудовые споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Наследственные споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Миграционные споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Страховые споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Кредитные споры"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Защита прав потребителей"
+            },
+            {
+                "link_modal": "#modal5",
+                "modal_button": "Заказать услугу",
+                "text": "Медицинские споры"
+            }
+        ]
+    },
+    {
+        "link_about": "/napisanie-iska/",
+        "modal_button": "Заказать услугу",
+        "text": "Написание иска",
+        "price": "от 4 900 руб"
+    },
+    {
+        "link_about": "/ugolovniy-advokat/",
+        "modal_button": "Заказать услугу",
+        "text": "Уголовный адвокат",
+        "price": "Рассчитывается индивидуально"
+    },  
+    {
+        "link_about": "/predstavitelstvo-v-sude/",
+        "modal_button": "Заказать услугу",
+        "text": "Представительство в суде",
+        "price": "от 29 900 руб"
+    }, 
+    {
+        "link_modal": "#modal5",
+        "modal_button": "Заказать срочный выезд",
+        "text": "Срочный выезд",
+        "price": "от 20 000 руб"
+    }
+    ],
+    "services_ur": [
+        {
+            "link_about": "/arbitrazhniy-advokat/",
+            "modal_button": "Заказать услугу",
+            "text": "Арбитражный адвокат",
+            "price": "от 20 000 руб"
+        }, 
+        {
+            "link_modal": "#modal5",
+            "modal_button": "Заказать услугу",
+            "text": "Юридическое сопровождение",
+            "price": "от 20 000 руб в месяц"
+        },
+        {
+            "link_about": "/zaschita-biznesa/",
+            "modal_button": "Заказать услугу",
+            "text": "Защита бизнеса",
+            "price": "19 900 руб в месяц"
+        }, {
+            "link_about": "/predstavitelstvo-v-sude/",
+            "modal_button": "Заказать услугу",
+            "text": "Представительство в суде",
+            "price": "от 29 900 руб"
+        }, {
+            "link_about": "/napisanie-iska/",
+            "modal_button": "Заказать услугу",
+            "text": "Написание иска",
+            "price": "от 4 900 руб"
+        }, {
+            "link_about": "/ugolovniy-advokat/",
+            "modal_button": "Заказать услугу",
+            "text": "Уголовный адвокат",
+            "price": "Рассчитывается индивидуально",
+            "mod": "small"
+        }, {
+            "link_modal": "#modal5",
+            "modal_button": "Заказать срочный выезд",
+            "text": "Срочный выезд",
+            "price": "от 20 000 руб"
+        }
+    ]
+}

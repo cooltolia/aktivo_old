@@ -1,0 +1,22 @@
+mixin authorization()
+    +b.authorization
+        if !loggedIn
+            +e.A.login(href='#') Вход
+        else
+            +e.logged
+                +e.BUTTON.toggle admin@aktivo.ru
+                +e.UL.list
+                    +e.LI.item
+                        +e.A.link(href='/realty') Недвижимость
+                    +e.LI.item
+                        +e.A.link(href='/account/questionary') Верификация
+                    +e.LI.item
+                        +e.A.link(href='/account/monitoring') Мониторинг
+                    +e.LI.item
+                        +e.A.link(href='/account/documents') Документы
+                    +e.LI.item
+                        +e.A.link(href='/account/finances') Финансы
+                    +e.LI.item
+                        +e.A.link(href='/account/settings') Настройки
+                    +e.LI.item
+                        +e.A.link(href='/logout') Выход

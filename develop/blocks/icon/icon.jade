@@ -1,0 +1,4 @@
+mixin icon(name, blockName, mod)
+	-var mod = mod || ''
+	svg(class='' + blockName + '__svg ' + mod)
+		use(xlink:href="../images/html-sprite.svg#" + name)

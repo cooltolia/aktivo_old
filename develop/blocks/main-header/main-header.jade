@@ -1,0 +1,22 @@
+mixin main-header()
+    +b.HEADER.main-header
+        +inner
+            +e.inner
+                +e.hamburger.mobile-only
+                    +hamburger
+                +e.A.logo&attributes(attributes)
+                    img(src='images/layout/logo.svg' width='88' alt='Aktivo')
+                +e.contacts
+                    +e.tel.desktop-only 
+                        a.number(href="tel:88005006464") 8 (800) 500-64-64
+                        span.info — звонок бесплатный
+                    +e.A.icon.--tel.mobile-only(href="tel:88005006464")
+                    +e.A.icon.--user.mobile-only(href="#")
+                +e.navigation.desktop-only
+                    +main-nav
+                +e.authorization.desktop-only
+                    +authorization()
+                //- +e.mobile-nav
+                //-     +mobile-nav
+                //-     +mobile-nav
+                

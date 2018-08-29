@@ -1,0 +1,42 @@
+mixin main-nav()
+    +b.NAV.main-nav
+        +e.UL.list
+            each link in links
+                +e.LI.item
+                    +e.A.link(href="#{link.url}") #{link.text}
+                    if (link.subnav)
+                        +e.subnav
+                            +e.UL.sublist
+                                each sublink in link.subnav
+                                    +e.LI.subitem
+                                        +e.A.sublink(href="#{sublink.url}") #{sublink.text}
+                                    
+mixin mobile-nav()
+    +b.NAV.mobile-nav
+        if loggedIn
+            +e.logged-user admin@aktivo.ru
+            +e.UL.logged-menu
+                +e.LI.logged-item
+                        +e.A.logged-link(href='/realty') Недвижимость
+                    +e.LI.logged-item
+                        +e.A.logged-link(href='/account/questionary') Верификация
+                    +e.LI.logged-item
+                        +e.A.logged-link(href='/account/monitoring') Мониторинг
+                    +e.LI.logged-item
+                        +e.A.logged-link(href='/account/documents') Документы
+                    +e.LI.logged-item
+                        +e.A.logged-link(href='/account/finances') Финансы
+                    +e.LI.logged-item
+                        +e.A.logged-link(href='/account/settings') Настройки
+                    +e.LI.logged-item
+                        +e.A.logged-link(href='/logout') Выход
+        +e.UL.list
+            each link in links
+                +e.LI.item
+                    +e.A.link(href="#{link.url}") #{link.text}
+                    if (link.subnav)
+                        +e.UL.submenu
+                            each sublink in link.subnav
+                                +e.LI.subitem
+                                    +e.A.sublink(href="#{sublink.url}") #{sublink.text}
+                        

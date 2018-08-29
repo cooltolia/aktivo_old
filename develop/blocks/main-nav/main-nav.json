@@ -1,0 +1,69 @@
+{
+    "links": [{
+            "url": "/realty",
+            "text": "Наши объекты"
+        }, {
+            "url": "/howitworks",
+            "text": "Клиентам",
+            "subnav": [{
+                    "url": "/howitworks",
+                    "text": "Как это работает"
+                },
+                {
+                    "url": "/howitworks/security",
+                    "text": "Безопасность"
+                },
+                {
+                    "url": "/howitworks/faq",
+                    "text": "FAQ"
+                },
+                {
+                    "url": "/howitworks/forowners",
+                    "text": "Продать недвижимость"
+                }
+            ]
+        },
+        {
+            "url": "/about/story",
+            "text": "О нас",
+            "subnav": [{
+                    "url": "/about/story",
+                    "text": "О нас"
+                },
+                {
+                    "url": "about/vacancies",
+                    "text": "Карьера"
+                },
+                {
+                    "url": "/about/contacts",
+                    "text": "Контакты"
+                }
+            ]
+        },
+        {
+            "url": "/blog",
+            "text": "Блог",
+            "subnav": [{
+                    "url": "/blog/trends",
+                    "text": "Тренды рынка"
+                },
+                {
+                    "url": "/blog/summary",
+                    "text": "Ликбез"
+                },
+                {
+                    "url": "/blog/news",
+                    "text": "Новости компании"
+                },
+                {
+                    "url": "/blog/press",
+                    "text": "СМИ о нас"
+                }
+            ]
+        },
+        {
+            "url": "/club",
+            "text": "Клуб Liberty"
+        }
+    ]
+}

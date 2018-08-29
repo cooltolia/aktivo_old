@@ -1,0 +1,15 @@
+mixin advices(id)
+    +b.SECTION.advices(id='#{id}')
+        +inner
+            +e.wrapper
+                +e.content
+                    +e.heading
+                        +title('light')
+                            | Посоветуйтесь с адвокатом:
+                    +e.UL.list
+                        +e.LI.item Какая реальная перспектива 
+                            span по Вашему делу
+                        +e.LI.item Как правильно действовать
+                        +e.LI.item И какую стратегию выбрать, чтобы увеличить шансы на успешный исход процессов
+                    +e.A.button(href='#modal4' data-toggle="modal" data-target="#modal4") Посоветоваться
+        +e.image

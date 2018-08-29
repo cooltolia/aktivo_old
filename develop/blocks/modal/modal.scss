@@ -1,0 +1,181 @@
+.modal {
+	font-family: $segoe;
+}
+
+.modal-dialog {
+	width: 80%;
+	max-width: 480px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.modal-header {
+	padding: 0;
+	border: none;
+	
+	.close {
+		position: absolute;
+		z-index: 99;
+		top: 5px;
+		right: 15px;
+		font-size: 30px;
+		font-weight: 100;
+		
+		appearance: none;
+		padding: 0;
+		cursor: pointer;
+		background: 0 0;
+		border: 0;
+
+		color: #000;
+		text-shadow: 0 1px 0 #fff;
+		opacity: 0.2;
+	}
+}
+
+.modal-title {
+	margin: 0;
+	max-width: 285px;
+	margin: 0 auto;
+	padding-top: 30px;
+	font-weight: 400;
+	font-size: 15px;
+	text-align: center;
+}
+
+.modal-legal {
+	margin-top: 10px;
+	font-size: 10px;
+}
+
+#modalLegal .modal-dialog,
+#payLegal .modal-dialog {
+	max-width: 700px;
+}
+
+#modalLegal .modal-content,
+#payLegal .modal-content {
+	padding: 25px;
+}
+
+.modal-body {
+	padding: 0;
+}
+
+.modal-content {
+	border: none;
+	background-color: #fff;
+}
+
+.modal-form {
+	padding: 55px 20px 25px;
+	max-width: 325px;
+	margin: 0 auto;
+}
+
+.has-title .modal-form {
+	padding-top: 15px;
+}
+
+.modal-input-row {
+	margin-bottom: 30px;
+}
+
+.modal-label {
+	margin-bottom: 10px;
+	
+	color: #131313;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.modal-input {
+	width: 100%;
+	padding: 15px;
+	border-radius: 3px;
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+	
+	color: #131313;
+	font-size: 15px;
+	font-weight: 300;
+
+	&::placeholder {
+		color: #1f1f1f;
+	}
+
+	@at-root {
+		textarea#{&} {
+			max-width: 100%;
+			min-width: 100%;
+			min-height: 50px;
+			max-height: 150px;
+		}
+	}
+}
+
+.modal-submit {
+	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+	margin: 0 auto;
+
+    border-radius: 50px;
+    border: 1px solid $themecolor;
+
+    background-color: $themecolor;
+
+    transition: all 300ms ease;
+
+	&[disabled] {
+		background-color: grey;
+		border: 1px solid grey;
+		cursor: initial;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: $lighttext;
+			background-color: grey;
+		}
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+        color: $lighttext;
+		background-color: darken($themecolor, 10%);
+	}
+	
+	&:active {
+		background-color: darken($themecolor, 20%);
+	}
+}
+
+
+body.modal-open {
+	overflow: auto !important;
+	padding-right: 0 !important;
+}
+
+@media (max-width: 480px) {
+	.modal-dialog {
+		width: 80%;
+		max-width: 360px;
+	}
+	
+	.modal-form {
+		padding-top: 25px;
+	}
+	
+	.modal-submit {
+		font-size: 16px;
+	}
+}

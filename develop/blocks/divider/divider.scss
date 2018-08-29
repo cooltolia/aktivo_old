@@ -1,0 +1,115 @@
+.divider {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+
+    color: $darktext;
+    font-family: $opsans;
+
+    background-color: #f0f0f0;
+}
+
+.divider__heading {
+    @include visually-hidden();
+}
+
+.divider__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.divider__item {
+    position: relative;
+    max-width: 47%;
+    padding-left: 130px;
+    padding-top: 25px;
+}
+
+.divider__icon {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 0;
+    top: 0;
+
+    svg {
+        @include svg-icon;
+    }
+}
+
+.divider__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.divider__text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+    .divider__content {
+        display: block;
+    }
+
+    .divider__item {
+        padding-top: 0;
+        padding-left: 110px;
+        margin-bottom: 45px;
+        max-width: 75%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .divider__item::before {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .divider {
+        padding-top: 35px;
+        padding-bottom: 25px;
+    }
+
+    .divider__item {
+        padding-left: 80px;
+        margin-bottom: 25px;
+    }
+
+    .divider__icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .divider__title {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .divider__text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .divider {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .divider__item {
+        max-width: 100%;
+        padding-left: 90px;
+        margin-bottom: 25px;
+    }
+}

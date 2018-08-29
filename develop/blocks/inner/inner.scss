@@ -1,0 +1,23 @@
+.inner {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1360px;
+    padding: 0 65px;
+}
+
+@media (max-width: 768px) {
+    .inner {
+        max-width: 740px;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 481px) {
+    .inner {
+        max-width: 740px;
+        padding: 0 20px;
+    }
+}
+

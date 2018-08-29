@@ -1,0 +1,7 @@
+mixin title(mod)
+    if (mod)
+        +b.H2.title(class='title--#{mod}')
+            block
+    else 
+        +b.H2.title
+            block

@@ -1,0 +1,112 @@
+.recommendations {
+    position: relative;
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 55px;
+
+    font-family: $opsans;
+    color: $darktext;
+
+    background-color: #fbfbfb;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        left: 50%;
+        bottom: -35px;
+        transform: translateX(-50%) rotate(-90deg);
+        background-color: #fff;
+
+        background-image: url('../images/left-arrow.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+    }
+}
+
+.recommendations__heading {
+    margin-bottom: 45px;
+}
+
+.recommendations__list {
+    padding: 0;
+    list-style: none;
+
+    counter-reset: recommendation-counter;
+}
+
+.recommendations__item {
+    position: relative;
+    font-size: 16px;
+
+    margin-bottom: 35px;
+
+    &::before {
+        position: relative;
+        counter-increment: recommendation-counter;
+        content: counter(recommendation-counter) ". ";
+
+        font-weight: 700;
+    }
+}
+
+.recommendations__inner-list {
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.recommendations__inner-item {
+    position: relative;
+    padding-left: 25px;
+
+    font-size: 14px;
+    font-weight: 300;
+
+    &::before {
+        position: relative;
+        content: '–';
+        left: -5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .recommendations {
+        padding-bottom: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recommendations {
+        padding-top: 25px;
+        padding-bottom: 20px;
+
+        &::after {
+            width: 46px;
+            height: 46px;
+            bottom: -23px;
+
+            background-size: 20px;
+        }
+    }
+
+    .recommendations__heading {
+        margin-bottom: 25px;
+    }
+
+    .recommendations__item {
+        margin-bottom: 25px;
+
+        font-size: 14px;
+    }
+
+    .recommendations__inner-item {
+        padding-left: 15px;
+        
+        font-size: 12px;
+    }
+}

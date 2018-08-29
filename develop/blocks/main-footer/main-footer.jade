@@ -1,0 +1,32 @@
+mixin main-footer(id)
+    +b.FOOTER.main-footer(id='#{id}')
+        +inner
+            +e.inner(itemscope itemtype="http://schema.org/LegalService")
+                +e.info
+                    +e.time
+                        time(itemprop="openingHours" datatime="Mo-Su") 
+                            | Круглосуточно 24/7
+                    +e.A.tel.--mobile(href='tel:+74951500902')
+                        +e.SPAN.icon-tel
+                            +icon('phone-white', 'main-header')
+                        span(itemprop="telephone") +7 (495) 150-09-02
+                    +e.A.tel(href='#modal3' data-toggle="modal" data-target="#modal3")
+                        +e.SPAN.icon-tel
+                            +icon('phone-white', 'main-header')
+                        span(itemprop="telephone") +7 (495) 150-09-02
+                    +e.A.email(href='mailto:msk@advokatkin.ru' itemprop="email") msk@advokatkin.ru
+                +e.socials
+                    +socials
+                +e.adress(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+                    | Наш адрес: г. 
+                    span(itemprop="addressLocality") Москва
+                    | , м. Сухаревская <br>
+                    span(itemprop="streetAddress") Большая Сухаревская площадь,<br>дом 9, каб. 8, 2-ой этаж<br>Бизнес центр “На Спасской” <br> 
+                    | Ежедневно с 9.00 до 21.00
+                +e.logo
+                    img(src="images/logo-white.svg", alt="Адвокаткин" itemprop="image")
+                    +e.logo-text 
+                        span(itemprop="description") Адвокаты в Москве и МО <br>
+                        | 2018 &copy; &laquo;<span itemprop="name">Адвокаткин</span>&raquo; <br>
+                        | Все права защищены.
+                meta(itemprop="priceRange" content="от 1000 рублей до 50 000 рублей")

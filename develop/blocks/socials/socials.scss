@@ -1,0 +1,35 @@
+.socials {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials__item {
+    width: 30px;
+    height: 30px;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &--vk {
+        background-image: url('../images/vk.svg');
+    }
+
+    &--instagram {
+        background-image: url('../images/instagram.svg');
+    }
+
+    &--facebook {
+        background-image: url('../images/facebook.svg');
+    }
+}
+
+@media (max-width: 768px) {
+    .socials__item {
+        width: 25px;
+        height: 25px;
+    }
+}

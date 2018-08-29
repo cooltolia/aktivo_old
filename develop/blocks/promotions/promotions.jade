@@ -1,0 +1,19 @@
+mixin promotions()
+    +b.SECTION.promotions
+        +inner
+            +e.H2.heading Воспользуйтесь специальным предложением
+            +e.list
+                +e.item
+                    +e.icon
+                    +e.P.text
+                        | Скидка 10% всем при обращении в день звонка!
+                +e.item
+                    +e.icon
+                    +e.P.text
+                        | Рассрочка в 2 этапа
+                +e.item
+                    +e.icon
+                    +e.P.text
+                        | Консультация бесплатно
+            +e.A.button(href='#modal6' data-toggle="modal" data-target="#modal6")
+                | Воспользоваться
