@@ -113,29 +113,29 @@ gulp.task("svgSprite", function() {
     
 })
 
-var CONFIG = require('./config.json');
+// var CONFIG = require('./config.json');
 
-var config = {
-    host: CONFIG.deploy.host,
-    port: CONFIG.deploy.port,
-    username: CONFIG.deploy.username,
-    privateKey: fs.readFileSync(CONFIG.deploy.privateKey)
-};
+// var config = {
+//     host: CONFIG.deploy.host,
+//     port: CONFIG.deploy.port,
+//     username: CONFIG.deploy.username,
+//     privateKey: fs.readFileSync(CONFIG.deploy.privateKey)
+// };
 
-var gulpSSH = new GulpSSH({
-    ignoreErrors: false,
-    sshConfig: config
-});
+// var gulpSSH = new GulpSSH({
+//     ignoreErrors: false,
+//     sshConfig: config
+// });
 
-gulp.task("deploy", function () {
-    return gulp
-        .src('./dist/**/*')
-        .pipe(confirm({
-            question: 'Continue deploy to ' + CONFIG.deploy.dest + '? Press "y" if ok',
-            input: '_key:y'
-        }))
-        .pipe(gulpSSH.dest('/var/www/' + CONFIG.deploy.dest))
-})
+// gulp.task("deploy", function () {
+//     return gulp
+//         .src('./dist/**/*')
+//         .pipe(confirm({
+//             question: 'Continue deploy to ' + CONFIG.deploy.dest + '? Press "y" if ok',
+//             input: '_key:y'
+//         }))
+//         .pipe(gulpSSH.dest('/var/www/' + CONFIG.deploy.dest))
+// })
 
 gulp.task("default", ["compile", "watch", "browser-sync"], function () {});
 

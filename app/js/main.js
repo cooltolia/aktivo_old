@@ -3,15 +3,6 @@ $.noConflict();
 jQuery(document).ready(function ($) {
     $("body").removeClass("pageload");
 
-     
-
-     
-     
-
-     
-     
-
-     
      ;
 
      (function () {
@@ -49,118 +40,6 @@ jQuery(document).ready(function ($) {
          })
 
      })()
-
-     
-     ;(function () {
-
-     
-
-         $('.cases__list').slick({
-
-             infinite: true,
-
-             slidesToShow: 1,
-
-             slidesToScroll: 1,
-
-             adaptiveHeight: true,
-
-             responsive: [
-
-                 {
-
-                     breakpoint: 769,
-
-                     settings: {
-
-                         dots: true,
-
-                         arrows: false,
-
-                     }
-
-                 }
-
-             ]
-
-         });
-
-     
-
-     })();
-
-     
-     
-
-     
-     
-
-     
-     ;(function () {
-
-     
-
-         var $answer = $('.faq__answer');
-
-         var $question = $('.faq__question');
-
-     
-
-         $question.on('click', function () {
-
-             $(this).addClass('active');
-
-     
-
-             var $nextAnswer = $(this).next('.faq__answer');
-
-     
-
-             $question.not($(this)).each(function () {
-
-                 $(this).removeClass('active');
-
-             });
-
-     
-
-             $answer.not($nextAnswer).each(function () {
-
-                 $(this).removeClass('active');
-
-                 $(this).slideUp(250);
-
-             });
-
-     
-
-             if ($nextAnswer.hasClass('active')) {
-
-                 
-
-                 $(this).removeClass('active');
-
-                 $nextAnswer.removeClass('active');
-
-                 $nextAnswer.slideUp(250);
-
-                 return;
-
-             }
-
-     
-
-             $nextAnswer.addClass('active');
-
-             $nextAnswer.slideDown(250  );
-
-     
-
-         });
-
-     
-
-     })();
 
      
      ;
@@ -794,359 +673,101 @@ jQuery(document).ready(function ($) {
      })();
 
      
-     
-
-     
-
-     $(document).ready(function () {
-
-     
-
-         var data = [
-
-         {
-
-             id: 'isk',
-
-             text: '<div class="selected__option">Написание иска</div>',
-
-             html: '<div class="option__title">Написание иска</div><div class="option__price">10 000р.</div>',
-
-             title: 'Написание иска',
-
-             price: '10 000'
-
-         }, {
-
-             id: 'buisness',
-
-             text: '<div class="selected__option">Защита бизнеса</div>',
-
-             html: '<div class="option__title">Защита бизнеса</div><div class="option__price">20 000р.</div>',
-
-             title: 'Защита бизнеса',
-
-             selected: true,
-
-             price: '20 000'
-
-         }, {
-
-             id: 'court',
-
-             text: '<div class="selected__option">Представительство в суде</div>',
-
-             html: '<div class="option__title">Представительство в суде</div><div class="option__price">30 000р.</div>',
-
-             title: 'Представительство в суде',
-
-             price: '30 000'
-
-         }
-
-     
-
-         ];
-
-     
-
-         $('.payForm__select').select2({
-
-             data: data,
-
-             escapeMarkup: function (markup) {
-
-                 return markup;
-
-             },
-
-             templateResult: function (data) {
-
-                 return data.html;
-
-             },
-
-             templateSelection: function (data) {
-
-                 return data.text;
-
-             },
-
-             minimumResultsForSearch: Infinity,
-
-             allowEmpty: true,
-
-             placeholder: 'Выберите услугу',
-
-             width: '100%'
-
-         });
-
-     
-
-         var $sum = $('.payForm__result-sum');
-
-     
-
-         var data = $(".payForm__select").select2('data');
-
-     
-
-         if (data)
-
-             var price  = data[0].price;
-
-     
-
-         $sum.val(price + ' р.')
-
-     
-
-         $('.payForm__select').on('select2:select', function (e) {
-
-             var data = $(".payForm__select").select2('data');
-
-             var price = data[0].price;
-
-             
-
-             $sum.val(price + ' р.')
-
-         });
-
-     
-
-         $form = $('.payForm__form');
-
-     
-
-         $form.submit(function(e) {
-
-             e.preventDefault();
-
-             // debugger;
-
-             let data = $(this).serializeArray();
-
-     
-
-             data[4].value = data[4].value.replace(/\D/g, '');
-
-             console.log(data);
-
-             
-
-         })
-
-     
-
-         $(".payForm input[name='payPhone']").inputmask();
-
-     });
-
-     
-     
-
-     
-     
-
-     
      ;
 
-     (function () {
+     (function() {
+
+         $('.object-select__slider-cards').slick({
+
+             slidesToShow: 1,
+
+             slidesToScroll: 1,
+
+             arrows: true,
+
+             fade: true,
+
+             asNavFor: '.object-select__slider-nav',
+
+             adaptiveHeight: true,
 
      
-
-         var $triggerService = $('.services__item.hasInner');
-
-         var $innerList = $('.services__inner-list');
-
-         var maxHeight = $innerList.outerHeight;
-
-     
-
-         $triggerService.on('click', function (e) {
-
-             e.preventDefault();
-
-             e.stopPropagation();
-
-             $triggerService.toggleClass('active');
-
-     
-
-             if ($innerList.hasClass("expanded")) {
-
-     
-
-                 $innerList.removeClass("expanded");
-
-                 $innerList.slideUp()
-
-     
-
-                 // $innerList.animate({
-
-                 //     height: maxHeight
-
-                 // }, 500);
-
-     
-
-             } else {
-
-     
-
-                 $innerList.addClass("expanded");
-
-                 $innerList.slideDown()
-
-     
-
-                 // $innerList.animate({
-
-                 //     height: $innerList.get(0).scrollHeight
-
-                 // }, 500, function () {
-
-                 //     $(this).height('auto')
-
-                 // });
-
-     
-
-             }
 
          });
 
-     })();
+         $('.object-select__slider-nav').slick({
 
-     
-     
+             slidesToShow: 4,
 
-     
-     
+             slidesToScroll: 1,
 
-     
-     
+             asNavFor: '.object-select__slider-cards',
 
-     
-     
+             dots: false,
 
-     
-     
+             arrows: false,
 
-     
-     ;(function () {
+             focusOnSelect: true,
 
-     
+             responsive: [
 
-         /* var mouse = $('.top-screen__mouse'),
+                 {
 
-             mouseTopPosition = mouse.offset().top;
+                     breakpoint: 1024,
 
-     
+                     settings: {
 
-         $(window).on('scroll', function(e) {
+                         slidesToShow: 3,
 
-     
+                         slidesToScroll: 1,
 
-             var windowTopPosition = $(window).scrollTop();
+                     }
 
-             
+                 },
 
-             mouse.css('transform', 'translate(-50%, -' + windowTopPosition + 'px)');
+                 {
 
-             mouse.animate({
+                     breakpoint: 480,
 
-                 opacity: 0
+                     settings: {
 
-             }, 1500 );
+                         slidesToShow: 1.1,
 
-         }) */
+                         slidesToScroll: 1,
+
+                         centerMode: false,
 
      
 
-         var link = $('.top-screen__button--grey');
+                     }
 
-     
+                 }
 
-         link.on('click', function (e) {
+                 // You can unslick at a given breakpoint now by adding:
 
-             e.preventDefault();
+                 // settings: "unslick"
 
-             var target = $(this.hash);
+                 // instead of, a settings object
 
-     
-
-             $('html, body').animate({
-
-                 scrollTop: target.offset().top
-
-             }, 1000);
+             ]
 
          });
 
      
 
-     
-
-     })();
+     })()
 
      
-
-     
-     ;(function() {
-
-         var $block = $('.triggers');
-
-         
-
-         function renderTriggers() {
-
-             if ($(this).width() >= 768) {
-
-                 var blockHeight = $block.outerHeight();
-
-                 $block.css('top', '-' + blockHeight + 'px');
-
-                 $block.css('margin-bottom', '-' + blockHeight + 'px');
-
-             } else {
-
-                 var blockHeight = $block.outerHeight();
-
-                 $block.css('top', '0');
-
-                 $block.css('margin-bottom', '0');
-
-             }
-
-         }
-
-      /*    $(window).resize(function() {
-
-             var $window = $(this);
-
      
 
-             if ($window.width() > 768  ) {
+     
+     
 
-                 var blockHeight = $block.outerHeight();
+     
+     
 
-                 $block.css('top', '-' + blockHeight + 'px');
-
-                 $block.css('margin-top', '-' + blockHeight + 'px');
-
-             }
-
-         }) */
-
-                 
-
-         $(window).on('load resize', renderTriggers)   
-
-     })();
+     
+     
     
     (function () {
      /*    function logElementEvent(eventName, element) {

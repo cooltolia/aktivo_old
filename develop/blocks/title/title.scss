@@ -2,31 +2,15 @@
     position: relative;
     margin: 0;
 
-    font-family: $opsans;
-    color: #000;
-    font-size: 20px;
+    font-family: $segoe;
+    color: $darktext;
+    font-size: 40px;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
 
     &--light {
         color: #fff;
     }
 }
 
-@media (min-width: 480px) {
-    .title {
-        font-size: 20px;
-    }
-}
 
-@media #{$tablet} {
-    .title {
-        font-size: 24px;
-    }
-}
-
-@media #{$desktop} {
-    .title {
-        font-size: 28px;
-    }
-}
