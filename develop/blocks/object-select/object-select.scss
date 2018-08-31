@@ -10,9 +10,12 @@
 }
 
 .object-select__heading {
-    width: 420px;
     margin: 0 0 65px;
     padding-left: 41%;
+
+    .title {
+        width: 420px;
+    }
 }
 
 .object-select__slider {
@@ -34,22 +37,33 @@
     position: absolute;
     top: -135px;
     z-index: 10;
-    width: 368px;
+    width: 408px;
     // height: 552px;
-    padding: 35px;
-    background-color: #ffffff;
+    // padding: 35px;
+    background-color: transparent;
     // box-shadow: 0 5px 30px 0 rgba(25, 53, 117, 0.1);
+}
+
+.object-select__slider-card {
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .object-select__slider-card-image{
     width: 240px;
+    top: -32px;
     position: absolute;
-    margin-left: 32px;
+    margin-left: 52px;
+    z-index: 1;
 
     img {
         @include img
     }
 }
+
+// .object-select .slick-list {
+//     overflow-y: visible;
+// }
 
 .object-select__slider-nav {
     width: 100%;

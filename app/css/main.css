@@ -60,6 +60,11 @@ html {
 body {
   margin: 0; }
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; }
+
 /* HTML5 display definitions
    ========================================================================== */
 /**
@@ -1331,9 +1336,10 @@ body.modal-open {
   padding: 0 50px; }
 
 .object-select__heading {
-  width: 420px;
   margin: 0 0 65px;
   padding-left: 41%; }
+  .object-select__heading .title {
+    width: 420px; }
 
 .object-select__slider {
   width: 100%;
@@ -1354,14 +1360,19 @@ body.modal-open {
   position: absolute;
   top: -135px;
   z-index: 10;
-  width: 368px;
-  padding: 35px;
-  background-color: #ffffff; }
+  width: 408px;
+  background-color: transparent; }
+
+.object-select__slider-card {
+  padding-top: 80px;
+  padding-bottom: 80px; }
 
 .object-select__slider-card-image {
   width: 240px;
+  top: -32px;
   position: absolute;
-  margin-left: 32px; }
+  margin-left: 52px;
+  z-index: 1; }
   .object-select__slider-card-image img {
     display: block;
     width: 100%;
@@ -1383,10 +1394,25 @@ body.modal-open {
           box-shadow: 0 5px 30px 0 rgba(25, 53, 117, 0.1); }
 
 .object-slide-card {
+  position: relative;
+  z-index: 0;
   padding: 140px 32px 32px;
-  margin-top: 32px;
+  margin-top: -45px;
+  width: -webkit-calc(100% - 50px);
+  width: -moz-calc(100% - 50px);
+  width: calc(100% - 50px);
+  margin-left: 32px;
   -webkit-box-shadow: 0 5px 30px 0 rgba(25, 53, 117, 0.1);
-          box-shadow: 0 5px 30px 0 rgba(25, 53, 117, 0.1); }
+          box-shadow: 0 5px 30px 0 rgba(25, 53, 117, 0.1);
+  background-color: #fff; }
+  .object-slide-card::before {
+    position: absolute;
+    content: '';
+    left: -32px;
+    top: 45px;
+    width: 32px;
+    height: 80%;
+    background-color: #f5f7f9; }
 
 .socials {
   width: 100%;

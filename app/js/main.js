@@ -685,7 +685,7 @@ jQuery(document).ready(function ($) {
 
              arrows: true,
 
-             fade: true,
+             fade: false,
 
              asNavFor: '.object-select__slider-nav',
 

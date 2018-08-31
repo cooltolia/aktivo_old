@@ -4,7 +4,7 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        fade: true,
+        fade: false,
         asNavFor: '.object-select__slider-nav',
         adaptiveHeight: true,
 
