@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.263 96" width='96'>
+    <defs>
+        <style>
+            .svg-bg{fill:#f5f7f9}.clsq-2{fill:none}.clsq-5,.svg-fill{fill:#ffd729}.clsq-4,.clsq-5{stroke:none}
+        </style>
+    </defs>
+    <g id="Symbol_9_1" data-name="Symbol 9 – 1" transform="translate(-776 -1072)">
+        <path id="Path_29" d="M41.777-12.11c22.3 0 47.111 33.333 47.111 54.5s-10.146 31.5-32.444 31.5S1.777 52.264 1.777 31.1s17.702-43.21 40-43.21z" class="svg-bg" data-name="Path 29" transform="rotate(90 -107.638 962.585)"/>
+        <g id="Path_30" class="clsq-2" data-name="Path 30">
+            <path d="M0-4.5l16-9.179V32H0z" class="clsq-4" transform="translate(792.057 1136)"/>
+            <path d="M14-10.23L2-3.346V30h12v-40.23m2-3.453V32H0V-4.504l16-9.18z" class="clsq-5 svg-fill" transform="translate(792.057 1136)"/>
+        </g>
+        <g id="Path_31" class="clsq-2" data-name="Path 31">
+            <path d="M0-2.424l16-9.106V48H0z" class="clsq-4" transform="translate(816.057 1120)"/>
+            <path d="M14-8.091L2-1.261V46h12V-8.091m2-3.44V48H0V-2.424l16-9.107z" class="clsq-5 svg-fill" transform="translate(816.057 1120)"/>
+        </g>
+        <g id="Path_32" class="clsq-2" data-name="Path 32">
+            <path d="M0-.325l16-9.1V64H0z" class="clsq-4" transform="translate(840.057 1104)"/>
+            <path d="M14-5.986L2 .84V62h12V-5.986m2-3.438V64H0V-.325l16-9.099z" class="clsq-5 svg-fill" transform="translate(840.057 1104)"/>
+        </g>
+        <path id="Rectangle_22" d="M0 0h110v2H0z" class="svg-fill" data-name="Rectangle 22" transform="rotate(-30 2497.542 -882.786)"/>
+    </g>
+</svg>

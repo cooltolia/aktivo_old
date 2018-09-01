@@ -1,0 +1,180 @@
+.greeting {
+    padding: 119px 0;
+
+    font-family: $segoe;
+    color: $darktext;
+}
+
+.greeting__wrapper {
+    padding: 0 112px;
+    display: flex;
+}
+
+.greeting__ceo {
+    flex: 0;
+    width: 304px;
+    margin-right: 101px;
+}
+
+.greeting__image {
+    position: relative;
+    width: 256px;
+    margin-bottom: 30px;
+    margin-left: 48px;
+
+    img {
+        @include img
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 232px;
+        height: 344px;
+        top: -40px;
+        left: -56px;
+
+        background-image: url('../images/main/ceo_bg.svg');
+    }
+}
+
+.greeting__video-link {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    right: 30px;
+    bottom: 28px;
+
+    background-image: url('../images/main/play.svg');
+    background-size: cover;
+}
+
+.greeting__name {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.greeting__post {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.greeting__content {
+    max-width: 505px;
+}
+
+.greeting__title {
+    margin: 0;
+    margin-bottom: 30px;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.17;
+}
+
+.greeting__text {
+    position: relative;
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 2px;
+        top: 12px;
+        left: -48px;
+
+        background-color: #000;
+    }
+}
+
+.greeting__button {
+    @include btn-theme;
+    padding: 16px;
+
+    width: 227px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .greeting__wrapper {
+        display: block;
+    }
+
+    .greeting__ceo {
+        margin: 0 auto 55px;
+    }
+
+    .greeting__content {
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .greeting {
+        padding: 100px 0 70px;
+    }
+
+    .greeting__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .greeting {
+        padding: 60px 0 25px;
+    }
+
+    .greeting__wrapper {
+        padding: 0;
+        padding-left: 36px;
+    }
+
+    .greeting__ceo {
+        margin-bottom: 25px;
+    }
+
+    .greeting__image {
+        width: 204px;
+        margin-bottom: 15px;
+        margin-left: 51px;
+
+        &::before {
+            width: 185px;
+            height: 274px;
+            left: -45px;
+            top: -32px;
+        }
+    }
+
+    .greeting__title {
+        margin-bottom: 25px;
+
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .greeting__text {
+        margin-bottom: 25px;
+    }
+
+    .greeting__button {
+        width: 264px;
+    }
+}
+
+@media (max-width: 360px) {
+    .greeting__wrapper {
+        padding: 0;
+    }
+}

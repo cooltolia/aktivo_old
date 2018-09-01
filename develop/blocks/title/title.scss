@@ -7,9 +7,17 @@
     font-size: 40px;
     font-weight: 700;
     text-align: left;
+    line-height: 1.2;
 
     &--light {
         color: #fff;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+        line-height: 1.25;
     }
 }
 
