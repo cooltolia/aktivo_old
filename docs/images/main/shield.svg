@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 354 466.599">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-1{stroke:#ffd729;stroke-width:2px}.cls-2{stroke:none}
+        </style>
+    </defs>
+    <g id="Group_188" data-name="Group 188" transform="translate(-111 -1684.443)">
+        <path id="Path_114" d="M176 0S122.4 64 0 64v152.8c0 80 34.4 156.8 97.6 205.6 22.4 17.6 48 32.8 78.4 41.6a222.707 222.707 0 0 0 78.4-41.6c63.2-48.8 97.6-125.6 97.6-205.6V64C229.6 64 176 0 176 0z" class="cls-1" data-name="Path 114" transform="translate(112 1686)"/>
+        <path id="Path_116" d="M134 359a170.3 170.3 0 0 1-48.8-28.8C35.6 291 6 228.6 6 162.2v-108c59.2-7.2 100.8-28 128-46.4 27.2 18.4 68.8 39.2 128 46.4v108c0 66.4-29.6 129.6-79.2 168A217.238 217.238 0 0 1 134 359z" class="cls-1" data-name="Path 116" transform="translate(154 1740.6)"/>
+        <g id="Group_90" data-name="Group 90" transform="translate(-15.418 -20)">
+            <g id="Rectangle_140" class="cls-1" data-name="Rectangle 140">
+                <path d="M0 0h47.418v130.4H0z" class="cls-2" transform="translate(302.418 1874)"/>
+                <path d="M1 1h45.418v128.4H1z" class="cls-3" transform="translate(302.418 1874)"/>
+            </g>
+            <g id="Rectangle_141" class="cls-1" data-name="Rectangle 141">
+                <path d="M0 0h47.418v106.691H0z" class="cls-2" transform="translate(257 1897.709)"/>
+                <path d="M1 1h45.418v104.691H1z" class="cls-3" transform="translate(257 1897.709)"/>
+            </g>
+            <g id="Rectangle_142" class="cls-1" data-name="Rectangle 142">
+                <path d="M0 0h11.855v23.709H0z" class="cls-2" transform="translate(267.855 1909.564)"/>
+                <path d="M1 1h9.855v21.709H1z" class="cls-3" transform="translate(267.855 1909.564)"/>
+            </g>
+            <g id="Rectangle_143" class="cls-1" data-name="Rectangle 143">
+                <path d="M0 0h11.855v23.709H0z" class="cls-2" transform="translate(267.855 1945.127)"/>
+                <path d="M1 1h9.855v21.709H1z" class="cls-3" transform="translate(267.855 1945.127)"/>
+            </g>
+            <g id="Rectangle_144" class="cls-1" data-name="Rectangle 144">
+                <path d="M0 0h11.855v23.709H0z" class="cls-2" transform="rotate(90 -785.791 1123.773)"/>
+                <path d="M1 1h9.855v21.709H1z" class="cls-3" transform="rotate(90 -785.791 1123.773)"/>
+            </g>
+            <g id="Rectangle_145" class="cls-1" data-name="Rectangle 145">
+                <path d="M0 0h11.855v23.709H0z" class="cls-2" transform="rotate(90 -773.936 1111.918)"/>
+                <path d="M1 1h9.855v21.709H1z" class="cls-3" transform="rotate(90 -773.936 1111.918)"/>
+            </g>
+            <g id="Rectangle_146" class="cls-1" data-name="Rectangle 146">
+                <path d="M0 0h11.855v23.709H0z" class="cls-2" transform="rotate(90 -809.5 1147.482)"/>
+                <path d="M1 1h9.855v21.709H1z" class="cls-3" transform="rotate(90 -809.5 1147.482)"/>
+            </g>
+            <g id="Rectangle_147" class="cls-1" data-name="Rectangle 147">
+                <path d="M0 0h11.855v23.709H0z" class="cls-2" transform="rotate(90 -797.646 1135.628)"/>
+                <path d="M1 1h9.855v21.709H1z" class="cls-3" transform="rotate(90 -797.646 1135.628)"/>
+            </g>
+            <g id="Rectangle_148" class="cls-1" data-name="Rectangle 148">
+                <path d="M0 0h23.709v23.709H0z" class="cls-2" transform="translate(267.855 1980.691)"/>
+                <path d="M1 1h21.709v21.709H1z" class="cls-3" transform="translate(267.855 1980.691)"/>
+            </g>
+            <g id="Rectangle_149" class="cls-1" data-name="Rectangle 149">
+                <path d="M0 0h23.709v23.709H0z" class="cls-2" transform="translate(314.273 1980.691)"/>
+                <path d="M1 1h21.709v21.709H1z" class="cls-3" transform="translate(314.273 1980.691)"/>
+            </g>
+        </g>
+        <path id="Path_123" d="M203 1739.4v-62.323" class="cls-1" data-name="Path 123" transform="translate(85 9)"/>
+        <path id="Path_124" d="M203 1739.4v-50.246" class="cls-1" data-name="Path 124" transform="translate(85 410.423)"/>
+    </g>
+</svg>

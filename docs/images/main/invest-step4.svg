@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.449 99.72" width='105'>
+    <defs>
+        <style>
+            .svg-bg{fill:#f5f7f9}.clsx-2,.clsx-3{fill:none;stroke:#ffd729;stroke-width:2px}.clsx-2{stroke-miterlimit:10}.clsx-4{fill:#ffd729}
+        </style>
+    </defs>
+    <g id="Symbol_10_1" data-name="Symbol 10 – 1" transform="translate(-1059.218 -1070.259)">
+        <path id="Path_33" d="M47.924-15.833c21.693 0 36.824 34.8 36.824 56.932s-23.805 39.068-45.5 39.068S.948 57.921.948 35.791 26.23-15.833 47.924-15.833z" class="svg-bg" data-name="Path 33" transform="rotate(90 32.374 1115.459)"/>
+        <path id="Path_35" d="M65.9 16.9A35.485 35.485 0 1 1 36 .5h1.5" class="clsx-2 svg-lines" data-name="Path 35" transform="rotate(30 -1450.454 2580.45)"/>
+        <path id="Path_36" d="M1022.788 1057.31l5.67 5.67-5.67 5.67" class="clsx-3 svg-lines" data-name="Path 36" transform="rotate(30 1026.447 1267.132)"/>
+        <g id="Group_14" data-name="Group 14" transform="translate(0 5)">
+            <path id="Path_35-2" d="M65.9 16.9A35.485 35.485 0 1 1 36 .5h1.5" class="clsx-2 svg-lines" data-name="Path 35" transform="translate(1073.5 1071.5)"/>
+            <path id="Path_36-2" d="M1022.788 1057.31l5.67 5.67-5.67 5.67" class="clsx-3 svg-lines" data-name="Path 36" transform="translate(85 9)"/>
+        </g>
+        <path id="Path_38" d="M9.362-10.416v2.854H7.744v-2.748A8.913 8.913 0 0 1 3-11.442v-2.933A6.544 6.544 0 0 0 5.173-13.2a7.918 7.918 0 0 0 2.571.473v-5.852a11.043 11.043 0 0 1-4.018-2.643 4.621 4.621 0 0 1-.914-2.867 4.681 4.681 0 0 1 1.394-3.386A5.889 5.889 0 0 1 7.744-29.2v-2.367h1.618v2.315a8.23 8.23 0 0 1 3.814.736v2.816a6.692 6.692 0 0 0-3.814-1.131v6.062a11.753 11.753 0 0 1 3.958 2.6 4.307 4.307 0 0 1 1.065 2.854 4.347 4.347 0 0 1-1.328 3.235 6.494 6.494 0 0 1-3.695 1.664zm-1.618-11.1v-5.247a2.759 2.759 0 0 0-1.565.842 2.259 2.259 0 0 0-.579 1.565 2.543 2.543 0 0 0 .473 1.591 5.1 5.1 0 0 0 1.671 1.25zm1.618 3.643v5.063q2.236-.473 2.236-2.328.002-1.551-2.236-2.735z" class="clsx-4 svg-fill" data-name="Path 38" transform="translate(1101 1137)"/>
+    </g>
+</svg>
