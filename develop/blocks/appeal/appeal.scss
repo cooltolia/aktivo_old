@@ -45,3 +45,25 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+@media (max-width: 480px) {
+    .appeal {
+        padding-top: 90px;
+        padding-bottom: 65px;
+
+        &::before {
+            clip-path: polygon(50% 18%, 0 0, 100% 0);
+        }
+    }
+
+    .appeal__heading {
+        margin-bottom: 50px;
+
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .appeal__button {
+        width: 264px;
+    }
+}

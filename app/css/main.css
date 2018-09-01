@@ -407,42 +407,49 @@ th {
   padding: 0; }
 
 .advantages {
-  position: relative;
   padding: 75px 0 145px;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   color: #000; }
-  .advantages::before {
+
+.advantages__wrapper {
+  position: relative;
+  padding: 0 36px; }
+  .advantages__wrapper::before {
     content: '';
     position: absolute;
     width: 40%;
     max-width: 332px;
     height: 100%;
-    left: 130px;
-    top: 140px;
+    left: 36px;
+    top: 80px;
     background-image: url("../images/main/shield.svg");
     background-size: contain;
     background-repeat: no-repeat; }
 
-.advantages__wrapper {
-  position: relative;
-  padding: 0 36px;
-  margin-left: 477px;
-  max-width: 600px; }
+.advantages__heading {
+  margin-bottom: 65px;
+  max-width: 600px;
+  margin-left: 477px; }
   @media (max-width: 1024px) {
-    .advantages__wrapper {
+    .advantages__heading {
       margin-left: 430px; } }
   @media (max-width: 768px) {
-    .advantages__wrapper {
+    .advantages__heading {
       margin-left: 0px; } }
 
-.advantages__heading {
-  margin-bottom: 65px; }
-
 .advantages__list {
+  max-width: 600px;
   padding: 0;
   margin: 0;
+  margin-left: 477px;
   margin-bottom: 60px;
   list-style: none; }
+  @media (max-width: 1024px) {
+    .advantages__list {
+      margin-left: 430px; } }
+  @media (max-width: 768px) {
+    .advantages__list {
+      margin-left: 0px; } }
 
 .advantages__item {
   position: relative;
@@ -485,6 +492,7 @@ th {
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   transition: all 300ms ease;
+  margin-left: 477px;
   width: 227px;
   padding: 16px;
   font-size: 18px;
@@ -495,32 +503,43 @@ th {
     background-color: #ffe15c; }
   .advantages__button:active {
     background-color: #ffea8f; }
+  @media (max-width: 1024px) {
+    .advantages__button {
+      margin-left: 430px; } }
+  @media (max-width: 768px) {
+    .advantages__button {
+      margin-left: 0px; } }
 
 @media (max-width: 1024px) {
   .advantages {
     padding-top: 15px;
     padding-bottom: 75px; }
-    .advantages::before {
-      width: 25%;
-      top: 50px;
-      left: 100px; }
-  .advantages__wrapper {
+  .advantages__wrapper::before {
+    width: 30%;
+    top: 50px; }
+  .advantages__heading,
+  .advantages__list,
+  .advantages__button {
     margin-left: 320px; } }
 
 @media (max-width: 768px) {
   .advantages {
     padding-bottom: 45px; }
-    .advantages::before {
+  .advantages__wrapper {
+    padding-left: 36px;
+    padding-right: 0; }
+    .advantages__wrapper::before {
       width: 78px;
-      left: -39px;
-      top: 28px;
+      left: -58px;
+      top: 10px;
       background-image: url("../images/main/shield_m.svg"); }
+  .advantages__heading,
+  .advantages__list,
+  .advantages__button {
+    margin-left: 0; }
   .advantages__heading {
     max-width: 360px;
-    margin-bottom: 45px; }
-  .advantages__wrapper {
-    margin-left: 0;
-    padding-right: 0; } }
+    margin-bottom: 45px; } }
 
 @media (max-width: 480px) {
   .advantages {
@@ -604,6 +623,20 @@ th {
     background-color: #ffe15c; }
   .appeal__button:active {
     background-color: #ffea8f; }
+
+@media (max-width: 480px) {
+  .appeal {
+    padding-top: 90px;
+    padding-bottom: 65px; }
+    .appeal::before {
+      -webkit-clip-path: polygon(50% 18%, 0 0, 100% 0);
+              clip-path: polygon(50% 18%, 0 0, 100% 0); }
+  .appeal__heading {
+    margin-bottom: 50px;
+    font-size: 32px;
+    line-height: 1.25; }
+  .appeal__button {
+    width: 264px; } }
 
 .authorization {
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;

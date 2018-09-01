@@ -1,18 +1,22 @@
 .advantages {
-    position: relative;
     padding: 75px 0 145px;
 
     font-family: $segoe;
     color: $darktext;
+}
 
+.advantages__wrapper {
+    position: relative;
+    padding: 0 36px;
+   
     &::before {
         content: '';
         position: absolute;
         width: 40%;
         max-width: 332px;
         height: 100%;
-        left: 130px;
-        top: 140px;
+        left: 36px;
+        top: 80px;
 
         background-image: url('../images/main/shield.svg');
         background-size: contain;
@@ -20,20 +24,17 @@
     }
 }
 
-.advantages__wrapper {
-    position: relative;
-    padding: 0 36px;
-    @include left-margin;
-    max-width: 600px;  
-}
-
 .advantages__heading {
     margin-bottom: 65px;
+    max-width: 600px;
+    @include left-margin;
 }
 
 .advantages__list {
+    max-width: 600px;
     padding: 0;
     margin: 0;
+    @include left-margin;
     margin-bottom: 60px;
     list-style: none;
 }
@@ -63,6 +64,7 @@
 
 .advantages__button {
     @include btn-theme;
+    @include left-margin;
     width: 227px;
     padding: 16px;
     
@@ -75,15 +77,18 @@
     .advantages {
         padding-top: 15px;
         padding-bottom: 75px;
-
-        &::before {
-            width: 25%;
-            top: 50px;
-            left: 100px;
-        }
     }
 
     .advantages__wrapper {
+        &::before {
+            width: 30%;
+            top: 50px;
+        }
+    }
+
+    .advantages__heading,
+    .advantages__list,
+    .advantages__button {
         margin-left: 320px;
     }
 }
@@ -91,25 +96,29 @@
 @media (max-width: 768px) {
     .advantages {
         padding-bottom: 45px;
+    }
+
+    .advantages__wrapper {
+        padding-left: 36px;
+        padding-right: 0;
 
         &::before {
             width: 78px;
-            left: -39px;
-            top: 28px;
-
+            left: -58px;
+            top: 10px;
             background-image: url('../images/main/shield_m.svg');
         }
+    }
 
+    .advantages__heading,
+    .advantages__list,
+    .advantages__button {
+        margin-left: 0;
     }
 
     .advantages__heading {
         max-width: 360px;
         margin-bottom: 45px;
-    }
-
-    .advantages__wrapper {
-        margin-left: 0;
-        padding-right: 0;
     }
 }
 
