@@ -150,3 +150,9 @@
         width: 264px;
     }
 }
+
+@media (max-width: 360px) {
+    .advantages__button {
+        margin-left: -36px;
+    }
+}

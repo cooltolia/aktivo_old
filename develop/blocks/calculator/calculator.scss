@@ -1,0 +1,551 @@
+.calculator {
+    padding: 70px 0 120px;
+
+    font-family: $segoe;
+    color: $darktext;
+}
+
+.calculator__wrapper {
+    padding: 0 16px;
+}
+
+.calculator__heading {
+    margin-left: 511px;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.calculator__content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.calculator__diagram {
+    position: relative;
+    width: 424px;
+    margin-right: 88px;
+    flex: 0 0 auto;
+    top: -60px;
+}
+
+// .calculator__settings {
+//     width: 100%;
+//     display: flex;
+//     flex-flow: row wrap;
+
+.col-ui {
+    width: 320px;
+    flex: 0 0 auto;
+    margin-right: 40px;
+}
+
+.col-result {
+    flex: 1 0 auto;
+}
+
+.settings-label {
+    margin-bottom: 3px;
+
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.settings-block {
+    margin-bottom: 105px;
+}
+
+.settings-summ {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.rangeslider {
+    height: 2px;
+    width: 100%;
+    background: #f5f7f9;
+    position: relative;
+    margin: 18px 0;
+}
+
+.rangeslider__fill {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: $themecolor;
+    border: 2px solid $themecolor;
+}
+
+.rangeslider__handle {
+    background: #fff;
+    border: 4px solid $themecolor;
+    height: 30px;
+    width: 30px;
+    top: -13px;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.rangeslider--disabled {
+    opacity: .4
+}
+
+.tooltip2 {
+    position: absolute;
+    padding: 6px 13px;
+    left: -30px;
+    top: 40px;
+    width: 150px;
+    font-size: 14px;
+    line-height: 1.25;
+
+    background-color: #f5f7f9;
+
+    .title {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0;
+    }
+    
+    .summ-t {
+        font-weight: 700;
+    }
+}
+
+.no-right .tooltip2 {
+    left: -100px;
+}
+
+.result {
+    margin-bottom: 30px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    sup {
+        margin-left: 6px;
+
+        font-size: 14px;
+        color: #000;
+        font-weight: 400;
+    }
+}
+
+.sub-result {
+    .label {
+        margin-bottom: 2px;
+
+        font-size: 14px;
+        color: rgba($color: $darktext, $alpha: 0.4);
+    }
+
+    .number {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 700;
+
+        sup {
+            font-size: 14px;
+            font-weight: 400;
+            top: 2px;
+            left: 5px;
+
+            &.rent {
+                color: #e7acee
+            }
+            &.increase {
+                color: #8589f8
+            }
+            &.price {
+                color: #5fce67
+            }
+        }
+    }
+}
+// }
+
+.calculator__appeal {
+    margin-top: -20px;
+    margin-left: 512px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.calculator__appeal-button {
+    @include btn-theme;
+    padding: 16px;
+    margin-right: 20px;
+    width: 227px;
+    flex: 0 0 227px;
+
+    font-weight: 600;
+    font-size: 18px;
+}
+.calculator__appeal-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.highcharts-axis.highcharts-xaxis {
+    display: none;
+}
+
+.ruble:before {
+    content: "\20BD";
+}
+
+@media (max-width: 1240px) {
+    .calculator {
+        padding-bottom: 80px;
+    }
+
+    .calculator__wrapper {
+        padding: 0;
+    }
+
+    .settings-block:last-child {
+        margin-bottom: 55px;
+    }
+
+    .col-result {
+        margin-left: 512px;
+        margin-top: -100px;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        padding: 35px 0;
+    }
+
+    .calculator__heading {
+        margin: 0 auto 35px;
+        max-width: 285px;
+    }
+
+    .calculator__content {
+        flex-direction: column;
+    }
+
+    .col-ui {
+        order: 0;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .settings-block {
+        margin-bottom: 80px;
+    }
+
+    .settings-label,
+    .settings-summ .summ-res {
+        padding-left: 28px;
+    }
+
+    .tooltip2 {
+        top: 30px;
+    }
+
+    .calculator__diagram {
+        order: 1;
+    }
+
+    .col-result {
+        order: 2;
+    }
+
+    .calculator__appeal {
+        display: none;
+    }
+
+    .calculator__diagram {
+        margin: 0 auto 5px;
+        top: 0;
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .col-result {
+        margin: 0 auto;
+        padding-left: 35px;
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .highcharts-legend-item span {
+        white-space: initial !important;
+    }
+
+    .col-result .settings-label {
+        padding-left: 0;
+    }
+
+}
+
+
+.IncomeCalc input[type=range]:focus+.rangeslider .rangeslider__handle {
+    -moz-box-shadow: 0 0 8px rgba(255, 0, 255, .9);
+    -webkit-box-shadow: 0 0 8px rgba(255, 0, 255, .9);
+    box-shadow: 0 0 8px rgba(255, 0, 255, .9)
+}
+
+.IncomeCalc .calc-graph .highcharts-legend {
+    width: 90%
+}
+
+.IncomeCalc .calc-graph .highcharts-legend>div {
+    width: 100%
+}
+
+.IncomeCalc .calc-graph .highcharts-legend>div>div {
+    width: 100%
+}
+
+.IncomeCalc .calc-graph .highcharts-legend .highcharts-point {
+    opacity: 0
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    padding: 3px 0
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item span {
+    position: relative !important;
+    top: -2px !important;
+    left: 0 !important
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item .gals {
+    border: 1px solid #e7acee;
+    background-color: #e7acee;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+    top: -1px;
+    position: relative
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item .gals:before,
+.IncomeCalc .calc-graph .highcharts-legend-item .gals:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 2px;
+    position: absolute;
+    top: 8px;
+    transform: rotate(60deg);
+    width: 6px
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item .gals:after {
+    height: 2px;
+    left: 5px;
+    top: 6px;
+    transform: rotate(-45deg);
+    width: 9px
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item .gals {
+    border: 1px solid #f0d561;
+    background-color: #f0d561;
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item .gals:after,
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item .gals:before {
+    background: #fff
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item .gals {
+    border: 1px solid #8589f8;
+    background-color: #8589f8;
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item .gals:after,
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item .gals:before {
+    background: #fff
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item .gals {
+    border: 1px solid #aaed96;
+    background-color: #aaed96;
+}
+
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item .gals:after,
+.IncomeCalc .calc-graph .highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item+.highcharts-legend-item .gals:before {
+    background: #fff
+}
+
+.IncomeCalc .ui-slider {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: 0 0;
+    border: none !important;
+    height: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin-top: 15px
+}
+
+.IncomeCalc .ui-slider:after {
+    height: 2px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    background: #d5d3d3;
+    content: ""
+}
+
+.IncomeCalc .ui-slider .ui-widget-header {
+    background: #4dc673
+}
+
+.IncomeCalc .ui-slider .ui-slider-handle {
+    background: #fff;
+    border: 4px solid #4dc673;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    top: -12px
+}
+
+.IncomeCalc .ui-slider .ui-widget.ui-widget-content {
+    border: none
+}
+
+.IncomeCalc .highcharts-tooltip-box {
+    fill: none;
+    stroke-width: 0;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .5)
+}
+
+.IncomeCalc .highcharts-tooltip text {
+    fill: #000
+}
+
+.IncomeCalc .highcharts-credits,
+.IncomeCalc .highcharts-button {
+    display: none !important
+}
+
+.IncomeCalc .highcharts-label {
+    width: 300px;
+    padding: 12px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    z-index: 10
+}
+
+.IncomeCalc .highcharts-label>span {
+    display: block;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important
+}
+
+.IncomeCalc .highcharts-label .row {
+    margin-bottom: 3px;
+    display: block;
+    font-size: 12px
+}
+
+.IncomeCalc .highcharts-label .label {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    font-size: 13px;
+    white-space: normal;
+    line-height: 1.1;
+    font-weight: 600
+}
+
+.IncomeCalc .highcharts-label .proc {
+    display: inline-block;
+    vertical-align: top;
+    width: 10%
+}
+
+.IncomeCalc .highcharts-label .income {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    text-align: right
+}
+
+.IncomeCalc .clearfix {
+    *zoom: 1
+}
+
+.IncomeCalc .clearfix:before {
+    content: " ";
+    display: table
+}
+
+.IncomeCalc .clearfix:after {
+    content: " ";
+    display: table;
+    clear: both
+}
+
+@media (max-width: 1024px) {
+
+    .IncomeCalc .calc-text,
+    .IncomeCalc .calc-graph {
+        width: 100%;
+        float: none;
+        // margin-bottom: 25px
+    }
+
+/*     .IncomeCalc .calc-graph {
+        width: auto;
+        margin-left: 20px
+    } */
+
+    .IncomeCalc .invest-blocks .b-left,
+    .IncomeCalc .invest-blocks .b-right {
+        width: 100%;
+        float: none
+    }
+}
+
+@media (max-width: 480px) {
+    .IncomeCalc .label {
+        font-size: 15px
+    }
+
+    .IncomeCalc .col-ui,
+    .IncomeCalc .col-result {
+        width: 100%;
+        float: none
+    }
+
+    .IncomeCalc .help-result {
+        padding: 15px 0;
+        width: 100%
+    }
+
+    .IncomeCalc .invest-blocks .block {
+        width: 100%;
+        border-bottom: 1px solid #f2f4f6
+    }
+}
