@@ -1,5 +1,7 @@
 .hamburger {
     display: none;
+    position: relative;
+    z-index: 99;
     width: 24px;
 
     &:hover {
@@ -19,6 +21,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.hamburger--dark.active .hamburger__line {
+    background-color: #fff;
 }
 
 .hamburger.active {

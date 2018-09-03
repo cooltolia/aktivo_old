@@ -142,7 +142,14 @@
     height: 100%;
     padding-bottom: 75px;
 
+    font-family: $segoe;
+
     background-color: #fff;
+
+    &--dark {
+        background-color: #000;
+        top: 0;
+    }
 }
 
 .mobile-nav__list {
@@ -153,6 +160,12 @@
     font-size: 20px;
 }
 
+.mobile-nav--dark .mobile-nav__list {
+    padding: 75px 56px 20px;
+
+    font-size: 24px;
+}
+
 .mobile-nav__submenu {
     list-style: none;
     padding-left: 25px;
@@ -160,12 +173,25 @@
     font-size: 16px;
 }
 
+.mobile-nav--dark .mobile-nav__submenu {
+    padding-left: 0;
+    padding-top: 10px;
+}
+
 .mobile-nav__item {
     margin-bottom: 15px;
 }
 
+.mobile-nav--dark .mobile-nav__item {
+    margin-bottom: 35px;
+}
+
 .mobile-nav__subitem {
     margin: 7px 0;
+}
+
+.mobile-nav--dark .mobile-nav__subitem {
+    margin: 5px 0 15px;
 }
 
 .mobile-nav__item.active .mobile-nav__link,
@@ -187,11 +213,28 @@
     }
 }
 
+.mobile-nav--dark .mobile-nav__link,
+.mobile-nav--dark .mobile-nav__sublink {
+    color: #fff;
+
+    &:hover,
+    &:active {
+        color: $themecolor;
+        text-decoration: none;
+    }
+}
+
 .mobile-nav__logged-user {
     padding: 25px 0 5px 20px;
 
     font-size: 20px;
     color: #4ec673;
+}
+
+.mobile-nav--dark .mobile-nav__logged-user {
+    padding: 75px 56px 20px;
+
+    font-size: 24px;
 }
 
 .mobile-nav__logged-menu {
@@ -202,17 +245,68 @@
     font-size: 16px;
 }
 
+.mobile-nav--dark .mobile-nav__logged-menu {
+    padding: 15px 56px 20px;
+    margin-bottom: -80px;
+
+    font-size: 24px;
+}
+
 .mobile-nav__logged-item {
     padding-left: 50px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.mobile-nav--dark .mobile-nav__logged-item {
+    padding-left: 55px;
+    margin-bottom: 30px;
 }
 
 .mobile-nav__logged-link {
+    position: relative;
     color: $darktext;
+    text-decoration: none;
 
     &:hover,
     &:active {
         color: #4ec673;
         text-decoration: none;
+    }
+}
+
+.mobile-nav--dark .mobile-nav__logged-link {
+    color: #fff;
+
+    &:hover,
+    &:active {
+        color: #4ec673;
+        text-decoration: none;
+    }
+}
+
+.mobile-nav__icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: -50px;
+
+    svg {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.mobile-nav--dark .mobile-nav__icon {
+    left: -55px;
+    top: 5px;
+
+    svg {
+        fill: #fff;
     }
 }

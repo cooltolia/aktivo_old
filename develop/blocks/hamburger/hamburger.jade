@@ -1,5 +1,6 @@
-mixin hamburger()
-    +b.hamburger
+mixin hamburger(mod)
+    -var addClass = mod ? 'hamburger--' + mod : ''
+    +b.hamburger(class=addClass)
         +e.line
         +e.line
         +e.line

@@ -11,25 +11,40 @@ mixin main-nav()
                                     +e.LI.subitem
                                         +e.A.sublink(href="#{sublink.url}") #{sublink.text}
                                     
-mixin mobile-nav()
-    +b.NAV.mobile-nav
+mixin mobile-nav(mod)
+    -var addClass = mod ? 'mobile-nav--' + mod : ''
+    +b.NAV.mobile-nav(class=addClass)
         if loggedIn
             +e.logged-user admin@aktivo.ru
             +e.UL.logged-menu
                 +e.LI.logged-item
                         +e.A.logged-link(href='/realty') Недвижимость
+                            +e.SPAN.icon.--property
+                                include ../../../app/images/layout/property.svg
                     +e.LI.logged-item
                         +e.A.logged-link(href='/account/questionary') Верификация
+                            +e.SPAN.icon.--questionary
+                                include ../../../app/images/layout/questionary.svg
                     +e.LI.logged-item
                         +e.A.logged-link(href='/account/monitoring') Мониторинг
+                            +e.SPAN.icon.--monitoring
+                                include ../../../app/images/layout/monitoring.svg
                     +e.LI.logged-item
                         +e.A.logged-link(href='/account/documents') Документы
+                            +e.SPAN.icon.--documents
+                                include ../../../app/images/layout/documents.svg
                     +e.LI.logged-item
                         +e.A.logged-link(href='/account/finances') Финансы
+                            +e.SPAN.icon.--finances
+                                include ../../../app/images/layout/finances.svg
                     +e.LI.logged-item
                         +e.A.logged-link(href='/account/settings') Настройки
+                            +e.SPAN.icon.--settings
+                                include ../../../app/images/layout/settings.svg
                     +e.LI.logged-item
-                        +e.A.logged-link(href='/logout') Выход
+                        +e.A.logged-link.--logout(href='/logout') Выход
+                            +e.SPAN.icon
+                                include ../../../app/images/layout/logout.svg
         +e.UL.list
             each link in links
                 +e.LI.item

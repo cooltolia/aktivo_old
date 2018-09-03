@@ -1,13 +1,13 @@
 include template/header
 include template/footer
 include ../blocks/**/*
-- var loggedIn = false
+- var loggedIn = true
 doctype
 html(lang='ru')
   +doc-header
   body.pageload.no-js
     +main-header(href='/')
-    +mobile-nav
+    +mobile-nav('dark')
     +greeting
     +invest-steps
     +advantages

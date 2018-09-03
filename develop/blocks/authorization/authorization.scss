@@ -75,10 +75,13 @@
 }
 
 .authorization__link {
+    position: relative;
     display: block;
-    padding: 8px 12px;
+    padding: 8px 12px 8px 45px;
     font-size: 14px;
     color: #fff;
+
+    text-decoration: none;
     
     transition: background-color 300ms ease;
 
@@ -88,5 +91,26 @@
         color: #fff;
         background-color: #6fde91;
         text-decoration: none;
+    }
+}
+
+.authorization__icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 10px;
+    top: 10px;
+
+    svg {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        fill: #fff;
     }
 }
