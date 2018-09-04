@@ -216,6 +216,20 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .col-result {
+        margin-left: 0;
+        margin-top: -30px;
+        margin-right: 25px;
+        width: 320px;
+    }
+
+    .calculator__appeal {
+        width: 60%;
+        margin-left: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .calculator {
         padding: 35px 0;
@@ -272,6 +286,7 @@
     .col-result {
         margin: 0 auto;
         padding-left: 35px;
+        margin-top: 25px;
         width: 100%;
         max-width: 480px;
     }
