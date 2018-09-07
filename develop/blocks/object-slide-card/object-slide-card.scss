@@ -42,6 +42,17 @@
 
     span {
         display: block;
+
+        &.has-image {
+            display: flex;
+            align-items: center;
+
+            img {
+                display: block;
+                width: 110px;
+                margin-left: 10px;
+            }
+        }
     }
 
     b {

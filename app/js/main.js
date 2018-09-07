@@ -1369,9 +1369,9 @@ jQuery(document).ready(function ($) {
 
              adaptiveHeight: true,
 
-             autoplay: true,
+             // autoplay: true,
 
-             autoplaySpeed: 3000,
+             // autoplaySpeed: 3000,
 
      
 

@@ -1583,6 +1583,8 @@ th {
   height: 98px;
   margin-bottom: 55px; }
   .invest-steps__image svg {
+    max-width: 100%;
+    max-height: 100%;
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -2072,6 +2074,22 @@ th {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
+  .main-nav__item.active::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 90px;
+    height: 10px;
+    left: 50%;
+    bottom: 0px;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    background-image: url("../images/layout/menu-icon.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
 
 .main-nav__link {
   position: relative;
@@ -2091,22 +2109,6 @@ th {
 
 .main-nav__item.active .main-nav__link {
   text-shadow: 1px 0 0 currentColor; }
-  .main-nav__item.active .main-nav__link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    max-width: 90px;
-    height: 10px;
-    left: 50%;
-    bottom: 0px;
-    -webkit-transform: translateX(-50%);
-       -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    background-image: url("../images/layout/menu-icon.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat; }
 
 .main-nav__subnav {
   display: none;
@@ -2734,6 +2736,7 @@ body.modal-open {
 
 .object-select__slider-card {
   display: block;
+  position: relative;
   padding-top: 100px;
   padding-bottom: 80px;
   text-decoration: none;
@@ -2948,6 +2951,19 @@ body.modal-open {
   color: rgba(0, 0, 0, 0.6); }
   .object-slide-card__data span {
     display: block; }
+    .object-slide-card__data span.has-image {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .object-slide-card__data span.has-image img {
+        display: block;
+        width: 110px;
+        margin-left: 10px; }
   .object-slide-card__data b {
     font-weight: 700; }
 

@@ -45,6 +45,10 @@
             @include menu-icon();
         }
     }
+
+    &.active::before {
+        @include menu-icon();
+    }
 }
 
 .main-nav__link {
@@ -72,9 +76,9 @@
 .main-nav__item.active .main-nav__link {
     text-shadow: 1px 0 0 currentColor;
 
-    &::before {
-        @include menu-icon();
-    }
+    // &::before {
+    //     @include menu-icon();
+    // }
 }
 
 .main-nav__subnav {
