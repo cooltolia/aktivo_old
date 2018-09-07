@@ -1,0 +1,130 @@
+.liberty-topscreen {
+    position: relative;
+    min-height: 685px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    color: $lighttext;
+    font-family: $segoe;
+}
+
+.liberty-topscreen__image {
+    position: absolute;
+    visibility: hidden;
+
+    &--first {
+        width: 296px;
+        top: 175px;
+        left: 0;
+    }
+
+    &--second {
+        width: 544px;
+        height: 544px;
+        top: 65px;
+        left: 184px;
+    }
+
+    &--third {
+        width: 256px;
+        height: 472px;
+        top: 235px;
+        right: 0;
+    }
+
+    img {
+        @include img;
+    }
+}
+
+.liberty-topscreen__wrapper {
+    position: absolute;
+    width: 750px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 187px;
+
+    visibility: hidden;
+}
+
+.liberty-topscreen__heading {
+    margin: 0;
+    margin-bottom: 50px;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 3.6px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.liberty-topscreen__about {
+    margin: 0;
+    margin-bottom: 105px;
+
+    font-size: 24px;
+    line-height: 1.33;
+    text-align: center;
+}
+
+.liberty-topscreen__button {
+    @include btn-theme;
+    width: 288px;
+    padding: 16px;
+    margin: 0 auto;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .liberty-topscreen {
+        overflow: hidden;
+        min-height: 552px;
+        max-width: 390px;
+    }
+
+    .liberty-topscreen__image {
+        &--first {
+            width: 170px;
+            height: 170px;
+            top: 100px;
+        }
+
+        &--second {
+            width: 313px;
+            height: 313px;
+            top: 44px;
+            left: 35px;
+        }
+
+        &--third {
+            width: 144px;
+            height: 270px;
+            top: 140px;
+            right: -72px;
+        }
+    }
+
+    .liberty-topscreen__wrapper {
+        width: 265px;
+        top: 95px;
+    }
+
+    .liberty-topscreen__heading {
+        margin-bottom: 15px;
+
+        font-size: 32px;
+    }
+
+    .liberty-topscreen__about {
+        margin-bottom: 125px;
+
+        font-size: 16px;
+    }
+
+    .liberty-topscreen__button {
+        width: 264px;
+    }
+}

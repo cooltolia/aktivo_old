@@ -1,5 +1,8 @@
 ;
 (function () {
+    $chart = $('#top_x_div');
+    if ($chart.length === 0) return;
+
     var percentFormatFunction = d3.format(".2f"),
         yearFormatter = function (year) {
             switch (parseInt(year)) {
