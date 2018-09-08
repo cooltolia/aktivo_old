@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 616 471">
+    <defs>
+        <style>
+            .cls-1,.cls-11{fill:#848f9b}.cls-2{fill:#222c36}.cls-3{fill:#181818}.cls-4,.cls-5,.cls-7{fill:#fff}.cls-4{font-size:24px}.cls-4,.cls-5,.cls-9{font-family:SegoeUI-Bold,Segoe UI;font-weight:700}.cls-5{font-size:16px}.cls-6{fill:#9b9b9b}.cls-6,.cls-7,.cls-9{font-size:14px}.cls-6,.cls-7{font-family:SegoeUI,Segoe UI}.cls-8{fill:#ffd729}.cls-10,.cls-11{stroke:none}
+        </style>
+    </defs>
+    <g id="Group_336" data-name="Group 336" transform="translate(-160 -902)">
+        <g id="Group_139" data-name="Group 139" transform="translate(-172 -315)">
+            <path id="Path_160" d="M261.84 387.271l-20.8 82.4-145.524-93.976-22.276-87.616z" class="cls-1" data-name="Path 160" transform="translate(587.76 1215.929)"/>
+            <path id="Path_159" d="M286.782 288.532l-21.6 85.2-193.808-92.993-22.392-88.075z" class="cls-1" data-name="Path 159" transform="translate(588.018 1215.868)"/>
+            <path id="Path_158" d="M310.757 193.179l-21.6 84.4L47.058 185.1l-22.1-86.928z" class="cls-1" data-name="Path 158" transform="translate(588.042 1216.021)"/>
+            <path id="Path_157" d="M0 0l333.6 97.6-21.2 85.6L22.625 88.992z" class="cls-1" data-name="Path 157" transform="translate(588 1217)"/>
+        </g>
+        <path id="Rectangle_166" d="M0 0h482.697v88H0z" class="cls-2" data-name="Rectangle 166" transform="translate(160 902)"/>
+        <path id="Rectangle_167" d="M0 0h523v88H0z" class="cls-2" data-name="Rectangle 167" transform="translate(160 998)"/>
+        <path id="Rectangle_168" d="M0 0h482.697v88H0z" class="cls-2" data-name="Rectangle 168" transform="translate(160 1094)"/>
+        <path id="Rectangle_169" d="M0 0h482.697v88H0z" class="cls-2" data-name="Rectangle 169" transform="translate(160 1189)"/>
+        <path id="Rectangle_170" d="M0 0h482.697v88H0z" class="cls-2" data-name="Rectangle 170" transform="translate(160 1285)"/>
+        <g id="Group_142" data-name="Group 142" transform="translate(-172 -315)">
+            <g id="Path_152" class="cls-3" data-name="Path 152">
+                <path d="M239.22 471.796H120.782l-21.462-86h161.568l-21.666 86z" class="cls-10" transform="translate(588.035 1215.204)"/>
+                <path d="M100.599 386.796l20.963 84h116.88l21.162-84H100.6m-2.56-2H262.17l-22.17 88H120l-21.962-88z" class="cls-11" transform="translate(588.035 1215.204)"/>
+            </g>
+            <g id="Path_153" class="cls-3" data-name="Path 153">
+                <path d="M336.853 87H23.401L1.29 1h357.424l-21.86 86z" class="cls-10" transform="translate(588 1217)"/>
+                <path d="M2.58 2l21.596 84h311.9l21.352-84H2.579M0 0h360l-22.37 88H22.626L0 0z" class="cls-11" transform="translate(588 1217)"/>
+            </g>
+            <g id="Path_154" class="cls-3" data-name="Path 154">
+                <path d="M312.023 185.157H48.596l-22.345-86h308.084l-22.312 86z" class="cls-10" transform="translate(588.042 1214.843)"/>
+                <path d="M27.544 100.157l21.825 84h261.88l21.793-84H27.544m-2.586-2h310.67l-22.831 88H47.822l-22.864-88z" class="cls-11" transform="translate(588.042 1214.843)"/>
+            </g>
+            <g id="Path_155" class="cls-3" data-name="Path 155">
+                <path d="M287.678 279.664H72.152l-21.883-86h259.308l-21.899 86z" class="cls-10" transform="translate(588.017 1216.336)"/>
+                <path d="M51.555 194.664l21.374 84h213.972l21.39-84H51.554m-2.573-2h261.882l-22.409 88H71.375l-22.393-88z" class="cls-11" transform="translate(588.017 1216.336)"/>
+            </g>
+            <g id="Path_156" class="cls-3" data-name="Path 156">
+                <path d="M263.78 375.079H96.293l-21.769-86h211.427l-22.173 86z" class="cls-10" transform="translate(587.76 1215.929)"/>
+                <path d="M75.81 290.079l21.262 84h165.932l21.658-84H75.81m-2.57-2h214.003l-22.689 88H95.516l-22.276-88z" class="cls-11" transform="translate(587.76 1215.929)"/>
+            </g>
+        </g>
+        <text id="_100_" class="cls-4" data-name="100%" transform="translate(596 950)">
+            <tspan x="-31.113" y="0">100%</tspan>
+        </text>
+        <text id="_50_" class="cls-4" data-name="50%" transform="translate(596 1048)">
+            <tspan x="-24.211" y="0">50%</tspan>
+        </text>
+        <text id="_25_" class="cls-4" data-name="25%" transform="translate(596 1143)">
+            <tspan x="-24.211" y="0">25%</tspan>
+        </text>
+        <text id="_4_" class="cls-4" data-name="4%" transform="translate(596 1238)">
+            <tspan x="-17.309" y="0">4%</tspan>
+        </text>
+        <text id="_2_" class="cls-4" data-name="2%" transform="translate(596 1335)">
+            <tspan x="-17.309" y="0">2%</tspan>
+        </text>
+        <text id="Рассмотрение_заявок" class="cls-5" data-name="Рассмотрение заявок" transform="translate(184 934)">
+            <tspan x="0" y="0">Рассмотрение заявок</tspan>
+        </text>
+        <text id="Базовая_проверка" class="cls-5" data-name="Базовая проверка" transform="translate(184 1029)">
+            <tspan x="0" y="0">Базовая проверка</tspan>
+        </text>
+        <text id="Тщательный_аудит" class="cls-5" data-name="Тщательный аудит" transform="translate(184 1126)">
+            <tspan x="0" y="0">Тщательный аудит</tspan>
+        </text>
+        <text id="Одобрение" class="cls-5" transform="translate(184 1222)">
+            <tspan x="0" y="0">Одобрение</tspan>
+        </text>
+        <text id="Выбор_клиента" class="cls-5" data-name="Выбор клиента" transform="translate(184 1317)">
+            <tspan x="0" y="0">Выбор клиента</tspan>
+        </text>
+        <text id="Уточнение_деталей_с_владельцем_объекта_недвижимости_" class="cls-6" data-name="Уточнение деталей с владельцем объекта недвижимости" transform="translate(184 941)">
+            <tspan x="0" y="15">Уточнение деталей с владельцем </tspan><tspan x="0" y="33">объекта недвижимости</tspan>
+        </text>
+        <text id="Проверка_объекта_на_соответствие_стандартам_AKTIVO_" class="cls-6" data-name="Проверка объекта на соответствие стандартам AKTIVO" transform="translate(184 1034)">
+            <tspan x="0" y="15">Проверка объекта на соответствие </tspan><tspan x="0" y="33">стандартам AKTIVO</tspan>
+        </text>
+        <text id="Детальная_экспертиза_маркетинговые_юридические_финансовые_аспекты_" class="cls-6" data-name="Детальная экспертиза (маркетинговые, юридические, финансовые аспекты)" transform="translate(184 1131)">
+            <tspan x="0" y="15">Детальная экспертиза (маркетинговые, </tspan><tspan x="0" y="33">юридические, финансовые аспекты)</tspan>
+        </text>
+        <text id="Одобрение_объекта_инвестирования_включение_в_каталог_" class="cls-6" data-name="Одобрение объекта инвестирования, включение в каталог" transform="translate(184 1227)">
+            <tspan x="0" y="15">Одобрение объекта инвестирования, </tspan><tspan x="0" y="33">включение в каталог</tspan>
+        </text>
+        <text id="Вы_сами_выбираете_лучший_из_лучших_объектов_на_свой_вкус_" class="cls-6" data-name="Вы сами выбираете лучший из лучших объектов на свой вкус" transform="translate(184 1324)">
+            <tspan x="0" y="15">Вы сами выбираете лучший из лучших </tspan><tspan x="0" y="33">объектов на свой вкус</tspan>
+        </text>
+        <text id="объектов" class="cls-7" transform="translate(566 966)">
+            <tspan x="0" y="0">объектов</tspan>
+        </text>
+        <text id="объектов-2" class="cls-7" data-name="объектов" transform="translate(566 1064)">
+            <tspan x="0" y="0">объектов</tspan>
+        </text>
+        <text id="объектов-3" class="cls-7" data-name="объектов" transform="translate(566 1160)">
+            <tspan x="0" y="0">объектов</tspan>
+        </text>
+        <text id="объектов-4" class="cls-7" data-name="объектов" transform="translate(566 1253)">
+            <tspan x="0" y="0">объектов</tspan>
+        </text>
+        <text id="объектов-5" class="cls-7" data-name="объектов" transform="translate(566 1350)">
+            <tspan x="0" y="0">объектов</tspan>
+        </text>
+        <path id="Path_161" d="M23.154-8.333C34.768-8.333 45 1.688 45 13.194s-10.232 23.38-21.846 23.38S-5 30.95-5 19.444 11.541-8.333 23.154-8.333z" class="cls-8" data-name="Path 161" transform="rotate(-180 308 506.334)"/>
+        <path id="Path_162" d="M23.154-8.333C34.768-8.333 45 1.688 45 13.194s-10.232 23.38-21.846 23.38S-5 30.95-5 19.444 11.541-8.333 23.154-8.333z" class="cls-8" data-name="Path 162" transform="rotate(-180 308 555.333)"/>
+        <path id="Path_163" d="M23.154-8.333C34.768-8.333 45 1.688 45 13.194s-10.232 23.38-21.846 23.38S-5 30.95-5 19.444 11.541-8.333 23.154-8.333z" class="cls-8" data-name="Path 163" transform="rotate(-180 308 601.333)"/>
+        <path id="Path_164" d="M23.154-8.333C34.768-8.333 45 1.688 45 13.194s-10.232 23.38-21.846 23.38S-5 30.95-5 19.444 11.541-8.333 23.154-8.333z" class="cls-8" data-name="Path 164" transform="rotate(-180 308 650.333)"/>
+        <text id="_-50_" class="cls-9" data-name="-50%" transform="translate(576 1004)">
+            <tspan x="0" y="0">-50%</tspan>
+        </text>
+        <text id="_-50_2" class="cls-9" data-name="-50%" transform="translate(576 1102)">
+            <tspan x="0" y="0">-50%</tspan>
+        </text>
+        <text id="_-92_" class="cls-9" data-name="-92%" transform="translate(576 1193)">
+            <tspan x="0" y="0">-92%</tspan>
+        </text>
+        <text id="_-50_3" class="cls-9" data-name="-50%" transform="translate(576 1291)">
+            <tspan x="0" y="0">-50%</tspan>
+        </text>
+    </g>
+</svg>
