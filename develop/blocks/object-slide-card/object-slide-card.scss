@@ -19,7 +19,6 @@
     }
 }
 
-
 .object-slide-card__title {
     margin-bottom: 5px;
 
@@ -40,23 +39,23 @@
     font-weight: 400;
     color: rgba($darktext, 0.6);
 
-    span {
-        display: block;
-
-        &.has-image {
-            display: flex;
-            align-items: center;
-
-            img {
-                display: block;
-                width: 110px;
-                margin-left: 10px;
-            }
-        }
-    }
-
     b {
         font-weight: 700;
+    }
+}
+
+.object-slide-card__data-line {
+    display: block;
+
+    &.has-image {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+            width: 110px;
+            margin-left: 10px;
+        }
     }
 }
 

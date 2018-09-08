@@ -97,12 +97,23 @@
     font-weight: 400;
     color: rgba($darktext, 0.6);
 
-    span {
-        display: block;
-    }
-
     b {
         font-weight: 700;
+    }
+}
+
+.object-item__data-line {
+    display: block;
+
+    &.has-image {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: block;
+            width: 110px;
+            margin-left: 10px;
+        }
     }
 }
 

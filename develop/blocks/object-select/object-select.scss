@@ -52,6 +52,45 @@
     color: $darktext;
 }
 
+.object-select__banner {
+    position: absolute;
+    padding: 5px 22px;
+    top: 120px;
+    right: 18px;
+    z-index: 2;
+
+    &--new {
+        width: 112px;
+        background-color: #5fce67;
+
+        color: #fff;
+        text-align: right;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &--club {
+        width: 160px;
+
+        background-color: $themecolor;
+        color: $darktext;
+    }
+}
+
+.object-select__lock {
+    position: absolute;
+    z-index: 1;
+    width: 16px;
+    height: 18px;
+    top: -80px;
+    right: 16px;
+    background-image: url('../images/objects/lock.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 .object-select__slider-card-link {
     position: absolute;
     width: 100%;
