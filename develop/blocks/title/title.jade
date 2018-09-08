@@ -1,7 +1,6 @@
-mixin title(mod)
-    if (mod)
-        +b.H2.title(class='title--#{mod}')
-            block
-    else 
-        +b.H2.title
-            block
+mixin title(mod1, mod2)
+    -var addClass1 = mod1 ? 'title--' + mod1 : ''
+    -var addClass2 = mod2 ? 'title--' + mod2 : ''
+    +b.H2.title(class=addClass1, class=addClass2)
+        block
+  

@@ -1,0 +1,170 @@
+.liberty-about {
+    padding: 135px 0 150px;
+
+    font-family: $segoe;
+    color: $darktext;
+
+    background-color: #f5f7f9;
+}
+
+.liberty-about__heading {
+    @include visually-hidden;
+}
+
+.liberty-about__wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.liberty-about__images {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.liberty-about__image {
+    position: absolute;
+
+    &--small {
+        width: 192px;
+        top: 120px;
+        left: 0;
+    }
+
+    &--big {
+        width: 304px;
+        left: 184px;
+        top: 0;
+    }
+
+    img {
+        @include img;
+    }
+}
+
+
+.liberty-about__content {
+    margin-left: 584px;
+    max-width: 610px;
+    padding-right: 20px;
+}
+
+.liberty-about__text {
+    position: relative;
+    margin: 0;
+    margin-bottom: 55px;
+    padding-top: 20px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    a {
+        color: #9b9b9b;
+
+        transition: color 300ms ease;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: $darktext;
+        }
+    }
+
+    &--strong {
+        padding-top: 0;
+        margin-bottom: 0;
+
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.3;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 32px;
+            height: 2px;
+            top: 15px;
+            left: -48px;
+
+            background-color: $themecolor;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .liberty-about {
+        padding: 95px 0 110px;
+    }
+
+    .liberty-about__image {
+        &--small {
+            width: 152px;
+            top: 70px;
+        }
+
+        &--big {
+            width: 224px;
+            left: 134px;
+        }
+    }
+
+    .liberty-about__content {
+        margin-left: 440px;
+    }
+}
+
+@media (max-width: 768px) {
+    .liberty-about {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+
+    .liberty-about__wrapper {
+        padding-left: 56px;
+        padding-right: 20px;
+    }
+
+    .liberty-about__images {
+        position: relative;
+        margin-bottom: 25px;
+        height: 255px;
+    }
+    
+    .liberty-about__image {
+        &--small {
+            width: 106px;
+            top: 48px;
+        }
+
+        &--big {
+            width: 168px;
+            left: 96px;
+            top: -15px;
+        }
+    }
+
+    .liberty-about__content {
+        margin-left: 0;
+        width: auto;
+        max-width: 480px;
+    }
+
+    .liberty-about__text {
+        padding-top: 0;
+        margin-bottom: 20px;
+
+        &--strong {
+            margin-bottom: 0;
+
+            font-size: 18px;
+            line-height: 1.8;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .liberty-about__wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

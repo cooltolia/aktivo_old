@@ -177,4 +177,10 @@
     .greeting__wrapper {
         padding: 0;
     }
+
+    .greeting__text {
+        &::before {
+            display: none;
+        }
+    }
 }

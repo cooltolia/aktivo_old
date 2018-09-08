@@ -5,6 +5,7 @@ mixin object-item(id, newObject, club)
             +e.banner.--new Скоро
         if (club)
             +e.banner.--club Клубная сделка
+            +e.lock
         +e.image
             img(src='images/objects/object' + id + '.jpg')
         +e.title Супермаркет «Пятерочка»

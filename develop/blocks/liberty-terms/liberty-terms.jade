@@ -1,2 +1,15 @@
-mixin blockName()
-    +b.SECTION.blockName
+mixin liberty-terms()
+    +b.SECTION.liberty-terms
+        +e.wrapper
+            +e.heading
+                +subtitle('center')
+                    | Клуб свободы
+                +title('center')
+                    | Условия участия
+            +e.P.text
+                | Для того, чтобы стать членом клуба LIBERTY, размер ваших первоначальных инвестиций должен быть не менее
+            +e.price
+                | 10 000 000 рублей
+            +e.text
+                | Одно условие, открывающее сотни новых возможностей.
+            +e.A.button(href='#') Стать участником клуба
