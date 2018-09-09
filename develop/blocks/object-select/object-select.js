@@ -7,8 +7,8 @@
         fade: false,
         asNavFor: '.object-select__slider-nav',
         adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
 
     });
     $('.object-select__slider-nav').slick({

@@ -3184,8 +3184,8 @@ body.modal-open {
 .object-select__banner {
   position: absolute;
   padding: 5px 22px;
-  top: 120px;
-  right: 18px;
+  top: 70px;
+  left: 30px;
   z-index: 2; }
   .object-select__banner--new {
     width: 112px;
@@ -3204,8 +3204,8 @@ body.modal-open {
   z-index: 1;
   width: 16px;
   height: 18px;
-  top: -80px;
-  right: 16px;
+  top: -30px;
+  right: -120%;
   background-image: url("../images/objects/lock.svg");
   background-size: contain;
   background-position: center;
