@@ -1,0 +1,103 @@
+.sell-triggers {
+    padding-top: 70px;
+    padding-bottom: 75px;
+
+    font-family: $segoe; 
+    color: $lighttext;
+
+    background-color: rgba(#000, 0.9);
+}
+
+.sell-triggers__heading {
+    margin-bottom: 45px;
+}
+
+.sell-triggers__list {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+
+    display: flex;
+    max-width: 920px;
+    justify-content: space-between;
+}
+
+.sell-triggers__item {
+    flex: 0 0 auto;
+    max-width: 210px;
+}
+
+.sell-triggers__item-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+
+    svg {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.sell-triggers__item-legend {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.71;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: #9b9b9b;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .sell-triggers {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+
+    .sell-triggers__heading {
+        margin-bottom: 35px;
+    }
+
+    .sell-triggers__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 480px;
+    }
+
+    .sell-triggers__item {
+        width: 50%;
+        padding: 0 25px;
+        margin-bottom: 25px;
+    }
+
+    .sell-triggers__item-image {
+       
+    }
+
+    .sell-triggers__item-legend {
+    }
+
+   
+}
+
+@media (max-width: 480px) {
+    .sell-triggers__item {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .sell-triggers__item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sell-triggers__item-legend {
+        font-size: 12px;
+    }
+
+    .sell-triggers__item {
+        padding: 0 5px;
+    }
+}

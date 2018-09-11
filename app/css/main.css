@@ -770,7 +770,7 @@ th {
   color: #9b9b9b;
   font-size: 16px;
   font-weight: 400;
-  margin-right: 15px; }
+  margin-right: 20px; }
   .breadcrumbs__item::after {
     content: '/';
     position: absolute;
@@ -1303,14 +1303,16 @@ th {
   background-color: rgba(0, 0, 0, 0.9); }
 
 .faq-appeal__wrapper {
-  width: 315px;
+  width: 355px;
   margin: 0 auto; }
 
 .faq-appeal__text {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.5; }
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 700; }
 
 .faq-appeal__button {
   position: relative;
@@ -1349,6 +1351,15 @@ th {
   .faq-appeal__button:active {
     background-color: #ffea8f; }
 
+@media (max-width: 480px) {
+  .faq-appeal {
+    padding: 45px 0; }
+  .faq-appeal__wrapper {
+    width: 100%;
+    padding: 0 20px; }
+  .faq-appeal__text {
+    font-size: 18px; } }
+
 .faq-content {
   padding-top: 15px;
   padding-bottom: 100px;
@@ -1373,6 +1384,7 @@ th {
   padding: 15px 5px 15px 20px;
   width: 362px;
   font-size: 24px;
+  line-height: normal;
   cursor: pointer;
   -webkit-transition: background-color 300ms ease;
   -moz-transition: background-color 300ms ease;
@@ -1984,6 +1996,10 @@ th {
   width: 80px;
   height: 80px;
   margin: 0 auto 30px; }
+  .howitworks-triggers__item-image svg {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%; }
 
 .howitworks-triggers__item-legend {
   font-size: 14px;
@@ -4124,6 +4140,273 @@ body.modal-open {
 @media (max-width: 360px) {
   .partners__wrapper {
     padding: 0; } }
+
+.sell-scheme {
+  padding-top: 65px;
+  padding-bottom: 85px;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000;
+  background-color: #f5f7f9; }
+
+.sell-scheme__heading {
+  margin-bottom: 75px; }
+
+.sell-scheme__image {
+  max-width: 1125px;
+  margin: 0 auto;
+  overflow-x: auto; }
+  .sell-scheme__image img {
+    min-width: 750px; }
+
+.sell-scheme__label {
+  display: none; }
+
+@media (max-width: 768px) {
+  .sell-scheme {
+    padding-top: 75px;
+    padding-bottom: 65px; }
+  .sell-scheme__heading {
+    margin-bottom: 40px; }
+  .sell-scheme__label {
+    display: block;
+    padding: 8px 0 10px;
+    margin-bottom: 40px;
+    background-color: #ffd729;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700; } }
+
+.sell-structure {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.sell-structure__heading {
+  margin-bottom: 65px; }
+
+.sell-structure__image {
+  max-width: 1024px;
+  margin: 0 auto 55px; }
+  .sell-structure__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%; }
+
+.sell-structure__appeal {
+  max-width: 355px;
+  margin: 0 auto; }
+
+.sell-structure__appeal-text {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700; }
+
+.sell-structure__appeal-button {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #ffd729;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  transition: all 300ms ease;
+  width: 272px;
+  margin: 0 auto;
+  padding: 16px;
+  font-size: 18px; }
+  .sell-structure__appeal-button:hover, .sell-structure__appeal-button:active, .sell-structure__appeal-button:focus {
+    text-decoration: none;
+    color: #000;
+    background-color: #ffe15c; }
+  .sell-structure__appeal-button:active {
+    background-color: #ffea8f; }
+
+.sell-structure__list {
+  display: none; }
+
+@media (max-width: 768px) {
+  .sell-structure {
+    padding-top: 60px;
+    padding-bottom: 80px; }
+  .sell-structure__heading {
+    margin-bottom: 40px; }
+  .sell-structure__image {
+    display: none; }
+  .sell-structure__list {
+    display: block;
+    padding: 0;
+    margin: 0 auto 60px;
+    list-style: none;
+    max-width: 480px; }
+  .sell-structure__item {
+    margin-bottom: 25px; }
+    .sell-structure__item:nth-child(1) .sell-structure__item-icon {
+      background-image: url("../images/sell/structure1.svg"); }
+    .sell-structure__item:nth-child(1) .sell-structure__item-title {
+      color: #455a6e; }
+    .sell-structure__item:nth-child(2) .sell-structure__item-icon {
+      background-image: url("../images/sell/structure2.svg"); }
+    .sell-structure__item:nth-child(2) .sell-structure__item-title {
+      color: #848f9b; }
+    .sell-structure__item:nth-child(3) .sell-structure__item-icon {
+      background-image: url("../images/sell/structure3.svg"); }
+    .sell-structure__item:nth-child(3) .sell-structure__item-title {
+      color: #d5dadf; }
+    .sell-structure__item:nth-child(4) .sell-structure__item-icon {
+      background-image: url("../images/sell/structure4.svg"); }
+    .sell-structure__item:nth-child(4) .sell-structure__item-title {
+      color: #ffd729; }
+  .sell-structure__item-icon {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    background-size: cover; }
+  .sell-structure__item-title {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700; }
+  .sell-structure__item-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff; } }
+
+.sell-topscreen {
+  padding-top: 15px;
+  padding-bottom: 50px;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000; }
+
+.sell-topscreen__heading {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 48px;
+  text-align: center; }
+
+.sell-topscreen__text {
+  max-width: 1020px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 1.33;
+  text-align: center; }
+
+@media (max-width: 768px) {
+  .sell-topscreen {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  .sell-topscreen__heading {
+    margin-bottom: 15px;
+    font-size: 32px;
+    line-height: 1.25; }
+  .sell-topscreen__text {
+    font-size: 16px;
+    line-height: 1.5; } }
+
+.sell-triggers {
+  padding-top: 70px;
+  padding-bottom: 75px;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.sell-triggers__heading {
+  margin-bottom: 45px; }
+
+.sell-triggers__list {
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 920px;
+  -webkit-box-pack: justify;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.sell-triggers__item {
+  -webkit-box-flex: 0;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  max-width: 210px; }
+
+.sell-triggers__item-image {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px; }
+  .sell-triggers__item-image svg {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%; }
+
+.sell-triggers__item-legend {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.71;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: #9b9b9b;
+  text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  .sell-triggers {
+    padding-top: 40px;
+    padding-bottom: 30px; }
+  .sell-triggers__heading {
+    margin-bottom: 35px; }
+  .sell-triggers__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 480px; }
+  .sell-triggers__item {
+    width: 50%;
+    padding: 0 25px;
+    margin-bottom: 25px; } }
+
+@media (max-width: 480px) {
+  .sell-triggers__item {
+    padding: 0 10px; } }
+
+@media (max-width: 360px) {
+  .sell-triggers__item-image {
+    width: 60px;
+    height: 60px; }
+  .sell-triggers__item-legend {
+    font-size: 12px; }
+  .sell-triggers__item {
+    padding: 0 5px; } }
 
 .socials {
   width: 100%;

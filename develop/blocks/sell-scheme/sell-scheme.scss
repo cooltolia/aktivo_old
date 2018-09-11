@@ -1,0 +1,50 @@
+.sell-scheme {
+    padding-top: 65px;
+    padding-bottom: 85px;
+
+    font-family: $segoe;
+    color: $darktext;
+
+    background-color: #f5f7f9;
+}
+
+.sell-scheme__heading {
+    margin-bottom: 75px;
+}
+
+.sell-scheme__image {
+    max-width: 1125px;
+    margin: 0 auto;
+
+    overflow-x: auto;
+
+    img {
+        min-width: 750px;
+    }
+}
+
+.sell-scheme__label {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sell-scheme {
+        padding-top: 75px;
+        padding-bottom: 65px;
+    }
+
+    .sell-scheme__heading {
+        margin-bottom: 40px;
+    }
+
+    .sell-scheme__label {
+        display: block;
+        padding: 8px 0 10px;
+        margin-bottom: 40px;
+        background-color: $themecolor;
+
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}

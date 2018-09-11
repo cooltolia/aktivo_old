@@ -8,7 +8,7 @@
 }
 
 .faq-appeal__wrapper {
-    width: 315px;
+    width: 355px;
     margin: 0 auto;
 }
 
@@ -16,8 +16,10 @@
     margin: 0;
     margin-bottom: 20px;
 
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
+    text-align: center;
+    font-weight: 700;
 }
 
 .faq-appeal__button {
@@ -27,5 +29,20 @@
     padding: 16px;
 
     font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    .faq-appeal {
+        padding: 45px 0;
+    }
+
+    .faq-appeal__wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .faq-appeal__text {
+        font-size: 18px;
+    }
 }
 

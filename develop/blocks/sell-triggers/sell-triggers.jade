@@ -1,0 +1,25 @@
+mixin sell-triggers()
+    +b.SECTION.sell-triggers
+        +inner
+            +e.heading
+                +subtitle('center', 'light')
+                    | Работайте с лучшими
+                +title('center', 'light')
+                    | Наши преимущества
+            +e.UL.list
+                +e.LI.item
+                    +e.item-image
+                        include ../../../app/images/sell/trigger1.svg
+                    +e.item-legend Без комиссий и агентов
+                +e.LI.item
+                    +e.item-image.--reverse
+                        include ../../../app/images/sell/trigger2.svg
+                    +e.item-legend Полное юридическое сопровождение
+                +e.LI.item
+                    +e.item-image
+                        include ../../../app/images/sell/trigger3.svg
+                    +e.item-legend Справедливая рыночная оценка
+                +e.LI.item
+                    +e.item-image
+                        include ../../../app/images/sell/trigger4.svg
+                    +e.item-legend Прозрачная сделка

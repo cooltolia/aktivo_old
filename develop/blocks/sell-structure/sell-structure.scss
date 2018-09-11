@@ -1,0 +1,138 @@
+.sell-structure {
+    padding-top: 80px;
+    padding-bottom: 90px;
+
+    font-family: $segoe;
+
+    background-color: rgba(#000, 0.9);
+}
+
+.sell-structure__heading {
+    margin-bottom: 65px;
+}
+
+.sell-structure__image {
+    max-width: 1024px;
+    margin: 0 auto 55px;
+
+    img {
+        @include img;
+    }
+}
+
+.sell-structure__appeal {
+    max-width: 355px;
+    margin: 0 auto;
+}
+
+.sell-structure__appeal-text {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-size: 20px;
+    color: $lighttext;
+    text-align: center;
+    font-weight: 700;
+}
+
+.sell-structure__appeal-button {
+    @include btn-theme;
+    width: 272px;
+    margin: 0 auto;
+    padding: 16px;
+
+    font-size: 18px;
+}
+
+.sell-structure__list {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sell-structure {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+    .sell-structure__heading {
+        margin-bottom: 40px;
+    }
+
+    .sell-structure__image {
+        display: none;
+    }
+
+    .sell-structure__list {
+        display: block;
+        padding: 0;
+        margin: 0 auto 60px;
+        list-style: none;
+        max-width: 480px;
+    }
+
+    .sell-structure__item {
+        margin-bottom: 25px;
+
+        &:nth-child(1) {
+            .sell-structure__item-icon {
+                background-image: url('../images/sell/structure1.svg');
+            }
+
+            .sell-structure__item-title {
+                color: #455a6e;
+            }
+        }
+        &:nth-child(2) {
+            .sell-structure__item-icon {
+                background-image: url('../images/sell/structure2.svg');
+            }
+
+            .sell-structure__item-title {
+                color: #848f9b;
+            }
+        }
+        &:nth-child(3) {
+            .sell-structure__item-icon {
+                background-image: url('../images/sell/structure3.svg');
+            }
+
+            .sell-structure__item-title {
+                color: #d5dadf;
+            }
+        }
+        &:nth-child(4) {
+            .sell-structure__item-icon {
+                background-image: url('../images/sell/structure4.svg');
+            }
+
+            .sell-structure__item-title {
+                color: #ffd729;
+            }
+        }
+    }
+
+    .sell-structure__item-icon {
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 20px;
+
+        background-size: cover;
+    }
+
+    .sell-structure__item-title {
+        display: block;
+        margin-bottom: 10px;
+
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .sell-structure__item-text {
+        margin: 0;
+
+        font-size: 16px;
+        line-height: 1.5;
+        color: $lighttext;
+    }
+}
