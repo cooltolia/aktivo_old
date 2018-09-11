@@ -6,7 +6,6 @@
     btnAccount.on('click', function () {
 
         btn.toggleClass('active');
-        debugger
 
         if (btnAccountMenu.hasClass('active')) {
             btnAccountMenu.slideUp();

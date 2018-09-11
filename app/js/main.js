@@ -25,8 +25,6 @@ jQuery(document).ready(function ($) {
 
              btn.toggleClass('active');
 
-             debugger
-
      
 
              if (btnAccountMenu.hasClass('active')) {
@@ -549,11 +547,7 @@ jQuery(document).ready(function ($) {
      })();
 
      
-     ;(function() {
-
      
-
-     })();
 
      
      ;

@@ -4,7 +4,7 @@ mixin authorization()
             +e.A.login(href='#') Вход
         else
             +e.logged
-                +e.BUTTON.toggle admin@aktivo.ru
+                +e.BUTTON.toggle(title='admin@aktivo.ru') admin@aktivo.ru
                 +e.UL.list
                     +e.LI.item
                         +e.A.link(href='/realty') Недвижимость

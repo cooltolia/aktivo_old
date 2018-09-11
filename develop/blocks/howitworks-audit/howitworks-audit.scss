@@ -1,0 +1,146 @@
+.howitworks-audit {
+    padding-top: 55px;
+    padding-bottom: 105px;
+
+    font-family: $segoe;
+    color: $lighttext;
+
+    background-color: rgba($color: #000000, $alpha: 0.9);
+}
+
+.howitworks-audit__heading {
+    margin-bottom: 60px;
+}
+
+.howitworks-audit__wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.howitworks-audit__col {
+    width: 40%;
+
+    &--big {
+        width: 60%;
+        min-height: 470px;
+        margin-right: 55px;
+    }
+}
+
+.howitworks-audit__image {
+    height: 100%;
+
+    background-image: url('../images/howitworks/audit.svg');
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.howitworks-audit__content {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.howitworks-audit__text {
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+
+    .highlight {
+        background-color: $themecolor;
+        color: $darktext;
+        font-weight: 700;
+    }
+}
+
+.howitworks-audit__appeal {
+    max-width: 312px;
+}
+
+.howitworks-audit__appeal-text {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+.howitworks-audit__appeal-button {
+    @include btn-theme;
+    width: 272px;
+    padding: 16px;
+
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .howitworks-audit {
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+        .inner {
+            padding: 0;
+        }
+    }
+
+    .howitworks-audit__heading {
+        margin-bottom: 40px;
+        padding: 0 20px;
+    }
+
+    .howitworks-audit__wrapper {
+        display: block;
+    }
+
+    .howitworks-audit__col {
+        width: 100%;
+
+        &--big {
+            max-width: 380px;
+            margin: 0 auto;
+            min-height: 0;
+        }
+    }
+
+    .howitworks-audit__image {
+        
+        margin: 0 auto 45px;
+        padding-top: 125%;
+
+        background-image: url('../images/howitworks/audit_m.svg');
+        background-size: cover;
+    }
+
+    .howitworks-audit__content,
+    .howitworks-audit__appeal {
+        padding: 0 30px;
+    }
+
+    .howitworks-audit__content {
+        padding-bottom: 50px;
+    }
+
+    .howitworks-audit__appeal {
+        text-align: center;
+        margin: 0 auto;
+        max-width: none;
+    }
+
+    .howitworks-audit__appeal-button {
+        width: 264px;
+        margin: 0 auto;
+    }
+    
+}
+
+@media (max-width: 360px) {
+    .howitworks-audit__content,
+    .howitworks-audit__appeal {
+        padding: 0 20px;
+    }
+}

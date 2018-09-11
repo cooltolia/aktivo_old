@@ -1,0 +1,31 @@
+.faq-appeal {
+    padding: 64px 0;
+
+    font-family: $segoe;
+    color: $lighttext;
+
+    background-color: rgba($color: #000000, $alpha: 0.9);
+}
+
+.faq-appeal__wrapper {
+    width: 315px;
+    margin: 0 auto;
+}
+
+.faq-appeal__text {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.faq-appeal__button {
+    @include btn-theme();
+    width: 272px;
+    margin: 0 auto;
+    padding: 16px;
+
+    font-size: 18px;
+}
+

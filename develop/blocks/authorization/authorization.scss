@@ -27,19 +27,24 @@
 .authorization__logged {
     position: relative;
     width: 180px;
+    top: 10px;
 }
 
 .authorization__toggle {
     position: relative;
     width: 100%;
     padding: 10px;
-    padding-right: 50px;
+    padding-right: 20px;
     display: inline-block;
     color: $lighttext;
     background: #4ec673;
     text-align: left;
     border-radius: 3px;
     border: none;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     &::after {
         content: '';
