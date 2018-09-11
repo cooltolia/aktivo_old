@@ -1,0 +1,215 @@
+.security-slider {
+    padding: 70px 0 95px;
+    font-family: $segoe;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+}
+
+.security-slider__heading {
+    @include visually-hidden;
+}
+
+.security-slider__slider {
+    width: 745px;
+    margin: 0 auto 45px;
+
+    .slick-list {
+        padding-left: 9% !important;
+        padding-right: 9% !important;
+    }
+
+    .slick-track {
+        max-width: 100% !important;
+        transform: translate3d(0, 0, 0) !important;
+    }
+
+    .slick-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 0;
+        width: 100% !important;
+        transform: translate3d(0, 0, 0);
+        transition: transform 1s, opacity 1s;
+        will-change: transform;
+
+        height: auto;
+        min-height: 1px;
+    }
+
+    .slick-snext,
+    .slick-sprev {
+        display: block;
+    }
+
+    .slick-current {
+        opacity: 1;
+        position: relative;
+        display: block;
+        transform: translate3d(0, 0, 0) scale(1);
+        z-index: 2;
+        background-color: #fff;
+
+        &>* {
+            opacity: 1;
+        }
+    }
+
+    .slick-snext {
+        opacity: 1;
+        transform: translate3d(21%, 0, 0px) scale(0.8);
+        z-index: 1;
+        background-color: #fff;
+
+        &>* {
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+    }
+
+    .slick-sprev {
+        opacity: 1;
+        transform: translate3d(-30%, 25px, 0px) scale(0.7);
+        background-color: #fff;
+
+        &>* {
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+    }
+
+    .slick-arrow {
+        position: absolute;
+        z-index: 9;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        margin: 0;
+        top: 70px;
+        border: none;
+        outline: none;
+        font-size: 0;
+        background-color: transparent;
+        background-image: url('../images/layout/slider-arrow.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background 300ms ease;
+
+        &:hover {
+            background-image: url('../images/layout/slider-arrow-active.svg');
+        }
+    }
+
+    .slick-next {
+        right: 100px;
+    }
+
+    .slick-prev {
+        left: 100px;
+        transform: rotate(-180deg);
+    }
+}
+
+.security-slider__slide {
+    padding: 32px 32px 38px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 30px 0 rgba(60, 123, 216, 0.1);
+    cursor: grab;
+}
+
+.security-slider__slide-icon {
+    display: block;
+    width: 106px;
+    height: 107px;
+    margin: 0 auto 20px;
+
+    img {
+        @include img
+    }
+}
+
+.security-slider__slide-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 700;
+}
+
+.security-slider__slide-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.security-slider__appeal {
+    width: 355px;
+    margin: 0 auto;
+}
+
+.security-slider__appeal-text {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 700;
+    color: $lighttext;
+}
+
+.security-slider__appeal-button {
+    @include btn-theme();
+    width: 272px;
+    margin: 0 auto;
+    padding: 16px;
+
+    font-size: 18px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .security-slider {
+        padding-top: 50px;
+        padding-bottom: 62px;
+    }
+
+    .security-slider__slider {
+        width: 100%;
+        max-width: 480px;
+
+        .slick-list {
+            padding-left: 8% !important;
+            padding-right: 8% !important;
+        }
+
+        .slick-arrow {
+            top: 60px;
+        }
+
+        .slick-next {
+            right: 50px;
+        }
+
+        .slick-prev {
+            left: 50px;
+        }
+    }
+
+    .security-slider__slide {
+        padding: 20px 24px 30px;
+    }
+
+    .security-slider__slide-title {
+        margin-bottom: 5px;
+
+        font-size: 18px;
+    }
+}
