@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>AKTIVO</title>
+    <link rel="icon" type="image/png" href="/favicon_16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/favicon_32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
+    <meta name="theme-color" content="#3aa5ed"/>
+    <!-- build:css css/vendor.css    -->
+    <link href="libs/slick/slick.css" rel="stylesheet"/>
+    <link href="libs/animate.css" rel="stylesheet"/>
+    <!-- endbuild-->
+    <!-- build:css css/main.css-->
+    <link href="css/main.css" rel="stylesheet"/>
+    <!-- endbuild -->
+    <!--[if lte IE 9]>
+    <script src="libs/ie/html5shiv.js"></script>
+    <script src="libs/ie/respond.src.js"></script>
+    <script src="libs/ie/respond.matchmedia.addListener.src.js"></script>
+    <script src="libs/polyfills/background_size_emu.js"></script>
+    <![endif]
+    -->
+  </head>
+  <body class="pageload no-js"><!-- main-header --> 
+    <header class="main-header">
+      <div class="inner">
+        <div class="main-header__inner">
+          <div class="main-header__hamburger mobile-only"><!-- hamburger --> 
+            <div class="hamburger hamburger hamburger--dark">
+              <div class="hamburger__line">
+              </div>
+              <div class="hamburger__line">
+              </div>
+              <div class="hamburger__line">
+              </div>
+            </div><!--/ hamburger --> 
+          </div><a class="main-header__logo" href="/"><img src="images/layout/logo.svg" width="88" alt="Aktivo"/></a>
+          <div class="main-header__contacts">
+            <div class="main-header__tel desktop-only"> <a href="tel:88005006464" class="number">8 (800) 500-64-64</a><span class="info">— звонок бесплатный</span>
+            </div><a href="tel:88005006464" class="main-header__icon main-header__icon--tel mobile-only"></a><a href="#" class="main-header__icon main-header__icon--user mobile-only"></a>
+          </div>
+          <div class="main-header__navigation desktop-only"><!-- main-nav --> 
+            <nav class="main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="/realty" class="main-nav__link">Наши объекты</a>
+                </li>
+                <li class="main-nav__item"><a href="/howitworks" class="main-nav__link">Клиентам</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/howitworks" class="main-nav__sublink">Как это работает</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/security" class="main-nav__sublink">Безопасность</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/faq" class="main-nav__sublink">FAQ</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/forowners" class="main-nav__sublink">Продать недвижимость</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/about/story" class="main-nav__link">О нас</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/about/story" class="main-nav__sublink">О нас</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="about/vacancies" class="main-nav__sublink">Карьера</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/about/contacts" class="main-nav__sublink">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/blog" class="main-nav__link">Блог</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/blog/trends" class="main-nav__sublink">Тренды рынка</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/summary" class="main-nav__sublink">Ликбез</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/news" class="main-nav__sublink">Новости компании</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/press" class="main-nav__sublink">СМИ о нас</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/club" class="main-nav__link">Клуб Liberty</a>
+                </li>
+              </ul>
+            </nav><!--/ main-nav --> 
+          </div>
+          <div class="main-header__authorization desktop-only"><!-- authorization --> 
+            <div class="authorization"><a href="#" class="authorization__login">Вход</a>
+            </div><!--/ authorization --> 
+          </div>
+        </div>
+      </div>
+    </header><!--/ main-header --> <!-- mobile-nav --> 
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item"><a href="/realty" class="mobile-nav__link">Наши объекты</a>
+        </li>
+        <li class="mobile-nav__item"><a href="/howitworks" class="mobile-nav__link">Клиентам</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/howitworks" class="mobile-nav__sublink">Как это работает</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/security" class="mobile-nav__sublink">Безопасность</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/faq" class="mobile-nav__sublink">FAQ</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/forowners" class="mobile-nav__sublink">Продать недвижимость</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/about/story" class="mobile-nav__link">О нас</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/about/story" class="mobile-nav__sublink">О нас</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="about/vacancies" class="mobile-nav__sublink">Карьера</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/about/contacts" class="mobile-nav__sublink">Контакты</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/blog" class="mobile-nav__link">Блог</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/blog/trends" class="mobile-nav__sublink">Тренды рынка</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/summary" class="mobile-nav__sublink">Ликбез</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/news" class="mobile-nav__sublink">Новости компании</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/press" class="mobile-nav__sublink">СМИ о нас</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/club" class="mobile-nav__link">Клуб Liberty</a>
+        </li>
+      </ul>
+    </nav><!--/ mobile-nav --> 
+    <div class="inner"><!-- breadcrumbs --> 
+      <ol class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active">Объекты
+        </li>
+      </ol><!--/ breadcrumbs --> 
+    </div><!-- faq-content --> 
+    <div class="faq-content">
+      <div class="inner">
+        <h1 class="faq-content__heading">Частые вопросы
+        </h1>
+        <div class="faq-content__wrapper">
+          <div class="faq-content__list">
+            <div data-for="answer1" class="faq-content__question active">Преимущества AKTIVO
+              <div class="icon"></div>
+            </div>
+            <div data-id="answer1" class="faq-content__answer active">
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Что такое краудфандинг в недвижимость?
+                </div>
+                <p class="faq-content__text">Краудфандинг в недвижимость (крауд-инвестиции, коллективные инвестиции) - способ приобретения масштабных высокодоходных объектов недвижимости институционального качества для получения стабильного арендного дохода путем объединения средств нескольких инвесторов.<br> Краудфандинговые инвестиции хорошо зарекомендовали себя по всему миру, в настоящее время в Европе и развитых странах Азии насчитывается более 150 компаний, предлагающих real estate crowdfunding & crowdinvesting.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">В чем преимущества инвестирования с AKTIVO?
+                </div>
+                <p class="faq-content__text">AKTIVO – компания краудфандинга коммерческой недвижимости №1 в России. Это уникальная возможность комфортно и безопасно инвестировать любую сумму от 300 000 рублей в тщательно отобранные объекты наилучшего качества. <br> AKTIVO позволяет разделить стоимость объекта между участниками, при этом размер инвестиций каждого участника зависит только от его выбора. <br> С другой стороны, AKTIVO – не только краудфандинговая площадка, но и профессиональная команда, которая выполняет наиболее сложные и хлопотные задачи за вас:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">Отбор и тщательный всесторонний аудит объектов (доходность, коммерческие, юридические, технические и др. параметры)
+                  </li>
+                  <li class="faq-content__list-item">Поиск соинвесторов и безопасное сопровождение сделки
+                  </li>
+                  <li class="faq-content__list-item">Обслуживание и управление объектами после покупки (решение вопросов с арендаторами, коммунальными службами и государственным органами)
+                  </li>
+                </ul>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">В чем отличие AKTIVO от банковских депозитов и других финансовых инструментов?
+                </div>
+                <p class="faq-content__text">Инвестиции в недвижимость с AKTIVO обладают рядом преимуществ перед другими финансовыми инструментами: это намного выгоднее, чем банковские вклады, средняя ставка по которым составляет в среднем 6% годовых, и безопаснее с учетом сложившейся ситуации в банковском секторе. По сравнению с паевыми фондами, инвестиции в недвижимость намного прозрачнее т.к. инвестор выбирает конкретное здание и может получить полную информацию о нем до совершения сделки. По сравнению с биржевыми инструментами вложения в недвижимость более безопасны и обеспечивают доходность на уровне 15-17% годовых с учетом роста стоимости самой недвижимости. При инвестировании в коммерческую недвижимость покупатель несет меньшие инфляционные и девальвационные риски (риск обесценения национальной валюты), поскольку стоимость недвижимости растет вместе с инфляцией и переоценивается с учетом текущей экономической ситуации. Инвестиции с AKTIVO – уникальный шанс защитить и сохранить реальную стоимость своих активов и получать регулярный доход, защищенный от инфляции.
+                </p>
+              </div>
+            </div>
+            <div data-for="answer2" class="faq-content__question">Доходность
+              <div class="icon"></div>
+            </div>
+            <div data-id="answer2" class="faq-content__answer">
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">За счет чего формируется доход инвестора?
+                </div>
+                <p class="faq-content__text">Доход формируется за счет арендных потоков и прочих доходов от объекта недвижимости.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">В какие сроки выплачивается доход на инвестиции?
+                </div>
+                <p class="faq-content__text">Регулярные ежемесячные выплаты производятся инвесторам уже на следующий месяц после приобретения объекта. При этом в личном кабинете инвестора формируется график получения доходов от объектов, находящихся в фондах.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">На какой доход можно рассчитывать?
+                </div>
+                <p class="faq-content__text">Доходность варьируется в зависимости от объекта и ситуации на рынке. В профиле каждого объекта указывается прогнозная доходность. В среднем она составляет 15% - 17% годовых и состоит из ежемесячно выплачиваемой доходности от аренды из расчета 9-12% годовых и роста стоимости самого объекта недвижимости на 5-7% в год. <br> Доходность объектов обеспечивается тщательным отбором объектов инвестирования.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какими налогами облагается доход с инвестиций с AKTIVO?
+                </div>
+                <p class="faq-content__text">Система получения дохода от инвестиций с AKTIVO абсолютно прозрачна. Налог на доходы инвесторов при погашении паев или получении промежуточного инвестиционного дохода составляет:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">13% — для физических лиц
+                  </li>
+                  <li class="faq-content__list-item">20% — для юридических лиц
+                  </li>
+                  <li class="faq-content__list-item">6% или 15% для лиц с упрощенной системой налогообложения
+                  </li>
+                  <li class="faq-content__list-item">30% — для нерезидентов — физических лиц
+                  </li>
+                  <li class="faq-content__list-item">20% — для нерезидентов — юридических лиц
+                  </li>
+                </ul>
+                <p class="faq-content__text">Для нерезидентов налоговая ставка определяется соглашением или конвенцией при условии, что лицо-нерезидент является резидентом страны, с которой заключено соглашение или конвенция об избежание двойного налогообложения. <br> Отложенная уплата налога на прибыль позволяет реинвестировать доход, полученный от сделок с имуществом фонда в полном объеме на срок до момента получения дохода пайщиком (погашения паев, выплаты промежуточного дохода).
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Выплачивает ли AKTIVO проценты на средства инвесторов или сделанные инвестиции?
+                </div>
+                <p class="faq-content__text">AKTIVO не является банком и не оказывает услуг по размещению депозитов или инвестированию в ценные бумаги. Мы не начисляем процентов, мы даем возможность совместно владеть недвижимостью с высоким рейтингом надежности и получать доход от сдачи ее в аренду. AKTIVO выплачивает только рентный доход, соответствующий доле инвестора в объекте недвижимости.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какое вознаграждение получает AKTIVO? 
+                </div>
+                <p class="faq-content__text">AKTIVO за сопровождение сделки составляет 2% от размера инвестиций. Комиссия взимается после покупки объекта недвижимости. Денежные средства идут на оплату услуг AKTIVO — подбор, проверку и оценку объекта недвижимости, обеспечение работы интернет — платформы и информационной поддержки пользователей.
+                </p>
+                <p class="faq-content__text">Ежемесячное вознаграждение AKTIVO составляет 12.5% от чистого операционного дохода от объекта, который определяется как валовый доход от аренды за вычетом операционных затрат по объекту:
+                </p>
+                <ul class="faq-content__list faq-content__list--bullits">
+                  <li class="faq-content__list-item">Эксплуатационные расходы
+                  </li>
+                  <li class="faq-content__list-item">Проведение ремонтных работ
+                  </li>
+                  <li class="faq-content__list-item">Налог на имущество
+                  </li>
+                  <li class="faq-content__list-item">Земельный налог или аренда на земельный участок под объектом
+                  </li>
+                  <li class="faq-content__list-item">Страховка
+                  </li>
+                  <li class="faq-content__list-item">Охрана территории и объекта
+                  </li>
+                  <li class="faq-content__list-item">Уборка территории и объекта
+                  </li>
+                  <li class="faq-content__list-item">Обеспечение противопожарной безопасности
+                  </li>
+                  <li class="faq-content__list-item">Услуги управляющей компании фонда
+                  </li>
+                  <li class="faq-content__list-item">Другие необходимые расходы
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div data-for="answer3" class="faq-content__question">Покупка активов
+              <div class="icon"></div>
+            </div>
+            <div data-id="answer3" class="faq-content__answer">
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Кто может инвестировать с AKTIVO?
+                </div>
+                <p class="faq-content__text">С AKTIVO могут инвестировать как граждане РФ, так и нерезиденты. Также инвестиции могут осуществлять юридические лица любой страны. Налогообложение инвесторов зависит от резидентства.  
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Как выглядитпроцесс покупки недвижимости на платформе AKTIVO?
+                </div>
+                <p class="faq-content__text">Процесс покупки недвижимости состоит из нескольких простых шагов:
+                </p>
+                <p class="faq-content__text">Зарегистрируйтесь и заполните анкету инвестора на сайте AKTIVO <br> Выберите объект недвижимости из каталога, определите сумму инвестирования.
+                </p>
+                <p class="faq-content__text">Необходимый пакет документов (договор инвестирования, анкета, доверенность управляющей компании) формируется автоматически на основании предоставленных данных и становится доступным в вашем личном кабинете на сайте AKTIVO.
+                </p>
+                <p class="faq-content__text">Назначьте встречу с Вашим личным инвестиционным консультантом для подписания договора в удобное для вас время. <br> Перечислите денежные средства на специальный расчетный счет AKTIVO <br> Как только сделка будет закрыта, Вы получите официальное уведомление о передаче доли в выбранном объекте.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Что случится, если AKTIVO не соберет нужное количество средств для покупки объекта?
+                </div>
+                <p class="faq-content__text">Если в течение срока формирования фонда необходимая для приобретения объекта сумма не будет собрана, деньги будут возвращены инвесторам в полном объеме.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Как структурированы инвестиции?
+                </div>
+                <p class="faq-content__text">Управляющая компания (УК) создает Закрытый паевой инвестиционный фонд (далее фонд или ЗПИФ) для приобретения конкретного объекта недвижимости. Форма ЗПИФ является наиболее защищенной и безопасной для коллективного инвестирования <br> Собственник объекта формирует ЗПИФ недвижимостью <br> Управляющая компания выпускает ценные бумаги (паи), которые удостоверяют право на долю в имуществе фонда (в данном случае, конкретный объект недвижимости и доход от него) и передает 100% паев продавцу <br> Право собственности переходит пайщикам ЗПИФ <br> AKTIVO заключает с инвестором договор купли-продажи выпускаемых паев. Согласно договору, инвестор перечисляет денежные средства на специальный счет AKTIVO <br> AKTIVO формирует необходимую сумму для покупки на специальном счете и покупает паи фонда у собственника объекта <br> Средства, полученные для покупки паев, переводятся собственнику объекта. Согласно договору купли-продажи средства могут быть использованы исключительно для покупки конкретного выбранного вами объекта недвижимости <br> AKTIVO передает данные ценные бумаги каждому из соинвесторов объекта. С данного момента каждый инвестор становится совладельцем имущества фонда и получает право на арендный доход
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какие функции выполняет Управляющая компания?
+                </div>
+                <p class="faq-content__text">Кроме формирования ЗПИФ под каждый объект недвижимости, в функции УК входит: получение денежных средств в оплату паев и выдача паев, осуществление выплат инвесторам, осуществление внутреннего контроля деятельности, в том числе разработка правил доверительного управления фондом, совершает операции с активами фонда и иные операции.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Как я могу продать свою долю недвижимости?
+                </div>
+                <p class="faq-content__text">У инвесторов существует возможность продать свою долю в недвижимости двумя способами:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">в частном порядке любому лицу
+                  </li>
+                  <li class="faq-content__list-item">через торговую площадку AKTIVO другим инвесторам
+                  </li>
+                </ul>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Как происходит проверка и отбор объектов?
+                </div>
+                <p class="faq-content__text">Каждый объект недвижимости, размещенный на торговой площадке, проходит тщательную проверку при участии юридических, аудиторских и финансовых консультантов.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Кто и как осуществляет управление объектами после покупки?
+                </div>
+                <p class="faq-content__text">После совершения покупки AKTIVO выполняет функцию обслуживания и управления объектами с целью максимизации арендных доходов и оптимизации затрат. При этом инвесторы получают ежемесячный финансовый и операционный отчет. В функцию управления объектами входят:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">Работа с арендаторами (поиск, переговоры, заключение договоров, контроль своевременности оплаты)
+                  </li>
+                  <li class="faq-content__list-item">Эксплуатация объектов (работа с коммунальными службами, организация ремонта и обслуживания зданий)
+                  </li>
+                  <li class="faq-content__list-item">Осуществление взаимодействия с прочими контрагентами
+                  </li>
+                </ul>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Может ли объект потребовать дополнительных вложений?
+                </div>
+                <p class="faq-content__text">Нет. В форс-мажорных обстоятельствах или в случае простоя объекта могут быть снижены или остановлены выплаты, но AKTIVO гарантирует, что даже это не повлечет за собой дополнительные расходы для инвесторов. Все затраты, связанные с объектом на период отсутствия арендных потоков, компания возмещает за счет собственных средств. Объект может потребовать отдельных вложений, если затраты не компенсируются страховой компанией или арендатором. Владельцы паев несут такие же риски как и обычные собственники недвижимости.
+                </p>
+              </div>
+            </div>
+            <div data-for="answer4" class="faq-content__question">Налогообложение инвестора
+              <div class="icon"></div>
+            </div>
+            <div data-id="answer4" class="faq-content__answer">
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какими налогами будет облагаться ежемесячный доход, получаемый инвестором - физическом лицом?
+                </div>
+                <p class="faq-content__text">Управляющая компания Фонда обязана удерживать и перечислять в бюджет РФ НДФЛ в качестве налогового агента. Удержание производится по ставке 13% для налоговых резидентов и по ставке 30% для лиц, не являющихся налоговыми резидентами.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какими налогами будет облагаться ежемесячный доход, получаемый инвестором - физическом лицом, зарегистрированным в качестве ИП?
+                </div>
+                <p class="faq-content__text">Несмотря на то, что физическое лицо зарегистрировано в качестве ИП, доход по операциям с паями регулируется отдельными положениями НК, согласно которым Управляющая компания Фонда будет обязана удерживать НДФЛ в качестве налогового агента (13% для налоговых резидентов, 30% для налоговых нерезидентов), вне зависимости от системы налогообложения, применяемой ИП (ОСН или УСН).
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какими налогами будет облагаться ежемесячный доход, получаемый инвестором - российским юридическим лицом (на ОСН или УСН)?
+                </div>
+                <p class="faq-content__text">Российское юридическое лицо, применяющее ОСН, будет обязано включить в налогооблагаемую базу получаемый ежемесячный доход и заплатить с него налог на прибыль по ставке 20%. Российское юридическое лицо, применяющее УСН по методу 15% с доходов, уменьшенных на расходы, также обязано будет включить в свою налогооблагаемую базу получаемый ежемесячный доход. Обращаем внимание, что в соответствии со ст. 346.14 НК организации, являющиеся участником договора доверительного управления, не могут применять УСН по методу 6% с доходов (в обратном случае они будут обязаны перейти на ОСН).
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какими налогами будет облагаться ежемесячный доход, получаемый инвестором - иностранным юридическим лицом, не осуществляющим в РФ деятельность через постоянное представительство?
+                </div>
+                <p class="faq-content__text">С данного дохода Управляющая компания Фонда обязана удержать налог на прибыль в качестве налогового агента по ставке 15% (при наличии соглашения об избежании двойного налогообложения между РФ и юрисдикцией, в которой зарегистрирована иностранная компания, налоговая ставка может быть снижена).
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Какие налоги инвестор будет обязан уплатить в случае выхода из проекта и продажи паев?
+                </div>
+                <p class="faq-content__text">При выходе из проекта и продаже паев инвестор будет обязан уплатить НДФЛ (для физических лиц) или налог на прибыль (для российских юридических лиц) с положительного финансового результата (прибыли), полученного от продажи паев.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">При каких условиях физическое лицо является или не является налоговым резидентом РФ?
+                </div>
+                <p class="faq-content__text">Налоговое резидентство физических лиц установлено статьей 207 НК РФ. Согласно ему, физическое лицо признается резидентом РФ при нахождении на территории РФ не менее 183 календарных дней в течение 12 месяцев. Если физическое лицо является налоговым резидентом РФ, то общая ставка НДФЛ для него составляет 13%, когда для нерезидентов общая ставка НДФЛ составляет 30%.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">В чем заключаются различия в системах налогообложения в ОСН и УСН?
+                </div>
+                <p class="faq-content__text">Общая система налогообложения (ОСН), предполагает уплату налогоплательщиком НДС, налога на прибыль организаций (для юридических лиц) и НДФЛ (для физических лиц, зарегистрированных в качестве ИП) а также налога на имущество. При выполнении определенных условий, физические лица, зарегистрированные в качестве ИП, и юридические лица могут применять упрощенную систему налогообложения (УСН). При применении УСН налогоплательщики получают освобождение от НДС, налога на прибыль (для юридических лиц), НДФЛ в части предпринимательской деятельности (для ИП), налога на имущество (за исключением налога в отношении имущества, налоговая база по которому определяется как кадастровая стоимость), вместо которых уплачивают единый налог по УСН либо по ставке 6% с доходов, либо по ставке 15% с доходов, уменьшенных на расходы. Обращаем внимание, что ПИФ не имеет право применять УСН.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Кто является плательщиком налога на имущество и земельного налога?
+                </div>
+                <p class="faq-content__text">В соответствии со статьями 378 и 388 НК РФ имущество, составляющее паевой инвестиционный фонд, подлежит налогообложению налогом на имущество и земельным налогом у Управляющей компанией фонда. При этом налог на имущество и земельный налог уплачивается за счет средств паевого инвестиционного фонда.
+                </p>
+              </div>
+            </div>
+            <div data-for="answer5" class="faq-content__question">Безопасность
+              <div class="icon"></div>
+            </div>
+            <div data-id="answer5" class="faq-content__answer">
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">В чем состоит преимущество инвестирования через ЗПИФ?
+                </div>
+                <p class="faq-content__text">Гибкость и удобство инвестирования:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">инвестиционные паи могут обращаться на фондовых биржах и на внебиржевом рынке;
+                  </li>
+                  <li class="faq-content__list-item">возможность выйти из проекта путем продажи паев;
+                  </li>
+                  <li class="faq-content__list-item">возможность перераспределения собственности через продажу паев;
+                  </li>
+                  <li class="faq-content__list-item">возможность получения кредита под залог инвестиционных паев.
+                  </li>
+                </ul>
+                <p class="faq-content__text">Защита собственности:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">обращение взыскания по долгам владельцев паев фонда распространяется только на принадлежащие им инвестиционные паи;
+                  </li>
+                  <li class="faq-content__list-item">фонд не отвечает по долгам управляющей компании и владельцев паев;
+                  </li>
+                  <li class="faq-content__list-item">ограничивается доступ к информации о собственниках активов фонда.
+                  </li>
+                </ul>
+                <p class="faq-content__text">Высокий уровень контроля за инвестициями:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">жесткий контроль со стороны контролирующих и регулирующих органов;
+                  </li>
+                  <li class="faq-content__list-item">контроль за распоряжением имуществом фонда со стороны специализированного депозитария;
+                  </li>
+                  <li class="faq-content__list-item">обязательное раскрытие информации;
+                  </li>
+                  <li class="faq-content__list-item">установленная законодательством четкая периодичность проведения независимого аудита фонда и оценки активов фонда.
+                  </li>
+                </ul>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Как обеспечивается безопасность денежных средств во время сделки?
+                </div>
+                <p class="faq-content__text">Для операций со средствами инвесторов разработана безопасная система, которая состоит из нескольких частей:
+                </p>
+                <ul class="faq-content__list">
+                  <li class="faq-content__list-item">Переданные средства хранятся на специальном банковском счете AKTIVO и могут быть перечислены только в счет приобретения инвестиционных паев. В случае, если необходимая сумма не собрана, все деньги возвращаются инвесторам без комиссий;
+                  </li>
+                  <li class="faq-content__list-item">Доходы инвестора ежемесячно автоматически выплачиваются независимой управляющей компанией;
+                  </li>
+                  <li class="faq-content__list-item">Для совершения операций по продаже паев, изменения данных счета, персональных данных используется система верификации;
+                  </li>
+                  <li class="faq-content__list-item">Для совершения операций по продаже паев, изменения данных счета, персональных данных используется система верификации по SMS;
+                  </li>
+                  <li class="faq-content__list-item">Имущество паевого фонда не может быть взыскано даже в судебном порядке
+                  </li>
+                </ul>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">
+                </div>
+                <p class="faq-content__text">Центральный банк Российской Федерации (Банк России) постоянно контролирует работу управляющей компании, специализированного депозитария и регистратора фонда <br> Имущество фонда учитывается управляющей компанией на отдельном балансе <br> Специализированный депозитарий не вправе давать управляющей компании свое согласие на совершение сделки и распоряжение имуществом фонда, если при этом будут нарушены нормы законодательства или Правила фонда <br> Фонд не отвечает своим имуществом по обязательствам и долгам управляющей компании <br> По долгам пайщиков фонда взыскание обращается на принадлежащие им паи и не распространяется на имущество, принадлежащее фонду.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <div class="faq-content__title">Что произойдет, если AKTIVO попадет в трудное финансовое положение или прекратит свое существование?
+                </div>
+                <p class="faq-content__text">Вложения инвесторов обособлены от обязательств AKTIVO и управляющей компании. Они структурированы в отдельный ЗПИФ. Один объект – один фонд. Независимая управляющая компания обеспечивает безопасность паевых фондов и финансовых операций. Если AKTIVO или управляющая компания попадут в сложное финансовое положение, это не повлияет на имущество фонда, управление в таком случае перейдет к другой управляющей компании, без финансовых потерь.
+                </p>
+              </div>
+            </div>
+            <div data-for="answer6" class="faq-content__question">Словарь терминов
+              <div class="icon"></div>
+            </div>
+            <div data-id="answer6" class="faq-content__answer">
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Инвестор</b> — юридическое или физическое лицо, вкладывающее собственные, заемные или привлеченные иным способом средства в инвестиционные объекты c целью получения дополнительного дохода.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Инвестиционный объект</b> — любой объект предпринимательской деятельности, на который направлены инвестиции. В случае AKTIVO – объекты недвижимости, размещенные на площадке.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Инвестиционный комитет</b> — коллегиальный орган, состоящий из профессионалов инвестиционной деятельности, который отбирает объекты для инвестиций и утверждает инвестиционную стратегию.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Инвестиционный риск</b> — вероятность частичной или полной потери вложенных средств, которая может быть вызвана различными причинами, в том числе и форс-мажорного характера.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Комиссия за управление объектом</b> — денежные средства, выплачиваемые управляющей компании, за комплекс действий, направленных на эффективное функционирование объекта инвестиций клиента.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Комиссия за транзакцию</b> — разовая выплата, взимаемая за организацию процесса структурирования объекта недвижимости.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Эксплуатирующая компания фонда</b> — ООО «Активо-Инвест» - компания, которая управляет арендными отношениями и эксплуатацией объекта, в целях получения прибыли и в интересах инвесторов.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Управляющая компания объекта</b> — ООО «Активо» - компания, которая управляет арендными отношениями и эксплуатацией объекта, в целях получения прибыли и в интересах инвесторов.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Доверительное управление</b> — услуга по управлению вложенными средствами на основании правил закрытого паевого инвестиционного фонда и договора с управляющей компанией, направленная на реализацию поручений клиента, связанных с инвестированием в конкретный объект недвижимости.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Налог на доходы физических лиц (НДФЛ)</b> — основной вид прямых налогов, исчисляемый в процентах от совокупного дохода физических лиц за вычетом документально подтвержденных расходов, в соответствии с действующим законодательством.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Инвестиционный меморандум</b> — документ, содержащий структурированную информацию для предоставления потенциальным инвесторам.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Отчет эксплуатирующей компании объекта</b> — ежемесячный отчет о произведенных затратах и полученных операционных доходах.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Отчет управляющей компании фонда</b> — ежеквартальный отчет о доходах и стоимости имущества фонда.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Закрытый паевой инвестиционный фонд (ЗПИФ)</b> — обособленный имущественный комплекс без образования юридического лица. Имущество ЗПИФ принадлежит владельцам инвестиционных паев на праве общей долевой собственности. Юридической основой функционирования ЗПИФ является договор доверительного управления (Правила фонда), в соответствии с которым учредитель управления передает имущество в фонд, а управляющая компания осуществляет управление активами ЗПИФ.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Рентный Закрытый паевой инвестиционный фонд</b> — это фонд, ориентированный на получение дохода от сдачи недвижимости в аренду. Такой фонд, как правило, не предполагает реинвестирования, а полученный доход выплачивает пайщикам в виде промежуточных выплат.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Имущество фонда</b> — в доверительное управление ЗПИФ учредители управления могут передавать денежные средства, а также иное имущество, предусмотренное инвестиционной декларацией фонда и действующим законодательством.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Правила доверительного управления (ПДУ)</b> — это основной документ фонда, содержащий условия договора доверительного управления фондом; в нем определяются права и обязанности управляющей компании и пайщиков, процедура приобретения и выкупа паев, порядок формирования фонда. Правила доверительного управления фондом разрабатываются управляющей компанией на основе Типовых правил, утвержденных Правительством РФ.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Инвестиционный пай</b> — это ценная бумага, удостоверяющая права ее владельца на долю имущества составляющего ЗПИФ. Учет прав на инвестиционные паи осуществляется специализированным регистратором на лицевых счетах в реестре владельцев инвестиционных паев.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Стоимость пая</b> — величина, определяемая путем деления стоимости чистых активов фонда на количество размещенных инвестиционных паев
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Стоимость чистых активов (СЧА)</b> — это разница между активами и пассивами фонда. Активы фонда — это имущество (ценные бумаги, депозиты, денежные средства, пр.) и дебиторская задолженность, а пассивы — кредиторская задолженность и резервы предстоящих расходов и платежей.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Правила управления ЗПИФ</b> — правила, регламентирующие инвестиционную политику, управление средствами, права и обязанности инвесторов и управляющей компании фонда.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Транзитный счет ЗПИФ</b> — счет, на котором формируется фонд для покупки объекта.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Капитализация объекта</b> — процесс, определяющий взаимосвязь будущего дохода и текущей стоимости объекта.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Валовый арендный доход</b> — суммарный годовой доход предприятия, исчисленный в денежном выражении, полученный в результате аренды объекта собственности.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Эксплуатационные расходы</b> — затраты, связанные с функционированием объекта аренды. Состав затрат определяется в индивидуальном порядке к каждому объекту аренды.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Чистый операционный доход</b> — разница между валовыми доходами от объекта и валовыми расходами по объекту.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Фондирование объекта</b> — Процесс сбора средств для приобретения объекта недвижимости.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Due Dilingence (DD, Дью дилидженс, ДД)</b> — всесторонняя проверка законности и коммерческой привлекательности планируемой сделки или инвестиционного проекта.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Он-лайн платформа</b> — сервис в сети Интернет для донесения информации и определенных возможностей до пользователя.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Ликвидность</b> — способность активов быть быстро проданными по цене близкой к рыночной.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Период фондирования</b> — отрезок времени между началом и окончанием сбора финансовых средств под приобретение объекта недвижимости.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Рентабельность инвестиций</b> — использование средств, при котором осуществляется не только покрытие затрат доходами, но также получение прибыли.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Стоимость объекта</b> — наиболее вероятная цена, которую можно получить при продаже конкретного объекта.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Рентный доход</b> — доход от сдачи в аренду объекта собственности за вычетом расходов на его содержание.
+                </p>
+              </div>
+              <div class="faq-content__paragraph">
+                <p class="faq-content__text"><b>Коммерческая недвижимость</b> — здания, сооружения или земельные участки, используемые для коммерческой деятельности с последующим извлечением постоянной прибыли или прироста капитала от аренды или перепродажи.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/ faq-content --> <!-- faq-appeal --> 
+    <section class="faq-appeal">
+      <div class="faq-appeal__wrapper">
+        <p class="faq-appeal__text">Персональный финансовый советник ответит на ваши вопросы
+        </p>
+        <button class="faq-appeal__button">Позвоните мне
+        </button>
+      </div>
+    </section><!--/ faq-appeal --> <!-- main-footer --> 
+    <footer class="main-footer">
+      <div class="inner">
+        <div class="main-footer__wrapper">
+          <div class="main-footer__menu"><!-- footer-nav --> 
+            <div class="footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item"><a href="/" class="footer-nav__link">Главная</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Владельцам недвижимости</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Партнерская программа</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Недвижимость</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Как это работает</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Безопасность</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">FAQ</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">О нас</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Блог</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Контакты</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Карьера</a>
+                </li>
+              </ul>
+            </div><!--/ footer-nav --> 
+          </div>
+          <div class="main-footer__col">
+            <div class="main-footer__logo"><img src="images/layout/logo-white.svg" alt="AKTIVO" width="88"/>
+            </div>
+            <div class="main-footer__socials"><!-- socials --> 
+              <div class="socials"><a href="https://facebook.com/" target="_blank" rel="nofollow noopener" class="socials__item socials__item--facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.399 18" width='9' fill='#9b9b9b'>
+    <path id="Path_73" d="M5.585 18V9h2.484L8.4 5.9H5.585V4.348c0-.809.077-1.242 1.239-1.242h1.557V0H5.9C2.911 0 1.861 1.5 1.861 4.035V5.9H0V9h1.861v9z" class="cls-1" data-name="Path 73"/>
+</svg>
+</a><a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener" class="socials__item socials__item--twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12.991" width='16' fill='#9b9b9b'>
+    <path id="ic_twitter" d="M16 1.541a6.145 6.145 0 0 1-1.884.514A3.308 3.308 0 0 0 15.56.245a6.792 6.792 0 0 1-2.1.783A3.245 3.245 0 0 0 11.058 0 3.278 3.278 0 0 0 7.78 3.278a3.8 3.8 0 0 0 .073.758A9.351 9.351 0 0 1 1.1.612a3.166 3.166 0 0 0-.44 1.639 3.285 3.285 0 0 0 1.468 2.74 3.4 3.4 0 0 1-1.492-.416v.049a3.256 3.256 0 0 0 2.642 3.2 3.29 3.29 0 0 1-.856.122A4.766 4.766 0 0 1 1.81 7.9a3.294 3.294 0 0 0 3.058 2.275 6.6 6.6 0 0 1-4.085 1.397c-.269 0-.514-.024-.783-.049a9.289 9.289 0 0 0 5.04 1.468 9.273 9.273 0 0 0 9.346-9.346v-.416A7.07 7.07 0 0 0 16 1.541z" class="cls-1"/>
+</svg>
+</a><a href="https://vk.com/" target="_blank" rel="nofollow noopener" class="socials__item socials__item--vk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 10.125" width='18' fill='#9b9b9b'>
+    <path id="Path_74" d="M9.883 10.083a.919.919 0 0 0 .491-.212.768.768 0 0 0 .147-.466s-.02-1.423.65-1.633 1.508 1.376 2.408 1.984a1.722 1.722 0 0 0 1.2.359l2.4-.033s1.257-.076.661-1.051a7.962 7.962 0 0 0-1.787-2.039c-1.508-1.379-1.306-1.156.51-3.542C17.668 2 18.11 1.11 17.972.73c-.131-.363-.945-.266-.945-.266L14.321.48a.623.623 0 0 0-.35.061.754.754 0 0 0-.24.286 15.327 15.327 0 0 1-1 2.081c-1.205 2.017-1.687 2.124-1.884 2-.459-.293-.344-1.174-.344-1.8 0-1.956.3-2.771-.585-2.982A4.686 4.686 0 0 0 8.656 0 5.929 5.929 0 0 0 6.41.229c-.308.148-.546.48-.4.5a1.221 1.221 0 0 1 .8.4 2.545 2.545 0 0 1 .268 1.207s.159 2.3-.372 2.588c-.364.2-.865-.2-1.939-2.035A16.913 16.913 0 0 1 3.8.91a.8.8 0 0 0-.224-.3 1.117 1.117 0 0 0-.418-.163L.587.464S.2.474.059.64c-.126.147-.01.451-.01.451s2.013 4.645 4.294 6.987a6.225 6.225 0 0 0 4.464 2.005z" class="cls-1" data-name="Path 74"/>
+</svg>
+</a>
+              </div><!--/ socials --> 
+            </div>
+          </div>
+          <p class="main-footer__info">Стоимость инвестиционных паев может увеличиваться и уменьшаться, результаты инвестирования в прошлом не определяют доходы в будущем, AKTIVO не гарантирует доходность инвестиций. Информация об инвестиционных фондах, объектах недвижимости, экономические показатели, а также любые аналитические и информационные данные предоставлены ООО «Активо» на правах пайщика указанных закрытых паевых инвестиционных фондов.
+          </p>
+          <p class="main-footer__legal">&copy;&nbsp;2018&nbsp;ООО &laquo;Активо&raquo;. Все права защищены
+          </p>
+        </div>
+      </div>
+    </footer><!--/ main-footer --> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- build:js js/vendor.js -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/rangeslider.js"></script>
+    <script src="libs/highcharts.js"></script>
+    <script src="libs/wow.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/main.js-->
+    <script src="js/bem.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild-->
+    
+  </body>
+</html>
