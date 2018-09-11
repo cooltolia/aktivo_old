@@ -148,7 +148,7 @@
 }
 
 .security-slider__appeal {
-    width: 355px;
+    max-width: 355px;
     margin: 0 auto;
 }
 
@@ -171,9 +171,6 @@
 
     font-size: 18px;
 }
-
-
-
 
 @media (max-width: 768px) {
     .security-slider {
