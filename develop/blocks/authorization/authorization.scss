@@ -119,4 +119,8 @@
 
         fill: #fff;
     }
+
+    img {
+        @include img;
+    }
 }
