@@ -3,6 +3,111 @@ $.noConflict();
 jQuery(document).ready(function ($) {
     $("body").removeClass("pageload");
 
+     ;(function() {
+
+     
+
+     })();
+
+     
+     
+
+     
+     
+
+     
+     ;(function() {
+
+         $('.about-team__slider').slick({
+
+             slidesToShow: 4,
+
+             slidesToScroll: 2,
+
+             arrows: true,
+
+             dots: false,
+
+             infinite: true,
+
+             // variableWidth: true,
+
+             // autoplay: true,
+
+             // autoplaySpeed: 3000,
+
+             responsive: [{
+
+                 breakpoint: 1200,
+
+                 settings: {
+
+                     slidesToShow: 3,
+
+                     // variableWidth: false,
+
+                     // centerMode: true,
+
+                     // centerPadding: '30px'
+
+                 }
+
+             },
+
+             {
+
+                 breakpoint: 769,
+
+                 settings: {
+
+                     slidesToShow: 2,
+
+                     arrows: false,
+
+                 }
+
+             },
+
+             {
+
+                 breakpoint: 481,
+
+                 settings: {
+
+                     slidesToShow: 1,
+
+                     slidesToScroll: 1,
+
+                     arrows: false,
+
+                     centerMode: true,
+
+                     centerPadding: '30px',
+
+                     adaptiveHeight: true
+
+                 }
+
+             }
+
+         ]
+
+         });
+
+     
+
+         $('.about-team__slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+
+             $(currentSlide).addClass('active')
+
+         });
+
+     })();
+
+     
+     
+
+     
      
 
      
@@ -536,6 +641,109 @@ jQuery(document).ready(function ($) {
          update();
 
          return {};
+
+     })();
+
+     
+     ;
+
+     (function () {
+
+         var officeTitles = document.getElementsByClassName("contacts-offices__title");
+
+         var i;
+
+     
+
+         if (!officeTitles) return;
+
+     
+
+     
+
+         for (i = 0; i < officeTitles.length; i++) {
+
+             officeTitles[i].addEventListener("click", function () {
+
+     
+
+                 if (this.classList.contains('active')) {
+
+                     this.classList.remove('active');
+
+                     // debugger;
+
+                     var officeData = this.nextElementSibling;
+
+     
+
+                     /* Toggle between hiding and showing the active panel */
+
+                     if (officeData.style.maxHeight || officeData.style.maxHeight === '') {
+
+                         officeData.style.maxHeight = null;
+
+                     } else {
+
+                         officeData.style.maxHeight = officeData.scrollHeight + "px";
+
+                     }
+
+     
+
+                     officeData.classList.remove('active');
+
+                     return;
+
+                 }
+
+     
+
+                 for (i = 0; i < officeTitles.length; i++) {
+
+                     officeTitles[i].classList.remove("active");
+
+                 }
+
+     
+
+                 this.classList.add("active");
+
+                 var officeData = this.nextElementSibling;
+
+     
+
+                 var otherDatas = document.querySelectorAll('.contacts-offices__data');
+
+                 for (i = 0; i < otherDatas.length; i++) {
+
+                     otherDatas[i].style.maxHeight = null;
+
+                     otherDatas[i].classList.remove('active');
+
+                 }
+
+     
+
+                 // officeData.classList.add('active');
+
+     
+
+                 /* Toggle between hiding and showing the active panel */
+
+                 if (officeData.style.maxHeight) {
+
+                     officeData.style.maxHeight = null;
+
+                 } else {
+
+                     officeData.style.maxHeight = officeData.scrollHeight + "px";
+
+                 }
+
+             });
+
+         }
 
      })();
 
@@ -1109,377 +1317,73 @@ jQuery(document).ready(function ($) {
      })()
 
      
-     $(window).on('load', function() {
+     ;(function(){
 
-         var zoom = 17;
+         var zoom = 16;
 
-         var myMap;
-
-         if ($(window).width() < 480) {
-
-             zoom = 16;
-
-         }
+         var adress = [55.747115, 37.539078];
 
      
 
-         var address;
+         ymaps.ready(function () {
 
-         address = [55.772405830765955, 37.63848997486877];
-
-         var $map = $('#map');
-
-         var $mapFallback = $('.map__fallback');
-
-     
-
-         /** popup */
-
-     
-
-         var $header = $('.map__info-header'),
-
-             $body = $('.map__info-body');
-
-     
-
-         if ($(window).width() <= '767') {
-
-             $header.on('click', function () {
-
-     
-
-                 if ($header.hasClass('js-expanded')) {
-
-                     $body.slideUp();
-
-                     $header.removeClass('js-expanded');
-
-                 } else {
-
-                     $header.addClass('js-expanded');
-
-                     $body.slideDown();
-
-                 }
-
-             })
-
-         }
-
-     
-
-         //Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки)
-
-         var check_if_load = false;
-
-         var TRY = 1
-
-         function init() { 
-
-             if (ymaps.geocode === undefined) {
-
-                 // console.log('Попытка номер ' + TRY);
-
-                 TRY++
-
-                 return ymap();
-
-             }
-
-     
-
-             ymaps.ready(function() {
-
-                 ymaps.geocode(address).then(function (res) {
-
-                     myMap = new ymaps.Map('map', {
-
-                         center: res.geoObjects.get(0).geometry.getCoordinates(),
-
-                         zoom: zoom
-
-                     });
-
-     
-
-                     var pointA = [55.77295318071541, 37.63288889128495],
-
-                         pointB = address;
-
-     
-
-                     multiRoute = new ymaps.multiRouter.MultiRoute({
-
-                         referencePoints: [
-
-                             pointA,
-
-                             pointB
-
-                         ],
-
-                         params: {
-
-                             //Тип маршрутизации - пешеходная маршрутизация.
-
-                             routingMode: 'pedestrian',
-
-                         },
-
-                     }, {
-
-                             // Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
-
-                             //boundsAutoApply: true
-
-                             wayPointIconLayout: "none",
-
-                             routeActivePedestrianSegmentStrokeStyle: "solid",
-
-                             routeActiveStrokeColor: "3aa5ed",
-
-                             pinActiveIconFillColor: "000000",
-
-                         });
-
-     
-
-                     var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
-                         hintContent: 'Большая Сухаревская площадь, дом 9',
-
-                         balloonContent: 'Большая Сухаревская площадь, дом 9'
-
-                     }, {
-
-                             // Опции.
-
-                             // Необходимо указать данный тип макета.
-
-                             iconLayout: 'default#image',
-
-                             // Своё изображение иконки метки.
-
-                             iconImageHref: '../images/map-icon.svg',
-
-                             // Размеры метки.
-
-                             iconImageSize: [20, 30],
-
-                             // Смещение левого верхнего угла иконки относительно
-
-                             // её "ножки" (точки привязки).
-
-                             iconImageOffset: [-10, -30]
-
-                         });
-
-     
-
-                     var layer = myMap.layers.get(0).get(0);
-
-                     // Отслеживаем событие окончания отрисовки тайлов.
-
-                     waitForTilesLoad(layer).then(function () {
-
-                         // console.log('Карта загружена');
-
-                     });
-
-     
-
-                     myMap.geoObjects.add(myPlacemark);
-
-                     myMap.geoObjects.add(multiRoute);
-
-                     myMap.behaviors.disable('scrollZoom');
-
-                 });
-
-             })
-
-     
+             var myMap;
 
              
 
-     
+             ymaps.geocode(adress).then(function (res) {
 
-         }
+                 myMap = new ymaps.Map('map', {
 
-     
+                     center: res.geoObjects.get(0).geometry.getCoordinates(),
 
-         // Функция для определения полной загрузки карты (на самом деле проверяется загрузка тайлов) 
-
-         function waitForTilesLoad(layer) {
-
-             return new ymaps.vow.Promise(function (resolve, reject) {
-
-                 var tc = getTileContainer(layer),
-
-                     readyAll = true;
-
-                 tc.tiles.each(function (tile, number) {
-
-                     if (!tile.isReady()) {
-
-                         readyAll = false;
-
-                     }
+                     zoom: zoom
 
                  });
 
-                 if (readyAll) {
+                 var myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 
-                     resolve();
+                     hintContent: 'Пресненская наб., д.8, стр.1',
 
-                 } else {
+                     //balloonContent: 'Это красивая метка'
 
-                     tc.events.once("ready", function () {
+                 }, {
 
-                         resolve();
+                         // Опции.
+
+                         // Необходимо указать данный тип макета.
+
+                         iconLayout: 'default#image',
+
+                         // Своё изображение иконки метки.
+
+                         iconImageHref: '../images/map-icon.png',
+
+                         // Размеры метки.
+
+                         iconImageSize: [30, 30],
+
+                         // Смещение левого верхнего угла иконки относительно
+
+                         // её "ножки" (точки привязки).
+
+                         iconImageOffset: [-15, -30]
 
                      });
 
-                 }
+     
+
+                 // myMap.geoObjects.add(myPlacemark);
+
+                 myMap.behaviors.disable('scrollZoom');
 
              });
-
-         }
-
-     
-
-         function getTileContainer(layer) {
-
-             for (var k in layer) {
-
-                 if (layer.hasOwnProperty(k)) {
-
-                     if (
-
-                         layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer ||
-
-                         layer[k] instanceof ymaps.layer.tileContainer.DomContainer
-
-                     ) {
-
-                         return layer[k];
-
-                     }
-
-                 }
-
-             }
-
-             return null;
-
-         }
-
-     
-
-         // Функция загрузки API Яндекс.Карт по требованию (в нашем случае при наведении)
-
-         function loadScript(url, callback) {
-
-             var script = document.createElement("script");
-
-     
-
-             if (script.readyState) { // IE
-
-                 script.onreadystatechange = function () {
-
-                     if (script.readyState == "loaded" ||
-
-                         script.readyState == "complete") {
-
-                         script.onreadystatechange = null;
-
-                         callback();
-
-                     }
-
-                 };
-
-             } else { // Другие браузеры
-
-                 script.onload = function () {
-
-                     callback();
-
-                 };
-
-             }
-
-     
-
-             script.src = url;
-
-             document.getElementsByTagName("head")[0].appendChild(script);
-
-         }
-
-     
-
-         // Основная функция, которая проверяет когда мы навели на блок с классом "ymap-container"
-
-         var ymap = function () {
-
-             
-
-             // myMap.destroy()
-
-             
-
-     
-
-     
-
-             // if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
-
-     
-
-             //     // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
-
-             //     check_if_load = true;
-
-     
-
-             //     // Показываем индикатор загрузки до тех пор, пока карта не загрузится
-
-             //     // spinner.addClass('is-active');
-
-     
-
-                 // Загружаем API Яндекс.Карт
-
-             loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&load=Map&loadByRequire=1", function () {
-
-                     // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором "map"
-
-                     ymaps.load(init);
-
-                 });
-
-             // }
-
-         }
-
-     
-
-         $(function () {
-
-             //Запускаем основную функцию
-
-             ymap();
 
      
 
          });
 
-     })
-
-     
+     })();
 
      
      ;(function() {
@@ -1692,6 +1596,129 @@ jQuery(document).ready(function ($) {
      
 
      
+     ;(function() {
+
+         var slider = $('.security-slider__slider');
+
+     
+
+         slider.on('init', function (event, slick, currentSlide) {
+
+             var current = $(slick.$slides[slick.currentSlide]);
+
+             var next = current.next();
+
+             var prev = current.prev();
+
+     
+
+             prev.addClass('slick-sprev');
+
+             next.addClass('slick-snext');
+
+             current.removeClass('slick-snext').removeClass('slick-sprev');
+
+     
+
+             slick.$prev = prev;
+
+             slick.$next = next;
+
+     
+
+         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+
+             var current = $(slick.$slides[nextSlide]);
+
+             slick.$prev.removeClass('slick-sprev');
+
+             slick.$next.removeClass('slick-snext');
+
+     
+
+             var next = current.next();
+
+             var prev = current.prev();
+
+     
+
+             prev.prev();
+
+             prev.next();
+
+             prev.addClass('slick-sprev');
+
+             next.addClass('slick-snext');
+
+             slick.$prev = prev;
+
+             slick.$next = next;
+
+     
+
+             current.removeClass('slick-next').removeClass('slick-sprev');
+
+         });
+
+         // .on('afterChange', function (event, slick, currentSlide, nextSlide) {
+
+         //     slick.animateHeight();
+
+         // });
+
+     
+
+         slider.slick({
+
+             speed: 500,
+
+             arrows: true,
+
+             dots: false,
+
+             focusOnSelect: true,
+
+             infinite: true,
+
+             centerMode: true,
+
+             slidesPerRow: 1,
+
+             slidesToShow: 1,
+
+             slidesToScroll: 1,
+
+             centerPadding: '0',
+
+             swipe: true,
+
+             // adaptiveHeight: true,
+
+             // autoplay: true,
+
+             // autoplaySpeed: 3000,
+
+         });
+
+     })();
+
+     
+     
+
+     
+     
+
+     
+     ;(function() {
+
+     
+
+     })();
+
+     
+     
+
+     
      
 
      
@@ -1699,6 +1726,112 @@ jQuery(document).ready(function ($) {
 
      
      
+
+     
+     
+
+     
+     ;
+
+     (function () {
+
+         var vacancyTitles = document.getElementsByClassName("vacancies__title");
+
+         var i;
+
+        
+
+         if (!vacancyTitles) return;
+
+     
+
+     
+
+         for (i = 0; i < vacancyTitles.length; i++) {
+
+             vacancyTitles[i].addEventListener("click", function () {
+
+     
+
+                 if (this.classList.contains('active')) {
+
+                     this.classList.remove('active');
+
+                     // debugger;
+
+                     var vacancyDescription = this.nextElementSibling;
+
+     
+
+                     /* Toggle between hiding and showing the active panel */
+
+                     if (vacancyDescription.style.maxHeight || vacancyDescription.style.maxHeight === '') {
+
+                         vacancyDescription.style.maxHeight = null;
+
+                     } else {
+
+                         vacancyDescription.style.maxHeight = vacancyDescription.scrollHeight + "px";
+
+                     }
+
+     
+
+                     vacancyDescription.classList.remove('active');
+
+                     return;
+
+                 }
+
+     
+
+                 for (i = 0; i < vacancyTitles.length; i++) {
+
+                     vacancyTitles[i].classList.remove("active");
+
+                 }
+
+     
+
+                 this.classList.add("active");
+
+                 var vacancyDescription = this.nextElementSibling;
+
+     
+
+                 var otherDescriptions = document.querySelectorAll('.vacancies__description');
+
+                 for (i = 0; i < otherDescriptions.length; i++) {
+
+                     otherDescriptions[i].style.maxHeight = null;
+
+                     otherDescriptions[i].classList.remove('active');
+
+                 }
+
+     
+
+                 // vacancyDescription.classList.add('active');
+
+     
+
+                 /* Toggle between hiding and showing the active panel */
+
+                 if (vacancyDescription.style.maxHeight) {
+
+                     vacancyDescription.style.maxHeight = null;
+
+                 } else {
+
+                     vacancyDescription.style.maxHeight = vacancyDescription.scrollHeight + "px";
+
+                 }
+
+             });
+
+         }
+
+     })();
     
     
 });
