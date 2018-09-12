@@ -1,0 +1,161 @@
+.about-team {
+    padding-top: 45px;
+    padding-bottom: 100px;
+
+    font-family: $segoe;
+    color: $darktext;
+    background-color: #f5f7f9; 
+}
+
+.about-team__heading {
+    margin-bottom: 45px;
+}
+
+.about-team__slider {
+    width: 100%;
+    padding-left: 168px;
+}
+
+.about-team__slide-inner {
+    padding-left: 33px;
+    padding-right: 10px;
+}
+
+.about-team__photo {
+    position: relative;
+    right: 0;
+    width: 240px;
+    margin-bottom: 20px;
+
+    img {
+        @include img;
+        filter: gray;
+        filter: grayscale(1);
+
+        transition: all 300ms ease;
+    }
+}
+
+.about-team__slide:hover {
+    .about-team__photo img {
+        filter: none;
+        filter: grayscale(0);
+    }
+
+    .about-team__photo-bg svg {
+        fill: $themecolor
+    }
+}
+
+.about-team__photo-bg {
+    position: absolute;
+    z-index: -1;
+
+    svg {
+        transition:  fill 300ms ease;
+    }
+}
+
+.about-team__name {
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.about-team__post {
+    margin-bottom: 15px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.about-team__desc {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.about-team .slick-prev {
+    display: none !important;
+}
+
+.about-team .slick-next {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 140px;
+    right: 50px;
+
+    border: none;
+    background-color: $themecolor;
+    background-image: url('../images/layout/arrow-white.svg');
+    background-size: 32px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-size: 0;
+}
+
+@media (max-width: 1200px) {
+    .about-team__slider {
+        padding-left: 104px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-team {
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+
+    .about-team__slider {
+        padding-left: 30px;
+    }
+
+    .about-team__slide-inner {
+        padding-left: 24px;
+    }
+
+    .about-team__photo {
+        margin: 0 auto 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .about-team__photo {
+        width: 160px;
+    }
+
+    .about-team__photo-bg {
+        width: 160px;
+        height: 190px;
+
+        svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .slick-list {
+        padding:0 20% 0 0 !important;
+    }
+
+    .slick-active {
+        .about-team__photo img {
+            filter: none;
+            filter: grayscale(0);
+        }
+
+        .about-team__photo-bg svg {
+            fill: $themecolor
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .about-team__slider {
+        padding-left: 0;
+    }
+}
