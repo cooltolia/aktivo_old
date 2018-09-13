@@ -67,3 +67,25 @@
         margin-bottom: 0;
     }
 }
+
+.object-slide-card__footer {
+    padding-top: 30px
+}
+
+.object-slide-card__footer-text {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba($darktext, 0.6);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: #3c7bd8;
+    }
+}

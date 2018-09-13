@@ -4533,6 +4533,21 @@ body.modal-open {
   .object-slide-card__data-content:last-child {
     margin-bottom: 0; }
 
+.object-slide-card__footer {
+  padding-top: 30px; }
+
+.object-slide-card__footer-text {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6); }
+  .object-slide-card__footer-text:last-child {
+    margin-bottom: 0; }
+  .object-slide-card__footer-text a {
+    color: #3c7bd8; }
+
 .objects {
   padding: 0 0 117px;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
