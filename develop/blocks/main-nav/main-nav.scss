@@ -3,10 +3,10 @@
     content: '';
     position: absolute;
     width: 100%;
-    max-width: 90px;
+    width: 75px;
     height: 10px;
     left: 50%;
-    bottom: 0px;
+    bottom: 0;
     transform: translateX(-50%);
     background-image: url('../images/layout/menu-icon.png');
     background-size: contain;
@@ -34,8 +34,8 @@
     margin: 0 10px;
 
     /* for subnav hover */
-    padding-bottom: 10px;
-    margin-bottom: -10px;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
 
     font-size: 16px;
     font-weight: 400;

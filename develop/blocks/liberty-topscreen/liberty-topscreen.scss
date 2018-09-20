@@ -12,6 +12,8 @@
     position: absolute;
     visibility: hidden;
 
+    filter: brightness(50%);
+
     &--first {
         width: 296px;
         top: 175px;

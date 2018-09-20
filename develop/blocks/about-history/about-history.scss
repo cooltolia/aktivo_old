@@ -90,6 +90,36 @@
     &--mobile {
         display: none;
     }
+
+    &--type1 {
+        top: 55%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            top: -42px;
+    
+            background-color: $themecolor;
+        }
+    }
+
+    &--type2 {
+        margin-top: -53px; // высота блока с годом "2018"
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: -148px;
+    
+            background-color: $themecolor;
+        }
+    }
 }
 
 .about-history__highlights {
@@ -202,6 +232,15 @@
 
         &--mobile {
             display: block;
+        }
+
+        &--desktop {
+            display: none;
+        }
+
+        &--type1,
+        &--type2 {
+            display: none;
         }
     }
 
