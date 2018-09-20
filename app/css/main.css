@@ -3089,6 +3089,7 @@ th {
     margin: auto;
     opacity: 0;
     width: 100% !important;
+    height: 370px;
     -webkit-transform: translate3d(0, 0, 0);
        -moz-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
@@ -3238,6 +3239,8 @@ th {
     .liberty-slider__slider .slick-list {
       padding-left: 8% !important;
       padding-right: 8% !important; }
+    .liberty-slider__slider .slick-slide {
+      height: 320px; }
     .liberty-slider__slider .slick-arrow {
       top: 80px; }
     .liberty-slider__slider .slick-next {
@@ -3259,6 +3262,10 @@ th {
 @media (max-width: 360px) {
   .liberty-slider__button {
     font-size: 14px; } }
+
+@media (max-width: 320px) {
+  .liberty-slider__slider .slick-slide {
+    height: 340px; } }
 
 .liberty-terms {
   padding: 130px 0 160px;
@@ -4794,7 +4801,7 @@ body.modal-open {
     transition: transform 1s, opacity 1s;
     transition: transform 1s, opacity 1s, -webkit-transform 1s, -moz-transform 1s;
     will-change: transform;
-    height: auto;
+    height: 450px;
     min-height: 1px; }
   .security-slider__slider .slick-snext,
   .security-slider__slider .slick-sprev {
@@ -4958,6 +4965,8 @@ body.modal-open {
     .security-slider__slider .slick-list {
       padding-left: 8% !important;
       padding-right: 8% !important; }
+    .security-slider__slider .slick-slide {
+      height: auto; }
     .security-slider__slider .slick-arrow {
       top: 60px; }
     .security-slider__slider .slick-next {

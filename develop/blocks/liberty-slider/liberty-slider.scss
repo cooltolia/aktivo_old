@@ -31,6 +31,7 @@
         margin: auto;
         opacity: 0;
         width: 100% !important;
+        height: 370px;
         transform: translate3d(0, 0, 0);
         transition: transform 1s, opacity 1s;
         will-change: transform;
@@ -161,6 +162,10 @@
             padding-right: 8% !important;
         }
 
+        .slick-slide {
+            height: 320px;
+        }
+
         .slick-arrow {
             top: 80px;
         }
@@ -197,5 +202,13 @@
 @media (max-width: 360px) {
     .liberty-slider__button {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .liberty-slider__slider {
+        .slick-slide {
+            height: 340px;
+        }
     }
 }

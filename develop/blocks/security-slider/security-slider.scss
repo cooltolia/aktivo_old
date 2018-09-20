@@ -35,7 +35,7 @@
         transition: transform 1s, opacity 1s;
         will-change: transform;
 
-        height: auto;
+        height: 450px;
         min-height: 1px;
     }
 
@@ -185,6 +185,10 @@
         .slick-list {
             padding-left: 8% !important;
             padding-right: 8% !important;
+        }
+
+        .slick-slide {
+            height: auto;
         }
 
         .slick-arrow {
