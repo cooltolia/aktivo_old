@@ -1,5 +1,5 @@
 .calculator {
-    padding: 70px 0 120px;
+    padding: 70px 0 80px;
 
     font-family: $segoe;
     color: $darktext;
@@ -165,7 +165,7 @@
 // }
 
 .calculator__appeal {
-    margin-top: -20px;
+    margin-top: -180px;
     margin-left: 512px;
     width: 100%;
     display: flex;
@@ -203,6 +203,10 @@
 
     .calculator__wrapper {
         padding: 0;
+    }
+
+    .calculator__appeal {
+        margin-top: 0;
     }
 
     .settings-block:last-child {

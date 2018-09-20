@@ -238,8 +238,8 @@
             display: none;
         }
 
-        &--type1,
-        &--type2 {
+        &--type1::before,
+        &--type2::before {
             display: none;
         }
     }
