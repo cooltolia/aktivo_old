@@ -1,0 +1,126 @@
+.requestForm{
+    &.default-form.dt-1{
+        text-align: center;
+        font-family: $PTSans_family;
+
+        .fieldgroup{
+            text-align: left;
+            padding:6px 0;
+            @include box-sizing(border-box);
+            label.fieldgroup-title{
+                padding:5px 10px 5px 0;
+                display: block;
+                width: span(6);
+                line-height: 36px;
+                @include inline-block(top);
+                @include box-sizing(border-box);
+            }
+
+            &.adress-fieldgroup{
+                margin:0 -10px;
+
+                .fieldgroup-title{
+                    padding-left: 10px;
+                    width: span(12);
+                }
+
+                .field{
+                    padding-left:10px;
+                    padding-right: 10px;
+                    @include box-sizing(border-box);
+                }
+
+                .region-field,
+                .city-field,
+                .street-field{
+                    width:span(6);
+                }
+
+                .housing-field,
+                .building-field{
+                    width:span(3);
+                }
+            }
+
+            .field{
+                .checkbox{
+                    input{
+                        vertical-align: middle;
+                    }
+                    label{
+                        display: inline;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .g-recaptcha div {
+                margin:0 auto;
+            }
+        }
+
+        .submit-field{
+            .button{
+                width:200px;
+                margin:10px auto 0;
+            }
+        }
+
+        @include media-rule($tablet-device-range, 'max-width', 'max'){
+            .fieldgroup{
+                &.adress-fieldgroup{
+                    width:auto;
+
+                    .region-field,
+                    .city-field,
+                    .street-field{
+                        width:span(12);
+                    }
+
+                    .housing-field,
+                    .building-field{
+                        width:span(6);
+                    }
+                }
+            }
+        }
+        @include media-rule($tablet-device-range, 'max-width', 'min'){
+            .fieldgroup{
+                padding:10px 0;
+                border-left-width:0;
+
+                label.fieldgroup-title{
+                    margin-left:0;
+                    width:100%;
+                    float:none;
+                    font-size: 18px;
+                    line-height: normal;
+                }
+                &.adress-fieldgroup{
+
+                    margin:0;
+
+                    .fieldgroup-title{
+                        padding-left: 0;
+                    }
+
+                    .field{
+                        padding-left:0;
+                        padding-right:0;
+                    }
+
+                    .housing-field,
+                    .building-field{
+                        width:span(12);
+                    }
+                }
+            }
+        }
+        @include media-rule($small-devices-range, 'max-width', 'max'){
+            .fieldgroup{
+                padding:5px 0;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,41 @@
+.auth-form{
+    .submit-button{
+        text-align: center;
+    }
+
+    .field.reset-pass-field{
+        text-align: center;
+        padding:15px 0 25px;
+        a{
+            text-decoration: underline;
+            @include inline-block(middle);
+            color:#000;
+            font-size: 14px;
+        }
+    }
+
+    .field-email,
+    .field-password{
+        .input-description{
+            display: none;
+        }
+    }
+
+    @include media-rule($small-devices-range,'max-width', 'max'){
+        .field.reset-pass-field{
+            padding:10px 0;
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+
+    @include media-rule($extrasmall-devices-range,'max-width', 'max'){
+        .field.reset-pass-field{
+            padding:5px 0;
+            a{
+                font-size: 11px;
+            }
+        }
+    }
+}

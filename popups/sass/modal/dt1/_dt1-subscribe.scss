@@ -1,0 +1,105 @@
+.modal{
+    &.modal-dt1.subscribe{
+        min-width: 600px;
+
+        @include media-rule($tablet-device-range, 'max-width','min'){
+            min-width: 0;
+        }
+
+
+
+        .image{
+            margin:0 -40px;
+            @include image-dimensions((width:4, height:2));
+            @include border-radius(3px 3px 0 0);
+            overflow: hidden;
+        }
+        h3{
+            text-align: center;
+            font-size: 15px;
+        }
+        .text{
+            &.message{
+                margin-bottom: -40px;
+                text-align: center;
+            }
+        }
+
+        form{
+            margin:0 -10px;
+            .field{
+                @include inline-block(top);
+                padding:10px;
+                @include box-sizing(border-box);
+
+                &.code-field{
+                    width:span(8);
+                }
+
+                &.email-field{
+                    width:span(8);
+                }
+                &.submit-field{
+                    width: span(4);
+                    .button{
+                        margin:0;
+                    }
+                }
+                @include media-rule($tablet-device-range, 'max-width','min'){
+                    &.email-field,
+                    &.submit-field{
+                        width:span(12);
+                    }
+                }
+            }
+        }
+        .dont-show{
+            text-align: center;
+            a{
+                color:#828282;
+                text-decoration: underline;
+                font-size: 14px;
+            }
+        }
+
+
+        &.request{
+            .modal-header{
+                padding: 0;
+                width: 100%;
+                .close-icon{
+                    background: #fff;
+                    padding:4px;
+                    right: -30px;
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    cursor: pointer;
+                    @include border-radius(3px);
+                }
+            }
+        }
+
+
+        &.success{
+
+            text-align: center;
+
+            h3{
+                text-align: center;
+                &:before{
+                    @include font-icon('tick_subscribe', true);
+                    font-size: 80px;
+                    color:#4ec673;
+                    display: block;
+                    margin-bottom: 30px;
+                }
+            }
+            .button{
+                @include button-styles();
+                @include inline-block(middle);
+                min-width: 200px;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<div class="panel auth" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd">
+
+    <div class="panel-title">
+        <h3>${header}</h3>
+    </div>
+
+    <div class="panel-content" t:type="zone" t:id="loginZone" id="loginZone">
+        <t:form t:id="loginForm" class="default-form dt-1 auth-form" t:zone="loginZone" autofocus="false"  novalidate="novalidate">
+            <input t:id="email" value="emailValue" t:label_for="literal: a" t:label_text="literal:Телефон или email"/>
+            <input t:id="password" value="passwordValue" />
+
+            <div class="field" t:type="if" test="rememberActive">
+                <div class="checkbox">
+                    <input type="checkbox" t:type="checkbox" class="checkbox" t:id="remember" value="remember"/>
+                    <t:label for="remember">Запомнить меня</t:label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="button submit-button">
+                    <input type="submit" class="btn btn-primary" id="login" value="Войти"/>
+                </div>
+            </div>
+
+            <div class="field reset-pass-field">
+                <t:actionlink t:id="forgotPassword" t:zone="loginZone">Забыли пароль?</t:actionlink>
+            </div>
+        </t:form>
+    </div>
+
+    <div class="panel-footer">
+        Если у вас еще нет аккаунта, Вы можете зарегистрироваться <t:actionLink t:id="toRegister" t:zone="loginZone">здесь</t:actionLink>
+    </div>
+</div>

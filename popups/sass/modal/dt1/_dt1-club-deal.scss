@@ -1,0 +1,25 @@
+.modal{
+    &.modal-dt1.club-deal{
+        text-align: center;
+
+        .default-form.dt-1 .field .textarea{
+            &.focus textarea,
+            .not-empty textarea{
+                padding-bottom:34px;
+            }
+        }
+
+        .submit-field{
+            text-align: center;
+            .button{
+                max-width: 180px;
+                @include inline-block(middle);
+            }
+        }
+
+        .button{
+            @include button-styles();
+            margin-bottom: 0;
+        }
+    }
+}

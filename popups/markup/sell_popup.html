@@ -1,0 +1,179 @@
+<t:block t:id="dataBlock">
+    <div class="modal-header">
+        <h3>Заполните данные</h3>
+        <a href="#" class="close-modal close-icon"/>
+    </div>
+    <div class="modal-content">
+        <form t:type="form" t:id="requestForm" zone="requestZone" class="default-form dt-1 requestForm"
+              autofocus="false" novalidate="novalidate">
+            <div class="fieldgroup">
+                <label class="fieldgroup-title">Площадь объекта</label>
+                <div class="field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <input t:type="textfield" t:id="area" value="request.area" type="text" name="area"/>
+                            <div class="input-description">кв. м.</div>
+                        </div>
+                    </div>
+                    <p t:type="error" for="area" class="help-block ">не указана площадь объекта</p>
+                </div>
+            </div>
+
+            <div class="fieldgroup">
+                <label class="fieldgroup-title">Класс объекта</label>
+                <div class="field">
+                    <t:radiogroup value="request.type">
+                        <div class="checkbox inline-checkbox">
+                            <input t:id="streetRetail" type="checkbox" t:type="radio" value="literal:1"
+                                   name="streetRetail"/>
+                            <t:label for="streetRetail">Стрит-ритейл</t:label>
+                        </div>
+                        <div class="checkbox inline-checkbox">
+                            <input t:id="localTradeCenter" type="checkbox" t:type="radio" value="literal:2"
+                                   name="localTradeCenter"/>
+                            <t:label for="localTradeCenter">Районный торговый центр</t:label>
+                        </div>
+                    </t:radiogroup>
+                </div>
+            </div>
+
+            <div class="fieldgroup adress-fieldgroup">
+                <label class="fieldgroup-title">Адрес объекта</label>
+                <div class="field inline-field region-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="region">Область</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="region" value="request.region"
+                                       name="region"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field inline-field city-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="city">Город</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="city" value="request.city" name="city"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field inline-field street-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="street">Улица</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="street" value="request.street"
+                                       name="street"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field inline-field building-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="building">Дом</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="building" value="request.building"
+                                       name="building"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field inline-field housing-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="housing">Корпус</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="housing" value="request.housing"
+                                       name="housing"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fieldgroup">
+                <label class="fieldgroup-title">Якорные арендаторы</label>
+                <div class="field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <input type="text" t:type="textfield" t:id="description" value="request.description"
+                                   name="description" placeholder="Магнит, КФС, FixPrice"/>
+                        </div>
+                    </div>
+                    <p t:type="error" for="description" class="help-block ">не более 255 символов</p>
+                </div>
+            </div>
+
+            <div class="fieldgroup">
+                <label class="fieldgroup-title">Стоимость объекта</label>
+                <div class="field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <input type="text" t:type="textfield" t:id="price" value="request.price" name="price"
+                                   placeholder=""/>
+                            <div class="input-description"><span class="ruble"/></div>
+                        </div>
+                    </div>
+                    <p t:type="error" for="price" class="help-block ">не указана стоимость объекта</p>
+                </div>
+            </div>
+
+            <div class="fieldgroup contacts-fieldgroup">
+                <label class="fieldgroup-title">Контактные данные</label>
+                <div class="field email-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="email">Email</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="email" value="request.email"
+                                       name="email" data-type="email"/>
+                            </div>
+                        </div>
+                    </div>
+                    <p t:type="error" for="email" class="help-block ">не указан email</p>
+                </div>
+                <div class="field name-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="owner">Имя</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="owner" value="request.owner"
+                                       name="owner"/>
+                            </div>
+                        </div>
+                    </div>
+                    <p t:type="error" for="owner" class="help-block ">не указано имя</p>
+                </div>
+                <div class="field phone-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="phone">Телефон:</t:label>
+                            <div class="input">
+                                <input type="text" t:type="textfield" t:id="phone" value="request.phone"
+                                       name="phone" placeholder="+7 (912) 345-67-89" data-type="phone"/>
+                            </div>
+                        </div>
+                    </div>
+                    <p t:type="error" for="phone" class="help-block ">не указан контактный телефон</p>
+                </div>
+            </div>
+
+            <div class="field">
+                <t:form.recaptchacomponent valid="verifyCaptcha"/>
+            </div>
+
+
+            <div class="field submit-field">
+                <div class="button submit-button">
+                    <input type="submit" name="send" value="Отправить заявку"/>
+                    <span/>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</t:block>

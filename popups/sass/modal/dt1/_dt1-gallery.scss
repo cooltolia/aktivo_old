@@ -1,0 +1,138 @@
+.modal{
+    &.modal-dt1.modal-dt1-gallery{
+        max-width: 100%;
+        background: #fff;
+        -ms-touch-action: pan-x pan-y;
+        touch-action: pan-x pan-y;
+        margin:0;
+
+        .modal-content{
+            padding:0;
+        }
+
+        .active-image{
+            position: relative; left:0; top:0; z-index: 1;
+            overflow: hidden;
+            cursor: move;
+            cursor: -webkit-grab;
+            cursor: -moz-grab;
+            img{
+                display: block;
+            }
+        }
+
+        &.modal-showed{
+            .gallery-nav{
+                display: block;
+            }
+        }
+
+        .gallery-nav{
+            display: none;
+            position: absolute;
+            position: fixed;
+            left:0; top:0; z-index: 3;
+            width: 100%;
+            height: 60px;
+
+            @include transform(translateZ(0));
+            @include transform(translate3d(0,0,0));
+            @include backface-visibility(hidden);
+
+            .control-group{
+                position: absolute; top:10px; left:10px; z-index: 5;
+                background: #fff;
+                @include box-shadow(0 1px 5px rgba(0,0,0,0.65));
+                text-align: center;
+                line-height: 26px;
+                font-size: 0;
+                vertical-align: middle;
+                @include border-radius(4px);
+                overflow: hidden;
+
+                &.nav-control{
+                    height: 26px;
+                    left:40px;
+                    a{
+                        border-left:1px solid #ccc;
+                        margin-left:-1px;
+                    }
+                }
+                &.close-control{
+                    width:26px; height: 26px;
+                    right:10px; left:auto;
+                }
+                &.zoom-control{
+                    width:26px;
+                    top:40px;
+                    a{
+                        border-top:1px solid #ccc;
+                        margin-top:-1px;
+                        &:before{
+                            font-family: $Consolas_family;
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+            }
+
+
+            a{
+                cursor: pointer; width:26px; height:26px;
+                text-decoration: none;
+                @include inline-block(baseline);
+                line-height: 26px;
+                color:#2d2d2d;
+                &:before{
+                    font-size: 12px;
+                    @include base-font-icon-styles();
+                    line-height: 26px;
+                }
+
+                &:hover{
+                    color:#5ad2fc;
+                }
+
+                &.disabled{
+                    color:#ccc;
+                    cursor: default;
+                }
+
+                &.prev{
+                    left:4px;
+                    &:before{
+                        @include font-icon('arrow-left_3', false);
+                    }
+                }
+                &.next{
+                    left:60px;
+                    &:before{
+                        @include font-icon('arrow-right_3', false);
+                    }
+                }
+                &.close-modal{
+                    position: static;
+                    &:before{
+                        @include font-icon('close');
+                    }
+                }
+
+
+
+                &.zoom-in{
+                    &:before{
+                        content:"+";
+                    }
+                }
+                &.zoom-out{
+                    &:before{
+                        content:"-";
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.panel.auth{
+  margin:0;
+  max-width: 100%;
+  width:600px;
+  .panel-title{
+    border:none;
+    padding-bottom:5px;
+    h3{
+      font-size: 16px;
+    }
+  }
+  .panel-footer{
+    text-align: center;
+  }
+
+  &.check-email-panel{
+    max-width: 430px;
+    text-align: center;
+    .panel-content{
+      padding:45px 50px;
+
+      &:before{
+        content:"";
+        display: block;
+        background:sprite-url($common-sprite) no-repeat;
+        @include sprite($common-sprite, 'checkemail_s96x90', true);
+        margin:-14px auto 0;
+      }
+
+      h3{
+        margin:0 0 10px; padding:0;
+        font-size: 17px;
+      }
+      p{
+        margin:0;
+        font-size: 14px;
+      }
+    }
+  }
+}

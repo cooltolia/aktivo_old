@@ -1,0 +1,35 @@
+<t:block t:id="dataBlock">
+    <div class="modal-header">
+        <h3>Пожалуйста, оставьте заявку на приобретение доли в объекте недвижимости</h3>
+        <a href="#" class="close-modal close-icon"></a>
+    </div>
+    <div class="modal-content">
+        <p>Как только объект поступит в реализацию, мы сообщим Вам в первую очередь и учтем вашу заявку в приоритетном
+            порядке.</p>
+
+        <form t:type="form" t:id="requestForm" zone="requestZone" class="default-form dt-1 requestForm"
+              autofocus="false" novalidate="novalidate" clientValidation="NONE">
+            <input t:type="hidden" name="selected-promo" value="realtyId" class="selected-promo"/>
+            <div class="fieldgroup">
+                <label class="fieldgroup-title">Сумма желаемой инвестиции</label>
+                <div class="field inline-field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:textfield value="amount" t:id="investment" translate="nonSpaceDecimal"
+                                         name="investment" placeholder=""/>
+                            <div class="input-description"><span class="ruble"/></div>
+                        </div>
+                    </div>
+                    <p t:type="error" for="investment" class="help-block ">не указана сумма желаемой инвестиции</p>
+                </div>
+            </div>
+
+            <div class="field submit-field">
+                <div class="button">
+                    <input type="submit" name="send" value="Отправить заявку"/>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</t:block>

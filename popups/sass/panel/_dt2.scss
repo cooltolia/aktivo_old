@@ -1,0 +1,82 @@
+.panel.dt-2{
+    .panel-title{
+        //text-align: left;
+        font-weight: normal;
+        font-size: 15px;
+        color:#2d2d2d;
+        text-align: center;
+        &:before{
+            font-size: 28px;
+            margin:-12px 20px -12px 0
+        }
+    }
+    .panel-content{
+        text-align: left;
+        color:#2d2d2d;
+        font-size: 14px;
+        line-height: 21px;
+        padding:10px 26px;
+        position: relative; left:0; top:0; z-index: 1;
+        a{
+            color:#2d2d2d;
+        }
+        p{
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    .panel-footer{
+        padding:10px 26px;
+    }
+
+    @include media-rule($medium-device-range, 'max-width', 'max'){
+        .panel-content{
+            padding:8px 20px;
+            font-size: 15px;
+            p{
+                font-size: 15px;
+                line-height: normal;
+            }
+        }
+        .panel-footer{
+            padding:8px 20px;
+        }
+    }
+    @include media-rule($tablet-device-range, 'max-width', 'min'){
+        .panel-content{
+            padding:6px 15px;
+            font-size: 14px;
+            p{
+                font-size: 14px;
+            }
+        }
+        .panel-footer{
+            padding:6px 15px;
+        }
+    }
+
+    @include media-rule($small-devices-range, 'max-width', 'max'){
+        .panel-content{
+            padding:5px 10px;
+            font-size: 13px;
+            p{
+                font-size: 13px;
+            }
+        }
+        .panel-footer{
+            padding:5px 10px;
+        }
+    }
+    @include media-rule($extrasmall-devices-range, 'max-width', 'max') {
+        .panel-content{
+            padding:4px 8px;
+            font-size: 12px;
+            p{
+                font-size: 12px;
+            }
+        }
+        .panel-footer{
+            padding:4px 8px;
+        }
+    }
+}
