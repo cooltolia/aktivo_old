@@ -3089,6 +3089,7 @@ th {
     margin: auto;
     opacity: 0;
     width: 100% !important;
+    height: 370px;
     -webkit-transform: translate3d(0, 0, 0);
        -moz-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
@@ -3238,6 +3239,8 @@ th {
     .liberty-slider__slider .slick-list {
       padding-left: 8% !important;
       padding-right: 8% !important; }
+    .liberty-slider__slider .slick-slide {
+      height: 320px; }
     .liberty-slider__slider .slick-arrow {
       top: 80px; }
     .liberty-slider__slider .slick-next {
@@ -3260,16 +3263,158 @@ th {
   .liberty-slider__button {
     font-size: 14px; } }
 
+@media (max-width: 320px) {
+  .liberty-slider__slider .slick-slide {
+    height: 340px; } }
+
 .liberty-terms {
+  position: relative;
   padding: 130px 0 160px;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   color: #000;
-  background-color: #f5f7f9;
-  background-image: url("../images/liberty/terms_bg.svg");
-  background-size: cover;
-  background-position: center center; }
+  overflow: hidden; }
+
+.liberty-terms__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .liberty-terms__bg .dollar {
+    position: absolute;
+    top: -20%;
+    background-image: url("../images/liberty/dollar.svg");
+    background-size: cover; }
+    .liberty-terms__bg .dollar:nth-child(1) {
+      width: 180px;
+      height: 180px;
+      left: 5%;
+      -webkit-transform-origin: center;
+         -moz-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dollaranimation 10s linear infinite;
+         -moz-animation: dollaranimation 10s linear infinite;
+              animation: dollaranimation 10s linear infinite; }
+    .liberty-terms__bg .dollar:nth-child(2) {
+      width: 80px;
+      height: 80px;
+      left: 17%;
+      -webkit-transform-origin: center;
+         -moz-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dollaranimation 10s linear infinite;
+         -moz-animation: dollaranimation 10s linear infinite;
+              animation: dollaranimation 10s linear infinite;
+      -webkit-animation-delay: 1s;
+         -moz-animation-delay: 1s;
+              animation-delay: 1s; }
+    .liberty-terms__bg .dollar:nth-child(3) {
+      width: 50px;
+      height: 50px;
+      left: 27%;
+      -webkit-transform-origin: center;
+         -moz-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dollaranimation 10s linear infinite;
+         -moz-animation: dollaranimation 10s linear infinite;
+              animation: dollaranimation 10s linear infinite;
+      -webkit-animation-delay: 1.5s;
+         -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s; }
+    .liberty-terms__bg .dollar:nth-child(4) {
+      width: 120px;
+      height: 120px;
+      left: 45%;
+      -webkit-transform-origin: center;
+         -moz-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dollaranimation 10s linear infinite;
+         -moz-animation: dollaranimation 10s linear infinite;
+              animation: dollaranimation 10s linear infinite;
+      -webkit-animation-delay: 2s;
+         -moz-animation-delay: 2s;
+              animation-delay: 2s; }
+    .liberty-terms__bg .dollar:nth-child(5) {
+      width: 70px;
+      height: 70px;
+      left: 65%;
+      -webkit-transform-origin: center;
+         -moz-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dollaranimation 10s linear infinite;
+         -moz-animation: dollaranimation 10s linear infinite;
+              animation: dollaranimation 10s linear infinite;
+      -webkit-animation-delay: 1s;
+         -moz-animation-delay: 1s;
+              animation-delay: 1s; }
+    .liberty-terms__bg .dollar:nth-child(6) {
+      width: 100px;
+      height: 100px;
+      left: 80%;
+      -webkit-transform-origin: center;
+         -moz-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dollaranimation 10s linear infinite;
+         -moz-animation: dollaranimation 10s linear infinite;
+              animation: dollaranimation 10s linear infinite;
+      -webkit-animation-delay: 1.5s;
+         -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s; }
+    .liberty-terms__bg .dollar:nth-child(6) {
+      width: 130px;
+      height: 130px;
+      left: 90%;
+      -webkit-transform-origin: center;
+         -moz-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-animation: dollaranimation 10s linear infinite;
+         -moz-animation: dollaranimation 10s linear infinite;
+              animation: dollaranimation 10s linear infinite;
+      -webkit-animation-delay: 0.5s;
+         -moz-animation-delay: 0.5s;
+              animation-delay: 0.5s; }
+
+@-webkit-keyframes dollaranimation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: -10%; }
+  to {
+    top: 100%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-moz-keyframes dollaranimation {
+  from {
+    -moz-transform: rotate(0deg);
+         transform: rotate(0deg);
+    top: -10%; }
+  to {
+    top: 100%;
+    -moz-transform: rotate(360deg);
+         transform: rotate(360deg); } }
+
+@keyframes dollaranimation {
+  from {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+    top: -10%; }
+  to {
+    top: 100%;
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 .liberty-terms__wrapper {
+  position: relative;
   max-width: 800px;
   margin: 0 auto; }
 
@@ -4185,6 +4330,174 @@ body.modal-open {
   width: calc(100% - 415px);
   background-color: white;
   max-height: none; }
+.modal .close-icon {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 24px;
+  height: 24px; }
+  .modal .close-icon:hover::before, .modal .close-icon:hover::after {
+    background-color: #7f97b3; }
+
+.modal .close-icon::before, .modal .close-icon::after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #dfe5ec;
+  -webkit-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  transition: background-color 300ms ease; }
+
+.modal .close-icon::before {
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.modal .close-icon::after {
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.modal .modal-content {
+  padding: 20px 60px; }
+
+.modal .fieldgroup {
+  margin: 0 auto 45px; }
+
+.panel {
+  position: relative;
+  max-width: 820px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 110px 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 5px 90px 0 rgba(255, 215, 41, 0.67);
+          box-shadow: 0 5px 90px 0 rgba(255, 215, 41, 0.67); }
+
+.panel-title {
+  margin-bottom: 20px; }
+  .panel-title h3 {
+    margin: 0;
+    font-size: 40px;
+    text-align: center; }
+
+.panel-content {
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto; }
+
+.panel.auth .panel-content {
+  max-width: 600px; }
+
+.panel-content .code-message {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center; }
+
+.phone-registration_form {
+  max-width: 450px;
+  margin: 0 auto; }
+  .phone-registration_form .field {
+    width: 100%;
+    margin-bottom: 20px; }
+  .phone-registration_form .input-text-inner {
+    position: relative; }
+  .phone-registration_form label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    pointer-events: none;
+    font-size: 24px;
+    text-align: center;
+    color: #000;
+    opacity: 0.4;
+    z-index: 1;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    transition: all 150ms ease;
+    will-change: scale; }
+  .phone-registration_form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    border-bottom: 1px solid #9b9b9b;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    -webkit-transition: border-color 300ms ease;
+    -moz-transition: border-color 300ms ease;
+    transition: border-color 300ms ease; }
+  .phone-registration_form input:focus {
+    outline: none;
+    border-color: #ffd729; }
+    .phone-registration_form input:focus + label {
+      -webkit-transform: scale(0.5) translate(-100%, -150%);
+         -moz-transform: scale(0.5) translate(-100%, -150%);
+          -ms-transform: scale(0.5) translate(-100%, -150%);
+              transform: scale(0.5) translate(-100%, -150%);
+      top: 0; }
+  .phone-registration_form .help-block {
+    color: #d54544;
+    font-size: 14px;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center; }
+  .phone-registration_form .btn-primary {
+    display: block;
+    max-width: 272px;
+    margin: 0 auto;
+    padding: 16px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    background-color: #ffd729;
+    border: none;
+    border-radius: 4px;
+    -webkit-transition: background-color 300ms ease;
+    -moz-transition: background-color 300ms ease;
+    transition: background-color 300ms ease; }
+    .phone-registration_form .btn-primary:hover, .phone-registration_form .btn-primary:active {
+      background-color: #ffe15c; }
+  .phone-registration_form .login-link {
+    margin: 35px auto;
+    text-align: center; }
+    .phone-registration_form .login-link a {
+      font-size: 16px;
+      color: #3c7bd8;
+      text-decoration: underline;
+      text-align: center;
+      -webkit-transition: color 300ms ease;
+      -moz-transition: color 300ms ease;
+      transition: color 300ms ease; }
+      .phone-registration_form .login-link a:hover, .phone-registration_form .login-link a:focus {
+        color: #2662bc; }
+
+.panel-content .agreement {
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center; }
+  .panel-content .agreement a {
+    display: inline;
+    color: #3c7bd8;
+    text-decoration: underline;
+    text-align: center;
+    -webkit-transition: color 300ms ease;
+    -moz-transition: color 300ms ease;
+    transition: color 300ms ease; }
+    .panel-content .agreement a:hover, .panel-content .agreement a:focus {
+      color: #2662bc; }
 
 .object-item {
   position: relative;
@@ -4861,7 +5174,7 @@ body.modal-open {
     transition: transform 1s, opacity 1s;
     transition: transform 1s, opacity 1s, -webkit-transform 1s, -moz-transform 1s;
     will-change: transform;
-    height: auto;
+    height: 450px;
     min-height: 1px; }
   .security-slider__slider .slick-snext,
   .security-slider__slider .slick-sprev {
@@ -5025,6 +5338,8 @@ body.modal-open {
     .security-slider__slider .slick-list {
       padding-left: 8% !important;
       padding-right: 8% !important; }
+    .security-slider__slider .slick-slide {
+      height: auto; }
     .security-slider__slider .slick-arrow {
       top: 60px; }
     .security-slider__slider .slick-next {

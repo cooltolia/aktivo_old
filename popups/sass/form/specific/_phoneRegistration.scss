@@ -1,0 +1,40 @@
+form.default-form.dt-1{
+  &.phone-registration_form{
+    text-align: center;
+
+    .description,
+    .sms-send-repeat,
+    .code-message,
+    .agreement{
+      color: #808080;
+      font-size: 14px;
+      padding-bottom:10px;
+    }
+    .agreement{
+      font-size: 12px;
+    }
+
+    .field{
+      max-width:260px;
+      margin-left:auto;
+      margin-right:auto;
+
+      .registration-recaptcha {
+        transform:scale(0.855);
+        -webkit-transform:scale(0.855);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+      }
+    }
+
+    .sms-send-repeat{
+      .countdown{
+        @include inline-block(baseline);
+      }
+    }
+
+    &.code_form{
+      margin-top:10px;
+    }
+  }
+}

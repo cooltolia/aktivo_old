@@ -1,0 +1,138 @@
+<div class="panel auth" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd" xmlns:p="tapestry:parameter">
+
+    <!-- Event snippet for регистрация conversion page
+        In your html page, add the snippet and call gtag_report_conversion
+        when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-798907033/-5ooCNLPlYUBEJm1-fwC',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
+
+    <div class="panel-title">
+        <h3>Моментальная Регистрация</h3>
+    </div>
+
+    <div class="panel-content" t:type="zone" t:id="registrationZone" id="registrationZone"
+         data-zone-update-url="${updateLink}">
+
+        <t:form class="default-form dt-1 phone-registration_form" t:id="registrationForm" t:zone="registrationZone"
+                novalidate="novalidate" autofocus="false">
+
+            <div class="code-message">
+                Для защиты и верификации Вашего аккаунта мы вышлем на Ваш мобильный телефон бесплатное сообщение с кодом
+                подтверждения
+            </div>
+
+            <div class="field">
+                <div class="input-text">
+                    <div class="input-text-inner">
+                        <t:label for="firstName">Имя</t:label>
+                        <div class="input">
+                            <input t:type="textfield" t:id="firstName" disabled="disabled" value="firstNameValue"
+                                   type="text" name="firstName" data-type="firstName"/>
+                        </div>
+                    </div>
+                </div>
+                <p t:type="error" for="firstName" class="help-block ">Укажите имя</p>
+            </div>
+            <div class="field">
+                <div class="input-text">
+                    <div class="input-text-inner">
+                        <t:label for="phone">Телефон</t:label>
+                        <div class="input">
+                            <input t:type="textfield" t:id="phone" disabled="disabled" value="phoneValue" type="text"
+                                   name="phone" data-type="phone"/>
+                        </div>
+                    </div>
+                </div>
+                <p t:type="error" for="phone" class="help-block ">Некорректно указан телефон</p>
+            </div>
+
+            <t:if test="!showCodeBlock">
+
+                <div class="field">
+                    <div class="registration-recaptcha">
+                        <t:form.recaptchacomponent valid="registrationCaptchaValid" t:id="registrationCaptcha"/>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="button submit-button">
+                        <t:submit class="btn btn-primary" t:id="register" value="Зарегистрироваться"/>
+                    </div>
+                </div>
+
+                <div class="agreement">
+                    Нажимая кнопку &laquo;Зарегистрироваться&raquo;, я даю <a href="/pages/agreement/index.html"
+                                                                              target="_blank">согласие</a>
+                    <br/> на хранение и обработку персональных данных <br/>
+                    и <strong>соглашаюсь</strong> с <a href="/pages/agreement/edo.pdf" target="_blank">условия</a>
+                    электронного документооборота с Aktivo.
+                </div>
+                <p:else>
+                    <t:actionlink t:id="anotherPhone" zone="registrationZone">Ввести другой телефон</t:actionlink>
+                </p:else>
+            </t:if>
+        </t:form>
+
+        <t:if test="showCodeBlock">
+            <t:form class="default-form dt-1 phone-registration_form code_form" t:id="codeForm"
+                    t:zone="registrationZone" novalidate="novalidate" autofocus="false">
+                <div class="panel-title">
+                    <h3>Подтвердите номер телефона</h3>
+                </div>
+                <div class="code-message">
+                    Мы направили 4-x значный кодом подтверждения на Ваш мобльный телефон.
+                </div>
+
+                <div class="field">
+                    <div class="input-text">
+                        <div class="input-text-inner">
+                            <t:label for="code">Код</t:label>
+                            <div class="input">
+                                <input t:type="textfield" t:id="code" value="codeValue" type="text" name="code"
+                                       data-type="code"/>
+                            </div>
+                        </div>
+                    </div>
+                    <p t:type="error" for="code" class="help-block ">Указан неверный код подтверждения</p>
+                </div>
+
+
+                <div class="sms-send-repeat">
+                    <t:if test="codeExpiriesDate">
+                        Вы можете запросить код подтверждения снова через
+                        <span id="code_countdown" class="countdown" data-timestamp="${codeExpiriesDate.getTime()}">
+                                <t:output format="literal:mm:ss" value="codeExpiriesDate"/>
+                            </span>
+                        <p:else>
+                            <t:actionlink t:id="anotherCode" zone="registrationZone">Выслать код повторно.
+                            </t:actionlink>
+                        </p:else>
+                    </t:if>
+                </div>
+
+                <div class="field">
+                    <div class="button submit-button">
+                        <input type="submit" class="btn btn-primary" id="confirm" value="Подтвердить"/>
+                    </div>
+                </div>
+            </t:form>
+        </t:if>
+    </div>
+    <div class="panel-footer">
+        Если у вас уже есть аккаунт, вы можете войти
+        <t:actionLink t:id="toLogin" t:zone="registrationZone">здесь</t:actionLink>
+    </div>
+</div>

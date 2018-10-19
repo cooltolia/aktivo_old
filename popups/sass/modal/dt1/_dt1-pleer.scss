@@ -1,0 +1,30 @@
+.modal{
+    &.modal-dt1.modal-dt1-pleer{
+        margin:0;
+        width: 100%;
+        max-width: 100%;
+        .close-modal{
+            color:#d7d7d7;
+            &:hover{
+                color:#41b5f6;
+            }
+        }
+        .modal-header{
+            padding:0;
+        }
+        .modal-content{
+            padding:0;
+            .pleer-wrapper{
+                iframe{
+                    width:100%;
+                    height:100%;
+                    display: block;
+                }
+            }
+        }
+
+        &.mini{
+            width: 70%;
+        }
+    }
+}

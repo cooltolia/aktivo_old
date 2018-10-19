@@ -1,0 +1,41 @@
+.modal{
+    &.modal-dt1{
+        max-width: 600px;
+        background: #fff;
+        @include border-radius(3px);
+        @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24));
+
+        .modal-header{
+            position: relative; left:0; top:0; z-index: 105;
+            padding: 20px 40px 0;
+            h3{
+                font-size: 15px;
+                font-weight: 600;
+            }
+        }
+
+        .modal-content{
+            padding:0 40px 40px;
+            @include box-sizing(border-box);
+            p{
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+
+        .close-icon{
+            position: absolute; right: 10px; top:10px;
+            float: right;
+            text-decoration: none;
+            color:#C0C0C0;
+            &:before{
+                @include font-icon('close');
+                font-size: 12px;
+                vertical-align: top;
+            }
+            &:hover{
+                color:#2d2d2d;
+            }
+        }
+    }
+}
