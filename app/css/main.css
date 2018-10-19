@@ -4119,6 +4119,73 @@ body.modal-open {
   .modal-submit {
     font-size: 16px; } }
 
+.object-content__wrapper {
+  width: 100%;
+  overflow: hidden; }
+
+.object-content__label {
+  position: absolute;
+  height: 64px;
+  padding: 0 5px 0 20px;
+  width: 292px;
+  color: #000;
+  font-size: 24px;
+  line-height: normal;
+  line-height: 64px;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  transition: background-color 300ms ease; }
+  .object-content__label::before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    top: 0;
+    right: -20px;
+    opacity: 0;
+    border-top: 32px solid transparent;
+    border-bottom: 32px solid transparent;
+    border-left: 20px solid #ffd729;
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    transition: opacity 300ms ease; }
+  .object-content__label span {
+    position: relative; }
+    .object-content__label span::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #ffd729;
+      -webkit-transition: width 300ms ease;
+      -moz-transition: width 300ms ease;
+      transition: width 300ms ease; }
+  .object-content__label.active {
+    background-color: #ffd729;
+    -webkit-box-shadow: 0 3px 30px 0 rgba(25, 53, 117, 0.1);
+            box-shadow: 0 3px 30px 0 rgba(25, 53, 117, 0.1); }
+    .object-content__label.active::before {
+      opacity: 1; }
+  .object-content__label:hover, .object-content__label:focus {
+    color: #000;
+    text-decoration: none;
+    outline: none; }
+    .object-content__label:hover span::after, .object-content__label:focus span::after {
+      width: 100%; }
+
+.object-content__block {
+  position: relative;
+  left: 415px;
+  width: -webkit-calc(100% - 415px);
+  width: -moz-calc(100% - 415px);
+  width: calc(100% - 415px);
+  background-color: white;
+  max-height: none; }
+
 .object-item {
   position: relative;
   width: 100%;

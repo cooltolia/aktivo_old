@@ -1,0 +1,28 @@
+mixin object-content()
+    +b.SECTION.object-content
+        +inner
+            +e.wrapper
+                +e.A.label.active(href='#') 
+                    span Описание
+                +e.block
+                    +object-description
+                +e.A.label(href='#') 
+                    span Планировка
+                +e.block
+                    +object-description
+                +e.A.label(href='#') 
+                    span Расположение
+                +e.A.block
+                    +object-description
+                +e.A.label(href='#') 
+                    span Финансы
+                +e.block
+                    +object-description
+                +e.A.label(href='#') 
+                    span Документы
+                +e.block
+                    +object-description
+                +e.A.label(href='#das') 
+                    span Рассчитать доходность
+                +e.block#das
+                    +object-description

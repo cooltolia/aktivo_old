@@ -1,0 +1,97 @@
+.object-content {
+    
+}
+
+.object-content__wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.object-content__label {
+    position: absolute;
+    height: 64px;
+    padding: 0 5px 0 20px;
+    width: 292px;
+
+    color: $darktext;
+    font-size: 24px;
+    line-height: normal;
+    line-height: 64px;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: background-color 300ms ease;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        top: 0;
+        right: -20px;
+        opacity: 0;
+
+        border-top: 32px solid transparent;
+        border-bottom: 32px solid transparent;
+        border-left: 20px solid $themecolor;
+
+        transition: opacity 300ms ease;
+    }
+
+    span {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+
+            background-color: $themecolor;
+
+            transition: width 300ms ease;
+        }
+    }
+    
+
+    &.active {
+        background-color: $themecolor;
+
+        box-shadow: 0 3px 30px 0 rgba(25, 53, 117, 0.1);
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        color: $darktext;
+        text-decoration: none;
+
+        outline: none;
+
+        span {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.object-content__block {
+    position: relative;
+    left: 415px;
+    width: calc(100% - 415px);
+    background-color: white;
+    max-height: none;
+    // overflow: hidden;
+    // transition: max-height 0.5s ease-out;
+
+    // &.active {
+    //     max-height: none;
+    // }
+}

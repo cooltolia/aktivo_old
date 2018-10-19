@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.132 105.529">
+    <defs>
+        <style>
+            .cls-1{fill:#ffd729}
+        </style>
+    </defs>
+    <g id="Group_407" data-name="Group 407" transform="translate(-98 -568)">
+        <g id="Group_391" data-name="Group 391" transform="translate(-25 -40)">
+            <path id="Path_176" d="M40.047-8.333C58.628-8.333 75 7.7 75 26.111S58.628 63.519 40.047 63.519-5 54.521-5 36.111 21.465-8.333 40.047-8.333z" class="cls-1" data-name="Path 176" transform="rotate(37 -840.163 555.533)"/>
+            <g id="calculator" transform="translate(148 632)">
+                <path id="Path_310" d="M21 14h-5V9a1 1 0 0 0-2 0v5H9a1 1 0 0 0 0 2h5v5a1 1 0 0 0 2 0v-5h5a1 1 0 0 0 0-2z" data-name="Path 310"/>
+                <path id="Path_311" d="M49 14H37a1 1 0 0 0 0 2h12a1 1 0 0 0 0-2z" data-name="Path 311"/>
+                <path id="Path_312" d="M30 0H0v58h58V0zM2 2h26v26H2zm0 54V30h26v26zm54 0H30V30h26zM30 28V2h26v26z" data-name="Path 312"/>
+                <path id="Path_313" d="M37 47h12a1 1 0 0 0 0-2H37a1 1 0 0 0 0 2z" data-name="Path 313"/>
+                <path id="Path_314" d="M37 41h12a1 1 0 0 0 0-2H37a1 1 0 0 0 0 2z" data-name="Path 314"/>
+                <path id="Path_315" d="M20.707 37.293a1 1 0 0 0-1.414 0L15 41.586l-4.293-4.293a1 1 0 1 0-1.414 1.414L13.586 43l-4.293 4.293a1 1 0 1 0 1.414 1.414L15 44.414l4.293 4.293a1 1 0 1 0 1.414-1.414L16.414 43l4.293-4.293a1 1 0 0 0 0-1.414z" data-name="Path 315"/>
+            </g>
+        </g>
+    </g>
+</svg>
