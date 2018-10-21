@@ -2,27 +2,33 @@ mixin object-content()
     +b.SECTION.object-content
         +inner
             +e.wrapper
-                +e.A.label.active(href='#') 
+                +e.A.label.active(href='#a') 
                     span Описание
-                +e.block
+                    .icon
+                +e.block.active#a
                     +object-description
-                +e.A.label(href='#') 
+                +e.A.label(href='#b') 
                     span Планировка
-                +e.block
+                    .icon
+                +e.block#b
                     +object-description
-                +e.A.label(href='#') 
+                +e.A.label(href='#d') 
                     span Расположение
-                +e.A.block
+                    .icon
+                +e.block#d
                     +object-description
-                +e.A.label(href='#') 
+                +e.A.label(href='#e') 
                     span Финансы
-                +e.block
+                    .icon
+                +e.block#e
                     +object-description
-                +e.A.label(href='#') 
+                +e.A.label(href='#f') 
                     span Документы
-                +e.block
+                    .icon
+                +e.block#f
                     +object-description
                 +e.A.label(href='#das') 
                     span Рассчитать доходность
+                    .icon
                 +e.block#das
-                    +object-description
+                    +object-calculator

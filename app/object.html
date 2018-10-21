@@ -155,52 +155,104 @@
     </div><!-- object-content --> 
     <section class="object-content">
       <div class="inner">
-        <div class="object-content__wrapper"><a href="#" class="object-content__label active"> <span>Описание</span></a>
-          <div class="object-content__block"><!-- object-description --> 
+        <div class="object-content__wrapper"><a href="#a" class="object-content__label active"> <span>Описание</span>
+          <div class="icon"></div></a>
+          <div id="a" class="object-content__block active"><!-- object-description --> 
             <section class="object-description">
               <h1 class="object-description__heading">Супермаркет «Пятерочка»
               </h1>
               <p class="object-description__address">Московская обл., г. Люберцы, Октябрьский пр., 55
               </p>
             </section><!--/ object-description --> 
-          </div><a href="#" class="object-content__label"> <span>Планировка</span></a>
-          <div class="object-content__block"><!-- object-description --> 
+          </div><a href="#b" class="object-content__label"> <span>Планировка</span>
+          <div class="icon"></div></a>
+          <div id="b" class="object-content__block"><!-- object-description --> 
             <section class="object-description">
               <h1 class="object-description__heading">Супермаркет «Пятерочка»
               </h1>
               <p class="object-description__address">Московская обл., г. Люберцы, Октябрьский пр., 55
               </p>
             </section><!--/ object-description --> 
-          </div><a href="#" class="object-content__label"> <span>Расположение</span></a><a class="object-content__block"><!-- object-description --> 
-          <section class="object-description">
-            <h1 class="object-description__heading">Супермаркет «Пятерочка»
-            </h1>
-            <p class="object-description__address">Московская обл., г. Люберцы, Октябрьский пр., 55
-            </p>
-          </section><!--/ object-description --> </a><a href="#" class="object-content__label"> <span>Финансы</span></a>
-          <div class="object-content__block"><!-- object-description --> 
+          </div><a href="#d" class="object-content__label"> <span>Расположение</span>
+          <div class="icon"></div></a>
+          <div id="d" class="object-content__block"><!-- object-description --> 
             <section class="object-description">
               <h1 class="object-description__heading">Супермаркет «Пятерочка»
               </h1>
               <p class="object-description__address">Московская обл., г. Люберцы, Октябрьский пр., 55
               </p>
             </section><!--/ object-description --> 
-          </div><a href="#" class="object-content__label"> <span>Документы</span></a>
-          <div class="object-content__block"><!-- object-description --> 
+          </div><a href="#e" class="object-content__label"> <span>Финансы</span>
+          <div class="icon"></div></a>
+          <div id="e" class="object-content__block"><!-- object-description --> 
             <section class="object-description">
               <h1 class="object-description__heading">Супермаркет «Пятерочка»
               </h1>
               <p class="object-description__address">Московская обл., г. Люберцы, Октябрьский пр., 55
               </p>
             </section><!--/ object-description --> 
-          </div><a href="#das" class="object-content__label"> <span>Рассчитать доходность</span></a>
-          <div id="das" class="object-content__block"><!-- object-description --> 
+          </div><a href="#f" class="object-content__label"> <span>Документы</span>
+          <div class="icon"></div></a>
+          <div id="f" class="object-content__block"><!-- object-description --> 
             <section class="object-description">
               <h1 class="object-description__heading">Супермаркет «Пятерочка»
               </h1>
               <p class="object-description__address">Московская обл., г. Люберцы, Октябрьский пр., 55
               </p>
             </section><!--/ object-description --> 
+          </div><a href="#das" class="object-content__label"> <span>Рассчитать доходность</span>
+          <div class="icon"></div></a>
+          <div id="das" class="object-content__block"><!-- object-calculator --> 
+            <section class="object-calculator">
+              <div class="inner">
+                <div class="object-calculator__content">
+                  <div class="object-calculator__diagram">
+                    <div class="calc-graph">
+                      <div id="object_top_x_div" style="width:100%; height: 420px;"></div>
+                    </div>
+                  </div>
+                  <div class="col-ui">
+                    <div class="settings-block">
+                      <div class="settings-label">Какую сумму вы хотите получать в год?</div>
+                      <div class="settings-summ"><span id="object_summ1" class="summ-res">500 000</span><span class="ruble"></span>
+                        <div id="object_summ1-scroll">
+                          <input id="object_summ1-range" value="500000" step="100000" max="5000000" min="100000" name="summ1" type="range"/>
+                          <div id="object_vres"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-block">
+                      <div class="settings-label">В течение скольких лет?</div>
+                      <div class="settings-summ"><span id="object_summ2" class="summ-res">3 года</span>
+                        <div id="object_summ2-scroll">
+                          <input id="object_summ2-range" value="3" step="1" max="10" min="1" name="summ2" type="range"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-result">
+                    <div class="settings-label">Ваш доход за <span id="object_vyear">3 года</span> составит:</div>
+                    <div class="result">
+                      <input id="object_vresult1" value="0" type="hidden"/><span id="object_result1"></span><span class="ruble"></span><sup id="object_result1_percent"></sup>
+                    </div>
+                    <div class="sub-result">
+                      <div class="label">Рентный доход:</div>
+                      <div class="number">
+                        <input id="object_vresult2" value="0" type="hidden"/><span id="object_result2"></span><span class="ruble"></span><sup id="object_result2_percent" class="rent"></sup>
+                      </div>
+                      <div class="label">Прирост стоимости:</div>
+                      <div class="number">
+                        <input id="object_vresult3" value="0" type="hidden"/><span id="object_result3"></span><span class="ruble"></span><sup id="object_result3_percent" class="increase"></sup>
+                      </div>
+                      <div class="label">Стоимость актива:</div>
+                      <div class="number">
+                        <input id="object_vresult4" value="0" type="hidden"/><span id="object_result4"></span><span class="ruble"></span><sup id="object_result4_percent" class="price"></sup>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section><!--/ object-calculator --> 
           </div>
         </div>
       </div>

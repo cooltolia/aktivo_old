@@ -20,7 +20,7 @@
     }
 
 
-    var mobile = window.matchMedia("(max-width: 768px)");
+    var mobile = window.matchMedia("(max-width: 1024px)");
 
     if (mobile.matches) {
 
