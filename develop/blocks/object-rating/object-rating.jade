@@ -1,0 +1,37 @@
+mixin object-rating()
+    +b.SECTION.object-rating
+        +e.H2.heading Рейтинг AKTIVO
+        +e.line
+            +e.current BBB
+            +e.graph
+                +e.graph-item
+                    +e.graph-label AAA
+                +e.graph-item
+                    +e.graph-label AA
+                +e.graph-item
+                    +e.graph-label A
+                +e.graph-item
+                    +e.graph-label BBB
+                +e.graph-item
+                    +e.graph-label BB
+                +e.graph-item
+                    +e.graph-label B
+                +e.graph-item
+                    +e.graph-label CCC
+                +e.graph-item
+                    +e.graph-label CC
+                +e.graph-item
+                    +e.graph-label C
+        +e.TABLE.table
+            thead
+                tr
+                    th Показатель
+                    th Значение
+                    th Балл
+            tbody
+                each row in objectrating
+                    tr
+                        td= row.key
+                        td= row.value
+                        td= row.grade
+                

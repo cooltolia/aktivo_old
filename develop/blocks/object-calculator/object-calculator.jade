@@ -1,52 +1,41 @@
 mixin object-calculator()
     +b.SECTION.object-calculator
-        +inner
-            +e.content
-                +e.diagram
-                    .calc-graph
-                        #object_top_x_div(style="width:100%; height: 420px;")
-                //- +e.settings
-                .col-ui
-                    .settings-block
-                        .settings-label Какую сумму вы хотите получать в год?
-                        .settings-summ
-                            span.summ-res#object_summ1 500 000
-                            span.ruble
-                            #object_summ1-scroll
-                                input#object_summ1-range(value="500000" step="100000" max="5000000" min="100000" name="summ1" type="range")
-                                #object_vres
-                    .settings-block
-                        .settings-label В течение скольких лет?
-                        .settings-summ
-                            span.summ-res#object_summ2 3 года
-                            #object_summ2-scroll
-                                input#object_summ2-range(value="3" step="1" max="10" min="1" name="summ2" type="range")
-                .col-result
-                    .settings-label
-                        | Ваш доход за 
-                        span#object_vyear 3 года
-                        |  составит:
-                    .result
-                        input#object_vresult1(value="0" type="hidden")
-                        span#object_result1
-                        span.ruble
-                        sup#object_result1_percent
-                    .sub-result
-                        .label Рентный доход:
-                        .number
-                            input#object_vresult2(value="0" type="hidden")
-                            span#object_result2
-                            span.ruble
-                            sup.rent#object_result2_percent
-                        .label Прирост стоимости:
-                        .number
-                            input#object_vresult3(value="0" type="hidden")
-                            span#object_result3
-                            span.ruble
-                            sup.increase#object_result3_percent
-                        .label Стоимость актива:
-                        .number
-                            input#object_vresult4(value="0" type="hidden")
-                            span#object_result4
-                            span.ruble
-                            sup.price#object_result4_percent
+        +e.H2.heading Рассчитать доходность
+        +e.content
+            +e.col
+                +e.block
+                    +e.label.--big Сумма инвестиций
+                    +e.summ
+                        span.data-result#object_summ1 500 000
+                        span.data-ruble  ₽
+                        +e.summ-range#object_summ1-scroll
+                            input#object_summ1-range(value="500000" step="100000" max="5000000" min="100000" name="summ1" type="range")
+                +e.block
+                    +e.label Первоначальная доходность
+                    +e.tip (~за 10 лет, до НДФЛ, на момент формирования фонда)
+                    +e.data 10.98%
+                +e.block
+                    +e.label Первоначальная стоимость фонда
+                    +e.data 160 000 000  ₽
+                +e.block
+                    +e.label Приобретенных паев
+                    +e.data 457
+            +e.col
+                +e.block
+                    +e.label.--big Ваш ежемесячный доход
+                    +e.tip (~за 10 лет, до НДФЛ, на момент формирования фонда) 
+                    +e.data.--big 
+                        span.data-result 480.24
+                        span.data-ruble  ₽
+                +e.block
+                    +e.label Сопровождение сделки 2%
+                    +e.tip 2%, но не менее 2000 рублей, включено в стоимость пая
+                    +e.data
+                        span.data-result 2048
+                        span.data-ruble  ₽
+                +e.block
+                    +e.label К оплате итого: 
+                    +e.data
+                        span.data-result 499 638.10
+                        span.data-ruble  ₽
+                   

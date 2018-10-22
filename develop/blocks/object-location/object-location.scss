@@ -1,0 +1,42 @@
+.object-location__heading {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+}
+
+.object-location__text {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.object-location__map {
+    margin-top: 35px;
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+.object-location__map-inner {
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+#object-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

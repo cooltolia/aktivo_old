@@ -1,3 +1,14 @@
-.object-planning {
+.object-planning__heading {
+    margin: 0;
+    margin-bottom: 10px;
 
+    font-size: 24px;
+}
+
+.object-planning__image {
+    width: 100%;
+
+    img {
+        @include img;
+    }
 }

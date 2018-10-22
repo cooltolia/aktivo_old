@@ -1,0 +1,127 @@
+.object-rating__heading {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+}
+
+.object-rating__line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+
+.object-rating__current {
+    width: 99px;
+    height: 99px;
+    margin-right: 20px;
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    color: $lighttext;
+    font-weight: 700;
+
+    background-image: url('../images/object/rating_bg.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.object-rating__graph {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.object-rating__graph-item {
+    flex: 1 1 auto;
+    position: relative;
+    height: 8px;
+
+    &:nth-child(1) {
+        background-color: #5fce67;
+    }
+
+    &:nth-child(2) {
+        background-color: #5fce67;
+        opacity: 0.7;
+    }
+
+    &:nth-child(3) {
+        background-color: #5fce67;
+        opacity: 0.4;
+    }
+
+    &:nth-child(4) {
+        background-color: #ffd729;
+    }
+
+    &:nth-child(5) {
+        background-color: #ffd729;
+        opacity: 0.7;
+    }
+
+    &:nth-child(6) {
+        background-color: #ffd729;
+        opacity: 0.4;
+    }
+
+    &:nth-child(7) {
+        background-color: #f52f4b;
+    }
+
+    &:nth-child(8) {
+        background-color: #f52f4b;
+        opacity: 0.7;
+    }
+
+    &:nth-child(9) {
+        background-color: #f52f4b;
+        opacity: 0.4;
+    }
+
+}
+
+.object-rating__graph-label {
+    position: relative;
+    bottom: -16px;
+    
+    text-align: center;
+    color: #9b9b9b;
+}
+
+.object-rating__table {
+    width: 100%;
+
+    th {
+        padding: 12px 16px;
+
+        font-size: 16px;
+        font-weight: 700;
+        text-align: left;
+
+        &:last-child {
+            padding-right: 50px;
+        }
+    }
+
+    td {
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 40;
+
+        &:last-child {
+            padding-right: 50px;
+
+            text-align: right;
+        }
+    }
+
+    tbody tr:nth-child(2n) {
+        background-color: #f5f7f9;
+    }
+ }

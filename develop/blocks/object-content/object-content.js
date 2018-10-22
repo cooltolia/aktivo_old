@@ -1,10 +1,10 @@
 ;
 (function () {
-    var nav = document.querySelectorAll(".object-content__label");
+    var nav = document.querySelectorAll(".object-content .js-link");
     var i;
     var n;
 
-    var question = document.querySelector('.object-content__label');
+    var question = document.querySelector('.object-content .js-link');
     if (!nav || !question) return;
 
     var questionHeight = question.offsetHeight;
@@ -83,5 +83,14 @@
             });
         });
     }
+
+    $('.object-content__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+    });
     
 })();

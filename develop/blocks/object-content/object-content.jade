@@ -2,33 +2,60 @@ mixin object-content()
     +b.SECTION.object-content
         +inner
             +e.wrapper
-                +e.A.label.active(href='#a') 
+                +e.block.visible
+                    +e.H1.heading Супермаркет «Пятерочка»
+                    +e.P.address Московская обл., г. Люберцы, Октябрьский пр., 55
+                    +e.slider
+                        +e.item
+                            +e.item-inner
+                                img(src='images/object/slide1.jpg')
+                        +e.item
+                            +e.item-inner
+                                img(src='images/object/slide1.jpg')
+                        +e.item
+                            +e.item-inner
+                                img(src='images/object/slide1.jpg')
+                    +e.spec
+                        +e.spec-col
+                            +e.spec-title Категория здания
+                            +e.spec-data Стрит-ритейл
+                        +e.spec-col
+                            +e.spec-title Стоимость 1 кв. м.
+                            +e.spec-data 247 448 ₽
+                        +e.spec-col
+                            +e.spec-title Площадь
+                            +e.spec-data 646.6 кв.м
+                        +e.spec-col
+                            +e.spec-title Балансовая стоимость 
+                            +e.spec-data 160 000 000 ₽
+                +e.A.label.js-link.active(href='#object-description') 
                     span Описание
                     .icon
-                +e.block.active#a
+                +e.block.active#object-description
                     +object-description
-                +e.A.label(href='#b') 
+                +e.A.label.js-link(href='#object-planning') 
                     span Планировка
                     .icon
-                +e.block#b
-                    +object-description
-                +e.A.label(href='#d') 
+                +e.block#object-planning
+                    +object-planning
+                +e.A.label.js-link(href='#object-location') 
                     span Расположение
                     .icon
-                +e.block#d
-                    +object-description
-                +e.A.label(href='#e') 
+                +e.block#object-location
+                    +object-location
+                +e.A.label.js-link(href='#e') 
                     span Финансы
                     .icon
                 +e.block#e
-                    +object-description
-                +e.A.label(href='#f') 
+                +e.A.label.js-link(href='#object-rating') 
                     span Документы
                     .icon
-                +e.block#f
-                    +object-description
-                +e.A.label(href='#das') 
-                    span Рассчитать доходность
+                +e.block#object-rating
+                    +object-rating
+                //- +e.block#object-risks
+                //-     +object-risks
+                +e.A.calculate.js-link(href='#object-calculator') 
                     .icon
-                +e.block#das
+                    span Рассчитать доходность
+                +e.block#object-calculator
                     +object-calculator
