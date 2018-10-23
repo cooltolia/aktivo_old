@@ -1,0 +1,28 @@
+.object-finances {
+
+}
+
+.object-finances__heading {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+}
+
+.object-finances__subtitle {
+    margin-bottom: 40px;
+
+    font-size: 24px;
+}
+
+.object-finances__text {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

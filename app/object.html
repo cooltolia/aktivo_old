@@ -239,9 +239,26 @@
                 </div>
               </div>
             </section><!--/ object-location --> 
-          </div><a href="#e" class="object-content__label js-link"> <span>Финансы</span>
+          </div><a href="#object-finances" class="object-content__label js-link"> <span>Финансы</span>
           <div class="icon"></div></a>
-          <div id="e" class="object-content__block">
+          <div id="object-finances" class="object-content__block"><!-- object-finances --> 
+            <section class="object-finances">
+              <h2 class="object-finances__heading">Финансы
+              </h2>
+              <div class="object-finances__subtitle">Годовые финансовые показатели объекта
+              </div>
+              <div class="object-finances__content">
+                <div class="object-finances__col">
+                  <div class="object-finances__chart">
+                    <canvas id="chart-area"></canvas>
+                  </div>
+                </div>
+                <div class="object-finances__col">
+                  <div class="object-finances__data">
+                  </div>
+                </div>
+              </div>
+            </section><!--/ object-finances --> 
           </div><a href="#object-rating" class="object-content__label js-link"> <span>Документы</span>
           <div class="icon"></div></a>
           <div id="object-rating" class="object-content__block"><!-- object-rating --> 
@@ -367,6 +384,20 @@
                 </tbody>
               </table>
             </section><!--/ object-rating --> 
+          </div>
+          <div id="object-risks" class="object-content__block"><!-- object-risks --> 
+            <section class="object-risks">
+              <h2 class="object-risks__heading">Управление рисками
+              </h2>
+              <div class="object-risks__subtitle">Негативные изменения рыночной конъюнктуры
+              </div>
+              <p class="object-risks__text">Продукты питания — это товар неэластичного спроса, что обеспечивает устойчивость арендатора в негативной рыночной конъюктуре. Более 10 лет успешной работы X5 Retail Group на данной точке показывают стабильный покупательский спрос и сформированную аудиторию магазина с высокой посещаемостью магазина (2000 чел./сутки).
+              </p>
+              <div class="object-risks__subtitle">Неисполнение обязательств со стороны текущего арендатора
+              </div>
+              <p class="object-risks__text">В договоре аренды не предусмотрено право досрочного расторжения, арендатором внесен депозит денежных средств. Соотношение арендных платежей к выручке является позитивным, что исключает риск снижения ставки аренды.
+              </p>
+            </section><!--/ object-risks --> 
           </div><a href="#object-calculator" class="object-content__calculate js-link"> 
           <div class="icon"></div><span>Рассчитать доходность</span></a>
           <div id="object-calculator" class="object-content__block"><!-- object-calculator --> 
@@ -498,6 +529,7 @@
     <script src="libs/bootstrap.min.js"></script>
     <script src="libs/rangeslider.js"></script>
     <script src="libs/highcharts.js"></script>
+    <script src="libs/chartjs/chart.min.js"></script>
     <script src="libs/wow.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>

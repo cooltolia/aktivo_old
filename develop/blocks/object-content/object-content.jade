@@ -43,17 +43,18 @@ mixin object-content()
                     .icon
                 +e.block#object-location
                     +object-location
-                +e.A.label.js-link(href='#e') 
+                +e.A.label.js-link(href='#object-finances') 
                     span Финансы
                     .icon
-                +e.block#e
+                +e.block#object-finances
+                    +object-finances
                 +e.A.label.js-link(href='#object-rating') 
                     span Документы
                     .icon
                 +e.block#object-rating
                     +object-rating
-                //- +e.block#object-risks
-                //-     +object-risks
+                +e.block#object-risks
+                    +object-risks
                 +e.A.calculate.js-link(href='#object-calculator') 
                     .icon
                     span Рассчитать доходность
