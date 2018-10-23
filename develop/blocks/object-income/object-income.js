@@ -1,5 +1,5 @@
 ;(function() {
-    var resourceChartElement = document.getElementById("financies-chart");
+    var resourceChartElement = document.getElementById("income-chart");
     var ctx = resourceChartElement.getContext("2d")
 
     var grossIncome = 24260353; // Валовый доход
