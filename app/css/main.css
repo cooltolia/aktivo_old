@@ -4872,6 +4872,33 @@ body.modal-open {
   .object-finances__text:last-child {
     margin-bottom: 0; }
 
+.object-finances__chart {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin-right: 100px; }
+
+.object-income__chart {
+  position: relative;
+  height: 250px; }
+
+.object-income__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px; }
+
+.object-income__subtitle {
+  margin-bottom: 40px;
+  font-size: 24px; }
+
+.object-income__text {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5; }
+  .object-income__text:last-child {
+    margin-bottom: 0; }
+
 .object-item {
   position: relative;
   width: 100%;

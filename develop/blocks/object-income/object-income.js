@@ -2,92 +2,145 @@
     var resourceChartElement = document.getElementById("income-chart");
     var ctx = resourceChartElement.getContext("2d")
 
-    var grossIncome = 24260353; // Валовый доход
-    var fee = 2559803; // Комиссия за управление
-    var debit = 3781927; // Расходы
-    var operatingProfit = grossIncome - debit; // Чистый операционный доход
-    var availableEarnest = operatingProfit - fee; // Прибыль к распределению
-    
+    Chart.pluginService.register({
+        beforeRender: function (chart) {
+            if (chart.config.options.showAllTooltips) {
+                // create an array of tooltips
+                // we can't use the chart tooltip because there is only one tooltip per chart
+                chart.pluginTooltips = [];
+                chart.config.data.datasets.forEach(function (dataset, i) {
+                    chart.getDatasetMeta(i).data.forEach(function (sector, j) {
+                        if (sector._datasetIndex > 0) return
+                        chart.pluginTooltips.push(new Chart.Tooltip({
+                            _chart: chart.chart,
+                            _chartInstance: chart,
+                            _data: chart.data,
+                            _options: chart.options.tooltips,
+                            _active: [sector]
+                        }, chart));
+                    });
+                });
 
-    var resourceChart = new Chart(ctx, {
-        type: "doughnut",
+                // turn off normal tooltips
+                chart.options.tooltips.enabled = false;
+            }
+        },
+        afterDraw: function (chart, easing) {
+            if (chart.config.options.showAllTooltips) {
+                // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
+                if (!chart.allTooltipsOnce) {
+                    if (easing !== 1)
+                        return;
+                    chart.allTooltipsOnce = true;
+                }
+
+                // turn on tooltips
+                chart.options.tooltips.enabled = true;
+                Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
+
+                    // if (tooltip._active[0]._datasetIndex > 0) return;
+
+                    tooltip.initialize();
+                    tooltip.update();
+                    // we don't actually need this since we are not animating tooltips
+                    tooltip.pivot();
+                    tooltip.transition(easing).draw();
+                });
+                chart.options.tooltips.enabled = false;
+            }
+        }
+    })
+    
+    var realLineData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38]
+
+    var mixedChart = new Chart(ctx, {
+        type: 'bar',
         data: {
-            labels: [
-                "Комиссия за управление",
-                "Прибыль к распределению",
-                "Чистый операционный доход",
-                "Расходы"
-            ],
-            datasets: [{
-                backgroundColor: [
-                    "#3c7bd8",
-                    "#ffd729",
-                    "#5fce67",
-                    "#f52f4b",
-                ],
-                hoverBackgroundColor: [
-                    "#3c7bd8",
-                    "#ffd729",
-                    "#5fce67",
-                    "#f52f4b",
-                ],
-                data: [
-                    0,
-                    0,
-                    operatingProfit,
-                    debit,
-                ]
+            datasets: [
+            {
+                label: 'Доходность',
+                data: [2100, 1700, 1200, 1600, 1250, 650],
+                type: 'line',
+                borderColor: '#ffd729',
+                pointBackgroundColor: '#ffd729',
+                fill: false,
             },
             {
-                backgroundColor: [
-                    "#3c7bd8",
-                    "#ffd729",
-                    "#5fce67",
-                    "#f52f4b",
-                ],
-                hoverBackgroundColor: [
-                    "#3c7bd8",
-                    "#ffd729",
-                    "#5fce67",
-                    "#f52f4b",
-                ],
-                data: [
-                    fee,
-                    availableEarnest,
-                ]
-            }
-            ],
+                backgroundColor: '#3c7bd8',
+                hoverBackgroundColor: '#3c7bd8',
+                label: 'Сумма выплат',
+                data: [2100, 1700, 1200, 1600, 1250, 650],
+                borderWidth: 0
+            }, 
+        ],
+            labels: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18']
         },
         options: {
-            legend: {
-                display: false
-            },
-            tooltips: {
-                callbacks: {
-                    label: function (tooltipItem, data) {
-                        var abc2 = function (n) {
-                            n += "";
-                            n = new Array(4 - n.length % 3).join("U") + n;
-                            return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
-                        };
-
-                        var dataset = data.datasets[tooltipItem.datasetIndex];
-                        //calculate the total of this data set
-                        var total = dataset.data.reduce(function (previousValue, currentValue, currentIndex, array) {
-                            return previousValue + currentValue;
-                        });
-                        //get the current items value
-                        var currentValue = dataset.data[tooltipItem.index];
-                        var currentLabel = data.labels[tooltipItem.index];
-                        //calculate the precentage based on the total and current item, also this does a rough rounding to give a whole number
-                        var formattedValue = abc2(currentValue);
-                        return currentLabel + ': ' + formattedValue + " ₽";
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                }],
+                xAxes: [{
+                    barThickness: 45,
+                    gridLines: {
+                        display: false
                     }
-                    
+                }]
+            },
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    boxWidth: 16,
+                    fontSize: 12,
+                    fontColor: '#000',
+                    padding: 15,
                 }
             },
-            rotation: (-0.5 * Math.PI) - (50 / 180 * Math.PI)
-        }
+            elements: {
+                line: {
+                    tension: 0
+                }
+            },
+            tooltips: {
+                mode: 'x',
+                displayColors: false,
+                yAlign: 'bottom',
+                xAlign: 'center',
+                bodyFontColor: '#000',
+                bodyFontSize: 14,
+                backgroundColor: 'transparent',
+                custom: function (tooltip) {
+                    if (!tooltip) return;
+                    // disable displaying the color box;
+                    tooltip.displayColors = false;
+                },
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                        if (tooltipItem.datasetIndex > 0) {
+                            return dataset.data[tooltipItem.index];
+                        }
+                        var label = realLineData[tooltipItem.index];
+
+                        return label;
+                    },
+                    // remove title
+                    title: function (tooltipItem, data) {
+                        if (tooltipItem.datasetIndex > 0) {
+                            return dataset.data[tooltipItem.index];
+                        } else {
+                            return null
+                        }
+                    }
+                }
+            },
+            showAllTooltips: true,
+            maintainAspectRatio: false,
+        },
+
     });
 })();
 

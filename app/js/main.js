@@ -1430,13 +1430,6 @@ jQuery(document).ready(function ($) {
      })();
 
      
-     ;(function() {
-
-     
-
-     })();
-
-     
      ;
 
      (function () {
@@ -1635,7 +1628,7 @@ jQuery(document).ready(function ($) {
      
      ;(function() {
 
-         var resourceChartElement = document.getElementById("chart-area");
+         var resourceChartElement = document.getElementById("financies-chart");
 
          var ctx = resourceChartElement.getContext("2d")
 
@@ -1652,6 +1645,94 @@ jQuery(document).ready(function ($) {
          var availableEarnest = operatingProfit - fee; // Прибыль к распределению
 
          
+
+         var formattedGrossIncome = abc2(grossIncome);
+
+         formattedGrossIncome = formattedGrossIncome + ' ₽';
+
+     
+
+         function abc2(n) {
+
+             n += "";
+
+             n = new Array(4 - n.length % 3).join("U") + n;
+
+             return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
+
+         };
+
+     
+
+         Chart.pluginService.register({
+
+             beforeDraw: function (chart) {
+
+                 if (chart.config.options.elements.center) {
+
+                     //Get ctx from string
+
+                     var ctx = chart.chart.ctx;
+
+     
+
+                     //Get options from the center object in options
+
+                     var centerConfig = chart.config.options.elements.center;
+
+                     var fontStyle = centerConfig.fontStyle || 'Arial';
+
+                     var txt = centerConfig.text;
+
+                     var color = centerConfig.color || '#000';
+
+                     var sidePadding = centerConfig.sidePadding || 20;
+
+                     var sidePaddingCalculated = (sidePadding / 100) * (chart.innerRadius * 2)
+
+                     
+
+                     ctx.font = 'normal 16px ' + fontStyle;
+
+     
+
+                     ctx.textAlign = 'center';
+
+                     ctx.textBaseline = 'middle';
+
+                     var centerX = ((chart.chartArea.left + chart.chartArea.right) / 2);
+
+                     var centerY = ((chart.chartArea.top + chart.chartArea.bottom) / 2 - 12);
+
+                     ctx.fillStyle = color;
+
+     
+
+                     var lines = txt.split('\n');
+
+                     var lineheight = 25;
+
+     
+
+                     for (var i = 0; i < lines.length; i++)
+
+                         if (i === lines.length - 1) {
+
+                             ctx.font = "bold 18px " + fontStyle;
+
+                             ctx.fillText(lines[i], centerX, centerY + (i * lineheight));
+
+                         } else {
+
+                             ctx.fillText(lines[i], centerX, centerY + (i * lineheight));
+
+                         }
+
+                 }
+
+             }
+
+         });
 
      
 
@@ -1709,7 +1790,9 @@ jQuery(document).ready(function ($) {
 
                          debit,
 
-                     ]
+                     ],
+
+                     borderWidth: 0
 
                  },
 
@@ -1745,7 +1828,9 @@ jQuery(document).ready(function ($) {
 
                          availableEarnest,
 
-                     ]
+                     ],
+
+                     borderWidth: 0
 
                  }
 
@@ -1761,23 +1846,27 @@ jQuery(document).ready(function ($) {
 
                  },
 
+                 elements: {
+
+                     center: {
+
+                         text: 'Валовый доход \n' + formattedGrossIncome,
+
+                         fontStyle: 'Segoe UI', // Default is Arial
+
+                         sidePadding: 20 // Defualt is 20 (as a percentage)
+
+                     }
+
+                 },
+
                  tooltips: {
 
                      callbacks: {
 
                          label: function (tooltipItem, data) {
 
-                             var abc2 = function (n) {
-
-                                 n += "";
-
-                                 n = new Array(4 - n.length % 3).join("U") + n;
-
-                                 return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
-
-                             };
-
-     
+                             
 
                              var dataset = data.datasets[tooltipItem.datasetIndex];
 
@@ -1809,9 +1898,308 @@ jQuery(document).ready(function ($) {
 
                  },
 
-                 rotation: (-0.5 * Math.PI) - (50 / 180 * Math.PI)
+                 rotation: (-0.5 * Math.PI) - (50 / 180 * Math.PI),
+
+                 cutoutPercentage: 65,
+
+                 maintainAspectRatio: false
 
              }
+
+         });
+
+     })();
+
+     
+
+     
+
+     
+     ;(function() {
+
+         var resourceChartElement = document.getElementById("income-chart");
+
+         var ctx = resourceChartElement.getContext("2d")
+
+     
+
+         Chart.pluginService.register({
+
+             beforeRender: function (chart) {
+
+                 if (chart.config.options.showAllTooltips) {
+
+                     // create an array of tooltips
+
+                     // we can't use the chart tooltip because there is only one tooltip per chart
+
+                     chart.pluginTooltips = [];
+
+                     chart.config.data.datasets.forEach(function (dataset, i) {
+
+                         chart.getDatasetMeta(i).data.forEach(function (sector, j) {
+
+                             if (sector._datasetIndex > 0) return
+
+                             chart.pluginTooltips.push(new Chart.Tooltip({
+
+                                 _chart: chart.chart,
+
+                                 _chartInstance: chart,
+
+                                 _data: chart.data,
+
+                                 _options: chart.options.tooltips,
+
+                                 _active: [sector]
+
+                             }, chart));
+
+                         });
+
+                     });
+
+     
+
+                     // turn off normal tooltips
+
+                     chart.options.tooltips.enabled = false;
+
+                 }
+
+             },
+
+             afterDraw: function (chart, easing) {
+
+                 if (chart.config.options.showAllTooltips) {
+
+                     // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
+
+                     if (!chart.allTooltipsOnce) {
+
+                         if (easing !== 1)
+
+                             return;
+
+                         chart.allTooltipsOnce = true;
+
+                     }
+
+     
+
+                     // turn on tooltips
+
+                     chart.options.tooltips.enabled = true;
+
+                     Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
+
+     
+
+                         // if (tooltip._active[0]._datasetIndex > 0) return;
+
+     
+
+                         tooltip.initialize();
+
+                         tooltip.update();
+
+                         // we don't actually need this since we are not animating tooltips
+
+                         tooltip.pivot();
+
+                         tooltip.transition(easing).draw();
+
+                     });
+
+                     chart.options.tooltips.enabled = false;
+
+                 }
+
+             }
+
+         })
+
+         
+
+         var realLineData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38]
+
+     
+
+         var mixedChart = new Chart(ctx, {
+
+             type: 'bar',
+
+             data: {
+
+                 datasets: [
+
+                 {
+
+                     label: 'Доходность',
+
+                     data: [2100, 1700, 1200, 1600, 1250, 650],
+
+                     type: 'line',
+
+                     borderColor: '#ffd729',
+
+                     pointBackgroundColor: '#ffd729',
+
+                     fill: false,
+
+                 },
+
+                 {
+
+                     backgroundColor: '#3c7bd8',
+
+                     hoverBackgroundColor: '#3c7bd8',
+
+                     label: 'Сумма выплат',
+
+                     data: [2100, 1700, 1200, 1600, 1250, 650],
+
+                     borderWidth: 0
+
+                 }, 
+
+             ],
+
+                 labels: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18']
+
+             },
+
+             options: {
+
+                 scales: {
+
+                     yAxes: [{
+
+                         ticks: {
+
+                             beginAtZero: true,
+
+                         },
+
+                     }],
+
+                     xAxes: [{
+
+                         barThickness: 45,
+
+                         gridLines: {
+
+                             display: false
+
+                         }
+
+                     }]
+
+                 },
+
+                 legend: {
+
+                     display: true,
+
+                     position: 'right',
+
+                     labels: {
+
+                         boxWidth: 16,
+
+                         fontSize: 12,
+
+                         fontColor: '#000',
+
+                         padding: 15,
+
+                     }
+
+                 },
+
+                 elements: {
+
+                     line: {
+
+                         tension: 0
+
+                     }
+
+                 },
+
+                 tooltips: {
+
+                     mode: 'x',
+
+                     displayColors: false,
+
+                     yAlign: 'bottom',
+
+                     xAlign: 'center',
+
+                     bodyFontColor: '#000',
+
+                     bodyFontSize: 14,
+
+                     backgroundColor: 'transparent',
+
+                     custom: function (tooltip) {
+
+                         if (!tooltip) return;
+
+                         // disable displaying the color box;
+
+                         tooltip.displayColors = false;
+
+                     },
+
+                     callbacks: {
+
+                         label: function (tooltipItem, data) {
+
+                             var dataset = data.datasets[tooltipItem.datasetIndex];
+
+                             if (tooltipItem.datasetIndex > 0) {
+
+                                 return dataset.data[tooltipItem.index];
+
+                             }
+
+                             var label = realLineData[tooltipItem.index];
+
+     
+
+                             return label;
+
+                         },
+
+                         // remove title
+
+                         title: function (tooltipItem, data) {
+
+                             if (tooltipItem.datasetIndex > 0) {
+
+                                 return dataset.data[tooltipItem.index];
+
+                             } else {
+
+                                 return null
+
+                             }
+
+                         }
+
+                     }
+
+                 },
+
+                 showAllTooltips: true,
+
+                 maintainAspectRatio: false,
+
+             },
+
+     
 
          });
 
