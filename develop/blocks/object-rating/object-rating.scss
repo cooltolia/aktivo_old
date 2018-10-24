@@ -1,8 +1,13 @@
-.object-rating__heading {
+.object-rating {
+    margin-bottom: 65px;
+}
+
+.object-rating__title {
     margin: 0;
     margin-bottom: 10px;
 
     font-size: 24px;
+    font-weight: 400;
 }
 
 .object-rating__line {

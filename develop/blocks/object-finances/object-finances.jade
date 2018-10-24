@@ -1,10 +1,29 @@
 mixin object-finances()
     +b.SECTION.object-finances
-        +e.H2.heading Финансы
-        +e.subtitle Годовые финансовые показатели объекта
+        +e.H3.title Годовые финансовые показатели объекта
         +e.content
-            +e.col
-                +e.chart
-                    canvas#financies-chart
-            +e.col
-                +e.data
+            +e.chart
+                canvas#financies-chart
+            +e.data
+                +e.date Декабрь 2015 — Декабрь 2016
+                +e.legend
+                    +e.legend-item Чистый операционный доход
+                    +e.legend-item Прибыль к распределению
+                    +e.legend-item Комиссия за управление
+                    +e.legend-item Расходы
+                +e.calculation
+                    +e.calculation-row
+                        +e.calculation-label Валовый доход
+                        +e.calculation-summ 24 260 353 ₽
+                    +e.calculation-row
+                        +e.calculation-label Расходы
+                        +e.calculation-summ - 3 781 927 ₽
+                    +e.calculation-row
+                        +e.calculation-label Чистый операционный доход
+                        +e.calculation-summ = 20 478 426 ₽
+                    +e.calculation-row
+                        +e.calculation-label Комиссия за управление
+                        +e.calculation-summ - 2 559 803 ₽
+                    +e.calculation-row
+                        +e.calculation-label Прибыль к распределению
+                        +e.calculation-summ = 17 918 622 ₽

@@ -100,3 +100,28 @@
         opacity: 0.4
     }
 }
+
+.object-calculator__appeal {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.object-calculator__appeal-button {
+    @include btn-theme;
+    padding: 16px;
+    margin-right: 20px;
+    width: 227px;
+    flex: 0 0 227px;
+
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.object-calculator__appeal-text {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+}

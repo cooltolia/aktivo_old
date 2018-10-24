@@ -32,30 +32,28 @@ mixin object-content()
                     span Описание
                     .icon
                 +e.block.active#object-description
+                    +e.H2.title Описание
                     +object-description
                 +e.A.label.js-link(href='#object-planning') 
                     span Планировка
                     .icon
                 +e.block#object-planning
+                    +e.H2.title Планировка
                     +object-planning
                 +e.A.label.js-link(href='#object-location') 
                     span Расположение
                     .icon
                 +e.block#object-location
+                    +e.H2.title Расположение
                     +object-location
                 +e.A.label.js-link(href='#object-finances') 
                     span Финансы
                     .icon
                 +e.block#object-finances
+                    +e.H2.title Финансы
                     +object-finances
-                +e.A.label.js-link(href='#object-rating') 
-                    span Документы
-                    .icon
-                +e.block#object-rating
                     +object-rating
-                +e.block#object-risks
                     +object-risks
-                +e.block#object-income
                     +object-income
                 +e.A.calculate.js-link(href='#object-calculator') 
                     .icon

@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Segoe UI';
-  src: url(".../fonts/SegoeUI/Light/font.eot");
-  src: local("Segoe UI Light"), local(".../fonts/SegoeUI/Light"), url(".../fonts/SegoeUI/Light/font.eot?#iefix") format("embedded-opentype"), url(".../fonts/SegoeUI/Light/font.woff") format("woff"), url(".../fonts/SegoeUI/Light/font.ttf") format("truetype");
+  src: url("../fonts/SegoeUI/Light/font.eot");
+  src: local("Segoe UI Light"), local("../fonts/SegoeUI/Light"), url("../fonts/SegoeUI/Light/font.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUI/Light/font.woff") format("woff"), url("../fonts/SegoeUI/Light/font.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 
@@ -4516,6 +4516,66 @@ body.modal-open {
   .object-calculator__summ .rangeslider--disabled {
     opacity: 0.4; }
 
+.object-calculator__appeal {
+  margin-top: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.object-calculator__appeal-button {
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: #ffd729;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  transition: all 300ms ease;
+  padding: 16px;
+  margin-right: 20px;
+  width: 227px;
+  -webkit-box-flex: 0;
+     -moz-box-flex: 0;
+      -ms-flex: 0 0 227px;
+          flex: 0 0 227px;
+  font-weight: 600;
+  font-size: 18px; }
+  .object-calculator__appeal-button:hover, .object-calculator__appeal-button:active, .object-calculator__appeal-button:focus {
+    text-decoration: none;
+    color: #000;
+    background-color: #ffe15c; }
+  .object-calculator__appeal-button:active {
+    background-color: #ffea8f; }
+
+.object-calculator__appeal-text {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: normal; }
+
 .object-content {
   padding-bottom: 250px;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
@@ -4630,6 +4690,12 @@ body.modal-open {
   margin-bottom: 5px;
   font-size: 48px; }
 
+.object-content__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700; }
+
 .object-content__address {
   margin: 0;
   margin-bottom: 35px;
@@ -4741,7 +4807,8 @@ body.modal-open {
     max-width: 768px;
     padding: 0;
     margin: 0 auto; }
-  .object-content__label {
+  .object-content__label,
+  .object-content__calculate {
     display: block;
     width: 100%;
     position: relative;
@@ -4749,11 +4816,14 @@ body.modal-open {
     padding-left: 56px;
     margin-top: -1px;
     border: solid 1px #f5f7f9; }
-    .object-content__label::before {
+    .object-content__label::before,
+    .object-content__calculate::before {
       display: none; }
-    .object-content__label:first-child {
+    .object-content__label:first-child,
+    .object-content__calculate:first-child {
       margin-top: 0; }
-    .object-content__label .icon {
+    .object-content__label .icon,
+    .object-content__calculate .icon {
       width: 24px;
       height: 24px;
       position: absolute;
@@ -4762,7 +4832,8 @@ body.modal-open {
       -webkit-transition: all 300ms ease;
       -moz-transition: all 300ms ease;
       transition: all 300ms ease; }
-      .object-content__label .icon::before {
+      .object-content__label .icon::before,
+      .object-content__calculate .icon::before {
         content: '';
         position: absolute;
         width: 0;
@@ -4773,7 +4844,8 @@ body.modal-open {
         -webkit-transition: all 300ms ease;
         -moz-transition: all 300ms ease;
         transition: all 300ms ease; }
-      .object-content__label .icon::after {
+      .object-content__label .icon::after,
+      .object-content__calculate .icon::after {
         content: '';
         position: absolute;
         width: 22px;
@@ -4784,13 +4856,15 @@ body.modal-open {
         -webkit-transition: all 300ms ease;
         -moz-transition: all 300ms ease;
         transition: all 300ms ease; }
-    .object-content__label.active .icon::before {
+    .object-content__label.active .icon::before,
+    .object-content__calculate.active .icon::before {
       -webkit-transform: rotate(90deg);
          -moz-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
               transform: rotate(90deg);
       border-color: #fff; }
-    .object-content__label.active .icon::after {
+    .object-content__label.active .icon::after,
+    .object-content__calculate.active .icon::after {
       border-color: #fff; }
   .object-content__block {
     width: 100%;
@@ -4842,11 +4916,6 @@ body.modal-open {
   .object-content__paragraph:last-child {
     padding-bottom: 15px; } }
 
-.object-description__heading {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 24px; }
-
 .object-description__text {
   margin: 0;
   margin-bottom: 20px;
@@ -4855,14 +4924,14 @@ body.modal-open {
   .object-description__text:last-child {
     margin-bottom: 0; }
 
-.object-finances__heading {
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 24px; }
+.object-finances {
+  margin-bottom: 50px; }
 
-.object-finances__subtitle {
+.object-finances__title {
+  margin: 0;
   margin-bottom: 40px;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 
 .object-finances__text {
   margin: 0;
@@ -4872,32 +4941,121 @@ body.modal-open {
   .object-finances__text:last-child {
     margin-bottom: 0; }
 
+.object-finances__content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .object-finances__chart {
   position: relative;
   width: 260px;
   height: 260px;
-  margin-right: 100px; }
+  margin-right: 45px; }
+
+.object-finances__data {
+  -webkit-box-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
+.object-finances__date {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 700; }
+
+.object-finances__legend {
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
+  -webkit-column-gap: 45px;
+     -moz-column-gap: 45px;
+          column-gap: 45px;
+  margin-bottom: 15px;
+  font-size: 12px; }
+
+.object-finances__legend-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 27px; }
+  .object-finances__legend-item::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .object-finances__legend-item:nth-child(1)::before {
+    background-color: #5fce67; }
+  .object-finances__legend-item:nth-child(2)::before {
+    background-color: #ffd729; }
+  .object-finances__legend-item:nth-child(3)::before {
+    background-color: #3c7bd8; }
+  .object-finances__legend-item:nth-child(4)::before {
+    background-color: #f52f4b; }
+
+.object-finances__calculation {
+  width: 360px; }
+
+.object-finances__calculation-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px; }
+
+.object-finances__calculation-label {
+  -webkit-box-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left; }
+
+.object-finances__calculation-row {
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right; }
+
+.object-income {
+  margin-bottom: 70px; }
+
+.object-income__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 400; }
 
 .object-income__chart {
   position: relative;
-  height: 250px; }
+  height: 250px;
+  margin-bottom: 40px; }
 
-.object-income__heading {
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 24px; }
-
-.object-income__subtitle {
-  margin-bottom: 40px;
-  font-size: 24px; }
-
-.object-income__text {
-  margin: 0;
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.5; }
-  .object-income__text:last-child {
-    margin-bottom: 0; }
+.object-income__link {
+  position: relative;
+  font-size: 14px;
+  color: #3c7bd8;
+  text-decoration: none; }
+  .object-income__link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: -3px;
+    border-bottom: 1px dashed #3c7bd8;
+    -webkit-transition: color 300ms ease;
+    -moz-transition: color 300ms ease;
+    transition: color 300ms ease; }
+  .object-income__link:hover, .object-income__link:active, .object-income__link:focus {
+    text-decoration: none;
+    color: #1d4c91; }
 
 .object-item {
   position: relative;
@@ -5035,11 +5193,6 @@ body.modal-open {
   .object-item__banner--club::before {
     right: 0; } }
 
-.object-location__heading {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 24px; }
-
 .object-location__text {
   margin: 0;
   margin-bottom: 20px;
@@ -5069,11 +5222,6 @@ body.modal-open {
   width: 100%;
   height: 100%; }
 
-.object-planning__heading {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 24px; }
-
 .object-planning__image {
   width: 100%; }
   .object-planning__image img {
@@ -5083,10 +5231,14 @@ body.modal-open {
     max-width: 100%;
     max-height: 100%; }
 
-.object-rating__heading {
+.object-rating {
+  margin-bottom: 65px; }
+
+.object-rating__title {
   margin: 0;
   margin-bottom: 10px;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 
 .object-rating__line {
   display: -webkit-box;
@@ -5194,10 +5346,14 @@ body.modal-open {
   .object-rating__table tbody tr:nth-child(2n) {
     background-color: #f5f7f9; }
 
-.object-risks__heading {
+.object-risks {
+  margin-bottom: 50px; }
+
+.object-risks__title {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 24px; }
+  font-size: 24px;
+  font-weight: 400; }
 
 .object-risks__subtitle {
   font-size: 16px;

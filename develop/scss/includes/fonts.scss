@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Segoe UI';
-    src: url('.../fonts/SegoeUI/Light/font.eot');
-    src: local('Segoe UI Light'), local('.../fonts/SegoeUI/Light'),
-        url('.../fonts/SegoeUI/Light/font.eot?#iefix') format('embedded-opentype'),
-        url('.../fonts/SegoeUI/Light/font.woff') format('woff'),
-        url('.../fonts/SegoeUI/Light/font.ttf') format('truetype');
+    src: url('../fonts/SegoeUI/Light/font.eot');
+    src: local('Segoe UI Light'), local('../fonts/SegoeUI/Light'),
+        url('../fonts/SegoeUI/Light/font.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SegoeUI/Light/font.woff') format('woff'),
+        url('../fonts/SegoeUI/Light/font.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }

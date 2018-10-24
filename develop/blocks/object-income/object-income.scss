@@ -1,33 +1,44 @@
 .object-income {
+    margin-bottom: 70px;
+}
 
+.object-income__title {
+    margin: 0;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 400;
 }
 
 .object-income__chart {
     position: relative;
     height: 250px;
-}
-
-.object-income__heading {
-    margin: 0;
-    margin-bottom: 20px;
-
-    font-size: 24px;
-}
-
-.object-income__subtitle {
     margin-bottom: 40px;
-
-    font-size: 24px;
 }
 
-.object-income__text {
-    margin: 0;
-    margin-bottom: 20px;
+.object-income__link {
+    position: relative;
+    font-size: 14px;
+    color: #3c7bd8;
+    text-decoration: none;
 
-    font-size: 16px;
-    line-height: 1.5;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        bottom: -3px;
+        border-bottom: 1px dashed #3c7bd8;
+        
+        transition: color 300ms ease;
+    }
 
-    &:last-child {
-        margin-bottom: 0;
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+
+        color: darken($color: #3c7bd8, $amount: 20%)
     }
 }
