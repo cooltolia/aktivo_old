@@ -137,20 +137,23 @@
         height: 190px;
     }
 
-    .slick-list {
-        padding:0 20% 0 0 !important;
+    .about-team {
+        .slick-list {
+            padding: 0 20% 0 0 !important;
+        }
+        
+        .slick-active {
+            .about-team__photo img {
+                filter: none;
+                filter: grayscale(0);
+            }
+    
+            .about-team__photo-bg svg {
+                fill: $themecolor
+            }
+        }
     }
 
-    .slick-active {
-        .about-team__photo img {
-            filter: none;
-            filter: grayscale(0);
-        }
-
-        .about-team__photo-bg svg {
-            fill: $themecolor
-        }
-    }
 }
 
 @media (max-width: 360px) {

@@ -109,3 +109,35 @@
     font-weight: 700;
     text-align: right;
 }
+
+@media (max-width: 1024px) {
+    .object-finances {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .object-finances__title {
+        font-size: 20px;
+    }
+
+    .object-finances__content {
+        display: block;
+    }
+
+    .object-finances__chart {
+        margin: 0 auto 25px;
+    }
+
+    .object-finances__data {
+        width: 100%;
+    }
+
+    .object-finances__calculation {
+        width: 100%;
+    }
+
+    .object-finances__calculation-label {
+        margin-right: 10px;
+    }
+}

@@ -42,3 +42,13 @@
         color: darken($color: #3c7bd8, $amount: 20%)
     }
 }
+
+@media (max-width: 480px) {
+    .object-income {
+        margin-bottom: 25px;
+    }
+
+    .object-income__title {
+        font-size: 20px;
+    }
+}

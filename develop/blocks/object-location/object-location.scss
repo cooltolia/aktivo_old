@@ -33,3 +33,15 @@
     width: 100%;
     height: 100%;
 }
+
+@media (max-width: 1024px) {
+    .object-location {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .object-location__text {
+        font-size: 14px;
+    }
+}

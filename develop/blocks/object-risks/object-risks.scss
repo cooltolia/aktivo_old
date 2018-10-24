@@ -27,3 +27,15 @@
         margin-bottom: 0;
     }
 }
+
+@media (max-width: 480px) {
+    .object-risks__title {
+        margin-bottom: 15px;
+        
+        font-size: 20px;
+    }
+
+    .object-risks__text {
+        font-size: 14px;
+    }
+}

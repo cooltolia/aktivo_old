@@ -5,3 +5,9 @@
         @include img;
     }
 }
+
+@media (max-width: 1024px) {
+    .object-planning {
+        padding: 20px 0;
+    }
+}

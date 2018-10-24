@@ -25,7 +25,8 @@
     if (mobile.matches) {
 
         for (i = 0; i < nav.length; i++) {
-            nav[i].addEventListener("click", function () {
+            nav[i].addEventListener("click", function (e) {
+                e.preventDefault();
 
                 if (this.classList.contains('active')) {
                     this.classList.remove('active');

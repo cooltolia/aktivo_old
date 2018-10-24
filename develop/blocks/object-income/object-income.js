@@ -151,9 +151,29 @@
                 },
                 showAllTooltips: true,
                 maintainAspectRatio: false,
+                responsive: true
             },
 
         });
+    }
+
+    var resizeId;
+    $(window).resize(function () {
+        clearTimeout(resizeId);
+        resizeId = setTimeout(afterResizing, 100);
+    });
+
+    afterResizing();
+
+    function afterResizing() {
+        var canvaswidth = document.getElementById("income-chart").width;
+        if (canvaswidth <= 500) {
+            
+            mixedChart.options.legend.display = false;
+        } else {
+            mixedChart.options.legend.display = true;
+        }
+        mixedChart.update();
     }
     
 })();

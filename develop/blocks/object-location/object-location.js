@@ -2,6 +2,10 @@
     var zoom = 16;
     var adress = [55.747115, 37.539078];
 
+    if (!ymaps) {
+        return
+    }
+
     ymaps.ready(function () {
         var myMap;
 

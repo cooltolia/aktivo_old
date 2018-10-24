@@ -1225,7 +1225,13 @@ jQuery(document).ready(function ($) {
 
          var adress = [55.747115, 37.539078];
 
-     
+         
+
+         if (!ymaps) {
+
+             return
+
+         }
 
          ymaps.ready(function () {
 
@@ -1484,7 +1490,9 @@ jQuery(document).ready(function ($) {
 
              for (i = 0; i < nav.length; i++) {
 
-                 nav[i].addEventListener("click", function () {
+                 nav[i].addEventListener("click", function (e) {
+
+                     e.preventDefault();
 
      
 
@@ -2229,11 +2237,51 @@ jQuery(document).ready(function ($) {
 
                      maintainAspectRatio: false,
 
+                     responsive: true
+
                  },
 
      
 
              });
+
+         }
+
+     
+
+         var resizeId;
+
+         $(window).resize(function () {
+
+             clearTimeout(resizeId);
+
+             resizeId = setTimeout(afterResizing, 100);
+
+         });
+
+     
+
+         afterResizing();
+
+     
+
+         function afterResizing() {
+
+             var canvaswidth = document.getElementById("income-chart").width;
+
+             if (canvaswidth <= 500) {
+
+                 
+
+                 mixedChart.options.legend.display = false;
+
+             } else {
+
+                 mixedChart.options.legend.display = true;
+
+             }
+
+             mixedChart.update();
 
          }
 
@@ -2254,6 +2302,14 @@ jQuery(document).ready(function ($) {
          var zoom = 16;
 
          var adress = [55.747115, 37.539078];
+
+     
+
+         if (!ymaps) {
+
+             return
+
+         }
 
      
 
