@@ -5166,7 +5166,7 @@ body.modal-open {
   .object-finances__calculation {
     width: 100%; }
   .object-finances__calculation-label {
-    margin-right: 1px; } }
+    margin-right: 10px; } }
 
 .object-income {
   margin-bottom: 70px; }

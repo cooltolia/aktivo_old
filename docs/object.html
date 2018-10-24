@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>AKTIVO</title>
+    <link rel="icon" type="image/png" href="/favicon_16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/favicon_32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
+    <meta name="theme-color" content="#3aa5ed"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer="defer" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lte IE 9]>
+    <script src="libs/ie/html5shiv.js"></script>
+    <script src="libs/ie/respond.src.js"></script>
+    <script src="libs/ie/respond.matchmedia.addListener.src.js"></script>
+    <script src="libs/polyfills/background_size_emu.js"></script>
+    <![endif]
+    -->
+  </head>
+  <body class="pageload no-js"><!-- main-header --> 
+    <header class="main-header">
+      <div class="inner">
+        <div class="main-header__inner">
+          <div class="main-header__hamburger mobile-only"><!-- hamburger --> 
+            <div class="hamburger hamburger hamburger--dark">
+              <div class="hamburger__line">
+              </div>
+              <div class="hamburger__line">
+              </div>
+              <div class="hamburger__line">
+              </div>
+            </div><!--/ hamburger --> 
+          </div><a class="main-header__logo" href="/"><img src="images/layout/logo.svg" width="88" alt="Aktivo"/></a>
+          <div class="main-header__contacts">
+            <div class="main-header__tel desktop-only"> <a href="tel:88005006464" class="number">8 (800) 500-64-64</a><span class="info">— звонок бесплатный</span>
+            </div><a href="tel:88005006464" class="main-header__icon main-header__icon--tel mobile-only"></a><a href="#" class="main-header__icon main-header__icon--user mobile-only"></a>
+          </div>
+          <div class="main-header__navigation desktop-only"><!-- main-nav --> 
+            <nav class="main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="/realty" class="main-nav__link">Наши объекты</a>
+                </li>
+                <li class="main-nav__item"><a href="/howitworks" class="main-nav__link">Клиентам</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/howitworks" class="main-nav__sublink">Как это работает</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/security" class="main-nav__sublink">Безопасность</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/faq" class="main-nav__sublink">FAQ</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/forowners" class="main-nav__sublink">Продать недвижимость</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/about/story" class="main-nav__link">О нас</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/about/story" class="main-nav__sublink">О нас</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="about/vacancies" class="main-nav__sublink">Карьера</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/about/contacts" class="main-nav__sublink">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/blog" class="main-nav__link">Блог</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/blog/trends" class="main-nav__sublink">Тренды рынка</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/summary" class="main-nav__sublink">Ликбез</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/news" class="main-nav__sublink">Новости компании</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/press" class="main-nav__sublink">СМИ о нас</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/club" class="main-nav__link">Клуб Liberty</a>
+                </li>
+              </ul>
+            </nav><!--/ main-nav --> 
+          </div>
+          <div class="main-header__authorization desktop-only"><!-- authorization --> 
+            <div class="authorization"><a href="#" class="authorization__login">Вход</a>
+            </div><!--/ authorization --> 
+          </div>
+        </div>
+      </div>
+    </header><!--/ main-header --> <!-- mobile-nav --> 
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item"><a href="/realty" class="mobile-nav__link">Наши объекты</a>
+        </li>
+        <li class="mobile-nav__item"><a href="/howitworks" class="mobile-nav__link">Клиентам</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/howitworks" class="mobile-nav__sublink">Как это работает</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/security" class="mobile-nav__sublink">Безопасность</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/faq" class="mobile-nav__sublink">FAQ</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/forowners" class="mobile-nav__sublink">Продать недвижимость</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/about/story" class="mobile-nav__link">О нас</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/about/story" class="mobile-nav__sublink">О нас</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="about/vacancies" class="mobile-nav__sublink">Карьера</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/about/contacts" class="mobile-nav__sublink">Контакты</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/blog" class="mobile-nav__link">Блог</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/blog/trends" class="mobile-nav__sublink">Тренды рынка</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/summary" class="mobile-nav__sublink">Ликбез</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/news" class="mobile-nav__sublink">Новости компании</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/press" class="mobile-nav__sublink">СМИ о нас</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/club" class="mobile-nav__link">Клуб Liberty</a>
+        </li>
+      </ul>
+    </nav><!--/ mobile-nav --> 
+    <div class="inner"><!-- breadcrumbs --> 
+      <ol class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active">Объекты
+        </li>
+      </ol><!--/ breadcrumbs --> 
+    </div><!-- object-content --> 
+    <section class="object-content">
+      <div class="inner">
+        <div class="object-content__wrapper">
+          <div class="object-content__block visible">
+            <h1 class="object-content__heading">Супермаркет «Пятерочка»
+            </h1>
+            <p class="object-content__address">Московская обл., г. Люберцы, Октябрьский пр., 55
+            </p>
+            <div class="object-content__slider">
+              <div class="object-content__item">
+                <div class="object-content__item-inner"><img src="images/object/slide1.jpg"/>
+                </div>
+              </div>
+              <div class="object-content__item">
+                <div class="object-content__item-inner"><img src="images/object/slide1.jpg"/>
+                </div>
+              </div>
+              <div class="object-content__item">
+                <div class="object-content__item-inner"><img src="images/object/slide1.jpg"/>
+                </div>
+              </div>
+            </div>
+            <div class="object-content__spec">
+              <div class="object-content__spec-col">
+                <div class="object-content__spec-title">Категория здания
+                </div>
+                <div class="object-content__spec-data">Стрит-ритейл
+                </div>
+              </div>
+              <div class="object-content__spec-col">
+                <div class="object-content__spec-title">Стоимость 1 кв. м.
+                </div>
+                <div class="object-content__spec-data">247 448 ₽
+                </div>
+              </div>
+              <div class="object-content__spec-col">
+                <div class="object-content__spec-title">Площадь
+                </div>
+                <div class="object-content__spec-data">646.6 кв.м
+                </div>
+              </div>
+              <div class="object-content__spec-col">
+                <div class="object-content__spec-title">Балансовая стоимость 
+                </div>
+                <div class="object-content__spec-data">160 000 000 ₽
+                </div>
+              </div>
+            </div>
+          </div><a href="#object-description" class="object-content__label js-link active"> <span>Описание</span>
+          <div class="icon"></div></a>
+          <div id="object-description" class="object-content__block active">
+            <h2 class="object-content__title">Описание
+            </h2><!-- object-description --> 
+            <section class="object-description">
+              <p class="object-description__text">Инвесторам предлагается профессионально отобранный объект недвижимости институционального качества формата street-retail — супермаркет «Пятерочка», расположенный в подмосковных Люберцах на Октябрьском проспекте, д.55. Данное предложение представляет собой редкую возможность инвестирования в рынок торговых помещений в секторе продуктового ритейла, являющегося наиболее привлекательным сектором коммерческой недвижимости в России.
+              </p>
+              <p class="object-description__text">На стадии отбора по предлагаемому объекту недвижимости был проведен полный инвестиционный анализ. Данный магазин бренда «Пятерочка» имеет стабильные показатели по соотношению аренды к выручке и является одним из лучших в сети. Объект располагается на первой линии домов центральной магистрали города и обладает при этом удобной парковкой. Площадь и состояние здания привлекательны для конкурентов и смежных видов бизнеса. Арендатором супермаркета является один из крупнейших и надежных продуктовых ритейлеров России — X5 Retail Group, имеющий длительную и прозрачную историю работы на данном объекте.
+              </p>
+            </section><!--/ object-description --> 
+          </div><a href="#object-planning" class="object-content__label js-link"> <span>Планировка</span>
+          <div class="icon"></div></a>
+          <div id="object-planning" class="object-content__block">
+            <h2 class="object-content__title">Планировка
+            </h2><!-- object-planning --> 
+            <section class="object-planning">
+              <div class="object-planning__image"><img src="images/object/plan.jpg" alt="План объекта"/>
+              </div>
+            </section><!--/ object-planning --> 
+          </div><a href="#object-location" class="object-content__label js-link"> <span>Расположение</span>
+          <div class="icon"></div></a>
+          <div id="object-location" class="object-content__block">
+            <h2 class="object-content__title">Расположение
+            </h2><!-- object-location --> 
+            <section class="object-location">
+              <p class="object-location__text">Торговое помещение супермаркета «Пятерочка» располагается на центральной магистрали Люберец – Октябрьском проспекте, по движению в сторону г. Москва. Данный актив исторически является местом повышенного спроса среди арендаторов, в первую очередь - федеральных продуктовых сетей.
+              </p>
+              <p class="object-location__text">Располагаясь на первой линии домов, объект обладает прямой видимостью при движении по основным транспортным потокам. Высокая пешеходная и транспортная доступность обусловлена расположением вблизи остановки общественного транспорта и плотной жилой застройки. Объект имеет развитую инфраструктуру и удобную парковку, позволяющую вместить до 15 автомобилей, окружен общественными строениями повышенной проходимости: на расстоянии менее 50 метров от объекта располагается федеральное государственное учреждение, в 150 метрах располагается среднее образовательное учреждение и более 15 жилых домов численностью до 8000 человек.
+              </p>
+              <p class="object-location__text">Развитая инфраструктура, наличие удобной парковки и привлекательного фасада, прямая видимость с Октябрьского проспекта, а также отсутствие прямых конкурентов в радиусе 2.5 км делают предлагаемый объект максимально привлекательным.
+              </p>
+              <div class="object-location__map">
+                <div class="object-location__map-inner">
+                  <div id="object-map"></div>
+                </div>
+              </div>
+            </section><!--/ object-location --> 
+          </div><a href="#object-finances" class="object-content__label js-link"> <span>Финансы</span>
+          <div class="icon"></div></a>
+          <div id="object-finances" class="object-content__block">
+            <h2 class="object-content__title">Финансы
+            </h2><!-- object-finances --> 
+            <section class="object-finances">
+              <h3 class="object-finances__title">Годовые финансовые показатели объекта
+              </h3>
+              <div class="object-finances__content">
+                <div class="object-finances__chart">
+                  <canvas id="financies-chart"></canvas>
+                </div>
+                <div class="object-finances__data">
+                  <div class="object-finances__date">Декабрь 2015 — Декабрь 2016
+                  </div>
+                  <div class="object-finances__legend">
+                    <div class="object-finances__legend-item">Чистый операционный доход
+                    </div>
+                    <div class="object-finances__legend-item">Прибыль к распределению
+                    </div>
+                    <div class="object-finances__legend-item">Комиссия за управление
+                    </div>
+                    <div class="object-finances__legend-item">Расходы
+                    </div>
+                  </div>
+                  <div class="object-finances__calculation">
+                    <div class="object-finances__calculation-row">
+                      <div class="object-finances__calculation-label">Валовый доход
+                      </div>
+                      <div class="object-finances__calculation-summ">24 260 353 ₽
+                      </div>
+                    </div>
+                    <div class="object-finances__calculation-row">
+                      <div class="object-finances__calculation-label">Расходы
+                      </div>
+                      <div class="object-finances__calculation-summ">- 3 781 927 ₽
+                      </div>
+                    </div>
+                    <div class="object-finances__calculation-row">
+                      <div class="object-finances__calculation-label">Чистый операционный доход
+                      </div>
+                      <div class="object-finances__calculation-summ">= 20 478 426 ₽
+                      </div>
+                    </div>
+                    <div class="object-finances__calculation-row">
+                      <div class="object-finances__calculation-label">Комиссия за управление
+                      </div>
+                      <div class="object-finances__calculation-summ">- 2 559 803 ₽
+                      </div>
+                    </div>
+                    <div class="object-finances__calculation-row">
+                      <div class="object-finances__calculation-label">Прибыль к распределению
+                      </div>
+                      <div class="object-finances__calculation-summ">= 17 918 622 ₽
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section><!--/ object-finances --> <!-- object-rating --> 
+            <section class="object-rating">
+              <h3 class="object-rating__title">Рейтинг AKTIVO
+              </h3>
+              <div class="object-rating__line">
+                <div class="object-rating__current">BBB
+                </div>
+                <div class="object-rating__graph">
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">AAA
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">AA
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">A
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">BBB
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">BB
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">B
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">CCC
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">CC
+                    </div>
+                  </div>
+                  <div class="object-rating__graph-item">
+                    <div class="object-rating__graph-label">C
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <table class="object-rating__table">
+                <thead>
+                  <tr>
+                    <th>Показатель</th>
+                    <th>Значение</th>
+                    <th>Балл</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cap rate (средний за 5 лет)</td>
+                    <td>12.3%</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Стоимость квадратного метра</td>
+                    <td>247 448 Р</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Срок договора аренды</td>
+                    <td>7 лет (до 2022 г.)</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Отрасль арендатора</td>
+                    <td>Продукты питания</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Финансовая устойчивость бизнеса арендатора</td>
+                    <td>Высокая</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Доля аренды в выручке арендатора</td>
+                    <td>&lt;8%</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Конкурирующих объектов на потоке, в радиусе 500 метров</td>
+                    <td>2</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Парковка</td>
+                    <td>15 машиномест</td>
+                    <td>0</td>
+                  </tr>
+                  <tr>
+                    <td>Приближенность метро</td>
+                    <td>более 1 км.</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Остановок общественного транспорта в радиусе 500 метров</td>
+                    <td>4</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Релевантных POI в радиусе 500 метров</td>
+                    <td>2 (школа, МФЦ)</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Просматриваемость объекта</td>
+                    <td>Прямая видимость</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>Количество жилых домов в радиусе 300 метров</td>
+                    <td>20</td>
+                    <td>4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section><!--/ object-rating --> <!-- object-risks --> 
+            <section class="object-risks">
+              <h2 class="object-risks__title">Управление рисками
+              </h2>
+              <div class="object-risks__subtitle">Негативные изменения рыночной конъюнктуры
+              </div>
+              <p class="object-risks__text">Продукты питания — это товар неэластичного спроса, что обеспечивает устойчивость арендатора в негативной рыночной конъюктуре. Более 10 лет успешной работы X5 Retail Group на данной точке показывают стабильный покупательский спрос и сформированную аудиторию магазина с высокой посещаемостью магазина (2000 чел./сутки).
+              </p>
+              <div class="object-risks__subtitle">Неисполнение обязательств со стороны текущего арендатора
+              </div>
+              <p class="object-risks__text">В договоре аренды не предусмотрено право досрочного расторжения, арендатором внесен депозит денежных средств. Соотношение арендных платежей к выручке является позитивным, что исключает риск снижения ставки аренды.
+              </p>
+            </section><!--/ object-risks --> <!-- object-income --> 
+            <section class="object-income">
+              <h3 class="object-income__title">Финансовые выплаты
+              </h3>
+              <div class="object-income__content">
+                <div class="object-income__chart">
+                  <canvas id="income-chart"></canvas>
+                </div><a href="#" class="object-income__link"></a>
+              </div>
+            </section><!--/ object-income --> 
+          </div><a href="#object-calculator" class="object-content__calculate js-link"> 
+          <div class="icon"></div><span>Рассчитать доходность</span></a>
+          <div id="object-calculator" class="object-content__block">
+            <h2 class="object-content__title">Рассчитать доходность
+            </h2><!-- object-calculator --> 
+            <section class="object-calculator">
+              <div class="object-calculator__content">
+                <div class="object-calculator__col">
+                  <div class="object-calculator__block">
+                    <div class="object-calculator__label object-calculator__label--big">Сумма инвестиций
+                    </div>
+                    <div class="object-calculator__summ"><span id="object_summ1" class="data-result">500 000</span><span class="data-ruble"> ₽</span>
+                      <div id="object_summ1-scroll" class="object-calculator__summ-range">
+                        <input id="object_summ1-range" value="500000" step="100000" max="5000000" min="100000" name="summ1" type="range"/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="object-calculator__block">
+                    <div class="object-calculator__label">Первоначальная доходность
+                    </div>
+                    <div class="object-calculator__tip">(~за 10 лет, до НДФЛ, на момент формирования фонда)
+                    </div>
+                    <div class="object-calculator__data">10.98%
+                    </div>
+                  </div>
+                  <div class="object-calculator__block">
+                    <div class="object-calculator__label">Первоначальная стоимость фонда
+                    </div>
+                    <div class="object-calculator__data">160 000 000  ₽
+                    </div>
+                  </div>
+                  <div class="object-calculator__block">
+                    <div class="object-calculator__label">Приобретенных паев
+                    </div>
+                    <div class="object-calculator__data">457
+                    </div>
+                  </div>
+                </div>
+                <div class="object-calculator__col">
+                  <div class="object-calculator__block">
+                    <div class="object-calculator__label object-calculator__label--big">Ваш ежемесячный доход
+                    </div>
+                    <div class="object-calculator__tip">(~за 10 лет, до НДФЛ, на момент формирования фонда) 
+                    </div>
+                    <div class="object-calculator__data object-calculator__data--big"> <span class="data-result">480.24</span><span class="data-ruble"> ₽</span>
+                    </div>
+                  </div>
+                  <div class="object-calculator__block">
+                    <div class="object-calculator__label">Сопровождение сделки 2%
+                    </div>
+                    <div class="object-calculator__tip">2%, но не менее 2000 рублей, включено в стоимость пая
+                    </div>
+                    <div class="object-calculator__data"><span class="data-result">2048</span><span class="data-ruble"> ₽</span>
+                    </div>
+                  </div>
+                  <div class="object-calculator__block">
+                    <div class="object-calculator__label">К оплате итого: 
+                    </div>
+                    <div class="object-calculator__data"><span class="data-result">499 638.10</span><span class="data-ruble"> ₽</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="object-calculator__appeal">
+                <button class="object-calculator__appeal-button">Отправить заявку
+                </button>
+                <p class="object-calculator__appeal-text">Наш менеджер свяжется с вами в течение 24 часов
+                </p>
+              </div>
+            </section><!--/ object-calculator --> 
+          </div>
+        </div>
+      </div>
+    </section><!--/ object-content --> <!-- main-footer --> 
+    <footer class="main-footer">
+      <div class="inner">
+        <div class="main-footer__wrapper">
+          <div class="main-footer__menu"><!-- footer-nav --> 
+            <div class="footer-nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item"><a href="/" class="footer-nav__link">Главная</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Владельцам недвижимости</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Партнерская программа</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Политика конфиденциальности</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Недвижимость</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Как это работает</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Безопасность</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">FAQ</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">О нас</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Блог</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Контакты</a>
+                </li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Карьера</a>
+                </li>
+              </ul>
+            </div><!--/ footer-nav --> 
+          </div>
+          <div class="main-footer__col">
+            <div class="main-footer__logo"><img src="images/layout/logo-white.svg" alt="AKTIVO" width="88"/>
+            </div>
+            <div class="main-footer__socials"><!-- socials --> 
+              <div class="socials"><a href="https://facebook.com/" target="_blank" rel="nofollow noopener" class="socials__item socials__item--facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.399 18" width='9' fill='#9b9b9b'>
+    <path id="Path_73" d="M5.585 18V9h2.484L8.4 5.9H5.585V4.348c0-.809.077-1.242 1.239-1.242h1.557V0H5.9C2.911 0 1.861 1.5 1.861 4.035V5.9H0V9h1.861v9z" class="cls-1" data-name="Path 73"/>
+</svg>
+</a><a href="https://www.instagram.com/" target="_blank" rel="nofollow noopener" class="socials__item socials__item--twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12.991" width='16' fill='#9b9b9b'>
+    <path id="ic_twitter" d="M16 1.541a6.145 6.145 0 0 1-1.884.514A3.308 3.308 0 0 0 15.56.245a6.792 6.792 0 0 1-2.1.783A3.245 3.245 0 0 0 11.058 0 3.278 3.278 0 0 0 7.78 3.278a3.8 3.8 0 0 0 .073.758A9.351 9.351 0 0 1 1.1.612a3.166 3.166 0 0 0-.44 1.639 3.285 3.285 0 0 0 1.468 2.74 3.4 3.4 0 0 1-1.492-.416v.049a3.256 3.256 0 0 0 2.642 3.2 3.29 3.29 0 0 1-.856.122A4.766 4.766 0 0 1 1.81 7.9a3.294 3.294 0 0 0 3.058 2.275 6.6 6.6 0 0 1-4.085 1.397c-.269 0-.514-.024-.783-.049a9.289 9.289 0 0 0 5.04 1.468 9.273 9.273 0 0 0 9.346-9.346v-.416A7.07 7.07 0 0 0 16 1.541z" class="cls-1"/>
+</svg>
+</a><a href="https://vk.com/" target="_blank" rel="nofollow noopener" class="socials__item socials__item--vk"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 10.125" width='18' fill='#9b9b9b'>
+    <path id="Path_74" d="M9.883 10.083a.919.919 0 0 0 .491-.212.768.768 0 0 0 .147-.466s-.02-1.423.65-1.633 1.508 1.376 2.408 1.984a1.722 1.722 0 0 0 1.2.359l2.4-.033s1.257-.076.661-1.051a7.962 7.962 0 0 0-1.787-2.039c-1.508-1.379-1.306-1.156.51-3.542C17.668 2 18.11 1.11 17.972.73c-.131-.363-.945-.266-.945-.266L14.321.48a.623.623 0 0 0-.35.061.754.754 0 0 0-.24.286 15.327 15.327 0 0 1-1 2.081c-1.205 2.017-1.687 2.124-1.884 2-.459-.293-.344-1.174-.344-1.8 0-1.956.3-2.771-.585-2.982A4.686 4.686 0 0 0 8.656 0 5.929 5.929 0 0 0 6.41.229c-.308.148-.546.48-.4.5a1.221 1.221 0 0 1 .8.4 2.545 2.545 0 0 1 .268 1.207s.159 2.3-.372 2.588c-.364.2-.865-.2-1.939-2.035A16.913 16.913 0 0 1 3.8.91a.8.8 0 0 0-.224-.3 1.117 1.117 0 0 0-.418-.163L.587.464S.2.474.059.64c-.126.147-.01.451-.01.451s2.013 4.645 4.294 6.987a6.225 6.225 0 0 0 4.464 2.005z" class="cls-1" data-name="Path 74"/>
+</svg>
+</a>
+              </div><!--/ socials --> 
+            </div>
+          </div>
+          <p class="main-footer__info">Стоимость инвестиционных паев может увеличиваться и уменьшаться, результаты инвестирования в прошлом не определяют доходы в будущем, AKTIVO не гарантирует доходность инвестиций. Информация об инвестиционных фондах, объектах недвижимости, экономические показатели, а также любые аналитические и информационные данные предоставлены ООО «Активо» на правах пайщика указанных закрытых паевых инвестиционных фондов.
+          </p>
+          <p class="main-footer__legal">&copy;&nbsp;2018&nbsp;ООО &laquo;Активо&raquo;. Все права защищены
+          </p>
+        </div>
+      </div>
+    </footer><!--/ main-footer --> 
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
