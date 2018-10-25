@@ -1448,19 +1448,19 @@ jQuery(document).ready(function ($) {
 
      
 
-         var question = document.querySelector('.object-content .js-link');
+         var label = document.querySelector('.object-content .js-link');
 
-         if (!nav || !question) return;
+         if (!nav || !label) return;
 
      
 
-         var questionHeight = question.offsetHeight;
+         var labelHeight = label.offsetHeight;
 
      
 
          for (n = 0; n < nav.length; n++) {
 
-             nav[n].style.top = questionHeight * n + 'px';
+             nav[n].style.top = labelHeight * n + 'px';
 
          };
 
@@ -1627,6 +1627,14 @@ jQuery(document).ready(function ($) {
          });
 
          
+
+         $('.object-content__slider').on('init', function(slick) {
+
+             debugger;
+
+         })
+
+     
 
      })();
 
@@ -2267,21 +2275,25 @@ jQuery(document).ready(function ($) {
 
          function afterResizing() {
 
-             var canvaswidth = document.getElementById("income-chart").width;
+             if (resourceChartElement) {
 
-             if (canvaswidth <= 500) {
+                 var canvaswidth = resourceChartElement.width;
 
-                 
+                 if (canvaswidth <= 500) {
 
-                 mixedChart.options.legend.display = false;
+                     
 
-             } else {
+                     mixedChart.options.legend.display = false;
 
-                 mixedChart.options.legend.display = true;
+                 } else {
+
+                     mixedChart.options.legend.display = true;
+
+                 }
+
+                 mixedChart.update();
 
              }
-
-             mixedChart.update();
 
          }
 
@@ -2354,7 +2366,29 @@ jQuery(document).ready(function ($) {
      })();
 
      
-     
+     ;
+
+     (function () {
+
+         $('.object-planning__images').slick({
+
+         slidesToShow: 1,
+
+         slidesToScroll: 1,
+
+         arrows: true,
+
+         fade: true,
+
+         // autoplay: true,
+
+         // autoplaySpeed: 3000,
+
+         });
+
+         
+
+     })();
 
      
      

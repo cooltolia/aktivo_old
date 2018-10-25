@@ -4,13 +4,13 @@
     var i;
     var n;
 
-    var question = document.querySelector('.object-content .js-link');
-    if (!nav || !question) return;
+    var label = document.querySelector('.object-content .js-link');
+    if (!nav || !label) return;
 
-    var questionHeight = question.offsetHeight;
+    var labelHeight = label.offsetHeight;
 
     for (n = 0; n < nav.length; n++) {
-        nav[n].style.top = questionHeight * n + 'px';
+        nav[n].style.top = labelHeight * n + 'px';
     };
 
     function smoothScroll(target, duration) {
@@ -94,4 +94,8 @@
         // autoplaySpeed: 3000,
     });
     
+    $('.object-content__slider').on('init', function(slick) {
+        debugger;
+    })
+
 })();

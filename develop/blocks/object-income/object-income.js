@@ -166,14 +166,16 @@
     afterResizing();
 
     function afterResizing() {
-        var canvaswidth = document.getElementById("income-chart").width;
-        if (canvaswidth <= 500) {
-            
-            mixedChart.options.legend.display = false;
-        } else {
-            mixedChart.options.legend.display = true;
+        if (resourceChartElement) {
+            var canvaswidth = resourceChartElement.width;
+            if (canvaswidth <= 500) {
+                
+                mixedChart.options.legend.display = false;
+            } else {
+                mixedChart.options.legend.display = true;
+            }
+            mixedChart.update();
         }
-        mixedChart.update();
     }
     
 })();

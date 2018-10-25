@@ -4596,7 +4596,11 @@ body.modal-open {
       width: 20px;
       top: -8px; }
   .object-calculator__data--big {
-    font-size: 22px; } }
+    font-size: 22px; }
+  .object-calculator__appeal {
+    display: block; }
+  .object-calculator__appeal-button {
+    margin: 0 auto; } }
 
 .object-content {
   padding-bottom: 250px;
@@ -5381,18 +5385,57 @@ body.modal-open {
   .object-location__text {
     font-size: 14px; } }
 
-.object-planning__image {
-  width: 100%; }
-  .object-planning__image img {
+.object-planning__images {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .object-planning__images img {
     display: block;
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 100%; }
+  .object-planning__images.slick-initialized {
+    display: block; }
+  .object-planning__images .slick-arrow {
+    position: absolute;
+    z-index: 9;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    border: none;
+    outline: none;
+    font-size: 0;
+    background-color: transparent;
+    background-image: url("../images/object/r-arrow.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .object-planning__images .slick-next {
+    right: 0; }
+  .object-planning__images .slick-prev {
+    left: 0;
+    -webkit-transform: translateY(-50%) rotate(-180deg);
+       -moz-transform: translateY(-50%) rotate(-180deg);
+        -ms-transform: translateY(-50%) rotate(-180deg);
+            transform: translateY(-50%) rotate(-180deg); }
 
 @media (max-width: 1024px) {
   .object-planning {
     padding: 20px 0; } }
+
+@media (max-width: 380px) {
+  .object-planning__images .slick-arrow {
+    width: 36px;
+    height: 36px; } }
 
 .object-rating {
   margin-bottom: 65px; }
