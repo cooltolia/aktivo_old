@@ -96,6 +96,11 @@
 
     text-decoration: none;
 
+    &.fixed {
+        position: fixed;
+        top: 0px !important;
+    }
+
     .icon {
         width: 108px;
         height: 106px;

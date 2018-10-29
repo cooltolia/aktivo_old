@@ -1225,9 +1225,9 @@ jQuery(document).ready(function ($) {
 
          var adress = [55.747115, 37.539078];
 
-         
+     
 
-         if (!ymaps) {
+         if (typeof ymaps == 'undefined') {
 
              return
 
@@ -1442,6 +1442,8 @@ jQuery(document).ready(function ($) {
 
          var nav = document.querySelectorAll(".object-content .js-link");
 
+         var commonLabels = document.querySelectorAll('.object-content__label');
+
          var i;
 
          var n;
@@ -1458,11 +1460,91 @@ jQuery(document).ready(function ($) {
 
      
 
+         
+
+         function offset(el) {
+
+             debugger;
+
+             var rect = el.getBoundingClientRect(),
+
+             scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+             scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+             return {
+
+                 top: rect.top + scrollTop,
+
+                 left: rect.left + scrollLeft
+
+             }
+
+         }
+
+         
+
          for (n = 0; n < nav.length; n++) {
 
              nav[n].style.top = labelHeight * n + 'px';
 
          };
+
+         
+
+         var calcLabel = document.querySelector('.object-content__calculate');
+
+         var calcLabelPosition;
+
+     
+
+         // var lastLabel = [].slice.call(commonLabels).pop();
+
+         debugger;
+
+         var lastLabel = Array.from(commonLabels).pop();
+
+         var lastLabelPosition;
+
+     
+
+         var labelOnScroll = throttle(calcLabelToggle, 100);
+
+     
+
+         document.addEventListener('scroll', function () {
+
+             labelOnScroll()
+
+         });
+
+     
+
+     
+
+         function calcLabelToggle() {
+
+             calcLabelPosition = calcLabel.getBoundingClientRect().top;
+
+             lastLabelPosition = lastLabel.getBoundingClientRect().top;
+
+             var alreadyFixed = calcLabel.classList.contains('fixed');
+
+             debugger;
+
+             if (calcLabelPosition < 0 && !alreadyFixed) {
+
+                calcLabel.classList.add('fixed');
+
+             } else if (alreadyFixed && lastLabelPosition > -50) {
+
+                 calcLabel.classList.remove('fixed')
+
+             }
+
+         }
+
+         
 
      
 
@@ -1626,13 +1708,63 @@ jQuery(document).ready(function ($) {
 
          });
 
-         
+     
 
-         $('.object-content__slider').on('init', function(slick) {
+         function throttle(func, ms) {
 
-             debugger;
+             var isThrottled = false,
 
-         })
+                 savedArgs,
+
+                 savedThis;
+
+     
+
+             function wrapper() {
+
+     
+
+                 if (isThrottled) { // (2)
+
+                     savedArgs = arguments;
+
+                     savedThis = this;
+
+                     return;
+
+                 }
+
+     
+
+                 func.apply(this, arguments); // (1)
+
+     
+
+                 isThrottled = true;
+
+     
+
+                 setTimeout(function () {
+
+                     isThrottled = false; // (3)
+
+                     if (savedArgs) {
+
+                         wrapper.apply(savedThis, savedArgs);
+
+                         savedArgs = savedThis = null;
+
+                     }
+
+                 }, ms);
+
+             }
+
+     
+
+             return wrapper;
+
+         }
 
      
 
@@ -2317,7 +2449,7 @@ jQuery(document).ready(function ($) {
 
      
 
-         if (!ymaps) {
+         if (typeof ymaps == 'undefined') {
 
              return
 

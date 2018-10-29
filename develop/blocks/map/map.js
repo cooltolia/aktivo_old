@@ -1,8 +1,8 @@
 ;(function(){
     var zoom = 16;
     var adress = [55.747115, 37.539078];
-    
-    if (!ymaps) {
+
+    if (typeof ymaps == 'undefined') {
         return
     }
     ymaps.ready(function () {
