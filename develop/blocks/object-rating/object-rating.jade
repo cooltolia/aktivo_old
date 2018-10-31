@@ -2,25 +2,28 @@ mixin object-rating()
     +b.SECTION.object-rating
         +e.H3.title Рейтинг AKTIVO
         +e.line
-            +e.current BBB
+            +e.current
+                span.image.value-c
+                    include ../../../app/images/object/rating_bg.svg
+                span.value BBB
             +e.graph
-                +e.graph-item
+                +e.graph-item.value-aaa
                     +e.graph-label AAA
-                +e.graph-item
+                +e.graph-item.value-aa
                     +e.graph-label AA
-                +e.graph-item
+                +e.graph-item.value-a
                     +e.graph-label A
-                +e.graph-item
+                +e.graph-item.value-bbb
                     +e.graph-label BBB
-                +e.graph-item
+                +e.graph-item.value-bb
                     +e.graph-label BB
-                +e.graph-item
+                +e.graph-item.value-b
                     +e.graph-label B
-                +e.graph-item
+                +e.graph-item.value-ccc
                     +e.graph-label CCC
-                +e.graph-item
+                +e.graph-item.value-cc
                     +e.graph-label CC
-                +e.graph-item
+                +e.graph-item.value-c
                     +e.graph-label C
         +e.TABLE.table
             thead

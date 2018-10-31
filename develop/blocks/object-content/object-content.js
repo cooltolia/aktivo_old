@@ -29,16 +29,14 @@
     var calcLabel = document.querySelector('.object-content__calculate');
     var calcLabelPosition;
 
-    // var lastLabel = [].slice.call(commonLabels).pop();
-    debugger;
-    var lastLabel = Array.from(commonLabels).pop();
-    var lastLabelPosition;
+    // var lastLabel = Array.from(commonLabels).pop();
+    // var lastLabelPosition;
 
-    var labelOnScroll = throttle(calcLabelToggle, 100);
+    // var labelOnScroll = throttle(calcLabelToggle, 100);
 
-    document.addEventListener('scroll', function () {
-        labelOnScroll()
-    });
+    // document.addEventListener('scroll', function () {
+    //     labelOnScroll()
+    // });
 
 
     function calcLabelToggle() {
@@ -135,33 +133,33 @@
         // autoplaySpeed: 3000,
     });
 
-    function throttle(func, ms) {
-        var isThrottled = false,
-            savedArgs,
-            savedThis;
+    // function throttle(func, ms) {
+    //     var isThrottled = false,
+    //         savedArgs,
+    //         savedThis;
 
-        function wrapper() {
+    //     function wrapper() {
 
-            if (isThrottled) { // (2)
-                savedArgs = arguments;
-                savedThis = this;
-                return;
-            }
+    //         if (isThrottled) { // (2)
+    //             savedArgs = arguments;
+    //             savedThis = this;
+    //             return;
+    //         }
 
-            func.apply(this, arguments); // (1)
+    //         func.apply(this, arguments); // (1)
 
-            isThrottled = true;
+    //         isThrottled = true;
 
-            setTimeout(function () {
-                isThrottled = false; // (3)
-                if (savedArgs) {
-                    wrapper.apply(savedThis, savedArgs);
-                    savedArgs = savedThis = null;
-                }
-            }, ms);
-        }
+    //         setTimeout(function () {
+    //             isThrottled = false; // (3)
+    //             if (savedArgs) {
+    //                 wrapper.apply(savedThis, savedArgs);
+    //                 savedArgs = savedThis = null;
+    //             }
+    //         }, ms);
+    //     }
 
-        return wrapper;
-    }
+    //     return wrapper;
+    // }
 
 })();

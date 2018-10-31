@@ -1498,25 +1498,21 @@ jQuery(document).ready(function ($) {
 
      
 
-         // var lastLabel = [].slice.call(commonLabels).pop();
+         // var lastLabel = Array.from(commonLabels).pop();
 
-         debugger;
-
-         var lastLabel = Array.from(commonLabels).pop();
-
-         var lastLabelPosition;
+         // var lastLabelPosition;
 
      
 
-         var labelOnScroll = throttle(calcLabelToggle, 100);
+         // var labelOnScroll = throttle(calcLabelToggle, 100);
 
      
 
-         document.addEventListener('scroll', function () {
+         // document.addEventListener('scroll', function () {
 
-             labelOnScroll()
+         //     labelOnScroll()
 
-         });
+         // });
 
      
 
@@ -1710,61 +1706,61 @@ jQuery(document).ready(function ($) {
 
      
 
-         function throttle(func, ms) {
+         // function throttle(func, ms) {
 
-             var isThrottled = false,
+         //     var isThrottled = false,
 
-                 savedArgs,
+         //         savedArgs,
 
-                 savedThis;
-
-     
-
-             function wrapper() {
+         //         savedThis;
 
      
 
-                 if (isThrottled) { // (2)
-
-                     savedArgs = arguments;
-
-                     savedThis = this;
-
-                     return;
-
-                 }
+         //     function wrapper() {
 
      
 
-                 func.apply(this, arguments); // (1)
+         //         if (isThrottled) { // (2)
+
+         //             savedArgs = arguments;
+
+         //             savedThis = this;
+
+         //             return;
+
+         //         }
 
      
 
-                 isThrottled = true;
+         //         func.apply(this, arguments); // (1)
 
      
 
-                 setTimeout(function () {
-
-                     isThrottled = false; // (3)
-
-                     if (savedArgs) {
-
-                         wrapper.apply(savedThis, savedArgs);
-
-                         savedArgs = savedThis = null;
-
-                     }
-
-                 }, ms);
-
-             }
+         //         isThrottled = true;
 
      
 
-             return wrapper;
+         //         setTimeout(function () {
 
-         }
+         //             isThrottled = false; // (3)
+
+         //             if (savedArgs) {
+
+         //                 wrapper.apply(savedThis, savedArgs);
+
+         //                 savedArgs = savedThis = null;
+
+         //             }
+
+         //         }, ms);
+
+         //     }
+
+     
+
+         //     return wrapper;
+
+         // }
 
      
 
