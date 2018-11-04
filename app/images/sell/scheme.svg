@@ -1,7 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127 343.6">
     <defs>
         <style>
-            .clsc-1,.clsc-10,.clsc-4{fill:none}.clsc-1,.clsc-5{stroke:#ffd729}.clsc-1,.clsc-4{stroke-width:2px}.clsc-2{fill:#ffd729}.clsc-3,.clsc-7{font-size:14px}.clsc-3{font-family:SegoeUI-SemiBold,Segoe UI;font-weight:600}.clsc-4{stroke:#000;stroke-miterlimit:10}.clsc-5{fill:#f5f7f9;stroke-width:4px}.clsc-6{fill:#e8ecef}.clsc-7{font-family:SegoeUI,Segoe UI}.clsc-8{font-size:16px;font-family:SegoeUI-Bold,Segoe UI;font-weight:700}.clsc-9{stroke:none}
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../../fonts/SegoeUI/Regular/font.woff');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../../fonts/SegoeUI/Bold/font.woff');
+                font-weight: 700;
+            }
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../../fonts/SegoeUI/SemiBold/font.woff');
+                font-weight: 600;
+            }
+            .clsc-1,.clsc-10,.clsc-4{fill:none}.clsc-1,.clsc-5{stroke:#ffd729}.clsc-1,.clsc-4{stroke-width:2px}.clsc-2{fill:#ffd729}.clsc-3,.clsc-7{font-size:14px}.clsc-3{font-family:'Segoe UI';font-weight:600}.clsc-4{stroke:#000;stroke-miterlimit:10}.clsc-5{fill:#f5f7f9;stroke-width:4px}.clsc-6{fill:#e8ecef}.clsc-7{font-family:'Segoe UI'}.clsc-8{font-size:16px;font-family:'Segoe UI';font-weight:700}.clsc-9{stroke:none}
         </style>
     </defs>
     <g id="Group_338" data-name="Group 338" transform="translate(-117 -1108.4)">

@@ -1,7 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 626">
     <defs>
         <style>
-            .cls-1{fill:#9b9b9b;font-size:14px;font-family:SegoeUI,Segoe UI}.cls-2{fill:#ffd729}.cls-3{fill:#3c7bd8}.cls-4{fill:#fff}.cls-12,.cls-5,.cls-6,.cls-7{fill:none}.cls-5{stroke:#000}.cls-5,.cls-8,.cls-9{stroke-width:2px}.cls-6,.cls-9{stroke:#848f9b}.cls-7,.cls-8{stroke:#ffd729}.cls-8,.cls-9{fill:#f5f7f9}.cls-10{fill:#848f9b}.cls-11{stroke:none}
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../../fonts/SegoeUI/Regular/font.woff');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../../fonts/SegoeUI/Bold/font.woff');
+                font-weight: 700;
+            }
+            .cls-1{fill:#9b9b9b;font-size:14px;font-family:'Segoe UI'}.cls-2{fill:#ffd729}.cls-3{fill:#3c7bd8}.cls-4{fill:#fff}.cls-12,.cls-5,.cls-6,.cls-7{fill:none}.cls-5{stroke:#000}.cls-5,.cls-8,.cls-9{stroke-width:2px}.cls-6,.cls-9{stroke:#848f9b}.cls-7,.cls-8{stroke:#ffd729}.cls-8,.cls-9{fill:#f5f7f9}.cls-10{fill:#848f9b}.cls-11{stroke:none}
         </style>
     </defs>
     <g id="Group_342" data-name="Group 342" transform="translate(-20 -2262)">

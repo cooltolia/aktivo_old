@@ -1,7 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 468">
     <defs>
         <style>
-            .clss-1,.clss-10,.clss-4,.clss-5,.clss-6,.clss-7,.clss-8,.clss-9{fill:none}.clss-1,.clss-5{stroke:#455a6e}.clss-2,.clss-3{fill:#fff}.clss-2{font-size:16px;font-family:SegoeUI,Segoe UI}.clss-3{font-size:24px;font-family:SegoeUI-Bold,Segoe UI;font-weight:700}.clss-10,.clss-4{stroke:#ffd729}.clss-4,.clss-5,.clss-6,.clss-7{stroke-miterlimit:10;stroke-width:24px}.clss-6,.clss-9{stroke:#d5dadf}.clss-7,.clss-8{stroke:#848f9b}
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../../fonts/SegoeUI/Regular/font.woff');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../../fonts/SegoeUI/Bold/font.woff');
+                font-weight: 700;
+            }
+            .clss-1,.clss-10,.clss-4,.clss-5,.clss-6,.clss-7,.clss-8,.clss-9{fill:none}.clss-1,.clss-5{stroke:#455a6e}.clss-2,.clss-3{fill:#fff}.clss-2{font-size:16px;font-family:'Segoe UI'}.clss-3{font-size:24px;font-family:'Segoe UI';font-weight:700}.clss-10,.clss-4{stroke:#ffd729}.clss-4,.clss-5,.clss-6,.clss-7{stroke-miterlimit:10;stroke-width:24px}.clss-6,.clss-9{stroke:#d5dadf}.clss-7,.clss-8{stroke:#848f9b}
         </style>
     </defs>
     <g id="Group_340" data-name="Group 340" transform="translate(-168 -1622)">

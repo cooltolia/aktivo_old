@@ -3,6 +3,16 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 374.7 471" style="enable-background:new 0 0 374.7 471;" xml:space="preserve">
 <style type="text/css">
+    @font-face {
+        font-family: 'Segoe UI';
+        src: url('../../fonts/SegoeUI/Regular/font.woff');
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: 'Segoe UI';
+        src: url('../../fonts/SegoeUI/Bold/font.woff');
+        font-weight: 700;
+    }
 	.st0{fill:#222C36;}
 	.st1{fill:#FFFFFF;}
 	.st2{font-family:'Segoe UI'; font-weigt: 700}
@@ -10,7 +20,7 @@
 	.st4{fill:#848F9B;}
 	.st5{fill:#181818;}
 	.st6{font-size:24px;}
-	.st7{font-family:'Segoe UI'';}
+	.st7{font-family:'Segoe UI';}
 	.st8{font-size:14px;}
 	.st9{fill:#FFD729;}
 </style>
