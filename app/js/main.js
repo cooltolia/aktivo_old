@@ -1431,6 +1431,20 @@ jQuery(document).ready(function ($) {
 
          update();
 
+     
+
+         var $sliderWrapper = $('.object-calculator__slider');
+
+         var sliderWrapperHeight = $sliderWrapper.outerHeight(true);
+
+     
+
+         var $columnForOffset = $('.object-calculator__col.offset-top');
+
+         $columnForOffset.css('margin-top', -sliderWrapperHeight + 'px');
+
+     
+
          return {};
 
      })();

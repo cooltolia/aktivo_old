@@ -1019,7 +1019,7 @@ th {
 
 .advantages__wrapper {
   position: relative;
-  padding: 0 36px; }
+  padding: 0 50px; }
   .advantages__wrapper::before {
     content: '';
     position: absolute;
@@ -4438,6 +4438,10 @@ body.modal-open {
   margin-bottom: 10px;
   font-size: 24px; }
 
+.object-calculator__slider {
+  width: 50%;
+  margin-bottom: 40px; }
+
 .object-calculator__content {
   width: 100%;
   display: -webkit-box;
@@ -4485,9 +4489,6 @@ body.modal-open {
     font-size: 24px; }
     .object-calculator__data--big .data-ruble {
       font-size: 22px; }
-
-.object-calculator__summ-range {
-  margin-bottom: 40px; }
 
 .object-calculator__summ {
   font-size: 24px;

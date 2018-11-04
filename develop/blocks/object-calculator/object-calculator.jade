@@ -1,14 +1,14 @@
 mixin object-calculator()
     +b.SECTION.object-calculator
+        +e.slider
+            +e.label.--big Сумма инвестиций
+                +e.summ
+                    span.data-result#object_summ1 500 000
+                    span.data-ruble  ₽
+                    +e.summ-range#object_summ1-scroll
+                        input#object_summ1-range(value="500000" step="100000" max="5000000" min="100000" name="summ1" type="range")
         +e.content
             +e.col
-                +e.block
-                    +e.label.--big Сумма инвестиций
-                    +e.summ
-                        span.data-result#object_summ1 500 000
-                        span.data-ruble  ₽
-                        +e.summ-range#object_summ1-scroll
-                            input#object_summ1-range(value="500000" step="100000" max="5000000" min="100000" name="summ1" type="range")
                 +e.block
                     +e.label Первоначальная доходность
                     +e.tip (~за 10 лет, до НДФЛ, на момент формирования фонда)

@@ -1,7 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 616 471">
     <defs>
         <style>
-            .cls-1,.cls-11{fill:#848f9b}.cls-2{fill:#222c36}.cls-3{fill:#181818}.cls-4,.cls-5,.cls-7{fill:#fff}.cls-4{font-size:24px}.cls-4,.cls-5,.cls-9{font-family:SegoeUI-Bold,Segoe UI;font-weight:700}.cls-5{font-size:16px}.cls-6{fill:#9b9b9b}.cls-6,.cls-7,.cls-9{font-size:14px}.cls-6,.cls-7{font-family:SegoeUI,Segoe UI}.cls-8{fill:#ffd729}.cls-10,.cls-11{stroke:none}
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../fonts/SegoeUI/Regular/font.woff');
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: 'Segoe UI';
+                src: url('../fonts/SegoeUI/Bold/font.woff');
+                font-weight: 700;
+            }
+            .cls-1,.cls-11{fill:#848f9b}.cls-2{fill:#222c36}.cls-3{fill:#181818}.cls-4,.cls-5,.cls-7{fill:#fff}.cls-4{font-size:24px}.cls-4,.cls-5,.cls-9{font-family:Segoe UI;font-weight:700}.cls-5{font-size:16px}.cls-6{fill:#9b9b9b}.cls-6,.cls-7,.cls-9{font-size:14px}.cls-6,.cls-7{font-family:SegoeUI,Segoe UI}.cls-8{fill:#ffd729}.cls-10,.cls-11{stroke:none}
         </style>
     </defs>
     <g id="Group_336" data-name="Group 336" transform="translate(-160 -902)">
