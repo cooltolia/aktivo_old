@@ -12,8 +12,12 @@
 
 .object-income__chart {
     position: relative;
-    height: 250px;
+    height: 300px;
     margin-bottom: 40px;
+
+    .highcharts-credits {
+        display: none;
+    }
 }
 
 .object-income__link {

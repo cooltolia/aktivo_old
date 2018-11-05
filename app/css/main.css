@@ -5186,8 +5186,10 @@ body.modal-open {
 
 .object-income__chart {
   position: relative;
-  height: 250px;
+  height: 300px;
   margin-bottom: 40px; }
+  .object-income__chart .highcharts-credits {
+    display: none; }
 
 .object-income__link {
   position: relative;
