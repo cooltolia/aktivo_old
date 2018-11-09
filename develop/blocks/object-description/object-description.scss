@@ -10,6 +10,30 @@
     }
 }
 
+.object-description__list {
+    padding: 0;
+    list-style: none;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.object-description__list-item {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 1px;
+        left: 0;
+        top: 0.85em;
+
+        background-color: $darktext;
+    }
+}
+
 @media (max-width: 1024px) {
     .object-description {
         padding: 20px 0;
@@ -18,6 +42,10 @@
 
 @media (max-width: 480px) {
     .object-description__text {
+        font-size: 14px;
+    }
+
+    .object-description__list {
         font-size: 14px;
     }
 }

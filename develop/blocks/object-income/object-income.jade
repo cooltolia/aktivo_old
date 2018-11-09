@@ -2,5 +2,9 @@ mixin object-income()
     +b.SECTION.object-income
         +e.H3.title Финансовые выплаты
         +e.content
-            +e.chart#income-chart
-            +e.A.link(href='#')
+            +e.chart
+                #income-chart
+            +e.legend
+                +e.legend-item Доходность
+                +e.legend-item Сумма выплат
+        +e.A.link(href='#') Подробнее
