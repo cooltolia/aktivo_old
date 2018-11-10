@@ -12,7 +12,6 @@
 
     
     function offset(el) {
-        debugger;
         var rect = el.getBoundingClientRect(),
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -43,7 +42,7 @@
         calcLabelPosition = calcLabel.getBoundingClientRect().top;
         lastLabelPosition = lastLabel.getBoundingClientRect().top;
         var alreadyFixed = calcLabel.classList.contains('fixed');
-        debugger;
+
         if (calcLabelPosition < 0 && !alreadyFixed) {
            calcLabel.classList.add('fixed');
         } else if (alreadyFixed && lastLabelPosition > -50) {
@@ -88,7 +87,7 @@
                 }
 
                 this.classList.add("active");
-                debugger;
+
                 var targetID = this.getAttribute("href");
                 var target = document.querySelector(targetID);
 
@@ -132,34 +131,5 @@
         // autoplay: true,
         // autoplaySpeed: 3000,
     });
-
-    // function throttle(func, ms) {
-    //     var isThrottled = false,
-    //         savedArgs,
-    //         savedThis;
-
-    //     function wrapper() {
-
-    //         if (isThrottled) { // (2)
-    //             savedArgs = arguments;
-    //             savedThis = this;
-    //             return;
-    //         }
-
-    //         func.apply(this, arguments); // (1)
-
-    //         isThrottled = true;
-
-    //         setTimeout(function () {
-    //             isThrottled = false; // (3)
-    //             if (savedArgs) {
-    //                 wrapper.apply(savedThis, savedArgs);
-    //                 savedArgs = savedThis = null;
-    //             }
-    //         }, ms);
-    //     }
-
-    //     return wrapper;
-    // }
-
+   
 })();

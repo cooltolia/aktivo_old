@@ -248,8 +248,11 @@
         legend: {
             enabled: false,
         },
+        credits: {
+            enabled: false
+        },
         series: [{
-            name: 'Доходность',
+            name: 'Сумма выплат',
             type: 'column',
             yAxis: 1,
             data: profitData,
@@ -258,7 +261,7 @@
                 valueSuffix: ' 000 руб'
             },
         }, {
-            name: 'Сумма выплат',
+            name: 'Доходность',
             type: 'line',
             data: dividendsData,
             color: '#ffd729',

@@ -4671,7 +4671,7 @@ body.modal-open {
 .object-content__calculate {
   position: absolute;
   width: 292px;
-  padding-top: 55px;
+  margin-top: 55px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -5103,9 +5103,12 @@ body.modal-open {
 
 .object-finances__chart {
   position: relative;
-  width: 260px;
-  height: 260px;
-  margin-right: 45px; }
+  width: 280px;
+  height: 280px;
+  margin-right: 25px; }
+  .object-finances__chart #financies-chart {
+    width: 100%;
+    height: 100%; }
 
 .object-finances__data {
   -webkit-box-flex: 1;
