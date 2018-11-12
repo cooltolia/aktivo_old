@@ -2575,91 +2575,73 @@ jQuery(document).ready(function ($) {
 
          var dividendsData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38];
 
-         Highcharts.chart('income-chart', {
+     
 
-             chart: {
+         var chart = $('#income-chart');
 
-                 zoomType: 'xy'
+         console.log(!chart.length);
 
-             },
+         
 
-             title: {
+     
 
-                 text: '',
+         if (chart.length) {
 
-             },
+             Highcharts.chart('income-chart', {
 
-             exporting: {
+                 chart: {
 
-                 enabled: false
+                     zoomType: 'xy'
 
-             },
+                 },
 
-             plotOptions: {
+                 title: {
 
-                 line: {
+                     text: '',
 
-                     dataLabels: {
+                 },
 
-                         align: 'center',
+                 exporting: {
 
-                         enabled: true,
+                     enabled: false
 
-                         color: 'black',
+                 },
 
-                         padding: 10,
+                 plotOptions: {
 
-                         style: {
+                     line: {
 
-                             textOutline: 'none',
+                         dataLabels: {
 
-                             fontSize: '14px',
+                             align: 'center',
 
-                             fontWeight: '400'
+                             enabled: true,
+
+                             color: 'black',
+
+                             padding: 10,
+
+                             style: {
+
+                                 textOutline: 'none',
+
+                                 fontSize: '14px',
+
+                                 fontWeight: '400'
+
+                             }
 
                          }
 
                      }
 
-                 }
-
-             },
-
-             xAxis: [{
-
-                 categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
-
-                 crosshair: false,
-
-                 labels: {
-
-                     style: {
-
-                         color: 'rgba(0, 0, 0, 0.4)',
-
-                         fontSize: '9px'
-
-                     }
-
                  },
 
-             }],
+                 xAxis: [{
 
-             yAxis: [{
+                     categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
 
-                     visible: false,
-
-                     softMax: 1.3
-
-                 },
-
-                 {
-
-                     title: {
-
-                         text: '',
-
-                     },
+                     crosshair: false,
 
                      labels: {
 
@@ -2673,71 +2655,99 @@ jQuery(document).ready(function ($) {
 
                      },
 
-                     opposite: false,
+                 }],
 
-                     visible: true,
+                 yAxis: [{
 
-                     tickInterval: 10,
+                         visible: false,
 
-                     softMax: 2200
+                         softMax: 1.3
 
-                 }
+                     },
 
-             ],
+                     {
 
-             legend: {
+                         title: {
 
-                 enabled: false,
+                             text: '',
 
-             },
+                         },
 
-             credits: {
+                         labels: {
 
-                 enabled: false
+                             style: {
 
-             },
+                                 color: 'rgba(0, 0, 0, 0.4)',
 
-             series: [{
+                                 fontSize: '9px'
 
-                 name: 'Сумма выплат',
+                             }
 
-                 type: 'column',
+                         },
 
-                 yAxis: 1,
+                         opposite: false,
 
-                 data: profitData,
+                         visible: true,
 
-                 color: '#3c7bd8',
+                         tickInterval: 10,
 
-                 tooltip: {
+                         softMax: 2200
 
-                     valueSuffix: ' 000 руб'
+                     }
+
+                 ],
+
+                 legend: {
+
+                     enabled: false,
 
                  },
 
-             }, {
+                 credits: {
 
-                 name: 'Доходность',
+                     enabled: false
 
-                 type: 'line',
+                 },
 
-                 data: dividendsData,
+                 series: [{
 
-                 color: '#ffd729',
+                     name: 'Сумма выплат',
 
-                 tooltip: {
+                     type: 'column',
 
-                     valueSuffix: 'млн руб'
+                     yAxis: 1,
 
-                 }
+                     data: profitData,
 
-             }]
+                     color: '#3c7bd8',
 
-         });
+                     tooltip: {
 
-     
+                         valueSuffix: ' 000 руб'
 
-     
+                     },
+
+                 }, {
+
+                     name: 'Доходность',
+
+                     type: 'line',
+
+                     data: dividendsData,
+
+                     color: '#ffd729',
+
+                     tooltip: {
+
+                         valueSuffix: 'млн руб'
+
+                     }
+
+                 }]
+
+             });
+
+         }
 
      
 

@@ -6485,7 +6485,7 @@ body.modal-open {
   margin: 0 auto;
   overflow-x: auto;
   overflow-y: hidden; }
-  .sell-scheme__image img {
+  .sell-scheme__image object {
     min-width: 750px; }
 
 .sell-scheme__label {
