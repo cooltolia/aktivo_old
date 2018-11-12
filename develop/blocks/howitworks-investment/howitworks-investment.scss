@@ -13,6 +13,10 @@
 .howitworks-investment__image {
     max-width: 985px;
     margin: 0 auto;
+
+    &--mobile {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -26,6 +30,11 @@
     }
 
     .howitworks-investment__image {
+        display: none;
         max-width: 480px;
+
+        &--mobile {
+            display: block;
+        }
     }
 }

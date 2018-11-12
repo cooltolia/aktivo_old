@@ -33,10 +33,9 @@
 .howitworks-audit__image {
     height: 100%;
 
-    background-image: url('../images/howitworks/audit.svg');
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
+    &--mobile {
+        display: none;
+    }
 }
 
 .howitworks-audit__content {
@@ -108,12 +107,13 @@
     }
 
     .howitworks-audit__image {
-        
+        display: none;
         margin: 0 auto 45px;
-        padding-top: 125%;
 
-        background-image: url('../images/howitworks/audit_m.svg');
-        background-size: cover;
+        &--mobile {
+            display: block;
+        }
+       
     }
 
     .howitworks-audit__content,

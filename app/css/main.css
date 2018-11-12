@@ -2521,11 +2521,9 @@ th {
     margin-right: 55px; }
 
 .howitworks-audit__image {
-  height: 100%;
-  background-image: url("../images/howitworks/audit.svg");
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat; }
+  height: 100%; }
+  .howitworks-audit__image--mobile {
+    display: none; }
 
 .howitworks-audit__content {
   padding-top: 20px;
@@ -2604,10 +2602,10 @@ th {
       margin: 0 auto;
       min-height: 0; }
   .howitworks-audit__image {
-    margin: 0 auto 45px;
-    padding-top: 125%;
-    background-image: url("../images/howitworks/audit_m.svg");
-    background-size: cover; }
+    display: none;
+    margin: 0 auto 45px; }
+    .howitworks-audit__image--mobile {
+      display: block; }
   .howitworks-audit__content,
   .howitworks-audit__appeal {
     padding: 0 30px; }
@@ -2638,6 +2636,8 @@ th {
 .howitworks-investment__image {
   max-width: 985px;
   margin: 0 auto; }
+  .howitworks-investment__image--mobile {
+    display: none; }
 
 @media (max-width: 768px) {
   .howitworks-investment {
@@ -2646,7 +2646,10 @@ th {
   .howitworks-investment__heading {
     margin-bottom: 45px; }
   .howitworks-investment__image {
-    max-width: 480px; } }
+    display: none;
+    max-width: 480px; }
+    .howitworks-investment__image--mobile {
+      display: block; } }
 
 .howitworks-triggers {
   padding-top: 15px;

@@ -7,6 +7,6 @@ mixin howitworks-investment()
                 +title('center')
                     | Инвестиции в недвижимость с Активо     
             +e.image
-                picture
-                    source(srcset="images/howitworks/invest.svg" media="(min-width: 769px)")
-                    img(src="images/howitworks/invest_m.svg")
+                object(type="image/svg+xml" data="images/howitworks/invest.svg")
+            +e.image.--mobile
+                object(type="image/svg+xml" data="images/howitworks/invest_m.svg")
