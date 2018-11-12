@@ -7,7 +7,8 @@ mixin sell-structure()
                 +title('center', 'light')
                     | Структура капитала
             +e.image
-                img(src="images/sell/structure.svg")
+                object(type="image/svg+xml" data="images/sell/structure.svg")
+                //- img(src="images/sell/structure.svg")
             +e.UL.list
                 +e.LI.item
                     +e.SPAN.item-icon
