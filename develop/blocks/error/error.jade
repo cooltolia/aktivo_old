@@ -1,0 +1,10 @@
+mixin error(code, image, text)
+    +b.SECTION.error
+        +e.inner
+            +e.image
+                img(src='#{image}' alt='#{code} error')
+            +e.content
+                +e.H1.code= code
+                +e.P.text= text
+                +e.BUTTON.button Позвоните мне
+                +e.A.link(href='/') Вернуться на главную

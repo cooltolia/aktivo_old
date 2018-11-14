@@ -1,0 +1,15 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- var loggedIn = false
+- var text = 'Извините, что-то пошло не так. Мы уже решаем эту проблему. Если у вас есть срочные вопросы, свяжитесь с нами, и мы все расскажем. '
+doctype
+html(lang='ru')
+  +doc-header
+  body.pageload.no-js
+    +main-header(href='/')
+    +mobile-nav
+    +breadcrumbs
+    +error(500, 'images/errors/500.svg', text)
+    +main-footer
+    +doc-footer

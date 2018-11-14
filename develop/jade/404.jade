@@ -1,0 +1,14 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- var loggedIn = false
+- var text = 'Мы не нашли эту страницу. Возможно, она устарела, возможно, ее никогда не было — в любом случае, если у вас есть вопросы, cвяжитесь с нами, и мы все расскажем.'
+doctype
+html(lang='ru')
+  +doc-header
+  body.pageload.no-js
+    +main-header(href='/')
+    +mobile-nav
+    +error(404, 'images/errors/404.svg', text)
+    +main-footer
+    +doc-footer
