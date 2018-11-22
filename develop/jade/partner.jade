@@ -1,0 +1,20 @@
+include template/header
+include template/footer
+include ../blocks/**/*
+- var loggedIn = false
+doctype
+html(lang='ru')
+    +doc-header
+    body.pageload.no-js
+        +main-header(href='/')
+        +mobile-nav
+        +breadcrumbs
+        +partner-topscreen
+        +partner-triggers
+        +partner-slider
+        +partner-about
+        +partner-example
+        +partner-secondary-triggers
+        +partner-appeal
+        +main-footer
+        +doc-footer
