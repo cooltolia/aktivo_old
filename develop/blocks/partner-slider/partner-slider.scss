@@ -11,10 +11,13 @@
 .partner-slider__slider {
     width: 745px;
     margin: 0 auto 50px;
+    height: auto;
 
     .slick-list {
         padding-left: 9% !important;
         padding-right: 9% !important;
+        height: auto !important;
+        transition: height 300ms ease;
     }
 
     .slick-track {
@@ -31,9 +34,9 @@
         margin: auto;
         opacity: 0;
         width: 100% !important;
-        height: 370px;
+        height: auto;
         transform: translate3d(0, 0, 0);
-        transition: transform 1s, opacity 1s;
+        transition: transform 1s, opacity 1s, height 1s ease;
         will-change: transform;
     }
 
@@ -126,13 +129,22 @@
     text-align: center;
 }
 
-.partner-slider__slide-text {
+.partner-slider-title {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     font-size: 24px;
     line-height: 1.3;
     text-align: center;
+    font-weight: 700;
 }
+
+.partner-slider-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
 
 .partner-slider__button {
     @include btn-theme;

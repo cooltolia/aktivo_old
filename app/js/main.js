@@ -2991,7 +2991,7 @@ jQuery(document).ready(function ($) {
 
              var next = current.next();
 
-             var prev = current.prev();
+             var prev = $(slick.$slides[slick.$slides.length - 1]);
 
      
 
@@ -3011,6 +3011,10 @@ jQuery(document).ready(function ($) {
 
          }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
 
+             const length = slick.$slides.length;
+
+     
+
              var current = $(slick.$slides[nextSlide]);
 
              slick.$prev.removeClass('slick-sprev');
@@ -3019,15 +3023,37 @@ jQuery(document).ready(function ($) {
 
      
 
-             var next = current.next();
-
-             var prev = current.prev();
+             var prev, next;
 
      
 
-             prev.prev();
+             if ((nextSlide === (length - 1))) {
 
-             prev.next();
+                 prev = current.prev();
+
+                 next = $(slick.$slides[0]);
+
+             } else if (currentSlide > nextSlide && nextSlide === 0) {
+
+                 next = current.next();
+
+                 prev = $(slick.$slides[length - 1]);
+
+             } else {
+
+                 next = current.next();
+
+                 prev = current.prev();
+
+             }
+
+     
+
+     
+
+             // prev.prev();
+
+             // prev.next();
 
              prev.addClass('slick-sprev');
 
@@ -3069,13 +3095,31 @@ jQuery(document).ready(function ($) {
 
              swipe: true,
 
-             autoHeight: true,
+             adaptiveHeight: true,
 
              // autoplay: true,
 
              // autoplaySpeed: 3000,
 
          });
+
+     
+
+         var sliderAdaptiveHeightMobile = function () {
+
+             slider.find('.slick-slide').height('0');
+
+             slider.find('.slick-slide.slick-active').height('auto');
+
+             slider.find('.slick-list').height('auto');
+
+             slider.slick('setOption', null, null, true);
+
+         }
+
+     
+
+         // sliderAdaptiveHeightMobile();
 
      })();
 

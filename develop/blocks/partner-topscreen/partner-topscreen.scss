@@ -1,37 +1,39 @@
-.liberty-topscreen {
+.partner-topscreen {
     position: relative;
-    min-height: 685px;
-    max-width: 900px;
+    min-height: 544px;
+    max-width: 1024px;
     margin: 0 auto;
 
     color: $lighttext;
     font-family: $segoe;
 }
 
-.liberty-topscreen__image {
+.partner-topscreen__image {
     position: absolute;
     visibility: hidden;
 
-    filter: brightness(50%);
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+
+    // filter: brightness(50%);
 
     &--first {
-        width: 296px;
-        top: 175px;
+        width: 304px;
+        height: 377px;
         left: 0;
+        top: 56px;
     }
 
     &--second {
-        width: 544px;
+        width: 640px;
         height: 544px;
-        top: 65px;
-        left: 184px;
+        left: 192px;
     }
 
     &--third {
-        width: 256px;
-        height: 472px;
-        top: 235px;
+        width: 304px;
+        height: 304px;
         right: 0;
+        bottom: 24px;
     }
 
     img {
@@ -39,38 +41,36 @@
     }
 }
 
-.liberty-topscreen__wrapper {
+.partner-topscreen__wrapper {
     position: absolute;
     width: 750px;
     left: 50%;
     transform: translateX(-50%);
-    top: 187px;
+    top: 75px;
 
     visibility: hidden;
 }
 
-.liberty-topscreen__heading {
+.partner-topscreen__heading {
     margin: 0;
     margin-bottom: 50px;
 
     font-size: 48px;
     font-weight: 700;
     line-height: 1.17;
-    letter-spacing: 3.6px;
     text-align: center;
-    text-transform: uppercase;
 }
 
-.liberty-topscreen__about {
+.partner-topscreen__about {
     margin: 0;
-    margin-bottom: 105px;
+    margin-bottom: 55px;
 
     font-size: 24px;
     line-height: 1.33;
     text-align: center;
 }
 
-.liberty-topscreen__button {
+.partner-topscreen__button {
     @include btn-theme;
     width: 288px;
     padding: 16px;
@@ -79,15 +79,15 @@
     font-size: 18px;
     font-weight: 600;
 }
-
+/* 
 @media (max-width: 768px) {
-    .liberty-topscreen {
+    .partner-topscreen {
         overflow: hidden;
         min-height: 552px;
         max-width: 390px;
     }
 
-    .liberty-topscreen__image {
+    .partner-topscreen__image {
         &--first {
             width: 170px;
             height: 170px;
@@ -109,24 +109,24 @@
         }
     }
 
-    .liberty-topscreen__wrapper {
+    .partner-topscreen__wrapper {
         width: 265px;
         top: 95px;
     }
 
-    .liberty-topscreen__heading {
+    .partner-topscreen__heading {
         margin-bottom: 15px;
 
         font-size: 32px;
     }
 
-    .liberty-topscreen__about {
+    .partner-topscreen__about {
         margin-bottom: 125px;
 
         font-size: 16px;
     }
 
-    .liberty-topscreen__button {
+    .partner-topscreen__button {
         width: 264px;
     }
-}
+} */
