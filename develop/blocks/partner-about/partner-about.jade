@@ -1,2 +1,90 @@
 mixin partner-about()
     +b.SECTION.partner-about
+        +inner
+            +e.heading
+                +subtitle('center', 'light') 
+                    | Ваш формат
+                +title('center')
+                    | Виды партнерской программы
+            +e.types
+                +e.type
+                    +e.type-image
+                        include ../../../app/images/partner/about1.svg
+                    +e.type-title Сертифицированный ID&nbsp;партнер
+                    +e.type-text 
+                        p Программа подойдет для партнеров физических и юридических лиц, которые обладают собственной клиентской базой и готовы проводить полный цикл сделки самостоятельно.
+                        p Каждый партнер получает индивидуальный ID номер, который присваивается всем его клиентам.
+                +e.type
+                    +e.type-image
+                        include ../../../app/images/partner/about2.svg
+                    +e.type-title Реферальный партнер
+                    +e.type-subtitle Реферальная ссылка — это специальная ссылка,<br> с индивидуальным ID партнера на конце.
+                    +e.type-text 
+                        p Программа подойдет для партнеров, которые профессионально используют возможности социальных сетей, видеоблогов и информационных порталов.
+                        p Партнер получает доход от каждого клиента, прошедшего по реферальной ссылке и совершившего сделку. Консультацией и обслуживанием клиентов занимаются специалисты Aktivo.
+            +e.steps
+                +e.steps-title
+                    span.text Расчет вознаграждения
+                        span.line.line-before
+                        span.line.line-after
+                +e.steps-list
+                    +e.step-title Первая продажа
+                    +e.step-row
+                        +e.step-block.--blue
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line.--flex
+                                        +e.step-benefit 1%
+                                        +e.P.step-text при совокупном объеме продаж за квартал до 10 млн руб.
+                                    +e.step-line.--flex
+                                        +e.step-benefit 1,5%
+                                        +e.P.step-text при совокупном объеме продаж за квартал свыше 10 млн руб.
+                        +e.step-block.--green
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line.--flex
+                                        +e.step-benefit 1%
+                                        +e.P.step-text при любой сделке от 1 млн руб.
+                    +e.step-title Повторная продажа
+                    +e.step-row
+                        +e.step-block.--blue
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line.--flex
+                                        +e.step-benefit 0,5%
+                                        +e.P.step-text от суммы при всех повторных сделках (в течение 12 месяцев).
+                        +e.step-block.--green
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line
+                                        +e.P.step-text.--big Не предусмотрено
+                    +e.step-title Заключение сделок
+                    +e.step-row
+                        +e.step-block.--blue
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line
+                                        +e.P.step-text.--big Самостоятельно
+                        +e.step-block.--green
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line
+                                        +e.P.step-text.--medium Консультацией и обслуживанием клиентов занимаются специалисты компании Aktivo.
+                    +e.step-title Сертификация
+                    +e.step-row
+                        +e.step-block.--blue
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line
+                                        +e.P.step-text.--medium Прохождение обучающего курса.
+                        +e.step-block.--green
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line
+                                        +e.P.step-text.--big Не требуется
+                    +e.step-row
+                        +e.step-block.--full
+                            +e.step-content
+                                +e.step-line
+                                    +e.step-line
+                                        +e.P.step-text.--big Подписание партнерского соглашения <b>Обязательно</b>

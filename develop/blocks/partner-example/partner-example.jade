@@ -1,2 +1,51 @@
 mixin partner-example()
-    +b.SECTION.partner-example
+    +b.partner-example
+        +inner
+            +e.heading Например:
+            +e.content
+                +e.P.text
+                    | Партнер привлек в компанию 3 клиентов за квартал, которые<br>совершили покупку по 5 миллионов рублей каждый.
+                +e.calculation
+                    +e.calculation-col.--w185
+                        +e.calculation-number 5 000 000 ₽
+                        +e.calculation-legend Сумма инвестиции
+                    +e.calculation-col
+                        +e.calculation-multiply
+                    +e.calculation-col.--shrink
+                        +e.calculation-number 1,5%
+                        +e.calculation-legend Вознаграждение партнера
+                    +e.calculation-col
+                        +e.calculation-equals 
+                    +e.calculation-col.--w157
+                        +e.calculation-number.--blue 75 000 ₽
+                        +e.calculation-legend Премия за одного клиента
+                    +e.calculation-col
+                        +e.calculation-multiply
+                    +e.calculation-col.--shrink
+                        +e.calculation-number 3
+                        +e.calculation-legend Количество клиентов
+                    +e.calculation-col
+                        +e.calculation-equals
+                    +e.calculation-col.--w205
+                        +e.calculation-number.--final 225 000 ₽
+                        +e.calculation-legend Совокупное вознаграждение
+                +e.P.text
+                    | Размер вознаграждения за повторные покупки клиентов составит:
+                +e.calculation
+                    +e.calculation-col
+                        +e.calculation-number 10 000 000 ₽
+                        +e.calculation-legend Сумма инвестиции
+                    +e.calculation-col
+                        +e.calculation-multiply
+                    +e.calculation-col.--shrink
+                        +e.calculation-number 0,5%
+                        +e.calculation-legend Вознаграждение<br> партнера
+                    +e.calculation-col
+                        +e.calculation-equals 
+                    +e.calculation-col.--w135
+                        +e.calculation-number.--final 50 000 ₽
+                        +e.calculation-legend Премия за повторную покупку
+                +e.P.text
+                    | Общий совокупный размер премии партнера составит:
+                +e.benefit
+                    | 275 000 ₽

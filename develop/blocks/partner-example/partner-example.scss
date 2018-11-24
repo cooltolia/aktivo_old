@@ -1,3 +1,158 @@
 .partner-example {
-    
+    padding-top: 125px;
+    padding-bottom: 70px;
+    margin-top: -65px;
+
+    font-family: $segoe;
+    color: $darktext;
+
+    background-color: #f5f7f9;
+}
+
+.partner-example__heading {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.partner-example__content {
+    max-width: 865px;
+    margin: 0 auto;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.partner-example__text {
+    margin: 0;
+    margin-bottom: 45px;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.35;
+    text-align: center;
+}
+
+.partner-example__calculation {
+    display: flex;
+    width: auto;
+    margin: 0 auto 35px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.partner-example__calculation-col {
+    margin-right: 20px;
+    flex: 0 1 auto;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--w205 {
+        width: 205px;
+    }
+
+    &--w185 {
+        width: 185px;
+    }
+
+    &--w157 {
+        width: 157px;
+    }
+
+    &--w135 {
+        width: 135px;
+    }
+
+    &--shrink {
+        flex-shrink: 2;
+    }
+}
+
+.partner-example__calculation-number {
+    margin-top: -5px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+
+    &--blue {
+        color: #3c7bd8;
+    }
+
+    &--final {
+        margin-top: -10px;
+        color: #ffd729;
+        font-size: 32px;
+    }
+}
+
+.partner-example__calculation-legend {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: left;
+}
+
+.partner-example__calculation-multiply {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 1px;
+        top: 7px;
+        left: -3px;
+        
+        background-color: #848f9b;
+        transform-origin: center;
+        transform: rotate(45deg)
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.partner-example__calculation-equals {
+    width: 24px;
+    margin-top: 3px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        left: 0;
+        top: 0;
+        
+        background-color: #848f9b;
+    }
+
+    &::after {
+        top: 11px;
+    }
+}
+
+.partner-example__benefit {
+    display: inline-block;
+    margin-top: -30px;
+    padding: 14px 24px 13px;
+
+    background-color: #ffd729;
+
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
 }
