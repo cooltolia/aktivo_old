@@ -60,3 +60,20 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+@media (max-width: 768px) {
+    .partner-appeal {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .partner-appeal__heading {
+        margin-bottom: 25px;
+
+        font-size: 20px;
+    }
+
+    .partner-appeal__button {
+        width: 264px;
+    }
+}

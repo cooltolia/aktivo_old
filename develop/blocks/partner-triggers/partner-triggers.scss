@@ -51,61 +51,77 @@
     text-transform: uppercase;
 }
 
-// @media (max-width: 768px) {
-//     .partner-triggers {
-//         padding-top: 40px;
-//     }
+@media (max-width: 768px) {
+    .partner-triggers {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
 
-//     .partner-triggers__heading {
-//         margin-bottom: 25px;
+    .partner-triggers__heading {
+        margin-bottom: 25px;
 
-//         font-size: 32px;
-//     }
+        font-size: 32px;
+    }
 
-//     .partner-triggers__list {
-//         flex-direction: column;
-//         max-width: 480px;
-//         margin: 0 auto 50px;
-//         padding: 0 28px;
-//     }
+    .partner-triggers__list {
+        flex-direction: column;
+        max-width: 480px;
+        margin: 0 auto 50px;
+        padding: 0 28px;
+    }
 
-//     .partner-triggers__item {
-//         flex: 0 0 auto;
-//         display: flex;
-//         align-items: center;
-//         margin-bottom: 15px;
+    .partner-triggers__item {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
 
-//         &:last-child {
-//             margin-bottom: 0;
-//         }
-//     }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
-//     .partner-triggers__item-image {
-//         margin: 0;
-//         margin-right: 25px;
-//         flex: 0 0 auto;
+    .partner-triggers__item-image {
+        margin: 0;
+        margin-right: 25px;
+        flex: 0 0 auto;
 
-//         &--reverse {
-//             order: 1;
-//             margin-left: 25px;
-//         }
-//     }
+        &--reverse {
+            order: 1;
+            margin-left: 25px;
+            margin-right: 0;
+        }
+    }
 
-//     .partner-triggers__item-legend {
-//         text-align: left;
-//     }
+    .partner-triggers__item-legend {
+        text-align: left;
 
-//     .partner-triggers__text {
-//         padding: 0 28px;
-//         font-size: 16px;
+        &--reverse {
+            text-align: right;
+        }
+    }
 
-//         line-height: 1.5;
-//     }
-// }
+    .partner-triggers__text {
+        padding: 0 28px;
+        font-size: 16px;
 
-// @media (max-width: 360px) {
-//     .partner-triggers__list,
-//     .partner-triggers__text {
-//         padding: 0;
-//     }
-// }
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 380px) {
+    .partner-triggers__list,
+    .partner-triggers__item {
+        padding: 0;
+    }
+
+    .partner-triggers__item-image {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    .partner-triggers__item-legend {
+        font-size: 13px;
+    }
+}

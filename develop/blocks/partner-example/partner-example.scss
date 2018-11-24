@@ -46,6 +46,7 @@
 .partner-example__calculation-col {
     margin-right: 20px;
     flex: 0 1 auto;
+    text-align: center;
 
     &:last-child {
         margin-right: 0;
@@ -78,7 +79,6 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 1;
-    text-align: left;
 
     &--blue {
         color: #3c7bd8;
@@ -95,7 +95,6 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.25;
-    text-align: left;
 }
 
 .partner-example__calculation-multiply {
@@ -125,6 +124,7 @@
 
 .partner-example__calculation-equals {
     width: 24px;
+    height: 24px;
     margin-top: 3px;
     position: relative;
 
@@ -155,4 +155,47 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .partner-example {
+        padding-top: 95px;
+        padding-bottom: 50px;
+        margin-top: -65px;
+    }
+
+    .partner-example__heading {
+        margin-bottom: 45px;
+
+        font-size: 30px;
+    }
+
+    .partner-example__text {
+        margin-bottom: 30px;
+        
+        font-size: 20px;
+    }
+
+    .partner-example__calculation {
+        display: block;
+        margin: 0 auto 35px;
+        text-align: center;
+    }
+
+    .partner-example__calculation-col {
+        margin: 0 auto 20px;
+        width: auto !important;
+        text-align: center;
+    }
+
+    .partner-example__calculation-multiply,
+    .partner-example__calculation-equals {
+        margin: 0 auto;
+    }
+
+    .partner-example__benefit {
+        margin-top: -10px;
+        padding: 12px 20px 11px;
+        font-size: 36px;
+    }
 }
