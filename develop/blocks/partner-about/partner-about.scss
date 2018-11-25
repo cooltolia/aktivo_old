@@ -110,7 +110,7 @@
 
         &::before {
             background-color: #3c7bd8;
-            transform: translateX(calc(50% - 3px));
+            transform: translateX(calc(50% - 4px));
         }
 
         &::after {
@@ -170,12 +170,12 @@
 .partner-about__step-title {
     padding: 15px;
 
-    opacity: 0.4;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1.4px;
     text-align: center;
     text-transform: uppercase;
+    color: rgba($darktext, 0.4);
 
     &:first-child {
         padding-top: 0;
@@ -300,5 +300,220 @@
         display: block;
         text-align: center;
         font-weight: 700;
+    }
+}
+
+@media (max-width: 768px) {
+    .partner-about {
+        padding-top: 40px;
+    }
+
+    .partner-about__type-image {
+        width: 65px;
+        height: 65px;
+        margin-bottom: 15px;
+    }
+
+    .partner-about__type-title {
+        font-size: 18px;
+    }
+
+    .partner-about__type-subtitle,
+    .partner-about__type-text {
+        display: none;
+    }
+
+    .partner-about__type {
+        width: 50%;
+        padding: 0 15px;
+        margin-right: 0;
+
+        &:last-child {
+            width: 50%;
+        }
+    }
+
+    .partner-about__steps {
+        padding-top: 25px;
+    }
+
+    .partner-about__steps-title {
+        margin-bottom: 80px;
+
+        font-size: 18px;
+
+        .text {
+
+            &::before,
+            &::after {
+                height: 56px;
+                bottom: -66px;
+            }
+        }
+
+        .line {
+
+            &.line-before {
+                left: -17px;
+            }
+
+            &.line-after {
+                right: -17px;
+
+                &::after {
+                    right: -32px;
+                }
+            }
+
+            &::before {
+                width: 32px;
+            }
+
+            &::after {
+                left: -32px;
+                height: 48px;
+            }
+        }
+    }
+
+    .partner-about__steps-list {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            height: 90%;
+            width: 2px;
+        }
+
+        &::before {
+            left: 15px;
+
+            background-color: #3c7bd8;
+        }
+
+        &::after {
+            right: 15px;
+
+            background-color: #5fce67;
+        }
+    }
+
+    .partner-about__step-title {
+        font-size: 14px;
+        position: relative;
+        padding-bottom: 0;
+        padding-top: 0;
+
+        span {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            padding: 0 15px;
+            background-color: #fff;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: calc(50% - 15px);
+            top: 50%;
+            transform: translateY(-50%)
+        }
+
+        &::before {
+            left: 15px;
+
+            background-color: #3c7bd8;
+        }
+
+        &::after {
+            right: 15px;
+
+            background-color: #5fce67;
+        }
+    }
+
+    .partner-about__step-row {
+        flex-flow: column;
+        padding: 40px 0;
+    }
+
+    .partner-about__step-block {
+        width: 80%;
+        margin: 0;
+        margin-right: auto;
+        margin-bottom: 15px;
+        padding: 15px;
+        min-height: 90px;
+        z-index: 1;
+
+        &:last-child {
+            margin-right: 0;
+            margin-left: auto;
+        }
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        &--full {
+            margin-right: auto;
+            width: 100%;
+        }
+
+        // &::before,
+        // &::after {
+        //     width: 2px;
+        //     height: 100%;
+        //     z-index: 0;
+        //     background-image: none !important;
+        // }
+
+        // &--blue {
+        //     &::before,
+        //     &::after {
+        //         background-color: #3c7bd8;
+        //     }
+        // }
+
+        // &--green {
+        //     &::before,
+        //     &::after {
+        //         background-color: #5fce67;
+        //     }
+        // }
+    }
+
+    .partner-about__step-benefit {
+        font-size: 30px;
+    }
+
+    .partner-about__step-text {
+        &--medium {
+            font-size: 14px;
+        }
+
+        &--big {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .partner-about__step-block {
+        width: 90%;
+        padding: 7px;
+
+        &--full {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+        }
     }
 }
