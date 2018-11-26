@@ -7344,10 +7344,14 @@ body.modal-open {
     top: 100px;
     left: -25px; }
   .partner-topscreen__image--second {
-    width: 281px;
-    height: 331px;
+    width: 309px;
+    height: 364px;
     top: 44px;
-    left: 54px; }
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .partner-topscreen__image--third {
     width: 130px;
     height: 130px;
@@ -7364,14 +7368,6 @@ body.modal-open {
     font-size: 16px; }
   .partner-topscreen__button {
     width: 264px; } }
-
-@media (max-width: 380px) {
-  .partner-topscreen__image--second {
-    left: 45px; } }
-
-@media (max-width: 320px) {
-  .partner-topscreen__image--second {
-    left: 20px; } }
 
 .partner-triggers {
   padding-top: 105px;

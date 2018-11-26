@@ -96,10 +96,11 @@
         }
 
         &--second {
-            width: 281px;
-            height: 331px;
+            width: 309px;
+            height: 364px;
             top: 44px;
-            left: 54px;
+            left: 50%;
+            transform: translateX(-50%)
         }
 
         &--third {
@@ -132,18 +133,18 @@
     }
 }
 
-@media (max-width: 380px) {
-    .partner-topscreen__image {
-        &--second {
-            left: 45px;
-        }
-    }
-}
+// @media (max-width: 380px) {
+//     .partner-topscreen__image {
+//         &--second {
+//             left: 45px;
+//         }
+//     }
+// }
 
-@media (max-width: 320px) {
-    .partner-topscreen__image {
-        &--second {
-            left: 20px;
-        }
-    }
-}
+// @media (max-width: 320px) {
+//     .partner-topscreen__image {
+//         &--second {
+//             left: 20px;
+//         }
+//     }
+// }
