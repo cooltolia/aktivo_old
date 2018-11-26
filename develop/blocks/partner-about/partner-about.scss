@@ -330,8 +330,28 @@
 
         &:last-child {
             width: 50%;
+
+            .partner-about__type-image {
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .partner-about__type-title {
+                text-align: right;
+            }
         }
     }
+
+     .partner-example__type:last-child {
+         .partner-example__type-image {
+             margin-left: auto;
+             margin-right: 0;
+         }
+
+         .partner-example__type-text {
+             text-align: right;
+         }
+     }
 
     .partner-about__steps {
         padding-top: 25px;
@@ -515,5 +535,9 @@
             margin-right: 0;
             margin-left: 0;
         }
+    }
+
+    .partner-about__type {
+        padding: 0 5px;
     }
 }

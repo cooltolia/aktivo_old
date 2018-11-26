@@ -6520,6 +6520,16 @@ body.modal-open {
     margin-right: 0; }
     .partner-about__type:last-child {
       width: 50%; }
+      .partner-about__type:last-child .partner-about__type-image {
+        margin-left: auto;
+        margin-right: 0; }
+      .partner-about__type:last-child .partner-about__type-title {
+        text-align: right; }
+  .partner-example__type:last-child .partner-example__type-image {
+    margin-left: auto;
+    margin-right: 0; }
+  .partner-example__type:last-child .partner-example__type-text {
+    text-align: right; }
   .partner-about__steps {
     padding-top: 25px; }
   .partner-about__steps-title {
@@ -6620,7 +6630,9 @@ body.modal-open {
     .partner-about__step-block--full {
       width: 100%;
       margin-right: 0;
-      margin-left: 0; } }
+      margin-left: 0; }
+  .partner-about__type {
+    padding: 0 5px; } }
 
 .partner-appeal {
   padding-top: 80px;
