@@ -114,6 +114,9 @@ jQuery(document).ready(function ($) {
      
 
      
+     
+
+     
      ;
 
      (function () {
@@ -1378,6 +1381,386 @@ jQuery(document).ready(function ($) {
          })
 
      
+
+     })();
+
+     
+     
+
+     
+     ;
+
+     (function () {
+
+         var profitData = [2100, 1700, 1200, 1600, 1250, 650];
+
+         var dividendsData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38];
+
+     
+
+         var chart = $('#income-monitoring');
+
+         console.log(!chart.length);
+
+     
+
+     
+
+         if (chart.length) {
+
+             Highcharts.chart('income-monitoring', {
+
+                 chart: {
+
+                     zoomType: 'xy'
+
+                 },
+
+                 title: {
+
+                     text: '',
+
+                 },
+
+                 exporting: {
+
+                     enabled: false
+
+                 },
+
+                 plotOptions: {
+
+                     line: {
+
+                         dataLabels: {
+
+                             align: 'center',
+
+                             enabled: true,
+
+                             color: 'black',
+
+                             padding: 10,
+
+                             style: {
+
+                                 textOutline: 'none',
+
+                                 fontSize: '14px',
+
+                                 fontWeight: '400'
+
+                             }
+
+                         }
+
+                     }
+
+                 },
+
+                 xAxis: [{
+
+                     categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
+
+                     crosshair: false,
+
+                     labels: {
+
+                         style: {
+
+                             color: 'rgba(0, 0, 0, 0.4)',
+
+                             fontSize: '9px'
+
+                         }
+
+                     },
+
+                 }],
+
+                 yAxis: [{
+
+                         visible: false,
+
+                         softMax: 1.3
+
+                     },
+
+                     {
+
+                         title: {
+
+                             text: '',
+
+                         },
+
+                         labels: {
+
+                             style: {
+
+                                 color: 'rgba(0, 0, 0, 0.4)',
+
+                                 fontSize: '9px'
+
+                             }
+
+                         },
+
+                         opposite: false,
+
+                         visible: true,
+
+                         tickInterval: 50,
+
+                         softMax: 2200
+
+                     }
+
+                 ],
+
+                 legend: {
+
+                     enabled: false,
+
+                 },
+
+                 credits: {
+
+                     enabled: false
+
+                 },
+
+                 series: [{
+
+                     name: 'Сумма выплат',
+
+                     type: 'column',
+
+                     yAxis: 1,
+
+                     data: profitData,
+
+                     color: '#3c7bd8',
+
+                     tooltip: {
+
+                         valueSuffix: ' 000 руб'
+
+                     },
+
+                 }, {
+
+                     name: 'Доходность',
+
+                     type: 'line',
+
+                     data: dividendsData,
+
+                     color: '#ffd729',
+
+                     tooltip: {
+
+                         valueSuffix: 'млн руб'
+
+                     }
+
+                 }]
+
+             });
+
+         }
+
+     })();
+
+     
+     ;(function() {
+
+         var $togglers = $('.monitoring-objects__nav-item');
+
+         var $sections = $('.monitoring-objects__section');
+
+     
+
+         $togglers.each(function(i, item) {
+
+             $(item).on('click', function() {
+
+     
+
+                 if ($(item).hasClass('active')) {
+
+                     return;
+
+                 }
+
+     
+
+                 var activeToggle = $('.monitoring-objects__nav-item.active');
+
+                 activeToggle.removeClass('active');
+
+     
+
+                 var activeSection = $('.monitoring-objects__section.active');
+
+                 activeSection.removeClass('active').fadeOut();
+
+     
+
+                 var id = $(item).data('for');
+
+                 var target = $('[data-id="' + id + '"');
+
+     
+
+                 $(item).addClass('active');
+
+                 target.addClass('active').fadeIn();
+
+             })
+
+         }) 
+
+     })();
+
+     
+     ;
+
+     (function () {
+
+         var chart = document.getElementById("monitoring-finances");
+
+     
+
+         if (chart) {
+
+             var objects = [
+
+                 {name: 'Супермаркет Пятерочка', data: 100},
+
+                 {name: 'Супермаркет Десяточка', data: 30},
+
+                 {name: 'Минимаркет Двоечка', data: 50},
+
+                 {name: 'Минимаркет Нулевочка', data: 10}
+
+             ]
+
+     
+
+     
+
+             // Create the chart
+
+             Highcharts.chart(chart, {
+
+                 chart: {
+
+                     type: "pie",
+
+                     margin: [0, 0, 0, 0]
+
+                 },
+
+                 credits: {
+
+                     enabled: false
+
+                 },
+
+                 title: {
+
+                     text: ""
+
+                 },
+
+                 plotOptions: {
+
+                     pie: {
+
+                         cursor: 'pointer',
+
+                         dataLabels: {
+
+                             enabled: false,
+
+                         },
+
+                         // startAngle: -90,
+
+                         borderColor: null,
+
+                         size: '100%'
+
+                     }
+
+                 },
+
+                 tooltip: {
+
+                     pointFormat: '<b>{point.y} руб</b>',
+
+                     percentageDecimals: 2,
+
+                 },
+
+                 series: [{
+
+                         name: "sa",
+
+                         data: [
+
+                             {
+
+                                 name: objects[0].name,
+
+                                 y: objects[0].data,
+
+                                 color: '#5fce67'
+
+                             },
+
+                             {
+
+                                 name: objects[1].name,
+
+                                 y: objects[1].data,
+
+                                 color: '#3c7bd8'
+
+                             },
+
+                             {
+
+                                 name: objects[2].name,
+
+                                 y: objects[2].data,
+
+                                 color: '#ffd729'
+
+                             },
+
+                             {
+
+                                 name: objects[3].name,
+
+                                 y: objects[3].data,
+
+                                 color: '#f52f4b'
+
+                             },
+
+                         ],
+
+                         innerSize: '85%',
+
+                     }
+
+                 ]
+
+             });
+
+         }
 
      })();
 

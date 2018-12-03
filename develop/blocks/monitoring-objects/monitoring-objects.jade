@@ -1,0 +1,36 @@
+mixin monitoring-objects()
+    +b.SECTION.monitoring-objects
+        +e.nav
+            +e.nav-item.active(data-for='planned_objects') Планируемые инвестиции
+            +e.nav-item(data-for='current_objects') Текущие инвестиции
+            +e.nav-item(data-for='forsale_objects') Доли на продажу
+            +e.nav-item(data-for='sold_objects') Проданные доли
+        +e.content
+            +e.section.active(data-id='planned_objects')
+                +e.section-inner
+                    +e.card
+                        +object-item('1')
+                    +e.card
+                        +object-item('2')
+                    +e.card
+                        +object-item('3')
+                    +e.card
+                        +object-item('4')
+            +e.section(data-id='current_objects')
+                +e.section-inner
+                    +e.card
+                        +object-item('4')
+                    +e.card
+                        +object-item('2')
+                    +e.card
+                        +object-item('3')
+            +e.section(data-id='forsale_objects')
+                +e.section-inner
+                    +e.card
+                        +object-item('4')
+                    +e.card
+                        +object-item('2')
+            +e.section(data-id='sold_objects')
+                +e.section-inner
+                    +e.card
+                        +object-item('1')

@@ -1,0 +1,25 @@
+mixin monitoring-sidebar()
+    +b.SECTION.monitoring-sidebar
+        +e.info-block
+            +e.title Ближайшая выплата:
+            +e.info-text 30.11.2018
+        +e.info-block
+            +e.title Вам принадлежит:
+            +e.info-text 1 829 долей = 7.43 кв.м.
+        +e.documents
+            +e.title Правоустанавливающие документы:
+            +e.A.documents-link(href='#') Уведомление об операции по лицевому счету
+            +e.A.documents-link(href='#') Свидетельство о государственной регистрации права
+        +e.chart
+            +e.title Портфель инвестиций:
+            #monitoring-finances
+            +e.legend
+                +e.legend-item Супермаркет Пятерочка
+                +e.legend-item Супермаркет Десяточка
+                +e.legend-item Минимаркет Двоечка
+                +e.legend-item Микромаркет Нулевочка
+
+
+
+
+

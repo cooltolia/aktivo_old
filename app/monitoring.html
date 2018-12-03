@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>AKTIVO</title>
+    <link rel="icon" type="image/png" href="/favicon_16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/favicon_32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
+    <meta name="theme-color" content="#3aa5ed"/>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer="defer" type="text/javascript"></script>
+    <!-- build:css css/vendor.css    -->
+    <link href="libs/slick/slick.css" rel="stylesheet"/>
+    <link href="libs/animate.css" rel="stylesheet"/>
+    <link href="libs/fancybox/jquery.fancybox.css" rel="stylesheet"/>
+    <!-- endbuild-->
+    <!-- build:css css/main.css-->
+    <link href="css/main.css" rel="stylesheet"/>
+    <!-- endbuild -->
+    <!--[if lte IE 9]>
+    <script src="libs/ie/html5shiv.js"></script>
+    <script src="libs/ie/respond.src.js"></script>
+    <script src="libs/ie/respond.matchmedia.addListener.src.js"></script>
+    <script src="libs/polyfills/background_size_emu.js"></script>
+    <![endif]
+    -->
+  </head>
+  <body class="pageload no-js"><!-- main-header --> 
+    <header class="main-header">
+      <div class="inner">
+        <div class="main-header__inner">
+          <div class="main-header__hamburger mobile-only"><!-- hamburger --> 
+            <div class="hamburger hamburger hamburger--dark">
+              <div class="hamburger__line">
+              </div>
+              <div class="hamburger__line">
+              </div>
+              <div class="hamburger__line">
+              </div>
+            </div><!--/ hamburger --> 
+          </div><a class="main-header__logo" href="/"><img src="images/layout/logo.svg" width="88" alt="Aktivo"/></a>
+          <div class="main-header__contacts">
+            <div class="main-header__tel desktop-only"> <a href="tel:88005006464" class="number">8 (800) 500-64-64</a><span class="info">— звонок бесплатный</span>
+            </div><a href="tel:88005006464" class="main-header__icon main-header__icon--tel mobile-only"></a><a href="#" class="main-header__icon main-header__icon--user mobile-only"></a>
+          </div>
+          <div class="main-header__navigation desktop-only"><!-- main-nav --> 
+            <nav class="main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="/realty" class="main-nav__link">Наши объекты</a>
+                </li>
+                <li class="main-nav__item"><a href="/howitworks" class="main-nav__link">Клиентам</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/howitworks" class="main-nav__sublink">Как это работает</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/security" class="main-nav__sublink">Безопасность</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/faq" class="main-nav__sublink">FAQ</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/howitworks/forowners" class="main-nav__sublink">Продать недвижимость</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/about/story" class="main-nav__link">О нас</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/about/story" class="main-nav__sublink">О нас</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="about/vacancies" class="main-nav__sublink">Карьера</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/about/contacts" class="main-nav__sublink">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/blog" class="main-nav__link">Блог</a>
+                  <div class="main-nav__subnav">
+                    <ul class="main-nav__sublist">
+                      <li class="main-nav__subitem"><a href="/blog/trends" class="main-nav__sublink">Тренды рынка</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/summary" class="main-nav__sublink">Ликбез</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/news" class="main-nav__sublink">Новости компании</a>
+                      </li>
+                      <li class="main-nav__subitem"><a href="/blog/press" class="main-nav__sublink">СМИ о нас</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="main-nav__item"><a href="/club" class="main-nav__link">Клуб Liberty</a>
+                </li>
+              </ul>
+            </nav><!--/ main-nav --> 
+          </div>
+          <div class="main-header__authorization desktop-only"><!-- authorization --> 
+            <div class="authorization"><a href="#" class="authorization__login">Вход</a>
+            </div><!--/ authorization --> 
+          </div>
+        </div>
+      </div>
+    </header><!--/ main-header --> <!-- account-nav --> 
+    <nav class="account-nav">
+      <div class="inner">
+        <ul class="account-nav__list">
+          <li class="account-nav__item"><a href="/realty" title="Недвижимость" class="account-nav__link">Недвижимость<span class="account-nav__icon account-nav__icon--property"><img src="../images/layout/property.svg" alt=""/></span></a>
+          </li>
+          <li class="account-nav__item active"><a href="/account/monitoring" title="Мониторинг" class="account-nav__link">Мониторинг<span class="account-nav__icon account-nav__icon--monitoring"><img src="../images/layout/monitoring.svg" alt=""/></span></a>
+          </li>
+          <li class="account-nav__item"><a href="/account/documents" title="Документы" class="account-nav__link">Документы<span class="account-nav__icon account-nav__icon--documents"><img src="../images/layout/documents.svg" alt=""/></span></a>
+          </li>
+          <li class="account-nav__item"><a href="/account/finances" title="Финансы" class="account-nav__link">Финансы<span class="account-nav__icon account-nav__icon--finances"><img src="../images/layout/finances.svg" alt=""/></span></a>
+          </li>
+          <li class="account-nav__item"><a href="/account/questionary" title="Верификация" class="account-nav__link">Верификация<span class="account-nav__icon account-nav__icon--questionary"><img src="../images/layout/questionary.svg" alt=""/></span></a>
+          </li>
+          <li class="account-nav__item"><a href="/account/settings" title="Настройки" class="account-nav__link">Настройки<span class="account-nav__icon account-nav__icon--settings"><img src="../images/layout/settings.svg" alt=""/></span></a>
+          </li>
+          <li class="account-nav__item"><a href="/account/feedback" class="account-nav__link">Отзыв</a>
+          </li>
+        </ul>
+      </div>
+    </nav><!--/ account-nav --> <!-- monitoring-content --> 
+    <div class="monitoring-content">
+      <div class="inner">
+        <div class="monitoring-content__wrapper">
+          <main class="monitoring-content__main" role="main"><!-- monitoring-finances --> 
+            <section class="monitoring-finances">
+              <div class="monitoring-finances__tip">Выберите объект инвестиций
+              </div>
+              <h2 class="monitoring-finances__title">Финансовые показатели
+              </h2>
+              <div class="monitoring-finances__graph">
+                <div class="monitoring-finances__graph-chart">
+                  <div id="income-monitoring"></div>
+                </div>
+                <div class="monitoring-finances__legend">
+                  <div class="monitoring-finances__legend-item monitoring-finances__legend-item--blue">Выплаты инвестору
+                  </div>
+                  <div class="monitoring-finances__legend-item monitoring-finances__legend-item--yellow">Сумма выплат
+                  </div>
+                </div>
+              </div>
+              <div class="monitoring-finances__data">
+                <div class="monitoring-finances__data-col">
+                  <div class="monitoring-finances__data-title">Выплачено за 12 месяцев:
+                  </div>
+                  <div class="monitoring-finances__data-text">421 704.42 ₽
+                  </div>
+                </div>
+                <div class="monitoring-finances__data-col">
+                  <div class="monitoring-finances__data-title">Всего выплачено: 
+                  </div>
+                  <div class="monitoring-finances__data-text">421 704.42 ₽
+                  </div>
+                </div>
+                <div class="monitoring-finances__data-col">
+                  <div class="monitoring-finances__data-title">Доходность за 12 месяцев, после НДФЛ: 
+                  </div>
+                  <div class="monitoring-finances__data-text">9.92%
+                  </div>
+                </div>
+              </div>
+              <p class="monitoring-finances__info">
+                Отчет подготовлен аналитическим способом. Возможны отклонения. <br>
+                За точными данными Вы можете обратиться в офис управляющей компании <br>
+                ООО «КСП Капитал Управление Активами» или по номеру +7 (495) 649-88-37
+              </p>
+            </section><!--/ monitoring-finances --> <!-- monitoring-objects --> 
+            <section class="monitoring-objects">
+              <div class="monitoring-objects__nav">
+                <div data-for="planned_objects" class="monitoring-objects__nav-item active">Планируемые инвестиции
+                </div>
+                <div data-for="current_objects" class="monitoring-objects__nav-item">Текущие инвестиции
+                </div>
+                <div data-for="forsale_objects" class="monitoring-objects__nav-item">Доли на продажу
+                </div>
+                <div data-for="sold_objects" class="monitoring-objects__nav-item">Проданные доли
+                </div>
+              </div>
+              <div class="monitoring-objects__content">
+                <div data-id="planned_objects" class="monitoring-objects__section active">
+                  <div class="monitoring-objects__section-inner">
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object1.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object2.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object3.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object4.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                  </div>
+                </div>
+                <div data-id="current_objects" class="monitoring-objects__section">
+                  <div class="monitoring-objects__section-inner">
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object4.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object2.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object3.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                  </div>
+                </div>
+                <div data-id="forsale_objects" class="monitoring-objects__section">
+                  <div class="monitoring-objects__section-inner">
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object4.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object2.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                  </div>
+                </div>
+                <div data-id="sold_objects" class="monitoring-objects__section">
+                  <div class="monitoring-objects__section-inner">
+                    <div class="monitoring-objects__card"><!-- object-item --> 
+                      <div class="object-item"><a href="#" class="object-item__link"></a>
+                        <div class="object-item__image"><img src="images/objects/object1.jpg"/>
+                        </div>
+                        <div class="object-item__title">Супермаркет «Пятерочка»
+                        </div>
+                        <div class="object-item__address">д. Мисайлово, ул. Луговая, 20
+                        </div>
+                        <div class="object-item__data">
+                          <p class="object-item__data-content"><span class="object-item__data-line">Первоначальная стоимость: <b>62 964 000 &#8381;</b></span><span class="object-item__data-line">Цена за кв. метр: <b>102 264,1 руб.</b></span><span class="object-item__data-line">Первоначальная доходность: <b>13,2%</b></span><span class="object-item__data-line">Окупаемость: <b>8 лет</b></span><span class="object-item__data-line">Мин. инвестиции: <b>2 198 000 руб.</b></span>
+                          </p>
+                          <p class="object-item__data-content"><span class="object-item__data-line">Фонд: <b>ЗПИФН «Активо Восемь»</b></span><span class="object-item__data-line">Управляющая компания: <b>КСП Капитал</b></span><span class="object-item__data-line has-image">Депозитарная компания:<img src="/images/main/sdkgarant.svg" alt=""/></span>
+                          </p>
+                        </div>
+                        <div class="object-item__footer">
+                          <p class="object-item__footer-text">* - В среднем за 10 лет, до НДФЛ, на момент формирования фонд
+                          </p>
+                          <p class="object-item__footer-text"> ** -  Доходность растёт с каждым годом за счет ежегодной индексации на 5% и будет составлять 14% в 2028 году. Рассчитано при цене 514 млн руб. <a href='#'>Подробнее</a>
+                          </p>
+                        </div>
+                      </div><!--/ object-item --> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section><!--/ monitoring-objects --> 
+          </main>
+          <aside class="monitoring-content__sidebar"><!-- monitoring-sidebar --> 
+            <section class="monitoring-sidebar">
+              <div class="monitoring-sidebar__info-block">
+                <div class="monitoring-sidebar__title">Ближайшая выплата:
+                </div>
+                <div class="monitoring-sidebar__info-text">30.11.2018
+                </div>
+              </div>
+              <div class="monitoring-sidebar__info-block">
+                <div class="monitoring-sidebar__title">Вам принадлежит:
+                </div>
+                <div class="monitoring-sidebar__info-text">1 829 долей = 7.43 кв.м.
+                </div>
+              </div>
+              <div class="monitoring-sidebar__documents">
+                <div class="monitoring-sidebar__title">Правоустанавливающие документы:
+                </div><a href="#" class="monitoring-sidebar__documents-link">Уведомление об операции по лицевому счету</a><a href="#" class="monitoring-sidebar__documents-link">Свидетельство о государственной регистрации права</a>
+              </div>
+              <div class="monitoring-sidebar__chart">
+                <div class="monitoring-sidebar__title">Портфель инвестиций:
+                </div>
+                <div id="monitoring-finances"></div>
+                <div class="monitoring-sidebar__legend">
+                  <div class="monitoring-sidebar__legend-item">Супермаркет Пятерочка
+                  </div>
+                  <div class="monitoring-sidebar__legend-item">Супермаркет Десяточка
+                  </div>
+                  <div class="monitoring-sidebar__legend-item">Минимаркет Двоечка
+                  </div>
+                  <div class="monitoring-sidebar__legend-item">Микромаркет Нулевочка
+                  </div>
+                </div>
+              </div>
+            </section><!--/ monitoring-sidebar --> 
+          </aside>
+        </div>
+      </div>
+    </div><!--/ monitoring-content --> 
+    <!-- build:js js/vendor.js -->
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/rangeslider.js"></script>
+    <script src="libs/highcharts.js"></script>
+    <script src="libs/chartjs/chart.min.js"></script>
+    <script src="libs/wow.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/d3.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/main.js-->
+    <script src="js/bem.js"></script>
+    <script src="js/main.js"></script>
+    <!-- endbuild-->
+    
+  </body>
+</html>

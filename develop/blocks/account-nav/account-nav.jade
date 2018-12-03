@@ -1,0 +1,30 @@
+mixin account-nav()
+    +b.NAV.account-nav
+        +inner
+            +e.UL.list
+                +e.LI.item
+                    +e.A.link(href='/realty' title='Недвижимость') Недвижимость
+                        +e.SPAN.icon.--property
+                            img(src="../images/layout/property.svg", alt="")
+                +e.LI.item.active
+                    +e.A.link(href='/account/monitoring' title='Мониторинг') Мониторинг
+                        +e.SPAN.icon.--monitoring
+                            img(src="../images/layout/monitoring.svg", alt="")
+                +e.LI.item
+                    +e.A.link(href='/account/documents' title='Документы') Документы
+                        +e.SPAN.icon.--documents
+                            img(src="../images/layout/documents.svg", alt="")
+                +e.LI.item
+                    +e.A.link(href='/account/finances' title='Финансы') Финансы
+                        +e.SPAN.icon.--finances
+                            img(src="../images/layout/finances.svg", alt="")
+                +e.LI.item
+                    +e.A.link(href='/account/questionary' title='Верификация') Верификация
+                        +e.SPAN.icon.--questionary
+                            img(src="../images/layout/questionary.svg", alt="")
+                +e.LI.item
+                    +e.A.link(href='/account/settings' title='Настройки') Настройки
+                        +e.SPAN.icon.--settings
+                            img(src="../images/layout/settings.svg", alt="")
+                +e.LI.item
+                    +e.A.link(href='/account/feedback') Отзыв

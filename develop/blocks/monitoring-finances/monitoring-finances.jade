@@ -1,0 +1,24 @@
+mixin monitoring-finances()
+    +b.SECTION.monitoring-finances
+        +e.tip Выберите объект инвестиций
+        +e.H2.title Финансовые показатели
+        +e.graph
+            +e.graph-chart
+                #income-monitoring
+            +e.legend
+                +e.legend-item.--blue Выплаты инвестору
+                +e.legend-item.--yellow Сумма выплат
+        +e.data
+            +e.data-col
+                +e.data-title Выплачено за 12 месяцев:
+                +e.data-text 421 704.42 ₽
+            +e.data-col
+                +e.data-title Всего выплачено: 
+                +e.data-text 421 704.42 ₽
+            +e.data-col
+                +e.data-title Доходность за 12 месяцев, после НДФЛ: 
+                +e.data-text 9.92%
+        +e.P.info
+            | Отчет подготовлен аналитическим способом. Возможны отклонения. <br>
+            | За точными данными Вы можете обратиться в офис управляющей компании <br>
+            | ООО «КСП Капитал Управление Активами» или по номеру +7 (495) 649-88-37
