@@ -4,10 +4,10 @@
 
     if (chart) {
         var objects = [
-            {name: 'Супермаркет Пятерочка', data: 100},
-            {name: 'Супермаркет Десяточка', data: 30},
-            {name: 'Минимаркет Двоечка', data: 50},
-            {name: 'Минимаркет Нулевочка', data: 10}
+            {name: 'Супермаркет Пятерочка', data: 100, color: '#5fce67'},
+            {name: 'Супермаркет Десяточка', data: 30, color: '#3c7bd8'},
+            {name: 'Минимаркет Двоечка', data: 50, color: '#ffd729'},
+            {name: 'Минимаркет Нулевочка', data: 10, color: '#f52f4b'}
         ]
 
 
@@ -15,7 +15,11 @@
         Highcharts.chart(chart, {
             chart: {
                 type: "pie",
-                margin: [0, 0, 0, 0]
+                margin: [0, 0, 0, 0],
+                spacingTop: 0,
+                spacingBottom: 0,
+                spacingLeft: 0,
+                spacingRight: 0
             },
             credits: {
                 enabled: false
@@ -29,7 +33,7 @@
                     dataLabels: {
                         enabled: false,
                     },
-                    // startAngle: -90,
+                    startAngle: -45,
                     borderColor: null,
                     size: '100%'
                 }
@@ -39,30 +43,30 @@
                 percentageDecimals: 2,
             },
             series: [{
-                    name: "sa",
+                    name: "",
                     data: [
                         {
                             name: objects[0].name,
                             y: objects[0].data,
-                            color: '#5fce67'
+                            color: objects[0].color
                         },
                         {
                             name: objects[1].name,
                             y: objects[1].data,
-                            color: '#3c7bd8'
+                            color: objects[1].color
                         },
                         {
                             name: objects[2].name,
                             y: objects[2].data,
-                            color: '#ffd729'
+                            color: objects[2].color
                         },
                         {
                             name: objects[3].name,
                             y: objects[3].data,
-                            color: '#f52f4b'
+                            color: objects[3].color
                         },
                     ],
-                    innerSize: '85%',
+                    innerSize: '83%',
                 }
             ]
         });

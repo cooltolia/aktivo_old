@@ -16,12 +16,13 @@
     flex: 1 1 32.5%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .monitoring-content__wrapper {
         display: block;
     }
 
     .monitoring-content__main {
         margin: 0;
+        margin-bottom: 16px;
     }
 }
