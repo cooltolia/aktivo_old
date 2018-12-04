@@ -1,4 +1,6 @@
 .monitoring-content {
+    padding-bottom: 150px;
+
     font-family: $segoe;
     color: $darktext;
 }
@@ -24,5 +26,11 @@
     .monitoring-content__main {
         margin: 0;
         margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .monitoring-content {
+        padding-bottom: 70px;
     }
 }

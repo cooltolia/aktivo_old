@@ -4515,6 +4515,7 @@ body.modal-open {
     font-size: 16px; } }
 
 .monitoring-content {
+  padding-bottom: 150px;
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   color: #000; }
 
@@ -4543,6 +4544,10 @@ body.modal-open {
   .monitoring-content__main {
     margin: 0;
     margin-bottom: 16px; } }
+
+@media (max-width: 480px) {
+  .monitoring-content {
+    padding-bottom: 70px; } }
 
 .monitoring-finances {
   padding: 40px 30px 30px 40px;
