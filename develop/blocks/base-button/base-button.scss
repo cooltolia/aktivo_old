@@ -1,0 +1,13 @@
+.base-button {
+    @include btn-theme;
+
+    width: 280px;
+    padding: 15px;
+
+    font-size: 18px;
+
+    &:disabled {
+        background-color: #f5f7f9;
+        color: #848f9b;
+    }
+}

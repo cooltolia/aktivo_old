@@ -1,0 +1,38 @@
+mixin settings-content()
+    +b.SECTION.settings-content
+        +inner
+            +e.inner
+                +e.col
+                    +e.block
+                        +e.title Основная информация:
+                        +e.FORM.form(action='' method='post')
+                            +e.input
+                                +base-input('text', 'settingsName', 'settings_name', 'Имя', false)
+                            +e.input
+                                +base-input('text', 'settingsSurame', 'settings_surname', 'Фамилия', false)
+                            +e.input
+                                +base-input('email', 'settingsEmail', 'settings_email', 'Email', false)
+                            +e.input
+                                +base-input('tel', 'settingsPhone', 'settings_phone', 'Телефон', false)
+                            +e.submit
+                                +base-button('submit', 'Сохранить')
+                +e.col
+                    +e.block
+                        +e.title Основная информация:
+                        +e.FORM.form(action='' method='post')
+                            +e.input
+                                +base-input('password', 'settingsOldPassword', 'settings_oldPassword', 'Старый пароль', false)
+                            +e.input
+                                +base-input('password', 'settingsOldPassword', 'settings_newPassword', 'Новый пароль', false)
+                            +e.submit
+                                +base-button('submit', 'Изменить пароль')(disabled)
+                    +e.block
+                        +e.title.--small-margin Подписки:
+                        +e.toggler
+                            +e.LABEL.toggler-label(for="agreementCheckbox") 
+                                +e.INPUT.toggler-input(type="checkbox" name='agreement' id='agreementCheckbox')
+                                +e.SPAN.toggler-icon
+                                +e.SPAN.toggler-text Получать рассылку на почту
+                        +e.P.info
+                            | Обратите внимание, что отписка действует только на маркетинговые рассылки. Функционирование транзакционных писем (восстановление пароля, подтверждение оплаты и т.д.) не будет затронуто.
+                            
