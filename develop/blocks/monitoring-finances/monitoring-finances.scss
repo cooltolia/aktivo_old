@@ -95,3 +95,36 @@
     font-size: 14px;
     line-height: 1.5;
 }
+
+@media (max-width: 480px) {
+    .monitoring-finances {
+        padding: 20px 15px;
+    }
+
+    .monitoring-finances__tip {
+        margin-bottom: 30px;
+    }
+
+    .monitoring-finances__graph {
+        padding-right: 0;
+    }
+
+    .monitoring-finances__graph-chart {
+        margin-bottom: 15px;
+    }
+
+    .monitoring-finances__data {
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+    }
+
+    .monitoring-finances__data-col {
+        flex-shrink: 0;
+        margin-right: 5%;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

@@ -68,3 +68,38 @@
         margin-right: 0;
     }
 }
+
+@media (max-width: 480px) {
+    .monitoring-objects {
+        padding: 20px 15px;
+    }
+
+    .monitoring-objects__nav {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .monitoring-objects__nav-item {
+        margin-bottom: 10px;
+    }
+
+    .monitoring-objects__section-inner {
+        display: block;
+    }
+
+    .monitoring-objects__card {
+        width: 95%;
+        max-width: 400px;
+        margin: 0 auto 25px;
+
+        &:nth-child(2n) {
+            margin: 0 auto 25px;
+        }
+    }
+}
+@media (max-width: 360px) {
+    .monitoring-objects__card {
+        .object-item__image {
+            width: 180px;
+        }
+    }
+}

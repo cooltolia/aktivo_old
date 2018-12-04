@@ -1,25 +1,27 @@
 mixin monitoring-sidebar()
     +b.SECTION.monitoring-sidebar
-        +e.info-block
-            +e.title Ближайшая выплата:
-            +e.info-text 30.11.2018
-        +e.info-block
-            +e.title Вам принадлежит:
-            +e.info-text 1 829 долей = 7.43 кв.м.
-        +e.documents
-            +e.title Правоустанавливающие документы:
-            +e.A.documents-link(href='#') Уведомление об операции по лицевому счету
-            +e.A.documents-link(href='#') Свидетельство о государственной регистрации права
-        +e.chart
-            +e.title Портфель инвестиций:
-            +e.chart-body
-                #monitoring-finances
-                +e.summary 1 999 645.70 ₽
-            +e.legend
-                +e.legend-item.--green Супермаркет Пятерочка
-                +e.legend-item.--blue Супермаркет Десяточка
-                +e.legend-item.--yellow Минимаркет Двоечка
-                +e.legend-item.--red Микромаркет Нулевочка
+        +e.col
+            +e.info-block
+                +e.title Ближайшая выплата:
+                +e.info-text 30.11.2018
+            +e.info-block
+                +e.title Вам принадлежит:
+                +e.info-text 1 829 долей = 7.43 кв.м.
+            +e.documents
+                +e.title Правоустанавливающие документы:
+                +e.A.documents-link(href='#') Уведомление об операции по лицевому счету
+                +e.A.documents-link(href='#') Свидетельство о государственной регистрации права
+        +e.col
+            +e.chart
+                +e.title Портфель инвестиций:
+                +e.chart-body
+                    #monitoring-finances
+                    +e.summary 1 999 645.70 ₽
+                +e.legend
+                    +e.legend-item.--green Супермаркет Пятерочка
+                    +e.legend-item.--blue Супермаркет Десяточка
+                    +e.legend-item.--yellow Минимаркет Двоечка
+                    +e.legend-item.--red Микромаркет Нулевочка
 
 
 

@@ -4628,6 +4628,27 @@ body.modal-open {
   font-size: 14px;
   line-height: 1.5; }
 
+@media (max-width: 480px) {
+  .monitoring-finances {
+    padding: 20px 15px; }
+  .monitoring-finances__tip {
+    margin-bottom: 30px; }
+  .monitoring-finances__graph {
+    padding-right: 0; }
+  .monitoring-finances__graph-chart {
+    margin-bottom: 15px; }
+  .monitoring-finances__data {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 15px; }
+  .monitoring-finances__data-col {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 5%;
+    margin-bottom: 15px; }
+    .monitoring-finances__data-col:last-child {
+      margin-right: 0; } }
+
 .monitoring-objects {
   padding: 40px 20px 15px;
   -webkit-box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
@@ -4696,6 +4717,29 @@ body.modal-open {
     border: solid 1px #ffd729; }
   .monitoring-objects__card:nth-child(2n) {
     margin-right: 0; }
+
+@media (max-width: 480px) {
+  .monitoring-objects {
+    padding: 20px 15px; }
+  .monitoring-objects__nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .monitoring-objects__nav-item {
+    margin-bottom: 10px; }
+  .monitoring-objects__section-inner {
+    display: block; }
+  .monitoring-objects__card {
+    width: 95%;
+    max-width: 400px;
+    margin: 0 auto 25px; }
+    .monitoring-objects__card:nth-child(2n) {
+      margin: 0 auto 25px; } }
+
+@media (max-width: 360px) {
+  .monitoring-objects__card .object-item__image {
+    width: 180px; } }
 
 .monitoring-sidebar {
   padding: 40px;
@@ -4776,16 +4820,30 @@ body.modal-open {
 
 @media (max-width: 1024px) {
   .monitoring-sidebar {
-    position: relative;
-    min-height: 560px; }
-  .monitoring-sidebar__info-block,
-  .monitoring-sidebar__documents {
-    width: 50%; }
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .monitoring-sidebar__col {
+    width: 50%;
+    -webkit-box-flex: 0;
+       -moz-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto; }
   .monitoring-sidebar__chart {
-    position: absolute;
-    right: 0;
-    top: 40px;
-    right: 30px; } }
+    position: relative;
+    width: 260px;
+    margin-left: auto; } }
+
+@media (max-width: 480px) {
+  .monitoring-sidebar {
+    display: block;
+    padding: 20px 15px; }
+  .monitoring-sidebar__col {
+    width: 100%; }
+  .monitoring-sidebar__chart {
+    width: 100%;
+    margin: 0 auto; } }
 
 .modal .close-icon {
   position: absolute;

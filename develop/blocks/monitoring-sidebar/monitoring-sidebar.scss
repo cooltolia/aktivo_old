@@ -102,19 +102,33 @@
 
 @media (max-width: 1024px) {
     .monitoring-sidebar {
-        position: relative;
-        min-height: 560px
+        display: flex;
     }
 
-    .monitoring-sidebar__info-block,
-    .monitoring-sidebar__documents {
+    .monitoring-sidebar__col {
         width: 50%;
+        flex: 0 1 auto;
     }
 
     .monitoring-sidebar__chart {
-        position: absolute;
-        right: 0;
-        top: 40px;
-        right: 30px;
+        position: relative;
+        width: 260px;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .monitoring-sidebar {
+        display: block;
+        padding: 20px 15px;
+    }
+
+    .monitoring-sidebar__col {
+        width: 100%;
+    }
+    
+    .monitoring-sidebar__chart {
+        width: 100%;
+        margin: 0 auto;
     }
 }
