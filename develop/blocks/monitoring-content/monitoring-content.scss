@@ -20,12 +20,16 @@
 
 @media (max-width: 1024px) {
     .monitoring-content__wrapper {
-        display: block;
+        flex-flow: column nowrap
     }
 
     .monitoring-content__main {
         margin: 0;
-        margin-bottom: 16px;
+    }
+
+    .monitoring-content__sidebar {
+        margin: 0 0 16px;
+        order: -1;
     }
 }
 

@@ -4654,10 +4654,20 @@ body.modal-open {
 
 @media (max-width: 1024px) {
   .monitoring-content__wrapper {
-    display: block; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
   .monitoring-content__main {
-    margin: 0;
-    margin-bottom: 16px; } }
+    margin: 0; }
+  .monitoring-content__sidebar {
+    margin: 0 0 16px;
+    -webkit-box-ordinal-group: 0;
+       -moz-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; } }
 
 @media (max-width: 480px) {
   .monitoring-content {
@@ -4825,7 +4835,8 @@ body.modal-open {
 
 .monitoring-objects__empty-message {
   font-size: 16px;
-  font-weight: 400; }
+  font-weight: 400;
+  margin: 0 0 25px; }
   .monitoring-objects__empty-message a {
     font-size: 16px;
     color: #3c7bd8;
@@ -4864,7 +4875,11 @@ body.modal-open {
     max-width: 400px;
     margin: 0 auto 25px; }
     .monitoring-objects__card:nth-child(2n) {
-      margin: 0 auto 25px; } }
+      margin: 0 auto 25px; }
+  .monitoring-objects__empty-message {
+    font-size: 14px; }
+    .monitoring-objects__empty-message a {
+      font-size: 14px; } }
 
 @media (max-width: 360px) {
   .monitoring-objects__card .object-item__image {
