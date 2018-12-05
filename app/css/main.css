@@ -1535,11 +1535,18 @@ th {
     background-color: #f5f7f9;
     color: #848f9b; }
 
+@media (max-width: 480px) {
+  .base-button {
+    width: 240px;
+    padding: 9px;
+    font-size: 16px; } }
+
 .base-input {
   position: relative;
   width: 100%;
   font-size: 24px;
-  font-weight: 400; }
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent; }
 
 .base-input__input {
   width: 100%;
@@ -1583,6 +1590,25 @@ th {
       -ms-transform-origin: left center;
           transform-origin: left center;
   pointer-events: none; }
+
+@media (max-width: 480px) {
+  .base-input {
+    font-size: 16px; }
+  .base-input__input {
+    padding: 4px; }
+    .base-input__input:focus + .base-input__label {
+      -webkit-transform: scale(0.7) translateY(-200%);
+         -moz-transform: scale(0.7) translateY(-200%);
+          -ms-transform: scale(0.7) translateY(-200%);
+              transform: scale(0.7) translateY(-200%); }
+    .base-input__input.hasValue + .base-input__label {
+      -webkit-transform: scale(0.7) translateY(-200%);
+         -moz-transform: scale(0.7) translateY(-200%);
+          -ms-transform: scale(0.7) translateY(-200%);
+              transform: scale(0.7) translateY(-200%); }
+  .base-input__label {
+    bottom: 4px;
+    font-size: 16px; } }
 
 .breadcrumbs {
   width: 100%;
@@ -4796,6 +4822,16 @@ body.modal-open {
      -moz-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
+
+.monitoring-objects__empty-message {
+  font-size: 16px;
+  font-weight: 400; }
+  .monitoring-objects__empty-message a {
+    font-size: 16px;
+    color: #3c7bd8;
+    text-decoration: none; }
+    .monitoring-objects__empty-message a:hover, .monitoring-objects__empty-message a:focus, .monitoring-objects__empty-message a:active {
+      color: #2157a6; }
 
 .monitoring-objects__card {
   width: 48%;
@@ -8710,10 +8746,10 @@ body.modal-open {
   height: 16px;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-35%);
+     -moz-transform: translateY(-35%);
+      -ms-transform: translateY(-35%);
+          transform: translateY(-35%);
   border-radius: 8px;
   background-color: #f5f7f9;
   -webkit-transition: background-color 300ms ease;
@@ -8753,6 +8789,28 @@ body.modal-open {
   margin: 0;
   font-size: 14px;
   line-height: 1.5; }
+
+@media (max-width: 1024px) {
+  .settings-content {
+    padding-bottom: 34px; }
+  .settings-content__inner {
+    display: block;
+    margin: 0; }
+  .settings-content__col {
+    width: 100%;
+    margin: 0 0 16px; } }
+
+@media (max-width: 480px) {
+  .settings-content__block {
+    padding: 25px 15px; }
+  .settings-content__title {
+    margin-bottom: 30px; }
+  .settings-content__input {
+    margin-bottom: 30px; }
+  .settings-content__toggler-text {
+    font-size: 14px; }
+  .settings-content__info {
+    font-size: 12px; } }
 
 .socials {
   width: 100%;

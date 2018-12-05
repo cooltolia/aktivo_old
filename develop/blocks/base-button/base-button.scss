@@ -11,3 +11,12 @@
         color: #848f9b;
     }
 }
+
+@media (max-width: 480px) {
+    .base-button {
+        width: 240px;
+        padding: 9px;
+
+        font-size: 16px;
+    }
+}

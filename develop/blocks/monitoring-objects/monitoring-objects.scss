@@ -51,6 +51,23 @@
     flex-flow: row wrap;
 }
 
+.monitoring-objects__empty-message {
+    font-size: 16px;
+    font-weight: 400;
+
+    a {
+       font-size: 16px;
+       color: #3c7bd8;
+       text-decoration: none;
+
+       &:hover,
+       &:focus,
+       &:active {
+           color: darken($color: #3c7bd8, $amount: 15%);
+       }
+    }
+}
+
 .monitoring-objects__card {
     width: 48%;
     margin: 0 8px 16px;

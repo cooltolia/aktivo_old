@@ -8,14 +8,16 @@ mixin monitoring-objects()
         +e.content
             +e.section.active(data-id='planned_objects')
                 +e.section-inner
-                    +e.card
-                        +object-item('1')
-                    +e.card
-                        +object-item('2')
-                    +e.card
-                        +object-item('3')
-                    +e.card
-                        +object-item('4')
+                    +e.P.empty-message
+                        | Вы не оставили заявку на инвестицию. <br/>Текущие предложения доступны в разделе <a href="/realty">Наши объекты</a>
+                    //- +e.card
+                    //-     +object-item('1')
+                    //- +e.card
+                    //-     +object-item('2')
+                    //- +e.card
+                    //-     +object-item('3')
+                    //- +e.card
+                    //-     +object-item('4')
             +e.section(data-id='current_objects')
                 +e.section-inner
                     +e.card

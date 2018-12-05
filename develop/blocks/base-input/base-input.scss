@@ -5,6 +5,8 @@
 
     font-size: 24px;
     font-weight: 400;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .base-input__input {
@@ -50,4 +52,32 @@
     transform-origin: left center;
 
     pointer-events: none;
+}
+
+@media (max-width: 480px) {
+    .base-input {
+        font-size: 16px;
+    }
+
+    .base-input__input {
+        padding: 4px;
+
+        &:focus {
+            +.base-input__label {
+                transform: scale(0.7) translateY(-200%);
+            }
+        }
+
+        &.hasValue {
+            +.base-input__label {
+                transform: scale(0.7) translateY(-200%);
+            }
+        }
+    }
+
+    .base-input__label {
+        bottom: 4px;
+
+        font-size: 16px;
+    }
 }
