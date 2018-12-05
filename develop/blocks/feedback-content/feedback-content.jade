@@ -1,0 +1,18 @@
+mixin feedback-content()
+    +b.SECTION.feedback-content
+        +inner
+            +e.block
+                +e.title Обратная связь
+                +e.subtitle Оставьте отзыв о работе компании, чтобы мы могли сделать сервис комфортнее и удобнее для вас.
+                +e.FORM.form(action='' method='post')
+                    +e.form-col
+                        +e.input
+                            +base-input('text', 'feedbackFullname', 'feedback_fullname', 'Имя Фамилия', false)
+                        +e.input
+                            +base-input('email', 'feedbackEmail', 'feedback_email', 'Email', false)
+                    +e.form-col
+                        +e.textarea
+                            +e.LABEL.textarea-label(for='feedbackComment') Сообщение
+                            +e.TEXTAREA.textarea-input(name='feedback_comment' id='feedbackComment')
+                        +e.submit
+                            +base-button('submit', 'Сохранить')
