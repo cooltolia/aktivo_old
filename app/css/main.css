@@ -2622,7 +2622,7 @@ th {
   font-weight: 700; }
 
 .feedback-content__subtitle {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   font-size: 16px;
   font-weight: 400; }
 
@@ -2639,15 +2639,16 @@ th {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto; }
   .feedback-content__form-col:first-child {
+    width: 30%;
     max-width: 385px;
     margin-right: 5%; }
 
 .feedback-content__input {
   width: 100%;
-  margin-bottom: 55px; }
+  margin-bottom: 45px; }
 
 .feedback-content__textarea {
-  margin-top: -17px;
+  margin-top: -13px;
   margin-bottom: 40px; }
 
 .feedback-content__textarea-label {
@@ -2665,25 +2666,34 @@ th {
 
 @media (max-width: 1024px) {
   .feedback-content {
-    padding-bottom: 34px; }
-  .feedback-content__inner {
-    display: block;
-    margin: 0; }
-  .feedback-content__col {
-    width: 100%;
-    margin: 0 0 16px; } }
+    padding-bottom: 34px; } }
+
+@media (max-width: 768px) {
+  .feedback-content__form {
+    display: block; }
+  .feedback-content__form-col {
+    width: 100%; }
+    .feedback-content__form-col:first-child {
+      max-width: none;
+      width: 100%;
+      margin: 0 0 16px; }
+  .feedback-content__textarea {
+    margin-top: 0; } }
 
 @media (max-width: 480px) {
   .feedback-content__block {
     padding: 25px 15px; }
   .feedback-content__title {
-    margin-bottom: 30px; }
-  .feedback-content__input {
-    margin-bottom: 30px; }
-  .feedback-content__toggler-text {
+    margin-bottom: 15px; }
+  .feedback-content__subtitle {
+    margin-bottom: 45px;
     font-size: 14px; }
-  .feedback-content__info {
-    font-size: 12px; } }
+  .feedback-content__input {
+    margin-bottom: 35px; }
+  .feedback-content__textarea {
+    margin-bottom: 25px; }
+  .feedback-content__textarea-input {
+    font-size: 18px; } }
 
 .footer-nav {
   font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
