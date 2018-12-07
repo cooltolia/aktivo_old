@@ -5,7 +5,7 @@ mixin feedback-content()
                 +e.title Обратная связь
                 +e.subtitle Оставьте отзыв о работе компании, чтобы мы могли сделать сервис комфортнее и удобнее для вас.
                 +e.FORM.form(action='' method='post')
-                    +e.form-col
+                    +e.form-col.--small
                         +e.input
                             +base-input('text', 'feedbackFullname', 'feedback_fullname', 'Имя Фамилия', false)
                         +e.input

@@ -781,6 +781,9 @@ jQuery(document).ready(function ($) {
      })();
 
      
+     
+
+     
      // ;(function() {
 
      
@@ -1425,9 +1428,13 @@ jQuery(document).ready(function ($) {
 
      (function () {
 
-         var profitData = [2100, 1700, 1200, 1600, 1250, 650];
+         var profitData = [2500, 1700, 1200, 1600, 1250, 650];
 
-         var dividendsData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38];
+         var dividendsData = [5, 10, 20, 30, 20, 15];
+
+         var dividendsMax = 35;
+
+         var profitMax = 2500;
 
      
 
@@ -1483,6 +1490,12 @@ jQuery(document).ready(function ($) {
 
                                  fontWeight: '400'
 
+                             },
+
+                             formatter: function () {
+
+                                 return this.y + '%';
+
                              }
 
                          }
@@ -1515,11 +1528,15 @@ jQuery(document).ready(function ($) {
 
                          visible: false,
 
-                         softMax: 1.3
+                         min: 0,
+
+                         max: dividendsMax,
 
                      },
 
                      {
+
+                         max: profitMax,
 
                          title: {
 
@@ -1538,14 +1555,6 @@ jQuery(document).ready(function ($) {
                              }
 
                          },
-
-                         opposite: false,
-
-                         visible: true,
-
-                         tickInterval: 50,
-
-                         softMax: 2200
 
                      }
 
@@ -1593,7 +1602,7 @@ jQuery(document).ready(function ($) {
 
                      tooltip: {
 
-                         valueSuffix: 'млн руб'
+                         valueSuffix: '%'
 
                      }
 

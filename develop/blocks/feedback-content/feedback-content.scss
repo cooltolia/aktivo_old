@@ -34,7 +34,7 @@
     width: 40%;
     flex: 1 1 auto;
 
-    &:first-child {
+    &--small {
         width: 30%;
         max-width: 385px;
         margin-right: 5%;
@@ -84,7 +84,7 @@
     .feedback-content__form-col {
         width: 100%;
 
-        &:first-child {
+        &--small {
             max-width: none;
             width: 100%;
             margin: 0 0 16px;

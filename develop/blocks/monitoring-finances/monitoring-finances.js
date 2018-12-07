@@ -1,7 +1,9 @@
 ;
 (function () {
-    var profitData = [2100, 1700, 1200, 1600, 1250, 650];
-    var dividendsData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38];
+    var profitData = [2500, 1700, 1200, 1600, 1250, 650];
+    var dividendsData = [5, 10, 20, 30, 20, 15];
+    var dividendsMax = 35;
+    var profitMax = 2500;
 
     var chart = $('#income-monitoring');
     console.log(!chart.length);
@@ -29,6 +31,9 @@
                             textOutline: 'none',
                             fontSize: '14px',
                             fontWeight: '400'
+                        },
+                        formatter: function () {
+                            return this.y + '%';
                         }
                     }
                 }
@@ -45,9 +50,11 @@
             }],
             yAxis: [{
                     visible: false,
-                    softMax: 1.3
+                    min: 0,
+                    max: dividendsMax,
                 },
                 {
+                    max: profitMax,
                     title: {
                         text: '',
                     },
@@ -57,10 +64,6 @@
                             fontSize: '9px'
                         }
                     },
-                    opposite: false,
-                    visible: true,
-                    tickInterval: 50,
-                    softMax: 2200
                 }
             ],
             legend: {
@@ -84,7 +87,7 @@
                 data: dividendsData,
                 color: '#ffd729',
                 tooltip: {
-                    valueSuffix: 'млн руб'
+                    valueSuffix: '%'
                 }
             }]
         });
