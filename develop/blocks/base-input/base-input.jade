@@ -2,3 +2,5 @@ mixin base-input(type, id, name, label, required)
     +b.base-input
         +e.INPUT.input(type='#{type}' id='#{id}' name='#{name}' required='#{required}')
         +e.LABEL.label(for='#{id}')= label
+        +e.errors
+            +e.error-message Текст ошибки

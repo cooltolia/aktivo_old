@@ -2,9 +2,9 @@
     position: relative;
     width: 100%;
     
-
     font-size: 24px;
     font-weight: 400;
+    line-height: normal;
 
     -webkit-tap-highlight-color: transparent;
 }
@@ -37,14 +37,12 @@
         }
     }
 
-
 }
 
 .base-input__label {
     position: absolute;
     left: 0;
-    bottom: 9px;
-
+    top: 12px;
     font-size: 24px;
     color: #d7d7d8;
 
@@ -52,6 +50,14 @@
     transform-origin: left center;
 
     pointer-events: none;
+}
+
+.base-input__errors {
+    position: relative;
+    margin-top: 5px;
+
+    font-size: 14px;
+    color: #f52f4b;
 }
 
 @media (max-width: 480px) {
@@ -64,20 +70,24 @@
 
         &:focus {
             +.base-input__label {
-                transform: scale(0.7) translateY(-200%);
+                transform: scale(0.7) translateY(-150%);
             }
         }
 
         &.hasValue {
             +.base-input__label {
-                transform: scale(0.7) translateY(-200%);
+                transform: scale(0.7) translateY(-150%);
             }
         }
     }
 
     .base-input__label {
-        bottom: 4px;
+        top: 4px;
 
         font-size: 16px;
+    }
+
+    .base-input__errors {
+        font-size: 12px;
     }
 }

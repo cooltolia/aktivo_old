@@ -1,6 +1,6 @@
 .documents-content {
     padding-bottom: 64px;
-    min-height: 80vh;
+    min-height: 70vh;
 
     font-family: $segoe;
     color: $darktext;
@@ -25,13 +25,15 @@
     font-size: 16px;
     font-weight: 700;
 
+    cursor: pointer;
+
     &::before {
         content: '';
         position: absolute;
         width: 4px;
         height: 4px;
         top: 50%;
-        left: 0;
+        left: 2px;
 
         border: 2px solid black;
         border-right-color: transparent;
@@ -45,22 +47,27 @@
 
     &.active {
         &::before {
-            transform: rotate(225deg) translate(0, 25%);
+            transform: rotate(225deg) translate(50%, 50%);
         }
+    }
+}
+
+.documents-content__table-wrapper {
+    display: none;
+
+    &.active {
+        display: block;
     }
 }
 
 .documents-content__table {
     width: 100%;
     border-collapse: collapse;
-    border: none;
+    table-layout: fixed;
 }
 
 .documents-content__table-row {
-    > * {
-        padding: 12px 30px;
-    }
-    
+
     &:nth-child(2n+1) {
         background-color: rgba(#f5f7f9, 1);
     }
@@ -75,11 +82,14 @@
 }
 
 .documents-content__name {
+    padding: 12px 30px;
+
     font-size: 16px;
     font-weight: 400;
 }
 
 .documents-content__status {
+    padding: 12px 30px;
     text-align: right;
 }
 
@@ -110,6 +120,7 @@
 }
 
 .documents-content__action {
+    padding: 12px 30px;
     padding-left: 100px;
 }
 
@@ -153,3 +164,97 @@
     }
 }
 
+@media (max-width: 1040px) {
+    .documents-content__action {
+        padding-left: 45px;
+    }
+
+    .documents-content__status {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .documents-content__block {
+        padding: 30px 45px;
+    }
+
+    .documents-content__table-row {
+        td:first-child {
+            width: 40%;
+        }
+    }
+
+    .documents-content__name {
+        padding: 9px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .documents-content__block {
+        padding: 20px 15px;
+    }
+
+    .documents-content__group {
+        margin-bottom: 35px; 
+    }
+
+    .documents-content__title {
+        padding-left: 20px;
+
+        font-size: 14px;
+
+        &::before {
+            width: 3px;
+            height: 3px;
+            border-width: 1px;
+        }
+    }
+
+    .documents-content__table-wrapper {
+        overflow-x: auto;
+    }
+
+    .documents-content__table {
+        width: 480px;
+    }
+
+    .documents-content__table-row {
+        td:last-child {
+            width: 20%;
+        }
+    }
+
+    .documents-content__name {
+        padding: 6px 10px;
+
+        font-size: 12px;
+    }
+
+    .documents-content__status {
+        padding: 6px 10px;
+    }
+
+    .documents-content__status-label {
+        padding: 1px 5px 3px;
+
+        font-size: 10px;
+    }
+
+    .documents-content__action {
+        padding: 6px 10px;
+    }
+
+    .documents-content__action-link {
+        padding-left: 15px;
+
+        font-size: 10px;
+
+        &::before {
+            width: 8px;
+            height: 6px;
+        }
+    }
+}
