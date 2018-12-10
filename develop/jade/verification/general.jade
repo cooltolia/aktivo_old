@@ -1,0 +1,14 @@
+include ../template/header
+include ../template/footer
+include ../../blocks/**/*
+- var loggedIn = false
+doctype
+html(lang='ru')
+  +doc-header
+  body.pageload.no-js
+    +main-header(href='/')
+    +account-nav
+    +verification-wrapper
+        +verification-general
+    +main-footer
+    +doc-footer
