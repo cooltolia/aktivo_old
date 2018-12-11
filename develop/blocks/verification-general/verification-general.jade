@@ -1,2 +1,29 @@
 mixin verification-general()
     +b.SECTION.verification-general
+        +e.FORM.form(action='#' method='post')
+            +e.row
+                +e.inputs-row
+                    +e.inputs-item
+                        +base-input('text', 'verificationSurname', 'verification_surname', 'Фамилия', false)
+                    +e.inputs-item
+                        +base-input('text', 'verificationName', 'verification_name', 'Имя', false)
+                    +e.inputs-item
+                        +base-input('text', 'verificationPatronymic', 'verification_patronymic', 'Отчество', false)
+            +e.row
+                +e.radios-row
+                    +e.radios-block
+                        +e.radios-title
+                            | Инвестировать как
+                        +e.radios-item
+                            +base-radio('verificationPrivate', 'verification-investment','private', 'Физическое лицо', true, false)
+                        +e.radios-item
+                            +base-radio('verificationLegal', 'verification-investment','legal', 'Юридическое лицо', false, false)
+                    +e.radios-block
+                        +e.radios-title
+                            | Являетесь ли вы гражданином РФ
+                        +e.radios-item
+                            +base-radio('verificationRussian', 'verification-citizenship','russian', 'Да', true, false)
+                        +e.radios-item
+                            +base-radio('verificationNotrussian', 'verification-citizenship','not_russian', 'Нет', false, false)
+            +e.row
+                +verification-continue

@@ -1,3 +1,85 @@
 .verification-general {
-    
+    font-family: $segoe;
+    color: $darktext;
+}
+
+.verification-general__row {
+    margin-bottom: 60px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.verification-general__inputs-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.verification-general__inputs-item {
+    width: 25%;
+    flex: 1 1 auto;
+    margin-right: 36px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.verification-general__radios-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.verification-general__radios-block {
+    flex: 0 1 auto;
+    margin-right: 36px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.verification-general__radios-title {
+    margin-bottom: 7px;
+
+    font-size: 16px;
+}
+
+.verification-general__radios-item {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 7px;
+}
+
+@media (max-width: 480px) {
+    .verification-general__row {
+        margin-bottom: 35px;
+    }
+
+    .verification-general__inputs-row {
+        display: block;
+    }
+
+    .verification-general__inputs-item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+
+    .verification-general__radios-row {
+        display: block;
+    }
+
+    .verification-general__radios-block {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .verification-general__radios-title {
+        font-size: 14px;
+    }
 }

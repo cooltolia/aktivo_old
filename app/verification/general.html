@@ -144,9 +144,103 @@
               </ul>
             </nav><!--/ verification-nav --> 
           </aside>
-          <main class="verification-wrapper__main" role="main">
+          <main class="verification-wrapper__main" role="main"><!-- verification-general --> 
             <section class="verification-general">
-            </section>
+              <form action="#" method="post" class="verification-general__form">
+                <div class="verification-general__row">
+                  <div class="verification-general__inputs-row">
+                    <div class="verification-general__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="verificationSurname" name="verification_surname" required="false" class="base-input__input"/>
+                        <label for="verificationSurname" class="base-input__label">Фамилия
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-general__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="verificationName" name="verification_name" required="false" class="base-input__input"/>
+                        <label for="verificationName" class="base-input__label">Имя
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-general__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="verificationPatronymic" name="verification_patronymic" required="false" class="base-input__input"/>
+                        <label for="verificationPatronymic" class="base-input__label">Отчество
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                  </div>
+                </div>
+                <div class="verification-general__row">
+                  <div class="verification-general__radios-row">
+                    <div class="verification-general__radios-block">
+                      <div class="verification-general__radios-title">Инвестировать как
+                      </div>
+                      <div class="verification-general__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="verificationPrivate" name="verification-investment" value="private" checked="true" required="false" class="base-radio__input"/>
+                          <label for="verificationPrivate" class="base-radio__label">Физическое лицо
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                      <div class="verification-general__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="verificationLegal" name="verification-investment" value="legal" required="false" class="base-radio__input"/>
+                          <label for="verificationLegal" class="base-radio__label">Юридическое лицо
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                    </div>
+                    <div class="verification-general__radios-block">
+                      <div class="verification-general__radios-title">Являетесь ли вы гражданином РФ
+                      </div>
+                      <div class="verification-general__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="verificationRussian" name="verification-citizenship" value="russian" checked="true" required="false" class="base-radio__input"/>
+                          <label for="verificationRussian" class="base-radio__label">Да
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                      <div class="verification-general__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="verificationNotrussian" name="verification-citizenship" value="not_russian" required="false" class="base-radio__input"/>
+                          <label for="verificationNotrussian" class="base-radio__label">Нет
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="verification-general__row"><!-- verification-continue --> 
+                  <div class="verification-continue">
+                    <button type="submit" class="verification-continue__next">Далее
+                    </button><a href="#" class="verification-continue__pass">Пропустить</a>
+                  </div><!--/ verification-continue --> 
+                </div>
+              </form>
+            </section><!--/ verification-general --> 
           </main>
         </div>
       </div>

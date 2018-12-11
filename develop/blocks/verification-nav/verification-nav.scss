@@ -34,7 +34,11 @@
 
         &::before {
             transform: scaleX(1.1);
-            box-shadow: 0 0 30px rgba(60, 123, 216, 0.16);
+            box-shadow: 3px 0 30px rgba(60, 123, 216, 0.16);
+        }
+
+        &::after {
+            opacity: 1;
         }
     }
 
@@ -49,6 +53,10 @@
             transform: scaleX(1.1);
             box-shadow: 0 0 30px rgba(60, 123, 216, 0.16);
         }
+
+        // &::after {
+        //     opacity: 1;
+        // }
     }
 
     &::before {
@@ -65,8 +73,86 @@
         transition: all 300ms ease;
     }
 
+    &::after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        top: 0;
+        right: -45px;
+        opacity: 0;
+        border-top: 24px solid transparent;
+        border-bottom: 24px solid transparent;
+        border-left: 15px solid #fff;
+        transition: opacity 100ms ease;
+    }
+
     span {
         position: relative;
-        z-index: 99;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .verification-nav__item {
+        padding-left: 0;
+    }
+
+    .verification-nav__link {
+
+        font-size: 14px;
+        text-align: center;
+
+        &.active {
+            &::before {
+                transform: none;
+                box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            &::before {
+                box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
+            }
+
+            // &::after {
+            //     opacity: 1;
+            // }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+
+            transition: all 300ms ease;
+        }
+
+        &::after {
+            top: auto;
+            right: auto;
+            bottom: -15px;
+            left: 50%;
+            z-index: -1;
+
+            border: 15px solid #f9fbfd;
+            border-color: transparent transparent #fff #fff;
+            transform-origin: 0 0;
+            transform: rotate(-45deg) translateX(-50%);
+
+            box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
+        }
+
+        span {
+            margin: 0 auto;
+        }
     }
 }

@@ -19,7 +19,39 @@
 .verification-wrapper__main {
     width: 50%;
     flex: 1 1 auto;
+    padding: 52px 96px;
 
     box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
     background-color: #ffffff;
+}
+
+@media (max-width: 1240px) {
+    .verification-wrapper__main {
+        padding: 45px 78px;
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .verification-wrapper__main {
+        padding: 35px 56px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .verification-wrapper__inner {
+        display: block;
+    }
+
+    .verification-wrapper__aside {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 36px;
+    }
+
+    .verification-wrapper__main {
+        width: 100%;
+        padding: 35px 25px;
+    }
 }

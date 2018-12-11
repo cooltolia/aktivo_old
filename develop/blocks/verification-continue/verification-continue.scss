@@ -1,0 +1,43 @@
+.verification-continue {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.verification-continue__next {
+    @include btn-theme;
+    width: 272px;
+    margin-right: 35px;
+    padding: 16px;
+
+    font-size: 18px;
+}
+
+.verification-continue__pass {
+    font-size: 16px;
+    color: #3c7bd8;
+    text-decoration: none;
+
+    transition: color 300ms ease;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        color: darken(#3c7bd8, 20%);
+    }
+}
+
+@media (max-width: 480px) {
+    .verification-continue__next {
+        width: 160px;
+        margin-right: 16px;
+        padding: 10px;
+
+        font-size: 16px;
+    }
+
+    .verification-continue__pass {
+        font-size: 14px;
+    }
+}
