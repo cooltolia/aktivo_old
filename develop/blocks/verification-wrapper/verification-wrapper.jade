@@ -1,6 +1,8 @@
-mixin verification-wrapper(blockName)
+mixin verification-wrapper()
     +b.verification-wrapper
-        +e.ASIDE.aside
-            +verification-nav
-        +e.MAIN.main
-            block
+        +inner
+            +e.inner
+                +e.ASIDE.aside
+                    +verification-nav
+                +e.MAIN.main
+                    block

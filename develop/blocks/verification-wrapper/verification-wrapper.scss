@@ -1,3 +1,25 @@
 .verification-wrapper {
-    
+    min-height: 70vh;
+    padding-bottom: 50px;    
+}
+
+.verification-wrapper__inner {
+    display: flex;
+}
+
+.verification-wrapper__aside {
+    width: 304px;
+    flex: 0 0 auto;
+    margin-right: 16px;
+
+    box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
+    background-color: #ffffff;
+}
+
+.verification-wrapper__main {
+    width: 50%;
+    flex: 1 1 auto;
+
+    box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
+    background-color: #ffffff;
 }
