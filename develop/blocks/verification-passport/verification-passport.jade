@@ -1,2 +1,48 @@
 mixin verification-passport()
     +b.SECTION.verification-passport
+        +e.FORM.form(action='#' method='post')
+            +e.row
+                +e.row-title Паспортные данные
+                +e.inputs-row.--three
+                    +e.inputs-item
+                        +base-input('text', 'passportSeries', 'passport_series', 'Серия', false)
+                    +e.inputs-item
+                        +base-input('text', 'passportNumber', 'passport_number', 'Номер', false)
+                    +e.inputs-item
+                        +base-input('text', 'passportIssueDate', 'passport_issue-date', 'Дата выдачи', false)
+                +e.inputs-row.--two
+                    +e.inputs-item
+                        +base-input('text', 'passportDepartmentCode', 'passport_department-code', 'Код подразделения', false)
+                    +e.inputs-item.--long
+                        +base-input('text', 'passportDepartmentAddress', 'passport_department-addresss', 'Кем выдан', false)
+                +e.inputs-row.--two
+                    +e.inputs-item
+                        +base-input('text', 'passportBirthDate', 'passport_birth-date', 'Дата рождения', false)
+                    +e.inputs-item.--long
+                        +base-input('text', 'passportBirthAddress', 'passport_birth-address', 'Место рождения', false)
+            +e.row
+                +e.row-title Адрес регистрации
+                +e.inputs-row.--three
+                    +e.inputs-item
+                        +base-input('text', 'addressIndex', 'address_index', 'Индекс', false)
+                    +e.inputs-item
+                        +base-input('text', 'addressCity', 'address_city', 'Город', false)
+                    +e.inputs-item
+                        +base-input('text', 'addressStreet', 'address_street', 'Улица', false)
+                +e.inputs-row.--four
+                    +e.inputs-item
+                        +base-input('text', 'addressHouse', 'address_house', 'Дом', false)
+                    +e.inputs-item
+                        +base-input('text', 'addressLetter', 'address_letter', 'Строение', false)
+                    +e.inputs-item
+                        +base-input('text', 'addressBuilding', 'address_building', 'Корпус', false)
+                    +e.inputs-item
+                        +base-input('text', 'addressAppartment', 'address_appartment', 'Квартира', false)
+            +e.row
+                +e.toggler
+                            +e.LABEL.toggler-label(for="agreementCheckbox") 
+                                +e.INPUT.toggler-input(type="checkbox" name='agreement' id='agreementCheckbox' checked)
+                                +e.SPAN.toggler-icon
+                                +e.SPAN.toggler-text Совпадает с адресом проживания
+            +e.row
+                +verification-continue

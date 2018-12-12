@@ -9652,6 +9652,112 @@ body.modal-open {
     .verification-nav__link span {
       margin: 0 auto; } }
 
+.verification-passport {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000; }
+
+.verification-passport__row {
+  margin-bottom: 58px; }
+  .verification-passport__row:last-child {
+    margin-bottom: 0; }
+
+.verification-passport__row-title {
+  margin-bottom: 38px;
+  font-size: 16px;
+  font-weight: 700; }
+
+.verification-passport__inputs-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 52px; }
+
+.verification-passport__inputs-item {
+  width: 15%;
+  -webkit-box-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-right: 36px; }
+  .verification-passport__inputs-item--long {
+    -webkit-box-flex: 2;
+       -moz-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2; }
+
+.verification-passport__toggler {
+  position: relative;
+  margin-bottom: 25px; }
+
+.verification-passport__toggler-input {
+  position: absolute;
+  opacity: 0; }
+
+.verification-passport__toggler-label {
+  position: relative;
+  display: block;
+  cursor: pointer; }
+
+.verification-passport__toggler-icon {
+  position: absolute;
+  width: 32px;
+  height: 16px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-35%);
+     -moz-transform: translateY(-35%);
+      -ms-transform: translateY(-35%);
+          transform: translateY(-35%);
+  border-radius: 8px;
+  background-color: #f5f7f9;
+  -webkit-transition: background-color 300ms ease;
+  -moz-transition: background-color 300ms ease;
+  transition: background-color 300ms ease; }
+  .verification-passport__toggler-icon::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: 1px;
+    top: 1px;
+    border: 1px solid white;
+    background-color: #bdc6d0;
+    -webkit-transition: background-color 300ms ease, -webkit-transform 300ms ease;
+    transition: background-color 300ms ease, -webkit-transform 300ms ease;
+    -moz-transition: transform 300ms ease, background-color 300ms ease, -moz-transform 300ms ease;
+    transition: transform 300ms ease, background-color 300ms ease;
+    transition: transform 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease, -moz-transform 300ms ease; }
+
+.verification-passport__toggler-input:checked + .verification-passport__toggler-icon {
+  background-color: #5fce67; }
+  .verification-passport__toggler-input:checked + .verification-passport__toggler-icon::before {
+    background-color: #fff;
+    left: auto;
+    -webkit-transform: translateX(17px);
+       -moz-transform: translateX(17px);
+        -ms-transform: translateX(17px);
+            transform: translateX(17px); }
+
+.verification-passport__toggler-text {
+  padding-left: 47px;
+  font-size: 16px; }
+
 .verification-wrapper {
   min-height: 70vh;
   padding-bottom: 50px; }
