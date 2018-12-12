@@ -9599,18 +9599,29 @@ body.modal-open {
   .verification-nav__link {
     font-size: 14px;
     text-align: center; }
-    .verification-nav__link.active::before {
-      -webkit-transform: none;
-         -moz-transform: none;
-          -ms-transform: none;
-              transform: none;
+    .verification-nav__link.active {
       -webkit-box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
               box-shadow: 0 0 15px rgba(60, 123, 216, 0.16); }
-    .verification-nav__link.active::after {
-      opacity: 1; }
-    .verification-nav__link:hover::before, .verification-nav__link:active::before, .verification-nav__link:focus::before {
+      .verification-nav__link.active::before {
+        -webkit-transform: none;
+           -moz-transform: none;
+            -ms-transform: none;
+                transform: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        z-index: 1; }
+      .verification-nav__link.active::after {
+        opacity: 1; }
+    .verification-nav__link:hover, .verification-nav__link:active, .verification-nav__link:focus {
       -webkit-box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
               box-shadow: 0 0 15px rgba(60, 123, 216, 0.16); }
+      .verification-nav__link:hover::before, .verification-nav__link:active::before, .verification-nav__link:focus::before {
+        -webkit-transform: none;
+           -moz-transform: none;
+            -ms-transform: none;
+                transform: none;
+        -webkit-box-shadow: none;
+                box-shadow: none; }
     .verification-nav__link::before {
       content: '';
       position: absolute;
@@ -9623,10 +9634,10 @@ body.modal-open {
     .verification-nav__link::after {
       top: auto;
       right: auto;
-      bottom: -15px;
+      bottom: -12px;
       left: 50%;
-      z-index: -1;
-      border: 15px solid #f9fbfd;
+      z-index: 0;
+      border: 10px solid #f9fbfd;
       border-color: transparent transparent #fff #fff;
       -webkit-transform-origin: 0 0;
          -moz-transform-origin: 0 0;
@@ -9691,6 +9702,10 @@ body.modal-open {
   .verification-wrapper__main {
     width: 100%;
     padding: 35px 25px; } }
+
+@media (max-width: 480px) {
+  .verification-wrapper__aside {
+    margin-bottom: 25px; } }
 
 html,
 body {

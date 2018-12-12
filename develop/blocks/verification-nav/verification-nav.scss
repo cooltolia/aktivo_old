@@ -104,9 +104,12 @@
         text-align: center;
 
         &.active {
+            box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
+
             &::before {
                 transform: none;
-                box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
+                box-shadow: none;
+                z-index: 1;
             }
 
             &::after {
@@ -117,8 +120,12 @@
         &:hover,
         &:active,
         &:focus {
+
+            box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
+
             &::before {
-                box-shadow: 0 0 15px rgba(60, 123, 216, 0.16);
+                transform: none;
+                box-shadow: none;
             }
 
             // &::after {
@@ -139,11 +146,11 @@
         &::after {
             top: auto;
             right: auto;
-            bottom: -15px;
+            bottom: -12px;
             left: 50%;
-            z-index: -1;
+            z-index: 0;
 
-            border: 15px solid #f9fbfd;
+            border: 10px solid #f9fbfd;
             border-color: transparent transparent #fff #fff;
             transform-origin: 0 0;
             transform: rotate(-45deg) translateX(-50%);

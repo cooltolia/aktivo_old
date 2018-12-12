@@ -28,7 +28,6 @@
 @media (max-width: 1240px) {
     .verification-wrapper__main {
         padding: 45px 78px;
-
     }
 }
 
@@ -53,5 +52,11 @@
     .verification-wrapper__main {
         width: 100%;
         padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .verification-wrapper__aside {
+        margin-bottom: 25px;
     }
 }
