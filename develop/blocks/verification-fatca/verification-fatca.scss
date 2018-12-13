@@ -1,3 +1,61 @@
 .verification-fatca {
-    
+    font-family: $segoe;
+    color: $darktext;
+}
+
+.verification-fatca__row {
+    margin-bottom: 72px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.verification-fatca__radios-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 56px;
+}
+
+.verification-fatca__radios-block {
+    flex: 0 1 auto;
+    margin-right: 36px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.verification-fatca__radios-title {
+    margin-bottom: 16px;
+
+    font-size: 16px;
+}
+
+.verification-fatca__radios-item {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 7px;
+}
+
+@media (max-width: 480px) {
+    .verification-fatca__row {
+        margin-bottom: 42px;
+    }
+
+    .verification-fatca__radios-row {
+        display: block;
+        margin-bottom: 36px;
+    }
+
+    .verification-fatca__radios-block {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .verification-fatca__radios-title {
+        font-size: 14px;
+    }
 }

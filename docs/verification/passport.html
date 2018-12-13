@@ -12,14 +12,8 @@
     <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
     <meta name="theme-color" content="#3aa5ed"/>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer="defer" type="text/javascript"></script>
-    <!-- build:css css/vendor.css    -->
-    <link href="/libs/slick/slick.css" rel="stylesheet"/>
-    <link href="/libs/animate.css" rel="stylesheet"/>
-    <link href="/libs/fancybox/jquery.fancybox.css" rel="stylesheet"/>
-    <!-- endbuild-->
-    <!-- build:css css/main.css-->
-    <link href="/css/main.css" rel="stylesheet"/>
-    <!-- endbuild -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
     <!--[if lte IE 9]>
     <script src="libs/ie/html5shiv.js"></script>
     <script src="libs/ie/respond.src.js"></script>
@@ -144,97 +138,181 @@
               </ul>
             </nav><!--/ verification-nav --> 
           </aside>
-          <main class="verification-wrapper__main" role="main"><!-- verification-fatca --> 
-            <section class="verification-fatca">
-              <form action="#" method="post" class="verification-fatca__form">
-                <div class="verification-fatca__row">
-                  <div class="verification-fatca__radios-row">
-                    <div class="verification-fatca__radios-block">
-                      <div class="verification-fatca__radios-title">Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
-                      </div>
-                      <div class="verification-fatca__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="fatca1" name="fatca-citizenship" value="true" checked="true" required="false" class="base-radio__input"/>
-                          <label for="fatca1" class="base-radio__label">Да
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
+          <main class="verification-wrapper__main" role="main"><!-- verification-passport --> 
+            <section class="verification-passport">
+              <form action="#" method="post" class="verification-passport__form">
+                <div class="verification-passport__row">
+                  <div class="verification-passport__row-title">Паспортные данные
+                  </div>
+                  <div class="verification-passport__inputs-row verification-passport__inputs-row--three">
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="passportSeries" name="passport_series" required="false" class="base-input__input"/>
+                        <label for="passportSeries" class="base-input__label">Серия
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
                           </div>
-                        </div><!--/ base-radio --> 
-                      </div>
-                      <div class="verification-fatca__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="fatca2" name="fatca-citizenship" value="false" required="false" class="base-radio__input"/>
-                          <label for="fatca2" class="base-radio__label">Нет
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="passportNumber" name="passport_number" required="false" class="base-input__input"/>
+                        <label for="passportNumber" class="base-input__label">Номер
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
                           </div>
-                        </div><!--/ base-radio --> 
-                      </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="passportIssueDate" name="passport_issue-date" required="false" class="base-input__input"/>
+                        <label for="passportIssueDate" class="base-input__label">Дата выдачи
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
                     </div>
                   </div>
-                  <div class="verification-fatca__radios-row">
-                    <div class="verification-fatca__radios-block">
-                      <div class="verification-fatca__radios-title">Выдавались ли доверенности и/или предоставлялось ли право подписи лицу, имеющему адрес в США?
-                      </div>
-                      <div class="verification-fatca__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="fatca3" name="fatca-warrant" value="true" required="false" class="base-radio__input"/>
-                          <label for="fatca3" class="base-radio__label">Да
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
+                  <div class="verification-passport__inputs-row verification-passport__inputs-row--two">
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="passportDepartmentCode" name="passport_department-code" required="false" class="base-input__input"/>
+                        <label for="passportDepartmentCode" class="base-input__label">Код подразделения
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
                           </div>
-                        </div><!--/ base-radio --> 
-                      </div>
-                      <div class="verification-fatca__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="fatca4" name="fatca-warrant" value="legal" required="false" class="base-radio__input"/>
-                          <label for="fatca4" class="base-radio__label">Нет
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item verification-passport__inputs-item--long"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="passportDepartmentAddress" name="passport_department-addresss" required="false" class="base-input__input"/>
+                        <label for="passportDepartmentAddress" class="base-input__label">Кем выдан
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
                           </div>
-                        </div><!--/ base-radio --> 
-                      </div>
+                        </div>
+                      </div><!--/ base-input --> 
                     </div>
                   </div>
-                  <div class="verification-fatca__radios-row">
-                    <div class="verification-fatca__radios-block">
-                      <div class="verification-fatca__radios-title">Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
-                      </div>
-                      <div class="verification-fatca__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="fatca5" name="fatca-citizenship1" value="true" checked="true" required="false" class="base-radio__input"/>
-                          <label for="fatca5" class="base-radio__label">Да
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
+                  <div class="verification-passport__inputs-row verification-passport__inputs-row--two">
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="passportBirthDate" name="passport_birth-date" required="false" class="base-input__input"/>
+                        <label for="passportBirthDate" class="base-input__label">Дата рождения
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
                           </div>
-                        </div><!--/ base-radio --> 
-                      </div>
-                      <div class="verification-fatca__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="fatca6" name="fatca-citizenship1" value="legal" required="false" class="base-radio__input"/>
-                          <label for="fatca6" class="base-radio__label">Нет
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item verification-passport__inputs-item--long"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="passportBirthAddress" name="passport_birth-address" required="false" class="base-input__input"/>
+                        <label for="passportBirthAddress" class="base-input__label">Место рождения
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
                           </div>
-                        </div><!--/ base-radio --> 
-                      </div>
+                        </div>
+                      </div><!--/ base-input --> 
                     </div>
                   </div>
                 </div>
-                <div class="verification-fatca__row"><!-- verification-continue --> 
+                <div class="verification-passport__row">
+                  <div class="verification-passport__row-title">Адрес регистрации
+                  </div>
+                  <div class="verification-passport__inputs-row verification-passport__inputs-row--three">
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="addressIndex" name="address_index" required="false" class="base-input__input"/>
+                        <label for="addressIndex" class="base-input__label">Индекс
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="addressCity" name="address_city" required="false" class="base-input__input"/>
+                        <label for="addressCity" class="base-input__label">Город
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="addressStreet" name="address_street" required="false" class="base-input__input"/>
+                        <label for="addressStreet" class="base-input__label">Улица
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                  </div>
+                  <div class="verification-passport__inputs-row verification-passport__inputs-row--four">
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="addressHouse" name="address_house" required="false" class="base-input__input"/>
+                        <label for="addressHouse" class="base-input__label">Дом
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="addressLetter" name="address_letter" required="false" class="base-input__input"/>
+                        <label for="addressLetter" class="base-input__label">Строение
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="addressBuilding" name="address_building" required="false" class="base-input__input"/>
+                        <label for="addressBuilding" class="base-input__label">Корпус
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                    <div class="verification-passport__inputs-item"><!-- base-input --> 
+                      <div class="base-input"><input type="text" id="addressAppartment" name="address_appartment" required="false" class="base-input__input"/>
+                        <label for="addressAppartment" class="base-input__label">Квартира
+                        </label>
+                        <div class="base-input__errors">
+                          <div class="base-input__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-input --> 
+                    </div>
+                  </div>
+                </div>
+                <div class="verification-passport__row">
+                  <div class="verification-passport__toggler">
+                    <label for="agreementCheckbox" class="verification-passport__toggler-label"> <input type="checkbox" name="agreement" id="agreementCheckbox" checked="true" class="verification-passport__toggler-input"/><span class="verification-passport__toggler-icon"></span><span class="verification-passport__toggler-text">Совпадает с адресом проживания</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="verification-passport__row"><!-- verification-continue --> 
                   <div class="verification-continue">
                     <button type="submit" class="verification-continue__next">Далее
                     </button><a href="#" class="verification-continue__pass">Пропустить</a>
                   </div><!--/ verification-continue --> 
                 </div>
               </form>
-            </section><!--/ verification-fatca --> 
+            </section><!--/ verification-passport --> 
           </main>
         </div>
       </div>
@@ -296,21 +374,8 @@
         </div>
       </div>
     </footer><!--/ main-footer --> 
-    <!-- build:js js/vendor.js -->
-    <script src="/libs/jquery.min.js"></script>
-    <script src="/libs/bootstrap.min.js"></script>
-    <script src="/libs/rangeslider.js"></script>
-    <script src="/libs/highcharts.js"></script>
-    <script src="/libs/chartjs/chart.min.js"></script>
-    <script src="/libs/wow.min.js"></script>
-    <script src="/libs/slick/slick.min.js"></script>
-    <script src="/libs/d3.min.js"></script>
-    <script src="/libs/fancybox/jquery.fancybox.min.js"></script>
-    <!-- endbuild-->
-    <!-- build:js js/main.js-->
-    <script src="/js/bem.js"></script>
-    <script src="/js/main.js"></script>
-    <!-- endbuild-->
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
     
   </body>
 </html>

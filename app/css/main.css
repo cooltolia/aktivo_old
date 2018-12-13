@@ -1602,6 +1602,11 @@ th {
   font-size: 14px;
   color: #f52f4b; }
 
+@media (max-width: 1240px) {
+  .base-input__label {
+    top: 22px;
+    font-size: 18px; } }
+
 @media (max-width: 480px) {
   .base-input {
     font-size: 16px; }
@@ -9421,6 +9426,61 @@ body.modal-open {
   .verification-continue__pass {
     font-size: 14px; } }
 
+.verification-fatca {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000; }
+
+.verification-fatca__row {
+  margin-bottom: 72px; }
+  .verification-fatca__row:last-child {
+    margin-bottom: 0; }
+
+.verification-fatca__radios-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 56px; }
+
+.verification-fatca__radios-block {
+  -webkit-box-flex: 0;
+     -moz-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin-right: 36px; }
+  .verification-fatca__radios-block:last-child {
+    margin-right: 0; }
+
+.verification-fatca__radios-title {
+  margin-bottom: 16px;
+  font-size: 16px; }
+
+.verification-fatca__radios-item {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 7px; }
+
+@media (max-width: 480px) {
+  .verification-fatca__row {
+    margin-bottom: 42px; }
+  .verification-fatca__radios-row {
+    display: block;
+    margin-bottom: 36px; }
+  .verification-fatca__radios-block {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px; }
+  .verification-fatca__radios-title {
+    font-size: 14px; } }
+
 .verification-general {
   font-family: "Segoe UI", Helvetica, Arial, sans-serif;
   color: #000; }
@@ -9755,8 +9815,27 @@ body.modal-open {
             transform: translateX(17px); }
 
 .verification-passport__toggler-text {
+  display: block;
   padding-left: 47px;
   font-size: 16px; }
+
+@media (max-width: 480px) {
+  .verification-passport__row {
+    margin-bottom: 35px; }
+  .verification-passport__inputs-row {
+    display: block; }
+  .verification-passport__inputs-item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 35px; }
+  .verification-passport__radios-row {
+    display: block; }
+  .verification-passport__radios-block {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px; }
+  .verification-passport__radios-title {
+    font-size: 14px; } }
 
 .verification-wrapper {
   min-height: 70vh;

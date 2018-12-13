@@ -92,7 +92,38 @@
 }
 
 .verification-passport__toggler-text {
+    display: block;
     padding-left: 47px;
 
     font-size: 16px;
+}
+
+@media (max-width: 480px) {
+    .verification-passport__row {
+        margin-bottom: 35px;
+    }
+
+    .verification-passport__inputs-row {
+        display: block;
+    }
+
+    .verification-passport__inputs-item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+
+    .verification-passport__radios-row {
+        display: block;
+    }
+
+    .verification-passport__radios-block {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .verification-passport__radios-title {
+        font-size: 14px;
+    }
 }

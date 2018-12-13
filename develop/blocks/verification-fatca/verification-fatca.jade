@@ -1,2 +1,30 @@
 mixin verification-fatca()
     +b.SECTION.verification-fatca
+        +e.FORM.form(action='#' method='post')
+            +e.row
+                +e.radios-row
+                    +e.radios-block
+                        +e.radios-title
+                            | Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                        +e.radios-item
+                            +base-radio('fatca1', 'fatca-citizenship','true', 'Да', true, false)
+                        +e.radios-item
+                            +base-radio('fatca2', 'fatca-citizenship','false', 'Нет', false, false)
+                +e.radios-row
+                    +e.radios-block
+                        +e.radios-title
+                            | Выдавались ли доверенности и/или предоставлялось ли право подписи лицу, имеющему адрес в США?
+                        +e.radios-item
+                            +base-radio('fatca3', 'fatca-warrant','true', 'Да', false, false)
+                        +e.radios-item
+                            +base-radio('fatca4', 'fatca-warrant','legal', 'Нет', false, false)
+                +e.radios-row
+                    +e.radios-block
+                        +e.radios-title
+                            | Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                        +e.radios-item
+                            +base-radio('fatca5', 'fatca-citizenship1','true', 'Да', true, false)
+                        +e.radios-item
+                            +base-radio('fatca6', 'fatca-citizenship1','legal', 'Нет', false, false)
+            +e.row
+                +verification-continue
