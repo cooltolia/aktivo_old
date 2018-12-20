@@ -195,6 +195,85 @@ jQuery(document).ready(function ($) {
      
 
      
+     ;
+
+     (function () {
+
+     $('body').on('click', function(e) {
+
+         console.log(e);
+
+         
+
+     })
+
+     
+
+         var $select = $('.base-select__input');
+
+         var $options = $('.base-select__options-list');
+
+         var $optionsItem = $('.base-select__options-item');
+
+     
+
+         if ($select.val().trim() !== '') {
+
+             $select.addClass('hasValue');
+
+         }
+
+     
+
+         $select.on('blur', function () {
+
+             if ($select.val().trim() !== '') {
+
+                 $select.addClass('hasValue');
+
+             } else {
+
+                 $select.removeClass('hasValue');
+
+             }
+
+     
+
+         })
+
+     
+
+         $select.on('click', function () {
+
+             $select.parent().addClass('active');
+
+             $options.slideDown();
+
+         })
+
+     
+
+         $optionsItem.each(function() {
+
+             $(this).on('click', function (e) {
+
+                 var text = $(this).text();
+
+                 $select.val(text);
+
+                 $select.addClass('hasValue');
+
+                 $select.parent().removeClass('active');
+
+                 $options.slideUp();
+
+             })
+
+         })
+
+     })()
+
+     
      
 
      
@@ -1655,6 +1734,57 @@ jQuery(document).ready(function ($) {
              });
 
          }
+
+     })();
+
+     
+     ;(function() {
+
+         var $togglers = $('.monitoring-objects__nav-item');
+
+         var $sections = $('.monitoring-objects__section');
+
+     
+
+         $togglers.each(function(i, item) {
+
+             $(item).on('click', function() {
+
+     
+
+                 if ($(item).hasClass('active')) {
+
+                     return;
+
+                 }
+
+     
+
+                 var activeToggle = $('.monitoring-objects__nav-item.active');
+
+                 activeToggle.removeClass('active');
+
+     
+
+                 var activeSection = $('.monitoring-objects__section.active');
+
+                 activeSection.removeClass('active').fadeOut();
+
+     
+
+                 var id = $(item).data('for');
+
+                 var target = $('[data-id="' + id + '"');
+
+     
+
+                 $(item).addClass('active');
+
+                 target.addClass('active').fadeIn();
+
+             })
+
+         }) 
 
      })();
 

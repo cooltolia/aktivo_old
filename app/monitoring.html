@@ -128,7 +128,35 @@
         <div class="monitoring-content__wrapper">
           <main class="monitoring-content__main" role="main"><!-- monitoring-finances --> 
             <section class="monitoring-finances">
-              <div class="monitoring-finances__tip">Выберите объект инвестиций
+              <div class="monitoring-finances__select"><!-- monitoring-select --> 
+                <section class="monitoring-select">
+                  <form action="/" method="post">
+                    <div class="monitoring-select__input"><!-- base-select --> 
+                      <div class="base-select"><input readonly="true" type="text" id="monitoring_select" name="monitoring-select" required="true" class="base-select__input"/>
+                        <label for="monitoring_select" class="base-select__label">Выберите объект инвестиций:
+                        </label>
+                        <div class="base-select__options-list">
+                          <div data-value="" class="base-select__options-item">Супермаркет «Пятерочка» (г. Люберцы, Октябрьский пр., 55)
+                          </div>
+                          <div data-value="" class="base-select__options-item">Супермаркет «Двоечка (г. Москва, Октябрьский пр., 55)
+                          </div>
+                          <div data-value="" class="base-select__options-item">Супермаркет «Единичка» (г. Иваново, Октябрьский пр., 55)
+                          </div>
+                          <div data-value="" class="base-select__options-item">Супермаркет «Десяточка» (г. Санкт-Петербург, Октябрьский пр., 55)
+                          </div>
+                        </div>
+                        <div class="base-select__errors">
+                          <div class="base-select__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-select --> 
+                    </div>
+                    <div class="monitoring-select__button"><!-- base-button --> 
+                      <button type="submit" class="base-button">Выставить на продажу
+                      </button><!--/ base-button --> 
+                    </div>
+                  </form>
+                </section><!--/ monitoring-select --> 
               </div>
               <h2 class="monitoring-finances__title">Финансовые показатели
               </h2>

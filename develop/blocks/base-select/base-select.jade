@@ -1,0 +1,11 @@
+mixin base-select(type, id, name, label, required)
+    +b.base-select
+        +e.INPUT.input( readonly type='#{type}' id='#{id}' name='#{name}' required='#{required}')
+        +e.LABEL.label(for='#{id}')= label
+        +e.options-list
+            +e.options-item(data-value='') Супермаркет «Пятерочка» (г. Люберцы, Октябрьский пр., 55)
+            +e.options-item(data-value='') Супермаркет «Двоечка (г. Москва, Октябрьский пр., 55)
+            +e.options-item(data-value='') Супермаркет «Единичка» (г. Иваново, Октябрьский пр., 55)
+            +e.options-item(data-value='') Супермаркет «Десяточка» (г. Санкт-Петербург, Октябрьский пр., 55)
+        +e.errors
+            +e.error-message Текст ошибки

@@ -1,0 +1,8 @@
+mixin monitoring-select()
+    +b.SECTION.monitoring-select
+        +e.FORM(action='/' method='post')
+            +e.input
+                +base-select('text', 'monitoring_select', 'monitoring-select', 'Выберите объект инвестиций:', true)
+            +e.button
+                +base-button('submit', 'Выставить на продажу')
+        

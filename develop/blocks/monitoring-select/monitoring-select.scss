@@ -1,0 +1,28 @@
+.monitoring-select {
+    position: relative;
+    z-index: 2;
+    padding-right: 70px;
+
+    .base-select__input,
+    .base-select__label {
+        font-size: 16px;
+    }
+
+    .base-select__input {
+        &:focus {
+            +.base-select__label {
+                transform: scale(0.75) translateY(-200%);
+            }
+        }
+
+        &.hasValue {
+            +.base-select__label {
+                transform: scale(0.75) translateY(-200%);
+            }
+        }
+    }
+}
+
+.monitoring-select__input {
+    margin-bottom: 24px;
+}

@@ -1,0 +1,157 @@
+.base-select {
+    position: relative;
+    width: 100%;
+    
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 17px;
+        top: 50%;
+
+        border: solid black;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+
+        transform: translateY(-50%) rotate(45deg);
+
+        transition: transform 300ms ease;
+    }
+
+    &.active::after {
+        transform: translateY(-50%) rotate(225deg);
+    }
+}
+
+.base-select__input {
+    position: relative;
+    width: 100%;
+    padding: 9px 0;
+    border: none;
+    outline: none;
+
+    border-bottom: 1px solid #9b9b9b;
+
+    cursor: pointer;
+
+    transition: border-color 300ms ease;
+
+    &:focus {
+        border-bottom-color: $themecolor;
+
+        + .base-select__label {
+            transform: scale(0.5) translateY(-200%);
+            color: #000;
+            left: 0;
+        }
+    }
+
+    &.hasValue {
+        + .base-select__label {
+            transform: scale(0.5) translateY(-200%);
+            color: #000;
+            left: 0;
+        }
+    }
+
+}
+
+.base-select__label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 24px;
+    color: #d7d7d8;
+
+    transition: transform 200ms ease, color 200ms ease;
+    transform-origin: left center;
+
+    pointer-events: none;
+}
+
+.base-select__errors {
+    display: none;
+    position: relative;
+    margin-top: 5px;
+
+    font-size: 14px;
+    color: #f52f4b;
+}
+
+.base-select__options-list {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+
+    background-color: #fff;
+    z-index: 9999;
+}
+
+.base-select__options-item {
+    position: relative;
+    z-index: 999999999999999999;
+    padding: 12px 24px;
+
+    font-size: 16px;
+
+    background-color: #fff;
+
+    cursor: pointer;
+
+    transition: color 300ms ease, background-color 300ms ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $themecolor;
+        background-color: rgba(#f5f7f9, 0.2);
+    }
+}
+
+@media (max-width: 1240px) {
+    .base-select__label {
+        top: 22px;
+        
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .base-select {
+        font-size: 16px;
+    }
+
+    .base-select__input {
+        padding: 4px;
+
+        &:focus {
+            +.base-select__label {
+                transform: scale(0.7) translateY(-150%);
+            }
+        }
+
+        &.hasValue {
+            +.base-select__label {
+                transform: scale(0.7) translateY(-150%);
+            }
+        }
+    }
+
+    .base-select__label {
+        top: 4px;
+
+        font-size: 16px;
+    }
+
+    .base-select__errors {
+        font-size: 12px;
+    }
+}
