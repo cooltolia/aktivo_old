@@ -1,2 +1,23 @@
 mixin verification-upload()
     +b.SECTION.verification-upload
+        +e.title Пожалуйста, загрузите сканы или фото документов
+        +e.container
+            +e.row
+                +e.block
+                    +e.label Главная страница паспорта
+                    +e.FORM.form#dropzone1(action="upload.php")
+                        .add
+                +e.block
+                    +e.label Полный разворот страницы паспорта с адресом регистрации
+                    +e.FORM.form#dropzone2(action="upload.php")
+                        .add
+            +e.row
+                +e.block
+                    +e.label ИНН
+                    +e.FORM.form#dropzone3(action="upload.php")
+                        .add
+                +e.block
+                    +e.label СНИЛС
+                    +e.FORM.form#dropzone4(action="upload.php")
+                        .add
+        +verification-continue
