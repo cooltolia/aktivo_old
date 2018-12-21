@@ -445,9 +445,12 @@ th {
   display: block;
   width: 400px;
   height: 248px;
-  background-image: url("../images/about/video-poster.jpg");
+  background-image: url("../images/about/video-poster_black.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  -webkit-transition: background 300ms ease;
+  -moz-transition: background 300ms ease;
+  transition: background 300ms ease; }
   .about-history__video-link::after {
     content: '';
     position: absolute;
@@ -474,6 +477,8 @@ th {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
+  .about-history__video-link:hover {
+    background-image: url("../images/about/video-poster.jpg"); }
 
 .about-history__text {
   margin: 0;

@@ -36,9 +36,11 @@
     width: 400px;
     height: 248px;
 
-    background-image: url('../images/about/video-poster.jpg');
+    background-image: url('../images/about/video-poster_black.jpg');
     background-size: cover;
     background-position: center;
+
+    transition: background 300ms ease;
 
     &::after {
         content: '';
@@ -67,6 +69,10 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    &:hover {
+        background-image: url('../images/about/video-poster.jpg');
     }
 }
 
@@ -101,7 +107,7 @@
             height: 2px;
             left: 0;
             top: -42px;
-    
+
             background-color: $themecolor;
         }
     }
@@ -116,7 +122,7 @@
             height: 2px;
             left: 0;
             bottom: -148px;
-    
+
             background-color: $themecolor;
         }
     }
@@ -144,7 +150,7 @@
             height: 2px;
             left: 0;
             top: 17px;
-    
+
             background-color: $themecolor;
         }
     }
@@ -302,6 +308,7 @@
 }
 
 @media (max-width: 360px) {
+
     .about-history__text,
     .about-history__highlights,
     .about-history__year {
@@ -310,6 +317,7 @@
     }
 
     .about-history__year-dots {
+
         &--type1,
         &--type2 {
             left: 10px;
