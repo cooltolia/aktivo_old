@@ -1,13 +1,11 @@
 ;
 (function () {
-$('body').on('click', function(e) {
-    console.log(e);
-    
-})
-
     var $select = $('.base-select__input');
     var $options = $('.base-select__options-list');
     var $optionsItem = $('.base-select__options-item');
+
+    if ($select.length == 0) return; 
+    
 
     if ($select.val().trim() !== '') {
         $select.addClass('hasValue');

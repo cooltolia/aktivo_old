@@ -1,0 +1,9 @@
+mixin base-checkbox(id, name, value, label, checked, required)
+    +b.base-checkbox
+        if (checked)
+            +e.INPUT.input(type='checkbox' id='#{id}' name='#{name}' value='#{value}' checked required='#{required}')
+        else
+            +e.INPUT.input(type='checkbox' id='#{id}' name='#{name}' value='#{value}' required='#{required}')
+        +e.LABEL.label(for='#{id}')= label
+        +e.errors
+            +e.error-message Текст ошибки

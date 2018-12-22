@@ -30,7 +30,7 @@
     }
 }
 
-.howitworks-audit__image {
+.howitworks-audit__image {    
     height: 100%;
 
     &--mobile {
@@ -112,6 +112,10 @@
 
         &--mobile {
             display: block;
+
+            object {
+                @include img;
+            }
         }
        
     }

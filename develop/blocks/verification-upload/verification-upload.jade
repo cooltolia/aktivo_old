@@ -5,7 +5,7 @@ mixin verification-upload()
             +e.row
                 +e.block
                     +e.label Главная страница паспорта
-                    +e.FORM.form#dropzone1(action="upload.php")
+                    +e.FORM.form#dropzone1.has-data(action="upload.php")
                         .add
                 +e.block
                     +e.label Полный разворот страницы паспорта с адресом регистрации

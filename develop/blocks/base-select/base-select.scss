@@ -92,12 +92,12 @@
     width: 100%;
 
     background-color: #fff;
-    z-index: 9999;
+    z-index: 2;
 }
 
 .base-select__options-item {
     position: relative;
-    z-index: 999999999999999999;
+    z-index: 2;
     padding: 12px 24px;
 
     font-size: 16px;

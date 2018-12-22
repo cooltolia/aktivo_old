@@ -27,3 +27,8 @@ mixin verification-general()
                             +base-radio('verificationNotrussian', 'verification-citizenship','not_russian', 'Нет', false, false)
             +e.row
                 +verification-continue
+            +e.row
+                +e.checkbox-block
+                    +base-checkbox('verificationSuperman', 'verification-superman','private', 'Я супермэн', true, false)
+                +e.checkbox-block
+                    +base-checkbox('verificationGrandpa', 'verification-grandpa','private', 'Живу с дедушкой', false, false)

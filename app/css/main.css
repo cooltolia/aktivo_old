@@ -1549,6 +1549,86 @@ th {
     padding: 9px;
     font-size: 16px; } }
 
+.base-checkbox {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center; }
+
+.base-checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0; }
+
+.base-checkbox__label {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-left: 33px;
+  text-align: left;
+  cursor: pointer; }
+  .base-checkbox__label::before {
+    content: '';
+    position: absolute;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-40%);
+       -moz-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+            transform: translateY(-40%);
+    border: 1px solid #848f9b;
+    background-color: #fff;
+    -webkit-transition: background-color 300ms ease;
+    -moz-transition: background-color 300ms ease;
+    transition: background-color 300ms ease; }
+  .base-checkbox__label::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-40%);
+       -moz-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+            transform: translateY(-40%);
+    background-image: url("../images/layout/checked-black.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 8px;
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    transition: opacity 300ms ease; }
+
+.base-checkbox__input:checked + .base-checkbox__label::before {
+  background-color: #ffd729; }
+
+.base-checkbox__input:checked + .base-checkbox__label::after {
+  opacity: 1; }
+
+.base-checkbox__errors {
+  display: none;
+  position: relative;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #f52f4b; }
+
+@media (max-width: 480px) {
+  .base-checkbox {
+    font-size: 12px; }
+  .base-checkbox__label {
+    min-width: 45px;
+    padding: 7px 12px; } }
+
 .base-input {
   position: relative;
   width: 100%;
@@ -1768,11 +1848,11 @@ th {
   left: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 9999; }
+  z-index: 2; }
 
 .base-select__options-item {
   position: relative;
-  z-index: 999999999999999999;
+  z-index: 2;
   padding: 12px 24px;
   font-size: 16px;
   background-color: #fff;
@@ -3438,6 +3518,12 @@ th {
     margin: 0 auto 45px; }
     .howitworks-audit__image--mobile {
       display: block; }
+      .howitworks-audit__image--mobile object {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%; }
   .howitworks-audit__content,
   .howitworks-audit__appeal {
     padding: 0 30px; }
@@ -9696,6 +9782,10 @@ body.modal-open {
   .verification-general__radios-block:last-child {
     margin-right: 0; }
 
+.verification-general__checkbox-block {
+  width: 100%;
+  margin-bottom: 25px; }
+
 .verification-general__radios-title {
   margin-bottom: 7px;
   font-size: 16px; }
@@ -9905,6 +9995,7 @@ body.modal-open {
   margin-bottom: 52px; }
 
 .verification-passport__inputs-item {
+  position: relative;
   width: 15%;
   -webkit-box-flex: 1;
      -moz-box-flex: 1;
@@ -9916,6 +10007,63 @@ body.modal-open {
        -moz-box-flex: 2;
         -ms-flex-positive: 2;
             flex-grow: 2; }
+  .verification-passport__inputs-item--address::after {
+    content: '';
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+       -moz-transform: translateY(-50%) rotate(45deg);
+        -ms-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    -moz-transition: transform 300ms ease, -moz-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease, -moz-transform 300ms ease; }
+  .verification-passport__inputs-item--address.active::after {
+    -webkit-transform: translateY(-50%) rotate(225deg);
+       -moz-transform: translateY(-50%) rotate(225deg);
+        -ms-transform: translateY(-50%) rotate(225deg);
+            transform: translateY(-50%) rotate(225deg); }
+  .verification-passport__inputs-item .tt-dropdown-menu {
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    -webkit-box-shadow: 0 3px 20px 0 #f5f7f9;
+            box-shadow: 0 3px 20px 0 #f5f7f9;
+    background-color: #ffffff; }
+    .verification-passport__inputs-item .tt-dropdown-menu .simplebar-track {
+      width: 4px;
+      background-color: rgba(233, 233, 233, 0.582); }
+      .verification-passport__inputs-item .tt-dropdown-menu .simplebar-track.horizontal {
+        display: none; }
+    .verification-passport__inputs-item .tt-dropdown-menu .simplebar-scrollbar {
+      width: 4px;
+      right: 0; }
+      .verification-passport__inputs-item .tt-dropdown-menu .simplebar-scrollbar::before {
+        opacity: 1;
+        background-color: #ffd729; }
+  .verification-passport__inputs-item .tt-suggestion {
+    position: relative;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    -webkit-transition: color 300ms ease, background-color 300ms ease;
+    -moz-transition: color 300ms ease, background-color 300ms ease;
+    transition: color 300ms ease, background-color 300ms ease; }
+    .verification-passport__inputs-item .tt-suggestion:hover, .verification-passport__inputs-item .tt-suggestion:active, .verification-passport__inputs-item .tt-suggestion:focus {
+      color: #ffd729;
+      background-color: rgba(245, 247, 249, 0.2); }
+    .verification-passport__inputs-item .tt-suggestion .value {
+      font-weight: 600; }
+      .verification-passport__inputs-item .tt-suggestion .value + div {
+        font-size: 14px; }
 
 .verification-passport__toggler {
   position: relative;
@@ -10089,6 +10237,22 @@ body.modal-open {
     .verification-upload__form .add::after {
       width: 2px;
       height: 32px; }
+  .verification-upload__form.has-data {
+    border-color: #5fce67; }
+    .verification-upload__form.has-data .add {
+      background: #5fce67; }
+      .verification-upload__form.has-data .add::before {
+        width: 2px;
+        height: 16px;
+        -webkit-transform: rotate(-45deg) translate(0, -50%);
+           -moz-transform: rotate(-45deg) translate(0, -50%);
+            -ms-transform: rotate(-45deg) translate(0, -50%);
+                transform: rotate(-45deg) translate(0, -50%); }
+      .verification-upload__form.has-data .add::after {
+        -webkit-transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%);
+           -moz-transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%);
+            -ms-transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%);
+                transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%); }
   .verification-upload__form .dz-preview {
     position: relative;
     width: 100%;

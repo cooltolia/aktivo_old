@@ -157,6 +157,9 @@ jQuery(document).ready(function ($) {
      
 
      
+     
+
+     
      ;(function() {
 
          $inputs = $('.base-input__input');
@@ -199,21 +202,17 @@ jQuery(document).ready(function ($) {
 
      (function () {
 
-     $('body').on('click', function(e) {
-
-         console.log(e);
-
-         
-
-     })
-
-     
-
          var $select = $('.base-select__input');
 
          var $options = $('.base-select__options-list');
 
          var $optionsItem = $('.base-select__options-item');
+
+     
+
+         if ($select.length == 0) return; 
+
+         
 
      
 
@@ -4007,7 +4006,31 @@ jQuery(document).ready(function ($) {
      
 
      
+     ;
+
+     (function () {
+
      
+
+         var $dropdown = $('.verification-passport .tt-dropdown-menu');
+
+     
+
+         if ($dropdown.length == 0) return;
+
+     
+
+     
+
+         new SimpleBar($dropdown[0], {
+
+             autoHide: false
+
+         });
+
+     
+
+     })();
 
      
      ;(function() {
