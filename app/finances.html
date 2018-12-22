@@ -123,151 +123,57 @@
           </li>
         </ul>
       </div>
-    </nav><!--/ account-nav --> <!-- verification-wrapper --> 
-    <div class="verification-wrapper">
+    </nav><!--/ account-nav --> <!-- finances-content --> 
+    <div class="finances-content">
       <div class="inner">
-        <div class="verification-wrapper__inner">
-          <aside class="verification-wrapper__aside"><!-- verification-nav --> 
-            <nav class="verification-nav">
-              <ul class="verification-nav__list">
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./general.html" class="verification-nav__link active"> <span>Основная информация</span></a>
-                </li>
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./passport.html" class="verification-nav__link"><span>Паспортные данные</span></a>
-                </li>
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./bank-data.html" class="verification-nav__link"> <span>Банковские реквизиты</span></a>
-                </li>
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./additional.html" class="verification-nav__link"> <span>Дополнительные сведения</span></a>
-                </li>
-                <li class="verification-nav__item verification-nav__item--failed"><a href="./fatca.html" class="verification-nav__link"> <span>Требования FATCA</span></a>
-                </li>
-                <li class="verification-nav__item verification-nav__item--failed"><a href="./upload.html" class="verification-nav__link"> <span>Загрузка документов</span></a>
-                </li>
-              </ul>
-            </nav><!--/ verification-nav --> 
-          </aside>
-          <main class="verification-wrapper__main" role="main"><!-- verification-general --> 
-            <section class="verification-general">
-              <form action="#" method="post" class="verification-general__form">
-                <div class="verification-general__row">
-                  <div class="verification-general__inputs-row">
-                    <div class="verification-general__inputs-item"><!-- base-input --> 
-                      <div class="base-input has-error"><input type="text" id="verificationSurname" name="verification_surname" required="false" class="base-input__input"/>
-                        <label for="verificationSurname" class="base-input__label">Фамилия
-                        </label>
-                        <div class="base-input__errors">
-                          <div class="base-input__error-message">Текст ошибки
-                          </div>
-                        </div>
-                      </div><!--/ base-input --> 
-                    </div>
-                    <div class="verification-general__inputs-item"><!-- base-input --> 
-                      <div class="base-input"><input type="text" id="verificationName" name="verification_name" required="false" class="base-input__input"/>
-                        <label for="verificationName" class="base-input__label">Имя
-                        </label>
-                        <div class="base-input__errors">
-                          <div class="base-input__error-message">Текст ошибки
-                          </div>
-                        </div>
-                      </div><!--/ base-input --> 
-                    </div>
-                    <div class="verification-general__inputs-item"><!-- base-input --> 
-                      <div class="base-input"><input type="text" id="verificationPatronymic" name="verification_patronymic" required="false" class="base-input__input"/>
-                        <label for="verificationPatronymic" class="base-input__label">Отчество
-                        </label>
-                        <div class="base-input__errors">
-                          <div class="base-input__error-message">Текст ошибки
-                          </div>
-                        </div>
-                      </div><!--/ base-input --> 
-                    </div>
-                  </div>
-                </div>
-                <div class="verification-general__row">
-                  <div class="verification-general__radios-row">
-                    <div class="verification-general__radios-block">
-                      <div class="verification-general__radios-title">Инвестировать как
-                      </div>
-                      <div class="verification-general__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="verificationPrivate" name="verification-investment" value="private" checked="true" required="false" class="base-radio__input"/>
-                          <label for="verificationPrivate" class="base-radio__label">Физическое лицо
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
-                          </div>
-                        </div><!--/ base-radio --> 
-                      </div>
-                      <div class="verification-general__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="verificationLegal" name="verification-investment" value="legal" required="false" class="base-radio__input"/>
-                          <label for="verificationLegal" class="base-radio__label">Юридическое лицо
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
-                          </div>
-                        </div><!--/ base-radio --> 
-                      </div>
-                    </div>
-                    <div class="verification-general__radios-block">
-                      <div class="verification-general__radios-title">Являетесь ли вы гражданином РФ
-                      </div>
-                      <div class="verification-general__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="verificationRussian" name="verification-citizenship" value="russian" checked="true" required="false" class="base-radio__input"/>
-                          <label for="verificationRussian" class="base-radio__label">Да
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
-                          </div>
-                        </div><!--/ base-radio --> 
-                      </div>
-                      <div class="verification-general__radios-item"><!-- base-radio --> 
-                        <div class="base-radio"><input type="radio" id="verificationNotrussian" name="verification-citizenship" value="not_russian" required="false" class="base-radio__input"/>
-                          <label for="verificationNotrussian" class="base-radio__label">Нет
-                          </label>
-                          <div class="base-radio__errors">
-                            <div class="base-radio__error-message">Текст ошибки
-                            </div>
-                          </div>
-                        </div><!--/ base-radio --> 
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="verification-general__row"><!-- verification-continue --> 
-                  <div class="verification-continue">
-                    <button type="submit" class="verification-continue__next">Далее
-                    </button><a href="#" class="verification-continue__pass">Пропустить</a>
-                  </div><!--/ verification-continue --> 
-                </div>
-                <div class="verification-general__row">
-                  <div class="verification-general__checkbox-block"><!-- base-checkbox --> 
-                    <div class="base-checkbox"><input type="checkbox" id="verificationSuperman" name="verification-superman" value="private" checked="true" required="false" class="base-checkbox__input"/>
-                      <label for="verificationSuperman" class="base-checkbox__label">Я супермэн
-                      </label>
-                      <div class="base-checkbox__errors">
-                        <div class="base-checkbox__error-message">Текст ошибки
-                        </div>
-                      </div>
-                    </div><!--/ base-checkbox --> 
-                  </div>
-                  <div class="verification-general__checkbox-block"><!-- base-checkbox --> 
-                    <div class="base-checkbox"><input type="checkbox" id="verificationGrandpa" name="verification-grandpa" value="private" required="false" class="base-checkbox__input"/>
-                      <label for="verificationGrandpa" class="base-checkbox__label">Живу с дедушкой
-                      </label>
-                      <div class="base-checkbox__errors">
-                        <div class="base-checkbox__error-message">Текст ошибки
-                        </div>
-                      </div>
-                    </div><!--/ base-checkbox --> 
-                  </div>
-                </div>
-              </form>
-            </section><!--/ verification-general --> 
-          </main>
+        <div class="finances-content__block">
+          <div class="finances-content__table-wrapper">
+            <table class="finances-content__table">
+              <tr class="finances-content__table-header">
+                <th class="finances-content__title">Операция
+                </th>
+                <th class="finances-content__title">Сумма
+                </th>
+                <th class="finances-content__title"> 
+                </th>
+              </tr>
+              <tr class="finances-content__table-row">
+                <td class="finances-content__name">Договор купли-продажи паёв 
+                </td>
+                <td class="finances-content__sum finances-content__sum--positive">+100500 руб.
+                </td>
+                <td class="finances-content__action"><a href="#" class="finances-content__action-link finances-content__action-link--download">Скачать</a>
+                </td>
+              </tr>
+              <tr class="finances-content__table-row">
+                <td class="finances-content__name">Договор купли-продажи паёв 
+                </td>
+                <td class="finances-content__sum finances-content__sum--negative">-100500 руб.
+                </td>
+                <td class="finances-content__action"><a href="#" class="finances-content__action-link finances-content__action-link--download">Скачать</a>
+                </td>
+              </tr>
+              <tr class="finances-content__table-row">
+                <td class="finances-content__name">Договор купли-продажи паёв 
+                </td>
+                <td class="finances-content__sum finances-content__sum--positive">+200500 руб.
+                </td>
+                <td class="finances-content__action"><a href="#" class="finances-content__action-link finances-content__action-link--download">Скачать</a>
+                </td>
+              </tr>
+              <tr class="finances-content__table-row table-footer">
+                <td class="finances-content__name">Итого
+                </td>
+                <td class="finances-content__sum finances-content__sum--positive">+200500 руб.
+                </td>
+                <td>
+                </td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
-    </div><!--/ verification-wrapper --> <!-- main-footer --> 
+    </div><!--/ finances-content --> <!-- main-footer --> 
     <footer class="main-footer">
       <div class="inner">
         <div class="main-footer__wrapper">

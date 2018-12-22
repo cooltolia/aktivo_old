@@ -1,0 +1,30 @@
+mixin finances-content()
+    +b.finances-content
+        +inner
+            +e.block
+                +e.table-wrapper
+                    +e.TABLE.table
+                        +e.TR.table-header
+                            +e.TH.title Операция
+                            +e.TH.title Сумма
+                            +e.TH.title 
+                        +e.TR.table-row
+                            +e.TD.name Договор купли-продажи паёв 
+                            +e.TD.sum.--positive +100500 руб.
+                            +e.TD.action
+                                +e.A.action-link.--download(href='#') Скачать
+                        +e.TR.table-row
+                            +e.TD.name Договор купли-продажи паёв 
+                            +e.TD.sum.--negative -100500 руб.
+                            +e.TD.action
+                                +e.A.action-link.--download(href='#') Скачать
+                        +e.TR.table-row
+                            +e.TD.name Договор купли-продажи паёв 
+                            +e.TD.sum.--positive +200500 руб.
+                            +e.TD.action
+                                +e.A.action-link.--download(href='#') Скачать
+                        +e.TR.table-row.table-footer
+                            +e.TD.name Итого
+                            +e.TD.sum.--positive +200500 руб.
+                            +e.TD
+                   

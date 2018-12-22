@@ -12,8 +12,32 @@
 }
 
 .verification-nav__item {
+    position: relative;
     border-bottom: 1px solid #f9fbfd;
     padding-left: 50px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: 55;
+        width: 8px;
+        height: 8px;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--passed::after {
+        background-image: url('../images/layout/checked-green.svg');
+    }
+
+    &--failed::after {
+        background-image: url('../images/layout/cross-red.svg');
+    }
 }
 
 .verification-nav__link {

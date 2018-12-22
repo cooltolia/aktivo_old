@@ -52,6 +52,16 @@
     pointer-events: none;
 }
 
+.base-input.has-error {
+    .base-input__input {
+        border-bottom-color: #f52f4b;
+    }
+
+    .base-input__label {
+        color: #f52f4b;
+    }
+}
+
 .base-input__errors {
     display: none;
     position: relative;

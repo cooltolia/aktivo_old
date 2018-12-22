@@ -1680,6 +1680,12 @@ th {
           transform-origin: left center;
   pointer-events: none; }
 
+.base-input.has-error .base-input__input {
+  border-bottom-color: #f52f4b; }
+
+.base-input.has-error .base-input__label {
+  color: #f52f4b; }
+
 .base-input__errors {
   display: none;
   position: relative;
@@ -3155,6 +3161,132 @@ th {
     margin-bottom: 25px; }
   .feedback-content__textarea-input {
     font-size: 18px; } }
+
+.finances-content {
+  padding-bottom: 64px;
+  min-height: 70vh;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000; }
+
+.finances-content__block {
+  padding: 50px 32px 40px;
+  -webkit-box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
+          box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
+  background-color: #ffffff; }
+
+.finances-content__table {
+  width: 100%;
+  border-collapse: collapse; }
+
+.finances-content__table-row {
+  width: 100%; }
+  .finances-content__table-row:nth-child(2n) {
+    background-color: #f5f7f9; }
+  .finances-content__table-row td {
+    width: 20%; }
+    .finances-content__table-row td:first-child {
+      width: 60%; }
+  .finances-content__table-row.table-footer {
+    background-color: #fff; }
+    .finances-content__table-row.table-footer td {
+      padding-top: 24px;
+      font-weight: 700; }
+
+.finances-content__title {
+  padding: 12px 0;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 400; }
+  .finances-content__title:first-child {
+    padding: 12px 32px; }
+
+.finances-content__name {
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 400; }
+
+.finances-content__sum--positive {
+  color: #5fce67; }
+
+.finances-content__sum--negative {
+  color: #f52f4b; }
+
+.finances-content__action {
+  padding: 12px 0; }
+
+.finances-content__action-link {
+  position: relative;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #3c7bd8;
+  text-decoration: none;
+  -webkit-transition: color 300ms ease;
+  -moz-transition: color 300ms ease;
+  transition: color 300ms ease; }
+  .finances-content__action-link:hover, .finances-content__action-link:focus, .finances-content__action-link:active {
+    text-decoration: none;
+    color: #1d4c91; }
+  .finances-content__action-link::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 10px;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-35%);
+       -moz-transform: translateY(-35%);
+        -ms-transform: translateY(-35%);
+            transform: translateY(-35%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .finances-content__action-link--watch::before {
+    background-image: url("../images/layout/doc-watch.svg"); }
+  .finances-content__action-link--download::before {
+    background-image: url("../images/layout/doc-download.svg"); }
+
+@media (max-width: 768px) {
+  .finances-content__block {
+    padding: 30px 26px; }
+  .finances-content__table-row td:first-child {
+    width: 50%; }
+  .finances-content__title {
+    padding: 9px 0;
+    font-size: 12px; }
+    .finances-content__title:first-child {
+      padding-left: 20px; }
+  .finances-content__name {
+    padding: 9px 20px;
+    font-size: 14px; }
+  .finances-content__sum {
+    padding: 9px 0;
+    font-size: 14px; } }
+
+@media (max-width: 480px) {
+  .finances-content__block {
+    padding: 20px 15px; }
+  .finances-content__table-wrapper {
+    overflow-x: auto; }
+  .finances-content__table {
+    width: 480px; }
+  .finances-content__table-row td:last-child {
+    width: 20%; }
+  .finances-content__name {
+    padding: 6px 10px;
+    font-size: 12px; }
+  .finances-content__status {
+    padding: 6px 10px; }
+  .finances-content__status-label {
+    padding: 1px 5px 3px;
+    font-size: 10px; }
+  .finances-content__action {
+    padding: 6px 10px; }
+  .finances-content__action-link {
+    padding-left: 15px;
+    font-size: 10px; }
+    .finances-content__action-link::before {
+      width: 8px;
+      height: 6px; } }
 
 .footer-nav {
   font-family: "Segoe UI", Helvetica, Arial, sans-serif; }
@@ -9824,8 +9956,28 @@ body.modal-open {
   list-style: none; }
 
 .verification-nav__item {
+  position: relative;
   border-bottom: 1px solid #f9fbfd;
   padding-left: 50px; }
+  .verification-nav__item::after {
+    content: '';
+    position: absolute;
+    z-index: 55;
+    width: 8px;
+    height: 8px;
+    right: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .verification-nav__item--passed::after {
+    background-image: url("../images/layout/checked-green.svg"); }
+  .verification-nav__item--failed::after {
+    background-image: url("../images/layout/cross-red.svg"); }
 
 .verification-nav__link {
   position: relative;
@@ -10244,15 +10396,15 @@ body.modal-open {
       .verification-upload__form.has-data .add::before {
         width: 2px;
         height: 16px;
-        -webkit-transform: rotate(-45deg) translate(0, -50%);
-           -moz-transform: rotate(-45deg) translate(0, -50%);
-            -ms-transform: rotate(-45deg) translate(0, -50%);
-                transform: rotate(-45deg) translate(0, -50%); }
+        -webkit-transform: rotate(-45deg) translate(-150%, -50%);
+           -moz-transform: rotate(-45deg) translate(-150%, -50%);
+            -ms-transform: rotate(-45deg) translate(-150%, -50%);
+                transform: rotate(-45deg) translate(-150%, -50%); }
       .verification-upload__form.has-data .add::after {
-        -webkit-transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%);
-           -moz-transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%);
-            -ms-transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%);
-                transform: rotate(35deg) scaleY(0.85) translate(-190%, -70%); }
+        -webkit-transform: rotate(35deg) scaleY(0.85) translate(-250%, -60%);
+           -moz-transform: rotate(35deg) scaleY(0.85) translate(-250%, -60%);
+            -ms-transform: rotate(35deg) scaleY(0.85) translate(-250%, -60%);
+                transform: rotate(35deg) scaleY(0.85) translate(-250%, -60%); }
   .verification-upload__form .dz-preview {
     position: relative;
     width: 100%;

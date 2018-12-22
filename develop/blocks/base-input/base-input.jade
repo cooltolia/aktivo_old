@@ -1,5 +1,5 @@
 mixin base-input(type, id, name, label, required)
-    +b.base-input
+    +b.base-input&attributes(attributes)
         +e.INPUT.input(type='#{type}' id='#{id}' name='#{name}' required='#{required}')
         +e.LABEL.label(for='#{id}')= label
         +e.errors

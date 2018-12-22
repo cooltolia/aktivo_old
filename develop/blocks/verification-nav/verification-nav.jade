@@ -1,21 +1,21 @@
 mixin verification-nav
     +b.NAV.verification-nav
         +e.UL.list
-            +e.LI.item
+            +e.LI.item.--passed
                 +e.A.link.active(href='./general.html') 
                     span Основная информация
-            +e.LI.item
+            +e.LI.item.--passed
                 +e.A.link(href='./passport.html')
                     span Паспортные данные
-            +e.LI.item
+            +e.LI.item.--passed
                 +e.A.link(href='./bank-data.html') 
                     span Банковские реквизиты
-            +e.LI.item
+            +e.LI.item.--passed
                 +e.A.link(href='./additional.html') 
                     span Дополнительные сведения
-            +e.LI.item
+            +e.LI.item.--failed
                 +e.A.link(href='./fatca.html') 
                     span Требования FATCA
-            +e.LI.item
+            +e.LI.item.--failed
                 +e.A.link(href='./upload.html') 
                     span Загрузка документов

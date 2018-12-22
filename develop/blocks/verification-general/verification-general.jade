@@ -4,7 +4,7 @@ mixin verification-general()
             +e.row
                 +e.inputs-row
                     +e.inputs-item
-                        +base-input('text', 'verificationSurname', 'verification_surname', 'Фамилия', false)
+                        +base-input('text', 'verificationSurname', 'verification_surname', 'Фамилия', false)(class='has-error')
                     +e.inputs-item
                         +base-input('text', 'verificationName', 'verification_name', 'Имя', false)
                     +e.inputs-item
