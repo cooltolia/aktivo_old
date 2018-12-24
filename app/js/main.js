@@ -4076,7 +4076,7 @@ jQuery(document).ready(function ($) {
 
          function initNewDropZone(target) {
 
-             var dpopz = new Dropzone(target, {
+             var dropz = new Dropzone(target, {
 
                  url: "upload.php",
 
@@ -4094,79 +4094,65 @@ jQuery(document).ready(function ($) {
 
      
 
-             dpopz.on("removedfile", function (file) {
+     
 
-                 // var _this = this;
+             dropz.on("removedfile", function (file) {
 
-                 // console.log(_this);
-
-                 // _this.element.remove();
-
-                 $('.add').css('opacity', 1);
+                
 
              })
 
      
 
-             dpopz.on("totaluploadprogress", function (progress) {
+             // dropz.on("totaluploadprogress", function (progress) {
 
-                 var progr = document.querySelector(".progress .determinate");
+             //     var progr = document.querySelector(".progress .determinate");
 
-                 if (progr === undefined || progr === null) return;
-
-     
-
-                 progr.style.width = progress + "%";
-
-             });
+             //     if (progr === undefined || progr === null) return;
 
      
 
-             dpopz.on("dragenter", function () {
+             //     progr.style.width = progress + "%";
 
-                 $(".fileuploader").addClass("active");
-
-             });
+             // });
 
      
 
-             dpopz.on("dragleave", function () {
+             dropz.on('uploadprogress', function (file) {
 
-                 $(".fileuploader").removeClass("active");
+                 var $add = $(file.previewElement).siblings('.add');
 
-             });
-
-     
-
-             dpopz.on("drop", function () {
-
-                 $(".fileuploader").removeClass("active");
-
-             });
+                 var $progressBar = $(file.previewElement).find('.dz-upload');
 
      
 
-             dpopz.on('uploadprogress', function () {
+                 $progressBar.css('opacity', 1);
 
-                 $('.dz-upload').css('opacity', 1);
-
-                 $('.add').css('opacity', 0);
+                 // $add.css('opacity', 0);
 
              })
 
      
 
-             dpopz.on('success', function () {
+             dropz.on('success', function (file) {
 
-                 $('.dz-upload').css('opacity', 0);
+                 var $progressBar = $(file.previewElement).find('.dz-upload');
+
+     
+
+                 $progressBar.css('opacity', 0);
 
              })
 
      
 
-             dpopz.on('error', function () {
+             dropz.on('error', function (file) {
 
-                 $('.dz-upload').css('opacity', 0);
+                 var $progressBar = $(file.previewElement).find('.dz-upload');
+
+     
+
+                 $progressBar.css('opacity', 0);
 
              })
 
