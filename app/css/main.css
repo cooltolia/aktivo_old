@@ -1648,14 +1648,14 @@ th {
   transition: border-color 300ms ease; }
   .base-input__input:focus {
     border-bottom-color: #ffd729; }
-    .base-input__input:focus + .base-input__label {
+    .base-input__input:focus ~ .base-input__label {
       -webkit-transform: scale(0.5) translateY(-200%);
          -moz-transform: scale(0.5) translateY(-200%);
           -ms-transform: scale(0.5) translateY(-200%);
               transform: scale(0.5) translateY(-200%);
       color: #000;
       left: 0; }
-  .base-input__input.hasValue + .base-input__label {
+  .base-input__input.hasValue ~ .base-input__label {
     -webkit-transform: scale(0.5) translateY(-200%);
        -moz-transform: scale(0.5) translateY(-200%);
         -ms-transform: scale(0.5) translateY(-200%);
@@ -1695,7 +1695,7 @@ th {
 
 @media (max-width: 1240px) {
   .base-input__label {
-    top: 22px;
+    top: 16px;
     font-size: 18px; } }
 
 @media (max-width: 480px) {
@@ -10408,7 +10408,8 @@ body.modal-open {
   .verification-upload__form .dz-preview {
     position: relative;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background-color: #fff; }
   .verification-upload__form .dz-image {
     position: relative;
     width: 100%;

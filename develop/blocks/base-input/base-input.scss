@@ -22,7 +22,7 @@
     &:focus {
         border-bottom-color: $themecolor;
 
-        + .base-input__label {
+        ~ .base-input__label {
             transform: scale(0.5) translateY(-200%);
             color: #000;
             left: 0;
@@ -30,7 +30,7 @@
     }
 
     &.hasValue {
-        + .base-input__label {
+        ~ .base-input__label {
             transform: scale(0.5) translateY(-200%);
             color: #000;
             left: 0;
@@ -73,7 +73,7 @@
 
 @media (max-width: 1240px) {
     .base-input__label {
-        top: 22px;
+        top: 16px;
         
         font-size: 18px;
     }
