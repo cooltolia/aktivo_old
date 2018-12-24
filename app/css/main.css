@@ -1679,6 +1679,13 @@ th {
       -ms-transform-origin: left center;
           transform-origin: left center;
   pointer-events: none; }
+  .base-input__label.js-focus {
+    -webkit-transform: scale(0.5) translateY(-200%);
+       -moz-transform: scale(0.5) translateY(-200%);
+        -ms-transform: scale(0.5) translateY(-200%);
+            transform: scale(0.5) translateY(-200%);
+    color: #000;
+    left: 0; }
 
 .base-input.has-error .base-input__input {
   border-bottom-color: #f52f4b; }
@@ -1718,6 +1725,46 @@ th {
     font-size: 16px; }
   .base-input__errors {
     font-size: 12px; } }
+
+/* additional styles for input with autocomplete functionality */
+.base-input-autocomplete .tt-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  width: 100%;
+  max-height: 300px;
+  overflow: auto;
+  -webkit-box-shadow: 0 3px 20px 0 #f5f7f9;
+          box-shadow: 0 3px 20px 0 #f5f7f9;
+  background-color: #ffffff; }
+  .base-input-autocomplete .tt-dropdown-menu .simplebar-track {
+    width: 4px;
+    background-color: rgba(233, 233, 233, 0.582); }
+    .base-input-autocomplete .tt-dropdown-menu .simplebar-track.horizontal {
+      display: none; }
+  .base-input-autocomplete .tt-dropdown-menu .simplebar-scrollbar {
+    width: 4px;
+    right: 0; }
+    .base-input-autocomplete .tt-dropdown-menu .simplebar-scrollbar::before {
+      opacity: 1;
+      background-color: #ffd729; }
+
+.base-input-autocomplete .tt-suggestion {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-transition: color 300ms ease, background-color 300ms ease;
+  -moz-transition: color 300ms ease, background-color 300ms ease;
+  transition: color 300ms ease, background-color 300ms ease; }
+  .base-input-autocomplete .tt-suggestion:hover, .base-input-autocomplete .tt-suggestion:active, .base-input-autocomplete .tt-suggestion:focus {
+    color: #ffd729;
+    background-color: rgba(245, 247, 249, 0.2); }
+  .base-input-autocomplete .tt-suggestion .value {
+    font-weight: 600; }
+    .base-input-autocomplete .tt-suggestion .value + div {
+      font-size: 14px; }
 
 .base-radio {
   position: relative;
@@ -2570,8 +2617,7 @@ th {
 
 .documents-content__table {
   width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed; }
+  border-collapse: collapse; }
 
 .documents-content__table-row:nth-child(2n+1) {
   background-color: #f5f7f9; }
@@ -2607,19 +2653,28 @@ th {
     border-color: #848f9b;
     color: #fff; }
 
-.documents-content__action {
+.documents-content__actions {
   padding: 12px 30px;
-  padding-left: 100px; }
+  padding-left: 5%; }
+
+.documents-content__actions-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .documents-content__action-link {
   position: relative;
   padding-left: 20px;
+  margin-right: 25px;
   font-size: 12px;
   color: #3c7bd8;
   text-decoration: none;
   -webkit-transition: color 300ms ease;
   -moz-transition: color 300ms ease;
   transition: color 300ms ease; }
+  .documents-content__action-link:last-child {
+    margin-right: 0; }
   .documents-content__action-link:hover, .documents-content__action-link:focus, .documents-content__action-link:active {
     text-decoration: none;
     color: #1d4c91; }
@@ -2641,10 +2696,14 @@ th {
     background-image: url("../images/layout/doc-watch.svg"); }
   .documents-content__action-link--download::before {
     background-image: url("../images/layout/doc-download.svg"); }
+  .documents-content__action-link--pay::before {
+    background-image: url("../images/layout/doc-download.svg");
+    -webkit-transform: translateY(-35%) rotate(-90deg);
+       -moz-transform: translateY(-35%) rotate(-90deg);
+        -ms-transform: translateY(-35%) rotate(-90deg);
+            transform: translateY(-35%) rotate(-90deg); }
 
 @media (max-width: 1040px) {
-  .documents-content__action {
-    padding-left: 45px; }
   .documents-content__status {
     padding-left: 10px;
     padding-right: 10px; } }
@@ -2652,8 +2711,6 @@ th {
 @media (max-width: 768px) {
   .documents-content__block {
     padding: 30px 45px; }
-  .documents-content__table-row td:first-child {
-    width: 40%; }
   .documents-content__name {
     padding: 9px 20px;
     font-size: 14px; } }
@@ -2674,8 +2731,8 @@ th {
     overflow-x: auto; }
   .documents-content__table {
     width: 480px; }
-  .documents-content__table-row td:last-child {
-    width: 20%; }
+  .documents-content__table-row td:first-child {
+    width: 40%; }
   .documents-content__name {
     padding: 6px 10px;
     font-size: 12px; }
@@ -2684,8 +2741,8 @@ th {
   .documents-content__status-label {
     padding: 1px 5px 3px;
     font-size: 10px; }
-  .documents-content__action {
-    padding: 6px 10px; }
+  .documents-content__actions {
+    padding: 6px 5px; }
   .documents-content__action-link {
     padding-left: 15px;
     font-size: 10px; }
@@ -10182,40 +10239,6 @@ body.modal-open {
        -moz-transform: translateY(-50%) rotate(225deg);
         -ms-transform: translateY(-50%) rotate(225deg);
             transform: translateY(-50%) rotate(225deg); }
-  .verification-passport__inputs-item .tt-dropdown-menu {
-    width: 100%;
-    max-height: 300px;
-    overflow: auto;
-    -webkit-box-shadow: 0 3px 20px 0 #f5f7f9;
-            box-shadow: 0 3px 20px 0 #f5f7f9;
-    background-color: #ffffff; }
-    .verification-passport__inputs-item .tt-dropdown-menu .simplebar-track {
-      width: 4px;
-      background-color: rgba(233, 233, 233, 0.582); }
-      .verification-passport__inputs-item .tt-dropdown-menu .simplebar-track.horizontal {
-        display: none; }
-    .verification-passport__inputs-item .tt-dropdown-menu .simplebar-scrollbar {
-      width: 4px;
-      right: 0; }
-      .verification-passport__inputs-item .tt-dropdown-menu .simplebar-scrollbar::before {
-        opacity: 1;
-        background-color: #ffd729; }
-  .verification-passport__inputs-item .tt-suggestion {
-    position: relative;
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: #fff;
-    cursor: pointer;
-    -webkit-transition: color 300ms ease, background-color 300ms ease;
-    -moz-transition: color 300ms ease, background-color 300ms ease;
-    transition: color 300ms ease, background-color 300ms ease; }
-    .verification-passport__inputs-item .tt-suggestion:hover, .verification-passport__inputs-item .tt-suggestion:active, .verification-passport__inputs-item .tt-suggestion:focus {
-      color: #ffd729;
-      background-color: rgba(245, 247, 249, 0.2); }
-    .verification-passport__inputs-item .tt-suggestion .value {
-      font-weight: 600; }
-      .verification-passport__inputs-item .tt-suggestion .value + div {
-        font-size: 14px; }
 
 .verification-passport__toggler {
   position: relative;

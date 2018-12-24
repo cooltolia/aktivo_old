@@ -4,3 +4,36 @@ mixin base-input(type, id, name, label, required)
         +e.LABEL.label(for='#{id}')= label
         +e.errors
             +e.error-message Текст ошибки
+
+
+mixin base-input-autocomplete(type, id, name, label, required)
+    +b.base-input.base-input-autocomplete&attributes(attributes)
+        span
+            block
+            +e.INPUT.input(type='#{type}' id='#{id}' name='#{name}' required='#{required}')
+        +e.LABEL.label(for='#{id}')= label
+        +e.errors
+            +e.error-message Текст ошибки
+
+mixin test-address-autocomplete()
+    span.tt-dropdown-menu
+        .tt-dataset-regAddress_city
+            span.tt-suggestions(style='display: block;')
+                .tt-suggestion
+                    .value(style='white-space: normal;') г Санкт-Петербург
+                    div(style='white-space: normal;') г Санкт-Петербург 
+                .tt-suggestion
+                    .value(style='white-space: normal;') село Санки
+                    div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
+                .tt-suggestion
+                    .value(style='white-space: normal;') село Санки
+                    div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
+                .tt-suggestion
+                    .value(style='white-space: normal;') село Санки
+                    div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
+                .tt-suggestion
+                    .value(style='white-space: normal;') село Санки
+                    div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
+                .tt-suggestion
+                    .value(style='white-space: normal;') село Санки
+                    div(style='white-space: normal;') Нижегородская обл Лукояновский р-н

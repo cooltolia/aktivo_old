@@ -20,27 +20,6 @@ mixin verification-passport()
                         +base-input('text', 'passportBirthDate', 'passport_birth-date', 'Дата рождения', false)
                     +e.inputs-item.--long.--address.twitter-typeahead
                         +base-input('text', 'passportBirthAddress', 'passport_birth-address', 'Место рождения', false)
-                        span.tt-dropdown-menu(style='position: absolute; top: 100%; left: 0px; z-index: 100; display: block; right: auto;')
-                            .tt-dataset-regAddress_city
-                                span.tt-suggestions(style='display: block;')
-                                    .tt-suggestion
-                                        .value(style='white-space: normal;') г Санкт-Петербург
-                                        div(style='white-space: normal;') г Санкт-Петербург 
-                                    .tt-suggestion
-                                        .value(style='white-space: normal;') село Санки
-                                        div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
-                                    .tt-suggestion
-                                        .value(style='white-space: normal;') село Санки
-                                        div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
-                                    .tt-suggestion
-                                        .value(style='white-space: normal;') село Санки
-                                        div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
-                                    .tt-suggestion
-                                        .value(style='white-space: normal;') село Санки
-                                        div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
-                                    .tt-suggestion
-                                        .value(style='white-space: normal;') село Санки
-                                        div(style='white-space: normal;') Нижегородская обл Лукояновский р-н
             
             +e.row
                 +e.row-title Адрес регистрации
@@ -48,7 +27,8 @@ mixin verification-passport()
                     +e.inputs-item
                         +base-input('text', 'addressIndex', 'address_index', 'Индекс', false)
                     +e.inputs-item
-                        +base-input('text', 'addressCity', 'address_city', 'Город', false)
+                        +base-input-autocomplete('text', 'addressCity', 'address_city', 'Город', false)
+                            +test-address-autocomplete
                     +e.inputs-item
                         +base-input('text', 'addressStreet', 'address_street', 'Улица', false)
                 +e.inputs-row.--four
