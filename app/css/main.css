@@ -4424,9 +4424,9 @@ th {
       -webkit-animation: dollaranimation 10s linear infinite;
          -moz-animation: dollaranimation 10s linear infinite;
               animation: dollaranimation 10s linear infinite;
-      -webkit-animation-delay: 1s;
-         -moz-animation-delay: 1s;
-              animation-delay: 1s; }
+      -webkit-animation-delay: 5s;
+         -moz-animation-delay: 5s;
+              animation-delay: 5s; }
     .liberty-terms__bg .dollar:nth-child(3) {
       width: 50px;
       height: 50px;
@@ -4466,9 +4466,9 @@ th {
       -webkit-animation: dollaranimation 10s linear infinite;
          -moz-animation: dollaranimation 10s linear infinite;
               animation: dollaranimation 10s linear infinite;
-      -webkit-animation-delay: 1s;
-         -moz-animation-delay: 1s;
-              animation-delay: 1s; }
+      -webkit-animation-delay: 8s;
+         -moz-animation-delay: 8s;
+              animation-delay: 8s; }
     .liberty-terms__bg .dollar:nth-child(6) {
       width: 100px;
       height: 100px;
@@ -4494,15 +4494,15 @@ th {
       -webkit-animation: dollaranimation 10s linear infinite;
          -moz-animation: dollaranimation 10s linear infinite;
               animation: dollaranimation 10s linear infinite;
-      -webkit-animation-delay: 0.5s;
-         -moz-animation-delay: 0.5s;
-              animation-delay: 0.5s; }
+      -webkit-animation-delay: 2.5s;
+         -moz-animation-delay: 2.5s;
+              animation-delay: 2.5s; }
 
 @-webkit-keyframes dollaranimation {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    top: -10%; }
+    top: -25%; }
   to {
     top: 100%;
     -webkit-transform: rotate(360deg);
@@ -4512,7 +4512,7 @@ th {
   from {
     -moz-transform: rotate(0deg);
          transform: rotate(0deg);
-    top: -10%; }
+    top: -25%; }
   to {
     top: 100%;
     -moz-transform: rotate(360deg);
@@ -4523,7 +4523,7 @@ th {
     -webkit-transform: rotate(0deg);
        -moz-transform: rotate(0deg);
             transform: rotate(0deg);
-    top: -10%; }
+    top: -25%; }
   to {
     top: 100%;
     -webkit-transform: rotate(360deg);

@@ -43,7 +43,7 @@
             transform-origin: center;
 
             animation: dollaranimation 10s linear infinite;
-            animation-delay: 1s 
+            animation-delay: 5s 
         }
 
         &:nth-child(3) {
@@ -73,7 +73,7 @@
             transform-origin: center;
 
             animation: dollaranimation 10s linear infinite;
-            animation-delay: 1s 
+            animation-delay: 8s 
         }
         &:nth-child(6) {
             width: 100px;
@@ -92,7 +92,7 @@
             transform-origin: center;
 
             animation: dollaranimation 10s linear infinite;
-            animation-delay: 0.5s 
+            animation-delay: 2.5s 
         }
     }
 }
@@ -100,8 +100,7 @@
 @keyframes dollaranimation {
     from {
         transform: rotate(0deg);
-        top: -10%;
-        
+        top: -25%;
     }
 
     to {
