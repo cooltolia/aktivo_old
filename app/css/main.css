@@ -1627,7 +1627,8 @@ th {
     font-size: 12px; }
   .base-checkbox__label {
     min-width: 45px;
-    padding: 7px 12px; } }
+    padding: 7px 12px;
+    padding-left: 27px; } }
 
 .base-input {
   position: relative;
@@ -9788,6 +9789,71 @@ body.modal-open {
   .vacancies__subitem {
     font-size: 14px; }
   .vacancies__appeal {
+    font-size: 14px; } }
+
+.verification-additional {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #000; }
+
+.verification-additional__row {
+  margin-bottom: 72px; }
+  .verification-additional__row:last-child {
+    margin-bottom: 0; }
+
+.verification-additional__row-title {
+  margin-bottom: 38px;
+  font-size: 16px;
+  font-weight: 700; }
+
+.verification-additional__radios-row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 56px; }
+
+.verification-additional__radios-block {
+  -webkit-box-flex: 0;
+     -moz-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin-right: 36px; }
+  .verification-additional__radios-block:last-child {
+    margin-right: 0; }
+
+.verification-additional__checkbox-block {
+  margin-bottom: 10px; }
+  .verification-additional__checkbox-block:last-child {
+    margin-bottom: 0; }
+
+.verification-additional__radios-title {
+  margin-bottom: 16px;
+  font-size: 16px; }
+
+.verification-additional__radios-item {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 7px; }
+
+@media (max-width: 480px) {
+  .verification-additional__row {
+    margin-bottom: 42px; }
+  .verification-additional__radios-row {
+    display: block;
+    margin-bottom: 36px; }
+  .verification-additional__radios-block {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px; }
+  .verification-additional__radios-title {
     font-size: 14px; } }
 
 .verification-continue {

@@ -1,2 +1,43 @@
 mixin verification-additional()
     +b.SECTION.verification-additional
+        +e.FORM.form(action='#' method='post')
+            +e.row
+                +e.row-title Дополнительная информация
+                +e.checkbox-row
+                    +e.checkbox-block
+                        +base-checkbox('verificationSuperman', 'verification-superman','private', 'Я супермэн', true, false)
+                    +e.checkbox-block
+                        +base-checkbox('verificationGrandpa', 'verification-grandpa','private', 'Живу с дедушкой', false, false)
+                    +e.checkbox-block
+                        +base-checkbox('verificationSuperman1', 'verification-superman','private', 'Я супермэн', true, false)
+                    +e.checkbox-block
+                        +base-checkbox('verificationGrandpa1', 'verification-grandpa','private', 'Живу с дедушкой', false, false)
+            +e.row
+                +e.radios-row
+                    +e.radios-block
+                        +e.radios-title
+                            | Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                        +e.radios-item
+                            +base-radio('fatca1', 'fatca-citizenship','true', 'Да', true, false)
+                        +e.radios-item
+                            +base-radio('fatca2', 'fatca-citizenship','false', 'Нет', false, false)
+            +e.row
+                +e.radios-row
+                    +e.radios-block
+                        +e.radios-title
+                            | Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                        +e.radios-item
+                            +base-radio('fatca11', 'fatca-citizenship','true', 'Да', true, false)
+                        +e.radios-item
+                            +base-radio('fatca22', 'fatca-citizenship','false', 'Нет', false, false)
+            +e.row
+                +e.radios-row
+                    +e.radios-block
+                        +e.radios-title
+                            | Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                        +e.radios-item
+                            +base-radio('fatca111', 'fatca-citizenship','true', 'Да', true, false)
+                        +e.radios-item
+                            +base-radio('fatca222', 'fatca-citizenship','false', 'Нет', false, false)
+            +e.row
+                +verification-continue
