@@ -96,55 +96,137 @@
           </div>
         </div>
       </div>
-    </header><!--/ main-header --> <!-- account-nav --> 
-    <nav class="account-nav">
+    </header><!--/ main-header --> <!-- mobile-nav --> 
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item"><a href="/realty" class="mobile-nav__link">Наши объекты</a>
+        </li>
+        <li class="mobile-nav__item"><a href="/howitworks" class="mobile-nav__link">Клиентам</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/howitworks" class="mobile-nav__sublink">Как это работает</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/security" class="mobile-nav__sublink">Безопасность</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/faq" class="mobile-nav__sublink">FAQ</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/howitworks/forowners" class="mobile-nav__sublink">Продать недвижимость</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/about/story" class="mobile-nav__link">О нас</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/about/story" class="mobile-nav__sublink">О нас</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="about/vacancies" class="mobile-nav__sublink">Карьера</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/about/contacts" class="mobile-nav__sublink">Контакты</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/blog" class="mobile-nav__link">Блог</a>
+          <ul class="mobile-nav__submenu">
+            <li class="mobile-nav__subitem"><a href="/blog/trends" class="mobile-nav__sublink">Тренды рынка</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/summary" class="mobile-nav__sublink">Ликбез</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/news" class="mobile-nav__sublink">Новости компании</a>
+            </li>
+            <li class="mobile-nav__subitem"><a href="/blog/press" class="mobile-nav__sublink">СМИ о нас</a>
+            </li>
+          </ul>
+        </li>
+        <li class="mobile-nav__item"><a href="/club" class="mobile-nav__link">Клуб Liberty</a>
+        </li>
+      </ul>
+    </nav><!--/ mobile-nav --> 
+    <div class="inner"><!-- breadcrumbs --> 
+      <ol class="breadcrumbs">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link">Главная</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--active">Объекты
+        </li>
+      </ol><!--/ breadcrumbs --> 
+    </div><!-- vacancies --> 
+    <section class="vacancies">
       <div class="inner">
-        <ul class="account-nav__list">
-          <li class="account-nav__item"><a href="/realty" title="Недвижимость" class="account-nav__link">Недвижимость<span class="account-nav__icon account-nav__icon--property"><img src="/images/layout/property.svg" alt=""/></span></a>
-          </li>
-          <li class="account-nav__item active"><a href="/monitoring.html" title="Мониторинг" class="account-nav__link">Мониторинг<span class="account-nav__icon account-nav__icon--monitoring"><img src="/images/layout/monitoring.svg" alt=""/></span></a>
-          </li>
-          <li class="account-nav__item"><a href="/documents.html" title="Документы" class="account-nav__link">Документы<span class="account-nav__icon account-nav__icon--documents"><img src="/images/layout/documents.svg" alt=""/></span></a>
-          </li>
-          <li class="account-nav__item"><a href="/finances.html" title="Финансы" class="account-nav__link">Финансы<span class="account-nav__icon account-nav__icon--finances"><img src="/images/layout/finances.svg" alt=""/></span></a>
-          </li>
-          <li class="account-nav__item"><a href="/verification.html" title="Верификация" class="account-nav__link">Верификация<span class="account-nav__icon account-nav__icon--questionary"><img src="/images/layout/questionary.svg" alt=""/></span></a>
-          </li>
-          <li class="account-nav__item"><a href="/settings.html" title="Настройки" class="account-nav__link">Настройки<span class="account-nav__icon account-nav__icon--settings"><img src="/images/layout/settings.svg" alt=""/></span></a>
-          </li>
-          <li class="account-nav__item"><a href="/feedback.html" class="account-nav__link">Отзыв</a>
-          </li>
-        </ul>
-      </div>
-    </nav><!--/ account-nav --> <!-- verification-wrapper --> 
-    <div class="verification-wrapper">
-      <div class="inner">
-        <div class="verification-wrapper__inner">
-          <aside class="verification-wrapper__aside"><!-- verification-nav --> 
-            <nav class="verification-nav">
-              <ul class="verification-nav__list">
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./general.html" class="verification-nav__link active"> <span>Основная информация</span></a>
+        <h1 class="vacancies__heading">Карьера в Активо
+        </h1>
+        <div class="vacancies__list">
+          <div class="vacancies__item">
+            <div class="vacancies__title active">Менеджер по работе с клиентами
+            </div>
+            <div class="vacancies__description active">
+              <div class="vacancies__subtitle">Обязанности:
+              </div>
+              <ul class="vacancies__sublist">
+                <li class="vacancies__subitem">Обработка входящего потока обращений клиентов: телефон, почта, обращения через CRM;
                 </li>
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./passport.html" class="verification-nav__link"><span>Паспортные данные</span></a>
+                <li class="vacancies__subitem">Планирование продаж;
                 </li>
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./bank-data.html" class="verification-nav__link"> <span>Банковские реквизиты</span></a>
+                <li class="vacancies__subitem">Полное сопровождение клиентов;
                 </li>
-                <li class="verification-nav__item verification-nav__item--passed"><a href="./additional.html" class="verification-nav__link"> <span>Дополнительные сведения</span></a>
-                </li>
-                <li class="verification-nav__item verification-nav__item--failed"><a href="./fatca.html" class="verification-nav__link"> <span>Требования FATCA</span></a>
-                </li>
-                <li class="verification-nav__item verification-nav__item--failed"><a href="./upload.html" class="verification-nav__link"> <span>Загрузка документов</span></a>
+                <li class="vacancies__subitem">Поиск потенциальных клиентов, ведение переговоров.
                 </li>
               </ul>
-            </nav><!--/ verification-nav --> 
-          </aside>
-          <main class="verification-wrapper__main" role="main">
-            <div class="SECTIONverification-bank-data">
+              <div class="vacancies__subtitle">Требования:
+              </div>
+              <ul class="vacancies__sublist">
+                <li class="vacancies__subitem">Отличные коммуникативные навыки, умение выстраивать взаимовыгодные отношения с клиентом;
+                </li>
+                <li class="vacancies__subitem">Умение планировать;
+                </li>
+                <li class="vacancies__subitem">Клиентоориентированность, стрессоустойчивость;
+                </li>
+                <li class="vacancies__subitem">Активная жизненная позиция;
+                </li>
+                <li class="vacancies__subitem">Желание работать и зарабатывать;
+                </li>
+                <li class="vacancies__subitem">Опыт работы в продажах не менее года (приветствуется в сфере недвижимости или инвестиционных продуктов).
+                </li>
+              </ul>
+              <div class="vacancies__subtitle">Условия:
+              </div>
+              <ul class="vacancies__sublist">
+                <li class="vacancies__subitem">Перспективы роста и развития, как профессионального, так и финансового.
+                </li>
+                <li class="vacancies__subitem">Профессиональное развитие сотрудника. Обучение технике продаж, переговорам, работе с возражениями клиентов.
+                </li>
+                <li class="vacancies__subitem">Перспектива быстрого карьерного роста;
+                </li>
+                <li class="vacancies__subitem">График работы: пн-пт, с 10.00 до 19.00.
+                </li>
+              </ul>
+              <div class="vacancies__appeal">Присылайте резюме на почту <a href='mailto:hr@aktivo.ru'>hr@aktivo.ru</a><br> с указанием в теме «Менеджер по работе с клиентами»
+              </div>
             </div>
-          </main>
+          </div>
+          <div class="vacancies__item">
+            <div class="vacancies__title">Помощник юриста
+            </div>
+            <div class="vacancies__description">
+              <div class="vacancies__subtitle">Требования:
+              </div>
+              <ul class="vacancies__sublist">
+                <li class="vacancies__subitem">Отличные коммуникативные навыки, умение выстраивать взаимовыгодные отношения с клиентом;
+                </li>
+                <li class="vacancies__subitem">Умение планировать;
+                </li>
+                <li class="vacancies__subitem">Клиентоориентированность, стрессоустойчивость;
+                </li>
+                <li class="vacancies__subitem">Активная жизненная позиция;
+                </li>
+                <li class="vacancies__subitem">Желание работать и зарабатывать;
+                </li>
+                <li class="vacancies__subitem">Опыт работы в продажах не менее года (приветствуется в сфере недвижимости или инвестиционных продуктов).
+                </li>
+              </ul>
+              <div class="vacancies__appeal">Присылайте резюме на почту <a href='mailto:hr@aktivo.ru'>hr@aktivo.ru</a><br> с указанием в теме «Менеджер по работе с клиентами»
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div><!--/ verification-wrapper --> <!-- main-footer --> 
+    </section><!--/ vacancies --> <!-- main-footer --> 
     <footer class="main-footer">
       <div class="inner">
         <div class="main-footer__wrapper">

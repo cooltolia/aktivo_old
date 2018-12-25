@@ -123,17 +123,17 @@
           <aside class="verification-wrapper__aside"><!-- verification-nav --> 
             <nav class="verification-nav">
               <ul class="verification-nav__list">
-                <li class="verification-nav__item"><a href="./general.html" class="verification-nav__link active"> <span>Основная информация</span></a>
+                <li class="verification-nav__item verification-nav__item--passed"><a href="./general.html" class="verification-nav__link active"> <span>Основная информация</span></a>
                 </li>
-                <li class="verification-nav__item"><a href="./passport.html" class="verification-nav__link"><span>Паспортные данные</span></a>
+                <li class="verification-nav__item verification-nav__item--passed"><a href="./passport.html" class="verification-nav__link"><span>Паспортные данные</span></a>
                 </li>
-                <li class="verification-nav__item"><a href="./bank-data.html" class="verification-nav__link"> <span>Банковские реквизиты</span></a>
+                <li class="verification-nav__item verification-nav__item--passed"><a href="./bank-data.html" class="verification-nav__link"> <span>Банковские реквизиты</span></a>
                 </li>
-                <li class="verification-nav__item"><a href="./additional.html" class="verification-nav__link"> <span>Дополнительные сведения</span></a>
+                <li class="verification-nav__item verification-nav__item--passed"><a href="./additional.html" class="verification-nav__link"> <span>Дополнительные сведения</span></a>
                 </li>
-                <li class="verification-nav__item"><a href="./fatca.html" class="verification-nav__link"> <span>Требования FATCA</span></a>
+                <li class="verification-nav__item verification-nav__item--failed"><a href="./fatca.html" class="verification-nav__link"> <span>Требования FATCA</span></a>
                 </li>
-                <li class="verification-nav__item"><a href="./upload.html" class="verification-nav__link"> <span>Загрузка документов</span></a>
+                <li class="verification-nav__item verification-nav__item--failed"><a href="./upload.html" class="verification-nav__link"> <span>Загрузка документов</span></a>
                 </li>
               </ul>
             </nav><!--/ verification-nav --> 
@@ -209,7 +209,7 @@
                         </div>
                       </div><!--/ base-input --> 
                     </div>
-                    <div class="verification-passport__inputs-item verification-passport__inputs-item--long"><!-- base-input --> 
+                    <div class="verification-passport__inputs-item verification-passport__inputs-item--long verification-passport__inputs-item--address twitter-typeahead"><!-- base-input --> 
                       <div class="base-input"><input type="text" id="passportBirthAddress" name="passport_birth-address" required="false" class="base-input__input"/>
                         <label for="passportBirthAddress" class="base-input__label">Место рождения
                         </label>
@@ -236,7 +236,32 @@
                       </div><!--/ base-input --> 
                     </div>
                     <div class="verification-passport__inputs-item"><!-- base-input --> 
-                      <div class="base-input"><input type="text" id="addressCity" name="address_city" required="false" class="base-input__input"/>
+                      <div class="base-input base-input-autocomplete"><span><span class="tt-dropdown-menu">
+                            <div class="tt-dataset-regAddress_city"><span style="display: block;" class="tt-suggestions">
+                                <div class="tt-suggestion">
+                                  <div style="white-space: normal;" class="value">г Санкт-Петербург</div>
+                                  <div style="white-space: normal;">г Санкт-Петербург </div>
+                                </div>
+                                <div class="tt-suggestion">
+                                  <div style="white-space: normal;" class="value">село Санки</div>
+                                  <div style="white-space: normal;">Нижегородская обл Лукояновский р-н</div>
+                                </div>
+                                <div class="tt-suggestion">
+                                  <div style="white-space: normal;" class="value">село Санки</div>
+                                  <div style="white-space: normal;">Нижегородская обл Лукояновский р-н</div>
+                                </div>
+                                <div class="tt-suggestion">
+                                  <div style="white-space: normal;" class="value">село Санки</div>
+                                  <div style="white-space: normal;">Нижегородская обл Лукояновский р-н</div>
+                                </div>
+                                <div class="tt-suggestion">
+                                  <div style="white-space: normal;" class="value">село Санки</div>
+                                  <div style="white-space: normal;">Нижегородская обл Лукояновский р-н</div>
+                                </div>
+                                <div class="tt-suggestion">
+                                  <div style="white-space: normal;" class="value">село Санки</div>
+                                  <div style="white-space: normal;">Нижегородская обл Лукояновский р-н</div>
+                                </div></span></div></span><input type="text" id="addressCity" name="address_city" required="false" class="base-input__input"/></span>
                         <label for="addressCity" class="base-input__label">Город
                         </label>
                         <div class="base-input__errors">

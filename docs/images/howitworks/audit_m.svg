@@ -1,71 +1,113 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 374.7 471" style="enable-background:new 0 0 374.7 471;" xml:space="preserve">
-<style type="text/css">
-    @font-face {
-        font-family: 'Segoe UI';
-        src: url('../../fonts/SegoeUI/Regular/font.woff');
-        font-weight: 400;
-    }
-    @font-face {
-        font-family: 'Segoe UI';
-        src: url('../../fonts/SegoeUI/Bold/font.woff');
+<svg xmlns="http://www.w3.org/2000/svg" width="374.7" height="471" viewBox="110 0 374.7 471">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #222c36;
+      }
+
+      .cls-2, .cls-5, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 16px;
+      }
+
+      .cls-2, .cls-5, .cls-8 {
+        font-family: SegoeUI-Bold, Segoe UI;
         font-weight: 700;
-    }
-	.st0{fill:#222C36;}
-	.st1{fill:#FFFFFF;}
-	.st2{font-family:'Segoe UI'; font-weigt: 700}
-	.st3{font-size:16px;}
-	.st4{fill:#848F9B;}
-	.st5{fill:#181818;}
-	.st6{font-size:24px;}
-	.st7{font-family:'Segoe UI';}
-	.st8{font-size:14px;}
-	.st9{fill:#FFD729;}
-</style>
-<rect id="Rectangle_212" y="0" class="st0" width="374.7" height="88"/>
-<rect id="Rectangle_213" y="96" class="st0" width="374.7" height="88"/>
-<rect id="Rectangle_214" y="192" class="st0" width="374.7" height="88"/>
-<rect id="Rectangle_215" y="287" class="st0" width="374.7" height="88"/>
-<rect id="Rectangle_216" y="383" class="st0" width="374.7" height="88"/>
-<text transform="matrix(1 0 0 1 25 39)" class="st1 st2 st3">Рассмотрение </text>
-<text transform="matrix(1 0 0 1 25 63)" class="st1 st2 st3">заявок</text>
-<text transform="matrix(1 0 0 1 25 135)" class="st1 st2 st3">Базовая </text>
-<text transform="matrix(1 0 0 1 25 159)" class="st1 st2 st3">проверка</text>
-<text transform="matrix(1 0 0 1 25 231)" class="st1 st2 st3">Тщательный </text>
-<text transform="matrix(1 0 0 1 25 255)" class="st1 st2 st3">аудит</text>
-<text transform="matrix(1 0 0 1 25 338)" class="st1 st2 st3">Одобрение</text>
-<text transform="matrix(1 0 0 1 25 434)" class="st1 st2 st3">Выбор клиента</text>
-<polygon class="st4" points="374.7,373.1 211,287 233.3,374.6 374.7,466 "/>
-<polygon class="st4" points="374.7,167.6 163,97.2 185.1,184.1 374.7,256.5 "/>
-<polygon class="st4" points="374.7,267.2 187,191.5 209.4,279.6 374.7,358.9 "/>
-<polygon class="st4" points="374.7,69.2 138,0 160.6,89 374.7,158.6 "/>
-<polygon class="st5" points="374.7,469 374.7,385 238.6,385 259.6,469 "/>
-<polygon class="st5" points="374.7,278 374.7,194 189.6,194 210.9,278 "/>
-<polygon class="st5" points="374.7,373 374.7,289 213.6,289 234.8,373 "/>
-<polygon class="st5" points="374.7,86 374.7,2 140.6,2 162.2,86 "/>
-<polygon class="st5" points="374.7,182 374.7,98 165.6,98 187.4,182 "/>
-<text transform="matrix(1 0 0 1 286.887 48)" class="st1 st2 st6">100%</text>
-<text transform="matrix(1 0 0 1 293.789 146)" class="st1 st2 st6">50%</text>
-<text transform="matrix(1 0 0 1 293.789 241)" class="st1 st2 st6">25%</text>
-<text transform="matrix(1 0 0 1 300.691 336)" class="st1 st2 st6">4%</text>
-<text transform="matrix(1 0 0 1 300.691 433)" class="st1 st2 st6">2%</text>
-<text transform="matrix(1 0 0 1 288 64)" class="st1 st7 st8">объектов</text>
-<text transform="matrix(1 0 0 1 288 162)" class="st1 st7 st8">объектов</text>
-<text transform="matrix(1 0 0 1 288 258)" class="st1 st7 st8">объектов</text>
-<text transform="matrix(1 0 0 1 288 351)" class="st1 st7 st8">объектов</text>
-<text transform="matrix(1 0 0 1 288 448)" class="st1 st7 st8">объектов</text>
-<path id="Path_255" class="st9" d="M314.8,119c-11.6,0-21.8-10-21.8-21.5s10.2-23.4,21.8-23.4c11.6,0,28.2,5.6,28.2,17.1
-	S326.5,119,314.8,119z"/>
-<path id="Path_256" class="st9" d="M314.8,217c-11.6,0-21.8-10-21.8-21.5s10.2-23.4,21.8-23.4c11.6,0,28.2,5.6,28.2,17.1
-	S326.5,217,314.8,217z"/>
-<path id="Path_257" class="st9" d="M314.8,309c-11.6,0-21.8-10-21.8-21.5s10.2-23.4,21.8-23.4c11.6,0,28.2,5.6,28.2,17.1
-	S326.5,309,314.8,309z"/>
-<path id="Path_258" class="st9" d="M314.8,407c-11.6,0-21.8-10-21.8-21.5s10.2-23.4,21.8-23.4c11.6,0,28.2,5.6,28.2,17.1
-	S326.5,407,314.8,407z"/>
-<text transform="matrix(1 0 0 1 298 102)" class="st2 st8">-50%</text>
-<text transform="matrix(1 0 0 1 298 200)" class="st2 st8">-50%</text>
-<text transform="matrix(1 0 0 1 298 291)" class="st2 st8">-92%</text>
-<text transform="matrix(1 0 0 1 298 389)" class="st2 st8">-50%</text>
+      }
+
+      .cls-10, .cls-3 {
+        fill: #848f9b;
+      }
+
+      .cls-4 {
+        fill: #181818;
+      }
+
+      .cls-5 {
+        font-size: 24px;
+      }
+
+      .cls-6, .cls-8 {
+        font-size: 14px;
+      }
+
+      .cls-6 {
+        font-family: SegoeUI, Segoe UI;
+      }
+
+      .cls-7 {
+        fill: #ffd729;
+      }
+
+      .cls-10, .cls-9 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_341" data-name="Group 341" transform="translate(112 -1019)">
+    <rect id="Rectangle_212" data-name="Rectangle 212" class="cls-1" width="482.697" height="88" transform="translate(-112 1019)"/>
+    <rect id="Rectangle_213" data-name="Rectangle 213" class="cls-1" width="523" height="88" transform="translate(-112 1115)"/>
+    <rect id="Rectangle_214" data-name="Rectangle 214" class="cls-1" width="482.697" height="88" transform="translate(-112 1211)"/>
+    <rect id="Rectangle_215" data-name="Rectangle 215" class="cls-1" width="482.697" height="88" transform="translate(-112 1306)"/>
+    <rect id="Rectangle_216" data-name="Rectangle 216" class="cls-1" width="482.697" height="88" transform="translate(-112 1402)"/>
+    <text id="Рассмотрение_заявок" data-name="Рассмотрение 
+заявок" class="cls-2" transform="translate(21 1058)"><tspan x="0" y="0">Рассмотрение </tspan><tspan x="0" y="24">заявок</tspan></text>
+    <text id="Базовая_проверка" data-name="Базовая 
+проверка" class="cls-2" transform="translate(21 1154)"><tspan x="0" y="0">Базовая </tspan><tspan x="0" y="24">проверка</tspan></text>
+    <text id="Тщательный_аудит" data-name="Тщательный 
+аудит" class="cls-2" transform="translate(21 1250)"><tspan x="0" y="0">Тщательный </tspan><tspan x="0" y="24">аудит</tspan></text>
+    <text id="Одобрение" class="cls-2" transform="translate(21 1357)"><tspan x="0" y="0">Одобрение</tspan></text>
+    <text id="Выбор_клиента" data-name="Выбор клиента" class="cls-2" transform="translate(21 1453)"><tspan x="0" y="0">Выбор клиента</tspan></text>
+    <g id="Group_293" data-name="Group 293" transform="translate(-10)">
+      <g id="Group_284" data-name="Group 284" transform="translate(-444 -198)">
+        <path id="Path_160" data-name="Path 160" class="cls-3" d="M261.84,387.271l-20.8,82.4L95.516,375.695,73.24,288.079Z" transform="translate(587.76 1215.929)"/>
+        <path id="Path_159" data-name="Path 159" class="cls-3" d="M286.782,288.532l-21.6,85.2L71.374,280.739,48.982,192.664Z" transform="translate(588.018 1215.868)"/>
+        <path id="Path_158" data-name="Path 158" class="cls-3" d="M310.757,193.179l-21.6,84.4L47.058,185.1l-22.1-86.928Z" transform="translate(588.042 1216.021)"/>
+        <path id="Path_157" data-name="Path 157" class="cls-3" d="M0,0,333.6,97.6l-21.2,85.6L22.625,88.992Z" transform="translate(588 1217)"/>
+      </g>
+      <g id="Group_285" data-name="Group 285" transform="translate(-444 -198)">
+        <g id="Path_152" data-name="Path 152" class="cls-4" transform="translate(588.035 1215.204)">
+          <path class="cls-9" d="M 239.2206878662109 471.796142578125 L 120.781120300293 471.796142578125 L 99.31858062744141 385.796142578125 L 260.8872985839844 385.796142578125 L 239.2206878662109 471.796142578125 Z"/>
+          <path class="cls-10" d="M 100.5988159179688 386.796142578125 L 121.5621948242188 470.796142578125 L 238.4413757324219 470.796142578125 L 259.6040954589844 386.796142578125 L 100.5988159179688 386.796142578125 M 98.038330078125 384.796142578125 L 262.1704711914063 384.796142578125 L 239.9999847412109 472.796142578125 L 119.9999847412109 472.796142578125 L 98.038330078125 384.796142578125 Z"/>
+        </g>
+        <g id="Path_153" data-name="Path 153" class="cls-4" transform="translate(588 1217)">
+          <path class="cls-9" d="M 336.8532409667969 87 L 23.40055084228516 87 L 1.289622664451599 1 L 358.7139892578125 1 L 336.8532409667969 87 Z"/>
+          <path class="cls-10" d="M 2.579254150390625 2 L 24.17596435546875 86 L 336.0756530761719 86 L 357.4280090332031 2 L 2.579254150390625 2 M 0 0 L 360 0 L 337.630859375 88 L 22.6251220703125 88 L 0 0 Z"/>
+        </g>
+        <g id="Path_154" data-name="Path 154" class="cls-4" transform="translate(588.042 1214.843)">
+          <path class="cls-9" d="M 312.0230712890625 185.1573486328125 L 48.59563827514648 185.1573486328125 L 26.25059700012207 99.1573486328125 L 334.3348693847656 99.1573486328125 L 312.0230712890625 185.1573486328125 Z"/>
+          <path class="cls-10" d="M 27.54364013671875 100.1573486328125 L 49.36898803710938 184.1573486328125 L 311.2493896484375 184.1573486328125 L 333.0423278808594 100.1573486328125 L 27.54364013671875 100.1573486328125 M 24.95758056640625 98.1573486328125 L 335.62744140625 98.1573486328125 L 312.7967224121094 186.1573486328125 L 47.822265625 186.1573486328125 L 24.95758056640625 98.1573486328125 Z"/>
+        </g>
+        <g id="Path_155" data-name="Path 155" class="cls-4" transform="translate(588.017 1216.336)">
+          <path class="cls-9" d="M 287.6780395507813 279.6640319824219 L 72.15174102783203 279.6640319824219 L 50.26871109008789 193.6640319824219 L 309.5769958496094 193.6640319824219 L 287.6780395507813 279.6640319824219 Z"/>
+          <path class="cls-10" d="M 51.55502319335938 194.6640319824219 L 72.92916870117188 278.6640319824219 L 286.9007568359375 278.6640319824219 L 308.2904052734375 194.6640319824219 L 51.55502319335938 194.6640319824219 M 48.98236083984375 192.6640319824219 L 310.863525390625 192.6640319824219 L 288.4552917480469 280.6640319824219 L 71.37432861328125 280.6640319824219 L 48.98236083984375 192.6640319824219 Z"/>
+        </g>
+        <g id="Path_156" data-name="Path 156" class="cls-4" transform="translate(587.76 1215.929)">
+          <path class="cls-9" d="M 263.7793273925781 375.0787353515625 L 96.29405975341797 375.0787353515625 L 74.52500915527344 289.0787353515625 L 285.9521484375 289.0787353515625 L 263.7793273925781 375.0787353515625 Z"/>
+          <path class="cls-10" d="M 75.8096923828125 290.0787353515625 L 97.07247924804688 374.0787353515625 L 263.0044250488281 374.0787353515625 L 284.66162109375 290.0787353515625 L 75.8096923828125 290.0787353515625 M 73.2403564453125 288.0787353515625 L 287.24267578125 288.0787353515625 L 264.55419921875 376.0787353515625 L 95.51565551757813 376.0787353515625 L 73.2403564453125 288.0787353515625 Z"/>
+        </g>
+      </g>
+      <text id="_100_" data-name="100%" class="cls-5" transform="translate(324 1067)"><tspan x="-31.113" y="0">100%</tspan></text>
+      <text id="_50_" data-name="50%" class="cls-5" transform="translate(324 1165)"><tspan x="-24.211" y="0">50%</tspan></text>
+      <text id="_25_" data-name="25%" class="cls-5" transform="translate(324 1260)"><tspan x="-24.211" y="0">25%</tspan></text>
+      <text id="_4_" data-name="4%" class="cls-5" transform="translate(324 1355)"><tspan x="-17.309" y="0">4%</tspan></text>
+      <text id="_2_" data-name="2%" class="cls-5" transform="translate(324 1452)"><tspan x="-17.309" y="0">2%</tspan></text>
+      <text id="объектов" class="cls-6" transform="translate(294 1083)"><tspan x="0" y="0">объектов</tspan></text>
+      <text id="объектов-2" data-name="объектов" class="cls-6" transform="translate(294 1181)"><tspan x="0" y="0">объектов</tspan></text>
+      <text id="объектов-3" data-name="объектов" class="cls-6" transform="translate(294 1277)"><tspan x="0" y="0">объектов</tspan></text>
+      <text id="объектов-4" data-name="объектов" class="cls-6" transform="translate(294 1370)"><tspan x="0" y="0">объектов</tspan></text>
+      <text id="объектов-5" data-name="объектов" class="cls-6" transform="translate(294 1467)"><tspan x="0" y="0">объектов</tspan></text>
+      <path id="Path_255" data-name="Path 255" class="cls-7" d="M23.154-8.333C34.768-8.333,45,1.688,45,13.194s-10.232,23.38-21.846,23.38S-5,30.95-5,19.444,11.541-8.333,23.154-8.333Z" transform="translate(344 1129.667) rotate(-180)"/>
+      <path id="Path_256" data-name="Path 256" class="cls-7" d="M23.154-8.333C34.768-8.333,45,1.688,45,13.194s-10.232,23.38-21.846,23.38S-5,30.95-5,19.444,11.541-8.333,23.154-8.333Z" transform="translate(344 1227.667) rotate(-180)"/>
+      <path id="Path_257" data-name="Path 257" class="cls-7" d="M23.154-8.333C34.768-8.333,45,1.688,45,13.194s-10.232,23.38-21.846,23.38S-5,30.95-5,19.444,11.541-8.333,23.154-8.333Z" transform="translate(344 1319.667) rotate(-180)"/>
+      <path id="Path_258" data-name="Path 258" class="cls-7" d="M23.154-8.333C34.768-8.333,45,1.688,45,13.194s-10.232,23.38-21.846,23.38S-5,30.95-5,19.444,11.541-8.333,23.154-8.333Z" transform="translate(344 1417.667) rotate(-180)"/>
+      <text id="_-50_" data-name="-50%" class="cls-8" transform="translate(304 1121)"><tspan x="0" y="0">-50%</tspan></text>
+      <text id="_-50_2" data-name="-50%" class="cls-8" transform="translate(304 1219)"><tspan x="0" y="0">-50%</tspan></text>
+      <text id="_-92_" data-name="-92%" class="cls-8" transform="translate(304 1310)"><tspan x="0" y="0">-92%</tspan></text>
+      <text id="_-50_3" data-name="-50%" class="cls-8" transform="translate(304 1408)"><tspan x="0" y="0">-50%</tspan></text>
+    </g>
+  </g>
 </svg>
