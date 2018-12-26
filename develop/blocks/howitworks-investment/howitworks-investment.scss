@@ -17,6 +17,11 @@
     &--mobile {
         display: none;
     }
+
+    object {
+        @include img;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {

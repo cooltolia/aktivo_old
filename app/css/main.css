@@ -3744,6 +3744,13 @@ th {
   margin: 0 auto; }
   .howitworks-investment__image--mobile {
     display: none; }
+  .howitworks-investment__image object {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto; }
 
 @media (max-width: 768px) {
   .howitworks-investment {
