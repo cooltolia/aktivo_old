@@ -37,6 +37,10 @@
 
         height: 450px;
         min-height: 1px;
+
+        > * {
+            opacity: 0;
+        }
     }
 
     .slick-snext,
@@ -62,22 +66,12 @@
         transform: translate3d(21%, 0, 0px) scale(0.8);
         z-index: 1;
         background-color: #fff;
-
-        &>* {
-            opacity: 0;
-            transition: opacity 300ms ease;
-        }
     }
 
     .slick-sprev {
         opacity: 1;
         transform: translate3d(-30%, 25px, 0px) scale(0.7);
         background-color: #fff;
-
-        &>* {
-            opacity: 0;
-            transition: opacity 300ms ease;
-        }
     }
 
     .slick-arrow {

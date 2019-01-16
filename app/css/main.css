@@ -4222,6 +4222,8 @@ th {
     transition: transform 1s, opacity 1s;
     transition: transform 1s, opacity 1s, -webkit-transform 1s, -moz-transform 1s;
     will-change: transform; }
+    .liberty-slider__slider .slick-slide > * {
+      opacity: 0; }
   .liberty-slider__slider .slick-snext,
   .liberty-slider__slider .slick-sprev {
     display: block; }
@@ -4243,22 +4245,12 @@ th {
             transform: translate3d(21%, 0, 0px) scale(0.8);
     z-index: 1;
     background-color: #fff; }
-    .liberty-slider__slider .slick-snext > * {
-      opacity: 0;
-      -webkit-transition: opacity 300ms ease;
-      -moz-transition: opacity 300ms ease;
-      transition: opacity 300ms ease; }
   .liberty-slider__slider .slick-sprev {
     opacity: 1;
     -webkit-transform: translate3d(-30%, 25px, 0px) scale(0.7);
        -moz-transform: translate3d(-30%, 25px, 0px) scale(0.7);
             transform: translate3d(-30%, 25px, 0px) scale(0.7);
     background-color: #fff; }
-    .liberty-slider__slider .slick-sprev > * {
-      opacity: 0;
-      -webkit-transition: opacity 300ms ease;
-      -moz-transition: opacity 300ms ease;
-      transition: opacity 300ms ease; }
   .liberty-slider__slider .slick-arrow {
     position: absolute;
     z-index: 9;
@@ -9008,6 +9000,8 @@ body.modal-open {
     will-change: transform;
     height: 450px;
     min-height: 1px; }
+    .security-slider__slider .slick-slide > * {
+      opacity: 0; }
   .security-slider__slider .slick-snext,
   .security-slider__slider .slick-sprev {
     display: block; }
@@ -9029,22 +9023,12 @@ body.modal-open {
             transform: translate3d(21%, 0, 0px) scale(0.8);
     z-index: 1;
     background-color: #fff; }
-    .security-slider__slider .slick-snext > * {
-      opacity: 0;
-      -webkit-transition: opacity 300ms ease;
-      -moz-transition: opacity 300ms ease;
-      transition: opacity 300ms ease; }
   .security-slider__slider .slick-sprev {
     opacity: 1;
     -webkit-transform: translate3d(-30%, 25px, 0px) scale(0.7);
        -moz-transform: translate3d(-30%, 25px, 0px) scale(0.7);
             transform: translate3d(-30%, 25px, 0px) scale(0.7);
     background-color: #fff; }
-    .security-slider__slider .slick-sprev > * {
-      opacity: 0;
-      -webkit-transition: opacity 300ms ease;
-      -moz-transition: opacity 300ms ease;
-      transition: opacity 300ms ease; }
   .security-slider__slider .slick-arrow {
     position: absolute;
     z-index: 9;
