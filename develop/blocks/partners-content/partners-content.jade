@@ -1,0 +1,93 @@
+mixin partners-content()
+    +b.SECTION.partners-content
+        +inner
+            +e.inner
+                +e.col.--long
+                    +e.block
+                        +e.title.--small-margin Ваш статус: 
+                            +e.SPAN.status.--active Активен
+                        +e.info
+                            +e.info-col
+                                +e.info-value 1,5%
+                                +e.info-label за первую сделку
+                            +e.info-col
+                                +e.info-value 0,5%
+                                +e.info-label за повторную в течение 12 мес после первой покупки
+                        +e.P.info-tip Вознаграждение не предусмотрено за повторную сделку по прошествии 12 мес.
+                +e.col
+                    +e.block
+                        +e.title.--small-margin Ваши проценты и выплаты
+                        +e.info
+                            +e.info-col
+                                +e.info-label Заработано:
+                                +e.info-value 421 704.42&nbsp;₽
+                            +e.info-col
+                                +e.info-label Всего выплачено:
+                                +e.info-value 201 704.42&nbsp;₽
+                        +e.P.info-tip Осталось: <b>201 704.42&nbsp;₽</b>
+            +e.inner
+                +e.col.--full
+                    +e.block
+                        +e.title Реферальная ссылка номер раз
+                        +e.referrals
+                            +e.inputs
+                                +e.input
+                                    +base-input('text', 'referralLink0', 'referral_link0', 'Реферальная ссылка', false)(value='https://www.youtube.com/watch?v=CIbfdfBeVLY' class='no-label' placeholder='Реферальная ссылка')
+                                    +e.BUTTON.copy
+                                +e.input
+                                    +base-input('text', 'referralComment0', 'referral_comment0', 'Комментарий к ссылке', false)(value='Ссылка для обеспеченных' class='no-label' placeholder='Комментарий к ссылке')
+                                    +e.BUTTON.copy
+                            +e.chart-wrapper
+                                +e.chart#referralChart0(data-values='[80, 20, 10]')
+            +e.inner
+                +e.col.--full
+                    +e.block
+                        +e.title Реферальная ссылка номер два
+                        +e.referrals
+                            +e.inputs
+                                +e.input
+                                    +base-input('text', 'referralLink1', 'referral_link1', 'Реферальная ссылка', false)(value='https://www.youtube.com/watch?v=CIbfdfBeVLY' class='no-label' placeholder='Реферальная ссылка')
+                                    +e.BUTTON.copy
+                                +e.input
+                                    +base-input('text', 'referralComment1', 'referral_comment1', 'Комментарий к ссылке', false)(class='no-label' placeholder='Комментарий к ссылке')
+                                    +e.BUTTON.copy
+                            +e.chart-wrapper
+                                +e.chart#referralChart1(data-values='[60, 40, 25]')
+            +e.BUTTON.add-link(type='button') Добавить новую ссылку
+            +e.inner
+                +e.col.--full
+                    +e.block
+                        +e.title Завершенные сделки
+                        +e.table-wrapper
+                            +e.TABLE.table
+                                +e.TR.table-row.table-header
+                                    +e.TH.cell ФИО
+                                    +e.TH.cell Подписано
+                                    +e.TH.cell Оплачено
+                                    +e.TH.cell Паи переданы
+                                    +e.TH.cell Сумма
+                                    +e.TH.cell Вознаграждение
+                                +e.TR.table-row
+                                    +e.TD.cell Константинов В.А.
+                                    +e.TD.cell 12.12.2018
+                                    +e.TD.cell 12.12.2018
+                                    +e.TD.cell 12.12.2018
+                                    +e.TD.cell 100500&nbsp;руб.
+                                    +e.TD.cell 500&nbsp;руб.
+                                +e.TR.table-row
+                                    +e.TD.cell Иванько И.С.
+                                    +e.TD.cell 20.02.2019
+                                    +e.TD.cell 20.02.2019
+                                    +e.TD.cell 20.02.2019
+                                    +e.TD.cell 100500&nbsp;руб.
+                                    +e.TD.cell 500&nbsp;руб.
+                                +e.TR.table-row
+                                    +e.TD.cell Полежаева З.В.
+                                    +e.TD.cell 17.07.2019
+                                    +e.TD.cell 17.07.2019
+                                    +e.TD.cell 17.07.2019
+                                    +e.TD.cell 100500&nbsp;руб.
+                                    +e.TD.cell 500&nbsp;руб.
+                                +e.TR.table-row.table-footer
+                                    +e.TD.cell(colspan='5' style='text-align: right') 301500&nbsp;руб.
+                                    +e.TD.cell 1500&nbsp;руб.

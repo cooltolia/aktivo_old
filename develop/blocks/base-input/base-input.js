@@ -1,8 +1,6 @@
 ;(function() {
     $inputs = $('.base-input__input');
     $autocompleteInputs = $('.base-input-autocomplete');
-    console.log($autocompleteInputs);
-    
 
     $inputs.each(function() {
         if ($(this).val().trim() !== '') {

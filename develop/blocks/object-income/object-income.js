@@ -192,8 +192,6 @@
     var dividendsData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38];
 
     var chart = $('#income-chart');
-    console.log(!chart.length);
-    
 
     if (chart.length) {
         Highcharts.chart('income-chart', {

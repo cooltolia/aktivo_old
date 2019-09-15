@@ -6,8 +6,6 @@
     var profitMax = 2500;
 
     var chart = $('#income-monitoring');
-    console.log(!chart.length);
-
 
     if (chart.length) {
         Highcharts.chart('income-monitoring', {

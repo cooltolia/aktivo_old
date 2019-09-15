@@ -124,51 +124,213 @@
           </li>
         </ul>
       </div>
-    </nav><!--/ account-nav --> <!-- feedback-content --> 
-    <section class="feedback-content">
+    </nav><!--/ account-nav --> <!-- partners-content --> 
+    <section class="partners-content">
       <div class="inner">
-        <div class="feedback-content__block">
-          <div class="feedback-content__title">Обратная связь
-          </div>
-          <div class="feedback-content__subtitle">Оставьте отзыв о работе компании, чтобы мы могли сделать сервис комфортнее и удобнее для вас.
-          </div>
-          <form action="" method="post" class="feedback-content__form">
-            <div class="feedback-content__form-col feedback-content__form-col--small">
-              <div class="feedback-content__input"><!-- base-input --> 
-                <div class="base-input"><input type="text" id="feedbackFullname" name="feedback_fullname" required="false" class="base-input__input"/>
-                  <label for="feedbackFullname" class="base-input__label">Имя Фамилия
-                  </label>
-                  <div class="base-input__errors">
-                    <div class="base-input__error-message">Текст ошибки
-                    </div>
-                  </div>
-                </div><!--/ base-input --> 
+        <div class="partners-content__inner">
+          <div class="partners-content__col partners-content__col--long">
+            <div class="partners-content__block">
+              <div class="partners-content__title partners-content__title--small-margin">Ваш статус: <span class="partners-content__status partners-content__status--active">Активен</span>
               </div>
-              <div class="feedback-content__input"><!-- base-input --> 
-                <div class="base-input"><input type="email" id="feedbackEmail" name="feedback_email" required="false" class="base-input__input"/>
-                  <label for="feedbackEmail" class="base-input__label">Email
-                  </label>
-                  <div class="base-input__errors">
-                    <div class="base-input__error-message">Текст ошибки
-                    </div>
+              <div class="partners-content__info">
+                <div class="partners-content__info-col">
+                  <div class="partners-content__info-value">1,5%
                   </div>
-                </div><!--/ base-input --> 
+                  <div class="partners-content__info-label">за первую сделку
+                  </div>
+                </div>
+                <div class="partners-content__info-col">
+                  <div class="partners-content__info-value">0,5%
+                  </div>
+                  <div class="partners-content__info-label">за повторную в течение 12 мес после первой покупки
+                  </div>
+                </div>
+              </div>
+              <p class="partners-content__info-tip">Вознаграждение не предусмотрено за повторную сделку по прошествии 12 мес.
+              </p>
+            </div>
+          </div>
+          <div class="partners-content__col">
+            <div class="partners-content__block">
+              <div class="partners-content__title partners-content__title--small-margin">Ваши проценты и выплаты
+              </div>
+              <div class="partners-content__info">
+                <div class="partners-content__info-col">
+                  <div class="partners-content__info-label">Заработано:
+                  </div>
+                  <div class="partners-content__info-value">421 704.42&nbsp;₽
+                  </div>
+                </div>
+                <div class="partners-content__info-col">
+                  <div class="partners-content__info-label">Всего выплачено:
+                  </div>
+                  <div class="partners-content__info-value">201 704.42&nbsp;₽
+                  </div>
+                </div>
+              </div>
+              <p class="partners-content__info-tip">Осталось: <b>201 704.42&nbsp;₽</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="partners-content__inner">
+          <div class="partners-content__col partners-content__col--full">
+            <div class="partners-content__block">
+              <div class="partners-content__title">Реферальная ссылка номер раз
+              </div>
+              <div class="partners-content__referrals">
+                <div class="partners-content__inputs">
+                  <div class="partners-content__input"><!-- base-input --> 
+                    <div class="base-input no-label" value="https://www.youtube.com/watch?v=CIbfdfBeVLY" placeholder="Реферальная ссылка"><input type="text" id="referralLink0" name="referral_link0" required="false" class="base-input__input no-label" value="https://www.youtube.com/watch?v=CIbfdfBeVLY" placeholder="Реферальная ссылка"/>
+                      <label for="referralLink0" class="base-input__label">Реферальная ссылка
+                      </label>
+                      <div class="base-input__errors">
+                        <div class="base-input__error-message">Текст ошибки
+                        </div>
+                      </div>
+                    </div><!--/ base-input --> 
+                    <button class="partners-content__copy">
+                    </button>
+                  </div>
+                  <div class="partners-content__input"><!-- base-input --> 
+                    <div class="base-input no-label" value="Ссылка для обеспеченных" placeholder="Комментарий к ссылке"><input type="text" id="referralComment0" name="referral_comment0" required="false" class="base-input__input no-label" value="Ссылка для обеспеченных" placeholder="Комментарий к ссылке"/>
+                      <label for="referralComment0" class="base-input__label">Комментарий к ссылке
+                      </label>
+                      <div class="base-input__errors">
+                        <div class="base-input__error-message">Текст ошибки
+                        </div>
+                      </div>
+                    </div><!--/ base-input --> 
+                    <button class="partners-content__copy">
+                    </button>
+                  </div>
+                </div>
+                <div class="partners-content__chart-wrapper">
+                  <div id="referralChart0" data-values="[80, 20, 10]" class="partners-content__chart">
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="feedback-content__form-col">
-              <div class="feedback-content__textarea">
-                <label for="feedbackComment" class="feedback-content__textarea-label">Сообщение
-                </label><textarea name="feedback_comment" id="feedbackComment" class="feedback-content__textarea-input"></textarea>
+          </div>
+        </div>
+        <div class="partners-content__inner">
+          <div class="partners-content__col partners-content__col--full">
+            <div class="partners-content__block">
+              <div class="partners-content__title">Реферальная ссылка номер два
               </div>
-              <div class="feedback-content__submit"><!-- base-button --> 
-                <button type="submit" class="base-button">Сохранить
-                </button><!--/ base-button --> 
+              <div class="partners-content__referrals">
+                <div class="partners-content__inputs">
+                  <div class="partners-content__input"><!-- base-input --> 
+                    <div class="base-input no-label" value="https://www.youtube.com/watch?v=CIbfdfBeVLY" placeholder="Реферальная ссылка"><input type="text" id="referralLink1" name="referral_link1" required="false" class="base-input__input no-label" value="https://www.youtube.com/watch?v=CIbfdfBeVLY" placeholder="Реферальная ссылка"/>
+                      <label for="referralLink1" class="base-input__label">Реферальная ссылка
+                      </label>
+                      <div class="base-input__errors">
+                        <div class="base-input__error-message">Текст ошибки
+                        </div>
+                      </div>
+                    </div><!--/ base-input --> 
+                    <button class="partners-content__copy">
+                    </button>
+                  </div>
+                  <div class="partners-content__input"><!-- base-input --> 
+                    <div class="base-input no-label" placeholder="Комментарий к ссылке"><input type="text" id="referralComment1" name="referral_comment1" required="false" class="base-input__input no-label" placeholder="Комментарий к ссылке"/>
+                      <label for="referralComment1" class="base-input__label">Комментарий к ссылке
+                      </label>
+                      <div class="base-input__errors">
+                        <div class="base-input__error-message">Текст ошибки
+                        </div>
+                      </div>
+                    </div><!--/ base-input --> 
+                    <button class="partners-content__copy">
+                    </button>
+                  </div>
+                </div>
+                <div class="partners-content__chart-wrapper">
+                  <div id="referralChart1" data-values="[60, 40, 25]" class="partners-content__chart">
+                  </div>
+                </div>
               </div>
             </div>
-          </form>
+          </div>
+        </div>
+        <button type="button" class="partners-content__add-link">Добавить новую ссылку
+        </button>
+        <div class="partners-content__inner">
+          <div class="partners-content__col partners-content__col--full">
+            <div class="partners-content__block">
+              <div class="partners-content__title">Завершенные сделки
+              </div>
+              <div class="partners-content__table-wrapper">
+                <table class="partners-content__table">
+                  <tr class="partners-content__table-row table-header">
+                    <th class="partners-content__cell">ФИО
+                    </th>
+                    <th class="partners-content__cell">Подписано
+                    </th>
+                    <th class="partners-content__cell">Оплачено
+                    </th>
+                    <th class="partners-content__cell">Паи переданы
+                    </th>
+                    <th class="partners-content__cell">Сумма
+                    </th>
+                    <th class="partners-content__cell">Вознаграждение
+                    </th>
+                  </tr>
+                  <tr class="partners-content__table-row">
+                    <td class="partners-content__cell">Константинов В.А.
+                    </td>
+                    <td class="partners-content__cell">12.12.2018
+                    </td>
+                    <td class="partners-content__cell">12.12.2018
+                    </td>
+                    <td class="partners-content__cell">12.12.2018
+                    </td>
+                    <td class="partners-content__cell">100500&nbsp;руб.
+                    </td>
+                    <td class="partners-content__cell">500&nbsp;руб.
+                    </td>
+                  </tr>
+                  <tr class="partners-content__table-row">
+                    <td class="partners-content__cell">Иванько И.С.
+                    </td>
+                    <td class="partners-content__cell">20.02.2019
+                    </td>
+                    <td class="partners-content__cell">20.02.2019
+                    </td>
+                    <td class="partners-content__cell">20.02.2019
+                    </td>
+                    <td class="partners-content__cell">100500&nbsp;руб.
+                    </td>
+                    <td class="partners-content__cell">500&nbsp;руб.
+                    </td>
+                  </tr>
+                  <tr class="partners-content__table-row">
+                    <td class="partners-content__cell">Полежаева З.В.
+                    </td>
+                    <td class="partners-content__cell">17.07.2019
+                    </td>
+                    <td class="partners-content__cell">17.07.2019
+                    </td>
+                    <td class="partners-content__cell">17.07.2019
+                    </td>
+                    <td class="partners-content__cell">100500&nbsp;руб.
+                    </td>
+                    <td class="partners-content__cell">500&nbsp;руб.
+                    </td>
+                  </tr>
+                  <tr class="partners-content__table-row table-footer">
+                    <td colspan="5" style="text-align: right" class="partners-content__cell">301500&nbsp;руб.
+                    </td>
+                    <td class="partners-content__cell">1500&nbsp;руб.
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section><!--/ feedback-content --> <!-- main-footer --> 
+    </section><!--/ partners-content --> <!-- main-footer --> 
     <footer class="main-footer">
       <div class="inner">
         <div class="main-footer__wrapper">

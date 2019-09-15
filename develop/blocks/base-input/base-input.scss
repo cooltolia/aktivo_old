@@ -7,6 +7,12 @@
     line-height: normal;
 
     -webkit-tap-highlight-color: transparent;
+
+    &.no-label {
+        .base-input__label {
+            display: none;
+        }
+    }
 }
 
 .base-input__input {
@@ -35,6 +41,10 @@
             color: #000;
             left: 0;
         }
+    }
+
+    &::placeholder {
+        color: #d7d7d8;
     }
 
 }

@@ -7,19 +7,16 @@
 }
 
 .documents-content__block {
-    padding: 40px 60px;
+    padding: 32px;
+    margin-bottom: 10px;
 
     box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
     background-color: #ffffff;
 }
 
-.documents-content__group {
-    margin-bottom: 55px;
-}
-
 .documents-content__title {
     position: relative;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     padding-left: 30px;
 
     font-size: 16px;
@@ -39,7 +36,7 @@
         border-right-color: transparent;
         border-bottom-color: transparent;
 
-        transform: rotate(45deg) translateY(25%);
+        transform: rotate(45deg) translateX(0);
         transform-origin: center;
 
         transition: transform 300ms ease;
@@ -52,12 +49,16 @@
     }
 }
 
-.documents-content__table-wrapper {
+.documents-content__data {
     display: none;
 
     &.active {
         display: block;
     }
+}
+
+.documents-content__table-wrapper {
+    padding-top: 20px;
 }
 
 .documents-content__table {
@@ -66,8 +67,7 @@
 }
 
 .documents-content__table-row {
-
-    &:nth-child(2n+1) {
+    &:nth-child(2n + 1) {
         background-color: rgba(#f5f7f9, 1);
     }
 
@@ -132,6 +132,10 @@
     padding-left: 20px;
     margin-right: 25px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-size: 12px;
     color: #3c7bd8;
     text-decoration: none;
@@ -177,10 +181,105 @@
     }
 }
 
+.documents-content__account {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-right: 32px;
+
+    &--opened {
+        &::before {
+            flex: 0 0 auto;
+            content: '';
+            position: relative;
+            width: 24px;
+            height: 24px;
+            left: 0;
+            margin-right: 12px;
+            align-self: flex-start;
+        
+            border: 1px solid green;
+            border-radius: 50%;
+
+            background-size: cover;
+        }
+    }
+
+    &--process {
+        background-image: url();
+    }
+
+    &--success {
+        background-image: url();
+    }
+
+    &--fail {
+        background-image: url();
+    }
+
+    &--success,
+    &--fail {
+        .documents-content__account-text {
+            color: $darktext;
+        }
+    }
+}
+
+.documents-content__account-button {
+    @include btn-theme(#3c7bd8);
+    padding: 16px 40px;
+    margin-right: 20px;
+    flex: 0 0 auto;
+
+    font-size: 18px;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: #fff;
+    }
+}
+
+.documents-content__account-text {
+    margin-right: 20px;
+    flex: 1 1 auto;
+
+    font-size: 16px;
+    color: rgba($color: $darktext, $alpha: 0.4);
+
+    p {
+        margin: 0 0 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.documents-content__account-logo {
+    flex: 0 0 160px;
+
+    img {
+        @include img;
+    }
+}
+
 @media (max-width: 1040px) {
     .documents-content__status {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .documents-content__account-button {
+        padding: 14px 20px;
+
+        font-size: 16px;
+    }
+
+    .documents-content__account-text {
+        font-size: 14px;
     }
 }
 
@@ -193,15 +292,15 @@
         padding: 9px 20px;
         font-size: 14px;
     }
+
+    .documents-content__account-logo {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
     .documents-content__block {
         padding: 20px 15px;
-    }
-
-    .documents-content__group {
-        margin-bottom: 35px;
     }
 
     .documents-content__title {
@@ -225,7 +324,6 @@
     }
 
     .documents-content__table-row {
-
         td:first-child {
             width: 40%;
         }
@@ -260,5 +358,32 @@
             width: 8px;
             height: 6px;
         }
+    }
+
+    .documents-content__account {
+        padding-top: 20px;
+        flex-wrap: wrap;
+
+        &--opened {
+            &::before {
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .documents-content__account-button {
+        margin-bottom: 10px;
+        padding: 12px 15px;
+
+        font-size: 14px;
+    }
+
+    .documents-content__account-text {
+        width: calc(100% - 30px);
+        margin: 0;
+
+        font-size: 13px;
     }
 }

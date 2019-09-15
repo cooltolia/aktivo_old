@@ -17,7 +17,8 @@
 }
 
 .account-nav__item {
-    flex: 1 1 174px;
+    position: relative;
+    flex: 1 1 152px;
     max-width: 250px;
     margin-right: 1px;
     margin-bottom: 1px;
@@ -26,13 +27,11 @@
 
     background-color: #f5f7f9;
 
-    transition: background-color 300ms ease,
-    transform 300ms ease;
+    transition: background-color 300ms ease, transform 300ms ease;
     transform-origin: bottom center;
 
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
-
 
     &:last-child {
         margin-right: 0;
@@ -43,15 +42,31 @@
     &:focus,
     &.active {
         background-color: $themecolor;
-        transform: scaleY(1.19) translateZ(0);
 
-        .account-nav__link {
-            transform: scaleY(0.81) translateY(10%) translateZ(0);
+        &::before {
+            transform: scaleY(1.19) translateZ(0);
         }
     }
 
     &.active {
-        box-shadow: 0 0 30px rgba(60, 123, 216, 0.16);
+        &::before {
+            z-index: 0;
+            box-shadow: 0 0 30px rgba(60, 123, 216, 0.16);
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: inherit;
+        top: 0;
+        left: 0;
+
+        transition: transform 300ms ease;
+        transform-origin: bottom center;
     }
 }
 
@@ -71,14 +86,12 @@
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
 
-
     &:hover,
     &:active,
     &:focus {
         color: $darktext;
         text-decoration: none;
     }
-
 }
 
 .account-nav__icon {

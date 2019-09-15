@@ -2,49 +2,8 @@ mixin documents-content()
     +b.SECTION.documents-content
         +inner
             +e.block
-                +e.group
-                    +e.title.active Продажа № 117054 «Активо один»
-                    +e.table-wrapper.active
-                        +e.TABLE.table
-                            +e.TR.table-row
-                                +e.TD.name Договор купли-продажи паёв 
-                                +e.TD.status
-                                    +e.status-label.--yellow На подпись
-                                +e.TD.actions
-                                    +e.actions-list
-                                        +e.A.action-link.--watch(href='#') Прочитать
-                                        +e.A.action-link.--pay(href='#') Оплатить
-                            +e.TR.table-row
-                                +e.TD.name Набор документов для печати — вторичный рынок
-                                +e.TD.status
-                                    +e.status-label.--white Для ознакомления
-                                +e.TD.actions
-                                    +e.actions-list
-                                        +e.A.action-link.--download(href='#') Скачать
-                            +e.TR.table-row
-                                +e.TD.name Договор купли-продажи паёв 
-                                +e.TD.status
-                                    +e.status-label.--grey Подписано
-                                +e.TD.actions
-                                    +e.actions-list
-                                        +e.A.action-link.--download(href='#') Скачать
-                                        +e.A.action-link.--watch(href='#') Взглянуть
-                            +e.TR.table-row
-                                +e.TD.name Набор документов для печати — вторичный рынок 
-                                +e.TD.status
-                                    +e.status-label.--grey Оплачено
-                                +e.TD.actions
-                                    +e.actions-list
-                                        +e.A.action-link.--download(href='#') Скачать
-                            +e.TR.table-row
-                                +e.TD.name Набор документов для печати — вторичный рынок 
-                                +e.TD.status
-                                    +e.status-label.--yellow Оплатить
-                                +e.TD.actions
-                                    +e.actions-list
-                                        +e.A.action-link.--download(href='#') Скачать
-                +e.group
-                    +e.title Продажа № 117054 «Активо один»
+                +e.title.active Продажа № 117054 «Активо один»
+                +e.data.active
                     +e.table-wrapper
                         +e.TABLE.table
                             +e.TR.table-row
@@ -84,8 +43,15 @@ mixin documents-content()
                                 +e.TD.actions
                                     +e.actions-list
                                         +e.A.action-link.--download(href='#') Скачать
-                +e.group
-                    +e.title Продажа № 117054 «Активо один»
+                    +e.account
+                        +e.BUTTON.account-button(type='button') Открыть лицевой счет
+                        +e.account-text 
+                            p Для открытия лицевого счета перейдите на сайт Управляющей Компании
+                        +e.account-logo
+                            img(src="images/main/alfacapital.png", alt="Альфа-Капитал")
+            +e.block
+                +e.title Продажа № 117054 «Активо один»
+                +e.data
                     +e.table-wrapper
                         +e.TABLE.table
                             +e.TR.table-row
@@ -125,3 +91,104 @@ mixin documents-content()
                                 +e.TD.actions
                                     +e.actions-list
                                         +e.A.action-link.--download(href='#') Скачать
+                    +e.account.--opened.--process
+                        +e.account-text 
+                            p Заявка на открытие Лицевого счета отправлена. Дождитесь уведомления.
+                        +e.account-logo
+                            img(src="images/main/alfacapital.png", alt="Альфа-Капитал")
+            +e.block
+                +e.title Продажа № 117054 «Активо один»
+                +e.data
+                    +e.table-wrapper
+                        +e.TABLE.table
+                            +e.TR.table-row
+                                +e.TD.name Договор купли-продажи паёв 
+                                +e.TD.status
+                                    +e.status-label.--yellow На подпись
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--watch(href='#') Прочитать
+                                        +e.A.action-link.--pay(href='#') Оплатить
+                            +e.TR.table-row
+                                +e.TD.name Набор документов для печати — вторичный рынок
+                                +e.TD.status
+                                    +e.status-label.--white Для ознакомления
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                            +e.TR.table-row
+                                +e.TD.name Договор купли-продажи паёв 
+                                +e.TD.status
+                                    +e.status-label.--grey Подписано
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                                        +e.A.action-link.--watch(href='#') Взглянуть
+                            +e.TR.table-row
+                                +e.TD.name Набор документов для печати — вторичный рынок 
+                                +e.TD.status
+                                    +e.status-label.--grey Оплачено
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                            +e.TR.table-row
+                                +e.TD.name Набор документов для печати — вторичный рынок 
+                                +e.TD.status
+                                    +e.status-label.--yellow Оплатить
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                    +e.account.--opened.--success
+                            +e.account-text 
+                                p Открыт лицевой счет №5468789454656535535568
+                            +e.account-logo
+                                img(src="images/main/alfacapital.png", alt="Альфа-Капитал")
+            +e.block
+                +e.title Продажа № 117054 «Активо один»
+                +e.data
+                    +e.table-wrapper
+                        +e.TABLE.table
+                            +e.TR.table-row
+                                +e.TD.name Договор купли-продажи паёв 
+                                +e.TD.status
+                                    +e.status-label.--yellow На подпись
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--watch(href='#') Прочитать
+                                        +e.A.action-link.--pay(href='#') Оплатить
+                            +e.TR.table-row
+                                +e.TD.name Набор документов для печати — вторичный рынок
+                                +e.TD.status
+                                    +e.status-label.--white Для ознакомления
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                            +e.TR.table-row
+                                +e.TD.name Договор купли-продажи паёв 
+                                +e.TD.status
+                                    +e.status-label.--grey Подписано
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                                        +e.A.action-link.--watch(href='#') Взглянуть
+                            +e.TR.table-row
+                                +e.TD.name Набор документов для печати — вторичный рынок 
+                                +e.TD.status
+                                    +e.status-label.--grey Оплачено
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                            +e.TR.table-row
+                                +e.TD.name Набор документов для печати — вторичный рынок 
+                                +e.TD.status
+                                    +e.status-label.--yellow Оплатить
+                                +e.TD.actions
+                                    +e.actions-list
+                                        +e.A.action-link.--download(href='#') Скачать
+                    +e.account.--opened.--fail
+                        +e.account-text 
+                            p 
+                                b При открытии лицевого счета возникла ошибка: текст ошибки 
+                            p Свяжитесь с вашим менеджером, чтобы решить этот вопрос.
+                        +e.account-logo
+                            img(src="images/main/alfacapital.png", alt="Альфа-Капитал")
