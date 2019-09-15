@@ -11,7 +11,6 @@
     <link rel="icon" type="image/png" href="/favicon_32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
     <meta name="theme-color" content="#3aa5ed"/>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer="defer" type="text/javascript"></script>
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <!--[if lte IE 9]>
@@ -110,9 +109,11 @@
           </li>
           <li class="account-nav__item"><a href="/verification.html" title="Верификация" class="account-nav__link">Верификация<span class="account-nav__icon account-nav__icon--questionary"><img src="/images/layout/questionary.svg" alt=""/></span></a>
           </li>
+          <li class="account-nav__item"><a href="/partners.html" title="Партнеры" class="account-nav__link">Партнеры<span class="account-nav__icon account-nav__icon--questionary"><img src="/images/layout/partners.svg" alt=""/></span></a>
+          </li>
           <li class="account-nav__item"><a href="/settings.html" title="Настройки" class="account-nav__link">Настройки<span class="account-nav__icon account-nav__icon--settings"><img src="/images/layout/settings.svg" alt=""/></span></a>
           </li>
-          <li class="account-nav__item"><a href="/feedback.html" class="account-nav__link">Отзыв</a>
+          <li class="account-nav__item"><a href="/feedback.html" class="account-nav__link">Отзыв<span class="account-nav__icon account-nav__icon--feedback"><img src="/images/layout/feedback.svg" alt=""/></span></a>
           </li>
         </ul>
       </div>
@@ -138,9 +139,147 @@
               </ul>
             </nav><!--/ verification-nav --> 
           </aside>
-          <main class="verification-wrapper__main" role="main">
+          <main class="verification-wrapper__main" role="main"><!-- verification-additional --> 
             <section class="verification-additional">
-            </section>
+              <form action="#" method="post" class="verification-additional__form">
+                <div class="verification-additional__row">
+                  <div class="verification-additional__row-title">Дополнительная информация
+                  </div>
+                  <div class="verification-additional__checkbox-row">
+                    <div class="verification-additional__checkbox-block"><!-- base-checkbox --> 
+                      <div class="base-checkbox"><input type="checkbox" id="verificationSuperman" name="verification-superman" value="private" checked="true" required="false" class="base-checkbox__input"/>
+                        <label for="verificationSuperman" class="base-checkbox__label">Я супермэн
+                        </label>
+                        <div class="base-checkbox__errors">
+                          <div class="base-checkbox__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-checkbox --> 
+                    </div>
+                    <div class="verification-additional__checkbox-block"><!-- base-checkbox --> 
+                      <div class="base-checkbox"><input type="checkbox" id="verificationGrandpa" name="verification-grandpa" value="private" required="false" class="base-checkbox__input"/>
+                        <label for="verificationGrandpa" class="base-checkbox__label">Живу с дедушкой
+                        </label>
+                        <div class="base-checkbox__errors">
+                          <div class="base-checkbox__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-checkbox --> 
+                    </div>
+                    <div class="verification-additional__checkbox-block"><!-- base-checkbox --> 
+                      <div class="base-checkbox"><input type="checkbox" id="verificationSuperman1" name="verification-superman" value="private" checked="true" required="false" class="base-checkbox__input"/>
+                        <label for="verificationSuperman1" class="base-checkbox__label">Я супермэн
+                        </label>
+                        <div class="base-checkbox__errors">
+                          <div class="base-checkbox__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-checkbox --> 
+                    </div>
+                    <div class="verification-additional__checkbox-block"><!-- base-checkbox --> 
+                      <div class="base-checkbox"><input type="checkbox" id="verificationGrandpa1" name="verification-grandpa" value="private" required="false" class="base-checkbox__input"/>
+                        <label for="verificationGrandpa1" class="base-checkbox__label">Живу с дедушкой
+                        </label>
+                        <div class="base-checkbox__errors">
+                          <div class="base-checkbox__error-message">Текст ошибки
+                          </div>
+                        </div>
+                      </div><!--/ base-checkbox --> 
+                    </div>
+                  </div>
+                </div>
+                <div class="verification-additional__row">
+                  <div class="verification-additional__radios-row">
+                    <div class="verification-additional__radios-block">
+                      <div class="verification-additional__radios-title">Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                      </div>
+                      <div class="verification-additional__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="fatca1" name="fatca-citizenship" value="true" checked="true" required="false" class="base-radio__input"/>
+                          <label for="fatca1" class="base-radio__label">Да
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                      <div class="verification-additional__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="fatca2" name="fatca-citizenship" value="false" required="false" class="base-radio__input"/>
+                          <label for="fatca2" class="base-radio__label">Нет
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="verification-additional__row">
+                  <div class="verification-additional__radios-row">
+                    <div class="verification-additional__radios-block">
+                      <div class="verification-additional__radios-title">Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                      </div>
+                      <div class="verification-additional__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="fatca11" name="fatca-citizenship" value="true" checked="true" required="false" class="base-radio__input"/>
+                          <label for="fatca11" class="base-radio__label">Да
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                      <div class="verification-additional__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="fatca22" name="fatca-citizenship" value="false" required="false" class="base-radio__input"/>
+                          <label for="fatca22" class="base-radio__label">Нет
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="verification-additional__row">
+                  <div class="verification-additional__radios-row">
+                    <div class="verification-additional__radios-block">
+                      <div class="verification-additional__radios-title">Являетесь ли Вы гражданином США (в том числе двойное гражданство)?
+                      </div>
+                      <div class="verification-additional__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="fatca111" name="fatca-citizenship" value="true" checked="true" required="false" class="base-radio__input"/>
+                          <label for="fatca111" class="base-radio__label">Да
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                      <div class="verification-additional__radios-item"><!-- base-radio --> 
+                        <div class="base-radio"><input type="radio" id="fatca222" name="fatca-citizenship" value="false" required="false" class="base-radio__input"/>
+                          <label for="fatca222" class="base-radio__label">Нет
+                          </label>
+                          <div class="base-radio__errors">
+                            <div class="base-radio__error-message">Текст ошибки
+                            </div>
+                          </div>
+                        </div><!--/ base-radio --> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="verification-additional__row"><!-- verification-continue --> 
+                  <div class="verification-continue">
+                    <button type="submit" class="verification-continue__next">Далее
+                    </button><a href="#" class="verification-continue__pass">Пропустить</a>
+                  </div><!--/ verification-continue --> 
+                </div>
+              </form>
+            </section><!--/ verification-additional --> 
           </main>
         </div>
       </div>

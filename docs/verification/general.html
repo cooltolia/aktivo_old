@@ -11,7 +11,6 @@
     <link rel="icon" type="image/png" href="/favicon_32.png" sizes="32x32"/>
     <link rel="icon" type="image/png" href="/favicon_96.png" sizes="96x96"/>
     <meta name="theme-color" content="#3aa5ed"/>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" defer="defer" type="text/javascript"></script>
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <!--[if lte IE 9]>
@@ -110,9 +109,11 @@
           </li>
           <li class="account-nav__item"><a href="/verification.html" title="Верификация" class="account-nav__link">Верификация<span class="account-nav__icon account-nav__icon--questionary"><img src="/images/layout/questionary.svg" alt=""/></span></a>
           </li>
+          <li class="account-nav__item"><a href="/partners.html" title="Партнеры" class="account-nav__link">Партнеры<span class="account-nav__icon account-nav__icon--questionary"><img src="/images/layout/partners.svg" alt=""/></span></a>
+          </li>
           <li class="account-nav__item"><a href="/settings.html" title="Настройки" class="account-nav__link">Настройки<span class="account-nav__icon account-nav__icon--settings"><img src="/images/layout/settings.svg" alt=""/></span></a>
           </li>
-          <li class="account-nav__item"><a href="/feedback.html" class="account-nav__link">Отзыв</a>
+          <li class="account-nav__item"><a href="/feedback.html" class="account-nav__link">Отзыв<span class="account-nav__icon account-nav__icon--feedback"><img src="/images/layout/feedback.svg" alt=""/></span></a>
           </li>
         </ul>
       </div>
@@ -144,7 +145,7 @@
                 <div class="verification-general__row">
                   <div class="verification-general__inputs-row">
                     <div class="verification-general__inputs-item"><!-- base-input --> 
-                      <div class="base-input has-error"><input type="text" id="verificationSurname" name="verification_surname" required="false" class="base-input__input"/>
+                      <div class="base-input has-error"><input type="text" id="verificationSurname" name="verification_surname" required="false" class="base-input__input has-error"/>
                         <label for="verificationSurname" class="base-input__label">Фамилия
                         </label>
                         <div class="base-input__errors">
