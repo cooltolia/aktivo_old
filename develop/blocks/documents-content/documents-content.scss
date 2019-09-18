@@ -199,7 +199,6 @@
             margin-right: 12px;
             align-self: flex-start;
         
-            border: 1px solid green;
             border-radius: 50%;
 
             background-size: cover;
@@ -207,15 +206,21 @@
     }
 
     &--process {
-        background-image: url();
+        &::before {
+            background-image: url(../images/layout/process.svg);
+        }
     }
 
     &--success {
-        background-image: url();
+        &::before {
+            background-image: url(../images/layout/success.svg);
+        }
     }
 
     &--fail {
-        background-image: url();
+        &::before {
+            background-image: url(../images/layout/fail.svg);
+        }
     }
 
     &--success,

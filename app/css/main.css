@@ -2766,15 +2766,14 @@ th {
     margin-right: 12px;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    border: 1px solid green;
     border-radius: 50%;
     background-size: cover; }
-  .documents-content__account--process {
-    background-image: url(); }
-  .documents-content__account--success {
-    background-image: url(); }
-  .documents-content__account--fail {
-    background-image: url(); }
+  .documents-content__account--process::before {
+    background-image: url(../images/layout/process.svg); }
+  .documents-content__account--success::before {
+    background-image: url(../images/layout/success.svg); }
+  .documents-content__account--fail::before {
+    background-image: url(../images/layout/fail.svg); }
   .documents-content__account--success .documents-content__account-text, .documents-content__account--fail .documents-content__account-text {
     color: #000; }
 
