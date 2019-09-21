@@ -8,7 +8,7 @@
         var id = $(this).attr('id');
         var data = $(this).data('values');
 
-        chartInit(id, data)
+        chartInit(id, data);
     });
 
     function chartInit(selector, data) {
@@ -76,9 +76,11 @@
         btn.prop('disabled', true);
 
         var inputToCopy = btn.prev().find('input')[0];
+        inputToCopy.disabled = false;
         inputToCopy.select();
         inputToCopy.setSelectionRange(0, 99999);
         document.execCommand('copy');
+        inputToCopy.disabled = true;
 
         setTimeout(function() {
             btn.removeClass('clicked');

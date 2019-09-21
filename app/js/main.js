@@ -3789,7 +3789,7 @@ jQuery(document).ready(function ($) {
 
      
 
-             chartInit(id, data)
+             chartInit(id, data);
 
          });
 
@@ -3925,11 +3925,15 @@ jQuery(document).ready(function ($) {
 
              var inputToCopy = btn.prev().find('input')[0];
 
+             inputToCopy.disabled = false;
+
              inputToCopy.select();
 
              inputToCopy.setSelectionRange(0, 99999);
 
              document.execCommand('copy');
+
+             inputToCopy.disabled = true;
 
      
 

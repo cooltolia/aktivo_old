@@ -1688,6 +1688,9 @@ th {
     color: #d7d7d8; }
   .base-input__input::placeholder {
     color: #d7d7d8; }
+  .base-input__input:disabled {
+    background-color: #fff;
+    opacity: 0.5; }
 
 .base-input__label {
   position: absolute;

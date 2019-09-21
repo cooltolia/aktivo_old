@@ -32,10 +32,10 @@ mixin partners-content()
                         +e.referrals
                             +e.inputs
                                 +e.input
-                                    +base-input('text', 'referralLink0', 'referral_link0', 'Реферальная ссылка', false)(value='https://www.youtube.com/watch?v=CIbfdfBeVLY' class='no-label' placeholder='Реферальная ссылка')
+                                    +base-input('text', 'referralLink0', 'referral_link0', 'Реферальная ссылка', false)(value='https://www.youtube.com/watch?v=CIbfdfBeVLY' class='no-label' placeholder='Реферальная ссылка' disabled='')
                                     +e.BUTTON.copy
                                 +e.input
-                                    +base-input('text', 'referralComment0', 'referral_comment0', 'Комментарий к ссылке', false)(value='Ссылка для обеспеченных' class='no-label' placeholder='Комментарий к ссылке')
+                                    +base-input('text', 'referralComment0', 'referral_comment0', 'Комментарий к ссылке', false)(value='Ссылка для обеспеченных' class='no-label' placeholder='Комментарий к ссылке' disabled='')
                                     +e.BUTTON.copy
                             +e.chart-wrapper
                                 +e.chart#referralChart0(data-values='[80, 20, 10]')
@@ -46,10 +46,10 @@ mixin partners-content()
                         +e.referrals
                             +e.inputs
                                 +e.input
-                                    +base-input('text', 'referralLink1', 'referral_link1', 'Реферальная ссылка', false)(value='https://www.youtube.com/watch?v=CIbfdfBeVLY' class='no-label' placeholder='Реферальная ссылка')
+                                    +base-input('text', 'referralLink1', 'referral_link1', 'Реферальная ссылка', false)(value='https://www.youtube.com/watch?v=CIbfdfBeVLY' class='no-label' placeholder='Реферальная ссылка' disabled='')
                                     +e.BUTTON.copy
                                 +e.input
-                                    +base-input('text', 'referralComment1', 'referral_comment1', 'Комментарий к ссылке', false)(class='no-label' placeholder='Комментарий к ссылке')
+                                    +base-input('text', 'referralComment1', 'referral_comment1', 'Комментарий к ссылке', false)(class='no-label' placeholder='Комментарий к ссылке' disabled='')
                                     +e.BUTTON.copy
                             +e.chart-wrapper
                                 +e.chart#referralChart1(data-values='[60, 40, 25]')

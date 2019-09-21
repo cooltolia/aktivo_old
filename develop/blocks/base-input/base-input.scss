@@ -47,6 +47,11 @@
         color: #d7d7d8;
     }
 
+    &:disabled {
+        background-color: #fff;
+        opacity: 0.5;
+    }
+
 }
 
 .base-input__label {
