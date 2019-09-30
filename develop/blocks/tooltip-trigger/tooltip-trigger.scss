@@ -1,0 +1,19 @@
+.tooltip-trigger {
+    display: inline-flex;
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $themecolor;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+
+    pointer-events: initial;
+
+    cursor: pointer;
+}
