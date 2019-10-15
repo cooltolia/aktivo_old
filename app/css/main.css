@@ -2613,8 +2613,11 @@ th {
   -webkit-box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
           box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
   background-color: #ffffff; }
+  .documents-content__block.right {
+    text-align: right; }
 
 .documents-content__title {
+  display: inline-block;
   position: relative;
   padding-left: 30px;
   font-size: 16px;
@@ -2650,7 +2653,8 @@ th {
             transform: rotate(225deg) translate(50%, 50%); }
 
 .documents-content__data {
-  display: none; }
+  display: none;
+  text-align: left; }
   .documents-content__data.active {
     display: block; }
 
