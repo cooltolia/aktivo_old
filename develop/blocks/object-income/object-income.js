@@ -234,7 +234,7 @@
         new SimpleBar($('.highcharts-scrolling')[0], {
             autoHide: false
         });
-    });
+    }, 1000);
 
     if (chart.length) {
         Highcharts.chart('income-chart', {

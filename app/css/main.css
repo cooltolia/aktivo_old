@@ -6924,6 +6924,13 @@ body.modal-open {
       .object-income__chart #income-chart .simplebar-scrollbar::before {
         opacity: 1;
         background-color: #ffd729; }
+    .object-income__chart #income-chart .simplebar-track.horizontal {
+      height: 7px;
+      border-radius: 4px; }
+    .object-income__chart #income-chart .horizontal.simplebar-track .simplebar-scrollbar {
+      height: 7px;
+      border-radius: 4px;
+      top: 0; }
   .object-income__chart .highcharts-credits {
     display: none; }
 

@@ -47,6 +47,17 @@
                 background-color: $themecolor;
             }
         }
+
+        .simplebar-track.horizontal {
+            height: 7px;
+            border-radius: 4px;
+        }
+
+        .horizontal.simplebar-track .simplebar-scrollbar {
+            height: 7px;
+            border-radius: 4px;
+            top: 0; 
+        }
     }
 
     .highcharts-credits {
