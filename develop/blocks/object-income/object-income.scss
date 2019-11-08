@@ -21,10 +21,32 @@
     position: relative;
     height: 300px;
     margin-right: 40px;
+    max-width: 600px;
 
     #income-chart {
-        width: 100%;
+        min-width: 320px;
         height: 100%;
+        width: auto;
+
+        .simplebar-track {
+            width: 100%;
+
+            background-color: rgba(233, 233, 233, 0.582);
+
+            &.vertical {
+                display: none;
+            }
+        }
+
+        .simplebar-scrollbar {
+            width: 4px;
+            right: 0;
+
+            &::before {
+                opacity: 1;
+                background-color: $themecolor;
+            }
+        }
     }
 
     .highcharts-credits {
@@ -64,7 +86,6 @@
     }
 }
 
-
 .object-income__link {
     position: relative;
     font-size: 14px;
@@ -79,7 +100,7 @@
         left: 0;
         bottom: -3px;
         border-bottom: 1px dashed #3c7bd8;
-        
+
         transition: color 300ms ease;
     }
 
@@ -88,7 +109,7 @@
     &:focus {
         text-decoration: none;
 
-        color: darken($color: #3c7bd8, $amount: 20%)
+        color: darken($color: #3c7bd8, $amount: 20%);
     }
 }
 

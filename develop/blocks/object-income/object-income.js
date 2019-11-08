@@ -1,5 +1,4 @@
-;
-(function () {
+(function() {
     // var resourceChartElement = document.getElementById("income-chart");
 
     // if (resourceChartElement) {
@@ -188,18 +187,65 @@
     
     */
 
-    var profitData = [2100, 1700, 1200, 1600, 1250, 650];
-    var dividendsData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38];
+    var profitData = [
+        2100,
+        1700,
+        1200,
+        1600,
+        1250,
+        650,
+        2100,
+        1700,
+        1200,
+        1600,
+        1250,
+        650,
+        2100,
+        1700,
+        1200,
+        1600,
+        1250,
+        650
+    ];
+    var dividendsData = [
+        1.3,
+        1.08,
+        0.71,
+        0.98,
+        0.78,
+        0.38,
+        1.3,
+        1.08,
+        0.71,
+        0.98,
+        0.78,
+        0.38,
+        1.3,
+        1.08,
+        0.71,
+        0.98,
+        0.78,
+        0.38
+    ];
 
     var chart = $('#income-chart');
+
+    setTimeout(() => {
+        new SimpleBar($('.highcharts-scrolling')[0], {
+            autoHide: false
+        });
+    });
 
     if (chart.length) {
         Highcharts.chart('income-chart', {
             chart: {
-                zoomType: 'xy'
+                zoomType: 'xy',
+                scrollablePlotArea: {
+                    minWidth: 800
+                }
             },
             title: {
-                text: '',
+                text: ''
             },
             exporting: {
                 enabled: false
@@ -219,23 +265,42 @@
                     }
                 }
             },
-            xAxis: [{
-                categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
-                crosshair: false,
-                labels: {
-                    style: {
-                        color: 'rgba(0, 0, 0, 0.4)',
-                        fontSize: '9px'
+            xAxis: [
+                {
+                    categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
+                    crosshair: false,
+                    labels: {
+                        style: {
+                            color: 'rgba(0, 0, 0, 0.4)',
+                            fontSize: '9px'
+                        }
+                    },
+                    min: 0,
+                    // max: 8,
+                    scrollbar: {
+                        enabled: true,
+                        barBackgroundColor: '#ffd729',
+                        barBorderRadius: 2,
+                        barBorderWidth: 0,
+                        buttonBackgroundColor: 'transparent',
+                        buttonBorderWidth: 0,
+                        buttonArrowColor: 'transparent',
+                        buttonBorderRadius: 0,
+                        rifleColor: 'transparent',
+                        trackBackgroundColor: '#e9e9e9',
+                        trackBorderWidth: 0,
+                        height: 4
                     }
-                },
-            }],
-            yAxis: [{
+                }
+            ],
+            yAxis: [
+                {
                     visible: false,
                     softMax: 1.3
                 },
                 {
                     title: {
-                        text: '',
+                        text: ''
                     },
                     labels: {
                         style: {
@@ -250,30 +315,42 @@
                 }
             ],
             legend: {
-                enabled: false,
+                enabled: false
             },
             credits: {
                 enabled: false
             },
-            series: [{
-                name: 'Сумма выплат',
-                type: 'column',
-                yAxis: 1,
-                data: profitData,
-                color: '#3c7bd8',
-                tooltip: {
-                    valueSuffix: ' 000 руб'
+            series: [
+                {
+                    name: 'Сумма выплат',
+                    type: 'column',
+                    yAxis: 1,
+                    data: profitData,
+                    color: '#3c7bd8',
+                    tooltip: {
+                        valueSuffix: ' 000 руб'
+                    },
+                    states: {
+                        inactive: {
+                            opacity: 0.8
+                        }
+                    }
                 },
-            }, {
-                name: 'Доходность',
-                type: 'line',
-                data: dividendsData,
-                color: '#ffd729',
-                tooltip: {
-                    valueSuffix: 'млн руб'
+                {
+                    name: 'Доходность',
+                    type: 'line',
+                    data: dividendsData,
+                    color: '#ffd729',
+                    tooltip: {
+                        valueSuffix: 'млн руб'
+                    },
+                    states: {
+                        inactive: {
+                            opacity: 0.8
+                        }
+                    }
                 }
-            }]
+            ]
         });
     }
-
 })();

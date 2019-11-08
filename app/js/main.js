@@ -2833,9 +2833,7 @@ jQuery(document).ready(function ($) {
      
 
      
-     ;
-
-     (function () {
+     (function() {
 
          // var resourceChartElement = document.getElementById("income-chart");
 
@@ -3213,13 +3211,101 @@ jQuery(document).ready(function ($) {
 
      
 
-         var profitData = [2100, 1700, 1200, 1600, 1250, 650];
+         var profitData = [
 
-         var dividendsData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38];
+             2100,
+
+             1700,
+
+             1200,
+
+             1600,
+
+             1250,
+
+             650,
+
+             2100,
+
+             1700,
+
+             1200,
+
+             1600,
+
+             1250,
+
+             650,
+
+             2100,
+
+             1700,
+
+             1200,
+
+             1600,
+
+             1250,
+
+             650
+
+         ];
+
+         var dividendsData = [
+
+             1.3,
+
+             1.08,
+
+             0.71,
+
+             0.98,
+
+             0.78,
+
+             0.38,
+
+             1.3,
+
+             1.08,
+
+             0.71,
+
+             0.98,
+
+             0.78,
+
+             0.38,
+
+             1.3,
+
+             1.08,
+
+             0.71,
+
+             0.98,
+
+             0.78,
+
+             0.38
+
+         ];
 
      
 
          var chart = $('#income-chart');
+
+     
+
+         setTimeout(() => {
+
+             new SimpleBar($('.highcharts-scrolling')[0], {
+
+                 autoHide: false
+
+             });
+
+         });
 
      
 
@@ -3229,13 +3315,19 @@ jQuery(document).ready(function ($) {
 
                  chart: {
 
-                     zoomType: 'xy'
+                     zoomType: 'xy',
+
+                     scrollablePlotArea: {
+
+                         minWidth: 800
+
+                     }
 
                  },
 
                  title: {
 
-                     text: '',
+                     text: ''
 
                  },
 
@@ -3275,27 +3367,65 @@ jQuery(document).ready(function ($) {
 
                  },
 
-                 xAxis: [{
+                 xAxis: [
 
-                     categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
+                     {
 
-                     crosshair: false,
+                         categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
 
-                     labels: {
+                         crosshair: false,
 
-                         style: {
+                         labels: {
 
-                             color: 'rgba(0, 0, 0, 0.4)',
+                             style: {
 
-                             fontSize: '9px'
+                                 color: 'rgba(0, 0, 0, 0.4)',
+
+                                 fontSize: '9px'
+
+                             }
+
+                         },
+
+                         min: 0,
+
+                         // max: 8,
+
+                         scrollbar: {
+
+                             enabled: true,
+
+                             barBackgroundColor: '#ffd729',
+
+                             barBorderRadius: 2,
+
+                             barBorderWidth: 0,
+
+                             buttonBackgroundColor: 'transparent',
+
+                             buttonBorderWidth: 0,
+
+                             buttonArrowColor: 'transparent',
+
+                             buttonBorderRadius: 0,
+
+                             rifleColor: 'transparent',
+
+                             trackBackgroundColor: '#e9e9e9',
+
+                             trackBorderWidth: 0,
+
+                             height: 4
 
                          }
 
-                     },
+                     }
 
-                 }],
+                 ],
 
-                 yAxis: [{
+                 yAxis: [
+
+                     {
 
                          visible: false,
 
@@ -3307,7 +3437,7 @@ jQuery(document).ready(function ($) {
 
                          title: {
 
-                             text: '',
+                             text: ''
 
                          },
 
@@ -3337,7 +3467,7 @@ jQuery(document).ready(function ($) {
 
                  legend: {
 
-                     enabled: false,
+                     enabled: false
 
                  },
 
@@ -3347,49 +3477,75 @@ jQuery(document).ready(function ($) {
 
                  },
 
-                 series: [{
+                 series: [
 
-                     name: 'Сумма выплат',
+                     {
 
-                     type: 'column',
+                         name: 'Сумма выплат',
 
-                     yAxis: 1,
+                         type: 'column',
 
-                     data: profitData,
+                         yAxis: 1,
 
-                     color: '#3c7bd8',
+                         data: profitData,
 
-                     tooltip: {
+                         color: '#3c7bd8',
 
-                         valueSuffix: ' 000 руб'
+                         tooltip: {
+
+                             valueSuffix: ' 000 руб'
+
+                         },
+
+                         states: {
+
+                             inactive: {
+
+                                 opacity: 0.8
+
+                             }
+
+                         }
 
                      },
 
-                 }, {
+                     {
 
-                     name: 'Доходность',
+                         name: 'Доходность',
 
-                     type: 'line',
+                         type: 'line',
 
-                     data: dividendsData,
+                         data: dividendsData,
 
-                     color: '#ffd729',
+                         color: '#ffd729',
 
-                     tooltip: {
+                         tooltip: {
 
-                         valueSuffix: 'млн руб'
+                             valueSuffix: 'млн руб'
+
+                         },
+
+                         states: {
+
+                             inactive: {
+
+                                 opacity: 0.8
+
+                             }
+
+                         }
 
                      }
 
-                 }]
+                 ]
 
              });
 
          }
 
-     
-
      })();
+
+     
 
      
      
