@@ -187,170 +187,180 @@
     
     */
 
-    var profitData = [
-        2100,
-        1700,
-        1200,
-        1600,
-        1250,
-        650,
-        2100,
-        1700,
-        1200,
-        1600,
-        1250,
-        650,
-        2100,
-        1700,
-        1200,
-        1600,
-        1250,
-        650
-    ];
-    var dividendsData = [
-        1.3,
-        1.08,
-        0.71,
-        0.98,
-        0.78,
-        0.38,
-        1.3,
-        1.08,
-        0.71,
-        0.98,
-        0.78,
-        0.38,
-        1.3,
-        1.08,
-        0.71,
-        0.98,
-        0.78,
-        0.38
-    ];
+    (function() {
+        var profitData = [
+            2100,
+            1700,
+            1200,
+            1600,
+            1250,
+            650,
+            2100,
+            1700,
+            1200,
+            1600,
+            1250,
+            650,
+            2100,
+            1700,
+            1200,
+            1600,
+            1250,
+            650,
+            2100,
+            1700
+        ];
+        var dividendsData = [
+            1.3,
+            1.08,
+            0.71,
+            0.98,
+            0.78,
+            0.38,
+            1.3,
+            1.08,
+            0.71,
+            0.98,
+            0.78,
+            0.38,
+            1.3,
+            1.08,
+            0.71,
+            0.98,
+            0.78,
+            0.38
+        ];
 
-    var chart = $('#income-chart');
+        var chart = $('#income-chart');
+        var columnWidth = 25;
+        var chartMinWidth = columnWidth * dividendsData.length * 1.5;
+        console.log(chartMinWidth);
 
-    setTimeout(() => {
-        new SimpleBar($('.highcharts-scrolling')[0], {
-            autoHide: false
-        });
-    }, 1000);
+        setTimeout(() => {
+            new SimpleBar(chart.find('.highcharts-scrolling')[0], {
+                autoHide: false
+            });
+        }, 1000);
 
-    if (chart.length) {
-        Highcharts.chart('income-chart', {
-            chart: {
-                zoomType: 'xy',
-                scrollablePlotArea: {
-                    minWidth: 800
-                }
-            },
-            title: {
-                text: ''
-            },
-            exporting: {
-                enabled: false
-            },
-            plotOptions: {
-                line: {
-                    dataLabels: {
-                        align: 'center',
-                        enabled: true,
-                        color: 'black',
-                        padding: 10,
-                        style: {
-                            textOutline: 'none',
-                            fontSize: '14px',
-                            fontWeight: '400'
-                        }
-                    }
-                }
-            },
-            xAxis: [
-                {
-                    categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
-                    crosshair: false,
-                    labels: {
-                        style: {
-                            color: 'rgba(0, 0, 0, 0.4)',
-                            fontSize: '9px'
-                        }
-                    },
-                    min: 0,
-                    // max: 8,
-                    scrollbar: {
-                        enabled: true,
-                        barBackgroundColor: '#ffd729',
-                        barBorderRadius: 2,
-                        barBorderWidth: 0,
-                        buttonBackgroundColor: 'transparent',
-                        buttonBorderWidth: 0,
-                        buttonArrowColor: 'transparent',
-                        buttonBorderRadius: 0,
-                        rifleColor: 'transparent',
-                        trackBackgroundColor: '#e9e9e9',
-                        trackBorderWidth: 0,
-                        height: 4
-                    }
-                }
-            ],
-            yAxis: [
-                {
-                    visible: false,
-                    softMax: 1.3
-                },
-                {
-                    title: {
-                        text: ''
-                    },
-                    labels: {
-                        style: {
-                            color: 'rgba(0, 0, 0, 0.4)',
-                            fontSize: '9px'
-                        }
-                    },
-                    opposite: false,
-                    visible: true,
-                    tickInterval: 10,
-                    softMax: 2200
-                }
-            ],
-            legend: {
-                enabled: false
-            },
-            credits: {
-                enabled: false
-            },
-            series: [
-                {
-                    name: 'Сумма выплат',
-                    type: 'column',
-                    yAxis: 1,
-                    data: profitData,
-                    color: '#3c7bd8',
-                    tooltip: {
-                        valueSuffix: ' 000 руб'
-                    },
-                    states: {
-                        inactive: {
-                            opacity: 0.8
-                        }
+        if (chart.length) {
+            Highcharts.chart('income-chart', {
+                chart: {
+                    zoomType: 'xy',
+                    scrollablePlotArea: {
+                        minWidth: chartMinWidth
                     }
                 },
-                {
-                    name: 'Доходность',
-                    type: 'line',
-                    data: dividendsData,
-                    color: '#ffd729',
-                    tooltip: {
-                        valueSuffix: 'млн руб'
+                title: {
+                    text: ''
+                },
+                exporting: {
+                    enabled: false
+                },
+                plotOptions: {
+                    line: {
+                        dataLabels: {
+                            align: 'center',
+                            enabled: true,
+                            color: 'black',
+                            padding: 10,
+                            style: {
+                                textOutline: 'none',
+                                fontSize: '14px',
+                                fontWeight: '400'
+                            }
+                        }
                     },
-                    states: {
-                        inactive: {
-                            opacity: 0.8
+                    column: {
+                        pointWidth: columnWidth
+                    }
+                },
+                xAxis: [
+                    {
+                        categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
+                        crosshair: false,
+                        labels: {
+                            style: {
+                                color: 'rgba(0, 0, 0, 0.4)',
+                                fontSize: '9px'
+                            }
+                        },
+                        min: 0,
+                        // max: 8,
+                        scrollbar: {
+                            enabled: true,
+                            barBackgroundColor: '#ffd729',
+                            barBorderRadius: 2,
+                            barBorderWidth: 0,
+                            buttonBackgroundColor: 'transparent',
+                            buttonBorderWidth: 0,
+                            buttonArrowColor: 'transparent',
+                            buttonBorderRadius: 0,
+                            rifleColor: 'transparent',
+                            trackBackgroundColor: '#e9e9e9',
+                            trackBorderWidth: 0,
+                            height: 4
                         }
                     }
-                }
-            ]
-        });
-    }
+                ],
+                yAxis: [
+                    {
+                        visible: false,
+                        softMax: 1.3
+                    },
+                    {
+                        title: {
+                            text: ''
+                        },
+                        labels: {
+                            style: {
+                                color: 'rgba(0, 0, 0, 0.4)',
+                                fontSize: '9px'
+                            }
+                        },
+                        opposite: false,
+                        visible: true,
+                        tickInterval: 10,
+                        softMax: 2200
+                    }
+                ],
+                legend: {
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [
+                    {
+                        name: 'Сумма выплат',
+                        type: 'column',
+                        yAxis: 1,
+                        data: profitData,
+                        color: '#3c7bd8',
+                        tooltip: {
+                            valueSuffix: ' 000 руб'
+                        },
+                        states: {
+                            inactive: {
+                                opacity: 0.8
+                            }
+                        }
+                    },
+                    {
+                        name: 'Доходность',
+                        type: 'line',
+                        data: dividendsData,
+                        color: '#ffd729',
+                        tooltip: {
+                            valueSuffix: 'млн руб'
+                        },
+                        states: {
+                            inactive: {
+                                opacity: 0.8
+                            }
+                        }
+                    }
+                ]
+            });
+        }
+    })();
 })();

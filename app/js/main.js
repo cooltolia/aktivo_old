@@ -3211,337 +3211,357 @@ jQuery(document).ready(function ($) {
 
      
 
-         var profitData = [
+         (function() {
 
-             2100,
+             var profitData = [
 
-             1700,
+                 2100,
 
-             1200,
+                 1700,
 
-             1600,
+                 1200,
 
-             1250,
+                 1600,
 
-             650,
+                 1250,
 
-             2100,
+                 650,
 
-             1700,
+                 2100,
 
-             1200,
+                 1700,
 
-             1600,
+                 1200,
 
-             1250,
+                 1600,
 
-             650,
+                 1250,
 
-             2100,
+                 650,
 
-             1700,
+                 2100,
 
-             1200,
+                 1700,
 
-             1600,
+                 1200,
 
-             1250,
+                 1600,
 
-             650
+                 1250,
 
-         ];
+                 650,
 
-         var dividendsData = [
+                 2100,
 
-             1.3,
+                 1700
 
-             1.08,
+             ];
 
-             0.71,
+             var dividendsData = [
 
-             0.98,
+                 1.3,
 
-             0.78,
+                 1.08,
 
-             0.38,
+                 0.71,
 
-             1.3,
+                 0.98,
 
-             1.08,
+                 0.78,
 
-             0.71,
+                 0.38,
 
-             0.98,
+                 1.3,
 
-             0.78,
+                 1.08,
 
-             0.38,
+                 0.71,
 
-             1.3,
+                 0.98,
 
-             1.08,
+                 0.78,
 
-             0.71,
+                 0.38,
 
-             0.98,
+                 1.3,
 
-             0.78,
+                 1.08,
 
-             0.38
+                 0.71,
 
-         ];
+                 0.98,
 
-     
+                 0.78,
 
-         var chart = $('#income-chart');
+                 0.38
 
-     
-
-         setTimeout(() => {
-
-             new SimpleBar($('.highcharts-scrolling')[0], {
-
-                 autoHide: false
-
-             });
-
-         }, 1000);
+             ];
 
      
 
-         if (chart.length) {
+             var chart = $('#income-chart');
 
-             Highcharts.chart('income-chart', {
+             var columnWidth = 25;
 
-                 chart: {
+             var chartMinWidth = columnWidth * dividendsData.length * 1.5;
 
-                     zoomType: 'xy',
+             console.log(chartMinWidth);
 
-                     scrollablePlotArea: {
+     
 
-                         minWidth: 800
+             setTimeout(() => {
 
-                     }
+                 new SimpleBar(chart.find('.highcharts-scrolling')[0], {
 
-                 },
+                     autoHide: false
 
-                 title: {
+                 });
 
-                     text: ''
+             }, 1000);
 
-                 },
+     
 
-                 exporting: {
+             if (chart.length) {
 
-                     enabled: false
+                 Highcharts.chart('income-chart', {
 
-                 },
+                     chart: {
 
-                 plotOptions: {
+                         zoomType: 'xy',
 
-                     line: {
+                         scrollablePlotArea: {
 
-                         dataLabels: {
-
-                             align: 'center',
-
-                             enabled: true,
-
-                             color: 'black',
-
-                             padding: 10,
-
-                             style: {
-
-                                 textOutline: 'none',
-
-                                 fontSize: '14px',
-
-                                 fontWeight: '400'
-
-                             }
-
-                         }
-
-                     }
-
-                 },
-
-                 xAxis: [
-
-                     {
-
-                         categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
-
-                         crosshair: false,
-
-                         labels: {
-
-                             style: {
-
-                                 color: 'rgba(0, 0, 0, 0.4)',
-
-                                 fontSize: '9px'
-
-                             }
-
-                         },
-
-                         min: 0,
-
-                         // max: 8,
-
-                         scrollbar: {
-
-                             enabled: true,
-
-                             barBackgroundColor: '#ffd729',
-
-                             barBorderRadius: 2,
-
-                             barBorderWidth: 0,
-
-                             buttonBackgroundColor: 'transparent',
-
-                             buttonBorderWidth: 0,
-
-                             buttonArrowColor: 'transparent',
-
-                             buttonBorderRadius: 0,
-
-                             rifleColor: 'transparent',
-
-                             trackBackgroundColor: '#e9e9e9',
-
-                             trackBorderWidth: 0,
-
-                             height: 4
-
-                         }
-
-                     }
-
-                 ],
-
-                 yAxis: [
-
-                     {
-
-                         visible: false,
-
-                         softMax: 1.3
-
-                     },
-
-                     {
-
-                         title: {
-
-                             text: ''
-
-                         },
-
-                         labels: {
-
-                             style: {
-
-                                 color: 'rgba(0, 0, 0, 0.4)',
-
-                                 fontSize: '9px'
-
-                             }
-
-                         },
-
-                         opposite: false,
-
-                         visible: true,
-
-                         tickInterval: 10,
-
-                         softMax: 2200
-
-                     }
-
-                 ],
-
-                 legend: {
-
-                     enabled: false
-
-                 },
-
-                 credits: {
-
-                     enabled: false
-
-                 },
-
-                 series: [
-
-                     {
-
-                         name: 'Сумма выплат',
-
-                         type: 'column',
-
-                         yAxis: 1,
-
-                         data: profitData,
-
-                         color: '#3c7bd8',
-
-                         tooltip: {
-
-                             valueSuffix: ' 000 руб'
-
-                         },
-
-                         states: {
-
-                             inactive: {
-
-                                 opacity: 0.8
-
-                             }
+                             minWidth: chartMinWidth
 
                          }
 
                      },
 
-                     {
+                     title: {
 
-                         name: 'Доходность',
+                         text: ''
 
-                         type: 'line',
+                     },
 
-                         data: dividendsData,
+                     exporting: {
 
-                         color: '#ffd729',
+                         enabled: false
 
-                         tooltip: {
+                     },
 
-                             valueSuffix: 'млн руб'
+                     plotOptions: {
+
+                         line: {
+
+                             dataLabels: {
+
+                                 align: 'center',
+
+                                 enabled: true,
+
+                                 color: 'black',
+
+                                 padding: 10,
+
+                                 style: {
+
+                                     textOutline: 'none',
+
+                                     fontSize: '14px',
+
+                                     fontWeight: '400'
+
+                                 }
+
+                             }
 
                          },
 
-                         states: {
+                         column: {
 
-                             inactive: {
+                             pointWidth: columnWidth
 
-                                 opacity: 0.8
+                         }
+
+                     },
+
+                     xAxis: [
+
+                         {
+
+                             categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
+
+                             crosshair: false,
+
+                             labels: {
+
+                                 style: {
+
+                                     color: 'rgba(0, 0, 0, 0.4)',
+
+                                     fontSize: '9px'
+
+                                 }
+
+                             },
+
+                             min: 0,
+
+                             // max: 8,
+
+                             scrollbar: {
+
+                                 enabled: true,
+
+                                 barBackgroundColor: '#ffd729',
+
+                                 barBorderRadius: 2,
+
+                                 barBorderWidth: 0,
+
+                                 buttonBackgroundColor: 'transparent',
+
+                                 buttonBorderWidth: 0,
+
+                                 buttonArrowColor: 'transparent',
+
+                                 buttonBorderRadius: 0,
+
+                                 rifleColor: 'transparent',
+
+                                 trackBackgroundColor: '#e9e9e9',
+
+                                 trackBorderWidth: 0,
+
+                                 height: 4
 
                              }
 
                          }
 
-                     }
+                     ],
 
-                 ]
+                     yAxis: [
 
-             });
+                         {
 
-         }
+                             visible: false,
+
+                             softMax: 1.3
+
+                         },
+
+                         {
+
+                             title: {
+
+                                 text: ''
+
+                             },
+
+                             labels: {
+
+                                 style: {
+
+                                     color: 'rgba(0, 0, 0, 0.4)',
+
+                                     fontSize: '9px'
+
+                                 }
+
+                             },
+
+                             opposite: false,
+
+                             visible: true,
+
+                             tickInterval: 10,
+
+                             softMax: 2200
+
+                         }
+
+                     ],
+
+                     legend: {
+
+                         enabled: false
+
+                     },
+
+                     credits: {
+
+                         enabled: false
+
+                     },
+
+                     series: [
+
+                         {
+
+                             name: 'Сумма выплат',
+
+                             type: 'column',
+
+                             yAxis: 1,
+
+                             data: profitData,
+
+                             color: '#3c7bd8',
+
+                             tooltip: {
+
+                                 valueSuffix: ' 000 руб'
+
+                             },
+
+                             states: {
+
+                                 inactive: {
+
+                                     opacity: 0.8
+
+                                 }
+
+                             }
+
+                         },
+
+                         {
+
+                             name: 'Доходность',
+
+                             type: 'line',
+
+                             data: dividendsData,
+
+                             color: '#ffd729',
+
+                             tooltip: {
+
+                                 valueSuffix: 'млн руб'
+
+                             },
+
+                             states: {
+
+                                 inactive: {
+
+                                     opacity: 0.8
+
+                                 }
+
+                             }
+
+                         }
+
+                     ]
+
+                 });
+
+             }
+
+         })();
 
      })();
 
