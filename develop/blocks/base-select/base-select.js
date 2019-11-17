@@ -25,6 +25,13 @@
         $options.slideDown();
     })
 
+    $(document).on('click', function(e) {
+        if ($select.parent().hasClass('active') && e.target !== $select && $select.parent().has(e.target).length === 0) {
+            $select.parent().removeClass("active");
+            $options.slideUp();
+        }
+    })
+
     $optionsItem.each(function() {
         $(this).on('click', function (e) {
             var text = $(this).text();

@@ -282,6 +282,20 @@ jQuery(document).ready(function ($) {
 
      
 
+         $(document).on('click', function(e) {
+
+             if ($select.parent().hasClass('active') && e.target !== $select && $select.parent().has(e.target).length === 0) {
+
+                 $select.parent().removeClass("active");
+
+                 $options.slideUp();
+
+             }
+
+         })
+
+     
+
          $optionsItem.each(function() {
 
              $(this).on('click', function (e) {
@@ -1579,191 +1593,427 @@ jQuery(document).ready(function ($) {
      
 
      
-     ;
+     (function() {
 
-     (function () {
+       var profitData = [2500, 1700, 1200, 1600, 1250, 650];
 
-         var profitData = [2500, 1700, 1200, 1600, 1250, 650];
+       var dividendsData = [5, 10, 20, 30, 20, 15];
 
-         var dividendsData = [5, 10, 20, 30, 20, 15];
+       var dividendsMax = 35;
 
-         var dividendsMax = 35;
-
-         var profitMax = 2500;
+       var profitMax = 2500;
 
      
 
-         var chart = $('#income-monitoring');
+       var chart = $("#income-monitoring");
 
      
 
-         if (chart.length) {
+       if (chart.length) {
 
-             Highcharts.chart('income-monitoring', {
+         Highcharts.chart("income-monitoring", {
 
-                 chart: {
+           chart: {
 
-                     zoomType: 'xy'
+             zoomType: "xy"
 
-                 },
+           },
 
-                 title: {
+           title: {
 
-                     text: '',
+             text: ""
 
-                 },
+           },
 
-                 exporting: {
+           exporting: {
 
-                     enabled: false
+             enabled: false
 
-                 },
+           },
 
-                 plotOptions: {
+           plotOptions: {
 
-                     line: {
+             line: {
 
-                         dataLabels: {
+               dataLabels: {
 
-                             align: 'center',
+                 align: "center",
 
-                             enabled: true,
+                 enabled: true,
 
-                             color: 'black',
+                 color: "black",
 
-                             padding: 10,
+                 padding: 10,
 
-                             style: {
+                 style: {
 
-                                 textOutline: 'none',
+                   textOutline: "none",
 
-                                 fontSize: '14px',
+                   fontSize: "14px",
 
-                                 fontWeight: '400'
-
-                             },
-
-                             formatter: function () {
-
-                                 return this.y + '%';
-
-                             }
-
-                         }
-
-                     }
+                   fontWeight: "400"
 
                  },
 
-                 xAxis: [{
+                 formatter: function() {
 
-                     categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
+                   return this.y + "%";
 
-                     crosshair: false,
+                 }
 
-                     labels: {
+               }
 
-                         style: {
+             }
 
-                             color: 'rgba(0, 0, 0, 0.4)',
+           },
 
-                             fontSize: '9px'
+           xAxis: [
 
-                         }
+             {
 
-                     },
+               categories: [
 
-                 }],
+                 "Фев 18",
 
-                 yAxis: [{
+                 "Мар 18",
 
-                         visible: false,
+                 "Апр 18",
 
-                         min: 0,
+                 "Май 18",
 
-                         max: dividendsMax,
+                 "Июн 18",
 
-                     },
+                 "Июл 18"
 
-                     {
+               ],
 
-                         max: profitMax,
+               crosshair: false,
 
-                         title: {
+               labels: {
 
-                             text: '',
+                 style: {
 
-                         },
+                   color: "rgba(0, 0, 0, 0.4)",
 
-                         labels: {
+                   fontSize: "9px"
 
-                             style: {
+                 }
 
-                                 color: 'rgba(0, 0, 0, 0.4)',
+               }
 
-                                 fontSize: '9px'
+             }
 
-                             }
+           ],
 
-                         },
+           yAxis: [
 
-                     }
+             {
 
-                 ],
+               visible: false,
 
-                 legend: {
+               min: 0,
 
-                     enabled: false,
+               max: dividendsMax
 
-                 },
+             },
 
-                 credits: {
+             {
 
-                     enabled: false
+               max: profitMax,
 
-                 },
+               title: {
 
-                 series: [{
+                 text: ""
 
-                     name: 'Сумма выплат',
+               },
 
-                     type: 'column',
+               labels: {
 
-                     yAxis: 1,
+                 style: {
 
-                     data: profitData,
+                   color: "rgba(0, 0, 0, 0.4)",
 
-                     color: '#3c7bd8',
+                   fontSize: "9px"
 
-                     tooltip: {
+                 }
 
-                         valueSuffix: ' 000 руб'
+               }
 
-                     },
+             }
 
-                 }, {
+           ],
 
-                     name: 'Доходность',
+           legend: {
 
-                     type: 'line',
+             enabled: false
 
-                     data: dividendsData,
+           },
 
-                     color: '#ffd729',
+           credits: {
 
-                     tooltip: {
+             enabled: false
 
-                         valueSuffix: '%'
+           },
 
-                     }
+           series: [
 
-                 }]
+             {
 
-             });
+               name: "Сумма выплат",
+
+               type: "column",
+
+               yAxis: 1,
+
+               data: profitData,
+
+               color: "#3c7bd8",
+
+               tooltip: {
+
+                 valueSuffix: " 000 руб"
+
+               }
+
+             },
+
+             {
+
+               name: "Доходность",
+
+               type: "line",
+
+               data: dividendsData,
+
+               color: "#ffd729",
+
+               tooltip: {
+
+                 valueSuffix: "%"
+
+               }
+
+             }
+
+           ]
+
+         });
+
+       }
+
+     
+
+       var timeline = $("#timelinechart");
+
+       if (timeline.length) {
+
+         setTimeout(() => {
+
+           var scrolledArea = timeline.find(".highcharts-scrolling");
+
+           if (scrolledArea.length === 0) return
+
+           new SimpleBar(scrolledArea[0], {
+
+             autoHide: false
+
+           });
+
+         }, 1000);
+
+     
+
+         var timelineData = [
+
+           {
+
+             name: "First dogs",
+
+             label: "1951: First dogs in space",
+
+             description: "22 July 1951 First dogs in space (Dezik and Tsygan) "
+
+           },
+
+           {
+
+             name: "Sputnik 1",
+
+             label: "1957: First artificial satellite",
+
+             description:
+
+               "4 October 1957 First artificial satellite. First signals from space."
+
+           },
+
+           {
+
+             name: "First human spaceflight",
+
+             label: "1961: First human spaceflight (Yuri Gagarin)",
+
+             description:
+
+               "First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight"
+
+           },
+
+           {
+
+             name: "First human on the Moon",
+
+             label: "1969: First human on the Moon",
+
+             description:
+
+               "First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon"
+
+           },
+
+           {
+
+             name: "First space station",
+
+             label: "1971: First space station",
+
+             description:
+
+               "Salyut 1 was the first space station of any kind, launched into low Earth orbit by the Soviet Union on April 19, 1971."
+
+           },
+
+           {
+
+             name: "Apollo–Soyuz Test Project",
+
+             label: "1975: First multinational manned mission",
+
+             description:
+
+               "The mission included both joint and separate scientific experiments, and provided useful engineering experience for future joint US–Russian space flights, such as the Shuttle–Mir Program and the International Space Station."
+
+           }
+
+         ];
+
+         var changeColorStep = 100 / timelineData.length;
+
+         var startTimelineColor = "#3c7bd8";
+
+         var timelineColors = [startTimelineColor];
+
+         for (var i = 1; i < timelineData.length; i++) {
+
+             timelineColors.push(shadeColor(timelineColors[i-1], -changeColorStep));
 
          }
 
+     
+
+         var columnWidth = 120;
+
+         var chartMinWidth = columnWidth * timelineData.length;
+
+         console.log(chartMinWidth);
+
+     
+
+         var startColor = Highcharts.chart("timelinechart", {
+
+           chart: {
+
+             type: "timeline",
+
+             scrollablePlotArea: {
+
+               minWidth: chartMinWidth
+
+             }
+
+           },
+
+           xAxis: {
+
+             visible: false
+
+           },
+
+           yAxis: {
+
+             visible: false
+
+           },
+
+           title: "none",
+
+           colors: timelineColors,
+
+           credits: {
+
+             enabled: false
+
+           },
+
+           series: [
+
+             {
+
+               data: timelineData
+
+             }
+
+           ]
+
+         });
+
+       }
+
+       
+
+       /** just a helper function to calc color for timeline */
+
+       function shadeColor(color, percent) {
+
+         var R = parseInt(color.substring(1, 3), 16);
+
+         var G = parseInt(color.substring(3, 5), 16);
+
+         var B = parseInt(color.substring(5, 7), 16);
+
+     
+
+         R = parseInt((R * (100 + percent)) / 100);
+
+         G = parseInt((G * (100 + percent)) / 100);
+
+         B = parseInt((B * (100 + percent)) / 100);
+
+     
+
+         R = R < 255 ? R : 255;
+
+         G = G < 255 ? G : 255;
+
+         B = B < 255 ? B : 255;
+
+     
+
+         var RR = R.toString(16).length == 1 ? "0" + R.toString(16) : R.toString(16);
+
+         var GG = G.toString(16).length == 1 ? "0" + G.toString(16) : G.toString(16);
+
+         var BB = B.toString(16).length == 1 ? "0" + B.toString(16) : B.toString(16);
+
+     
+
+         return "#" + RR + GG + BB;
+
+       }
+
      })();
+
+     
 
      
      ;(function() {
@@ -2835,365 +3085,365 @@ jQuery(document).ready(function ($) {
      
      (function() {
 
-         // var resourceChartElement = document.getElementById("income-chart");
+       // var resourceChartElement = document.getElementById("income-chart");
 
      
 
-         // if (resourceChartElement) {
+       // if (resourceChartElement) {
 
-         //     var ctx = resourceChartElement.getContext("2d")
-
-     
-
-         //     Chart.pluginService.register({
-
-         //         beforeRender: function (chart) {
-
-         //             if (chart.config.options.showAllTooltips) {
-
-         //                 // create an array of tooltips
-
-         //                 // we can't use the chart tooltip because there is only one tooltip per chart
-
-         //                 chart.pluginTooltips = [];
-
-         //                 chart.config.data.datasets.forEach(function (dataset, i) {
-
-         //                     chart.getDatasetMeta(i).data.forEach(function (sector, j) {
-
-         //                         if (sector._datasetIndex > 0) return
-
-         //                         chart.pluginTooltips.push(new Chart.Tooltip({
-
-         //                             _chart: chart.chart,
-
-         //                             _chartInstance: chart,
-
-         //                             _data: chart.data,
-
-         //                             _options: chart.options.tooltips,
-
-         //                             _active: [sector]
-
-         //                         }, chart));
-
-         //                     });
-
-         //                 });
+       //     var ctx = resourceChartElement.getContext("2d")
 
      
 
-         //                 // turn off normal tooltips
+       //     Chart.pluginService.register({
 
-         //                 chart.options.tooltips.enabled = false;
+       //         beforeRender: function (chart) {
 
-         //             }
+       //             if (chart.config.options.showAllTooltips) {
 
-         //         },
+       //                 // create an array of tooltips
 
-         //         afterDraw: function (chart, easing) {
+       //                 // we can't use the chart tooltip because there is only one tooltip per chart
 
-         //             if (chart.config.options.showAllTooltips) {
+       //                 chart.pluginTooltips = [];
 
-         //                 // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
+       //                 chart.config.data.datasets.forEach(function (dataset, i) {
 
-         //                 if (!chart.allTooltipsOnce) {
+       //                     chart.getDatasetMeta(i).data.forEach(function (sector, j) {
 
-         //                     if (easing !== 1)
+       //                         if (sector._datasetIndex > 0) return
 
-         //                         return;
+       //                         chart.pluginTooltips.push(new Chart.Tooltip({
 
-         //                     chart.allTooltipsOnce = true;
+       //                             _chart: chart.chart,
 
-         //                 }
+       //                             _chartInstance: chart,
 
-     
+       //                             _data: chart.data,
 
-         //                 // turn on tooltips
+       //                             _options: chart.options.tooltips,
 
-         //                 chart.options.tooltips.enabled = true;
+       //                             _active: [sector]
 
-         //                 Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
+       //                         }, chart));
 
-     
+       //                     });
 
-         //                     // if (tooltip._active[0]._datasetIndex > 0) return;
-
-     
-
-         //                     tooltip.initialize();
-
-         //                     tooltip.update();
-
-         //                     // we don't actually need this since we are not animating tooltips
-
-         //                     tooltip.pivot();
-
-         //                     tooltip.transition(easing).draw();
-
-         //                 });
-
-         //                 chart.options.tooltips.enabled = false;
-
-         //             }
-
-         //         }
-
-         //     })
+       //                 });
 
      
 
-         //     var realLineData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38]
+       //                 // turn off normal tooltips
+
+       //                 chart.options.tooltips.enabled = false;
+
+       //             }
+
+       //         },
+
+       //         afterDraw: function (chart, easing) {
+
+       //             if (chart.config.options.showAllTooltips) {
+
+       //                 // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
+
+       //                 if (!chart.allTooltipsOnce) {
+
+       //                     if (easing !== 1)
+
+       //                         return;
+
+       //                     chart.allTooltipsOnce = true;
+
+       //                 }
 
      
 
-         //     var mixedChart = new Chart(ctx, {
+       //                 // turn on tooltips
 
-         //         type: 'bar',
+       //                 chart.options.tooltips.enabled = true;
 
-         //         data: {
-
-         //             datasets: [{
-
-         //                     label: 'Доходность',
-
-         //                     data: [2100, 1700, 1200, 1600, 1250, 650],
-
-         //                     type: 'line',
-
-         //                     borderColor: '#ffd729',
-
-         //                     pointBackgroundColor: '#ffd729',
-
-         //                     fill: false,
-
-         //                 },
-
-         //                 {
-
-         //                     backgroundColor: '#3c7bd8',
-
-         //                     hoverBackgroundColor: '#3c7bd8',
-
-         //                     label: 'Сумма выплат',
-
-         //                     data: [2100, 1700, 1200, 1600, 1250, 650],
-
-         //                     borderWidth: 0
-
-         //                 },
-
-         //             ],
-
-         //             labels: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18']
-
-         //         },
-
-         //         options: {
-
-         //             scales: {
-
-         //                 yAxes: [{
-
-         //                     ticks: {
-
-         //                         fontColor: "rgba(0, 0, 0, 0.4)",
-
-         //                         fontSize: 9,
-
-         //                         padding: 10,
-
-         //                         beginAtZero: true,
-
-         //                     },
-
-         //                     gridLines: {
-
-         //                         drawBorder: false,
-
-         //                     }
-
-         //                 }],
-
-         //                 xAxes: [{
-
-         //                     barThickness: 45,
-
-         //                     gridLines: {
-
-         //                         display: false,
-
-         //                         drawBorder: false,
-
-         //                     },
-
-         //                     ticks: {
-
-         //                         fontColor: "rgba(0, 0, 0, 0.4)",
-
-         //                         fontSize: 9,
-
-         //                     }
-
-         //                 }]
-
-         //             },
-
-         //             legend: {
-
-         //                 display: true,
-
-         //                 position: 'right',
-
-         //                 labels: {
-
-         //                     boxWidth: 16,
-
-         //                     fontSize: 12,
-
-         //                     fontColor: '#000',
-
-         //                     padding: 15,
-
-         //                 }
-
-         //             },
-
-         //             elements: {
-
-         //                 line: {
-
-         //                     tension: 0
-
-         //                 }
-
-         //             },
-
-         //             tooltips: {
-
-         //                 mode: 'x',
-
-         //                 displayColors: false,
-
-         //                 yAlign: 'bottom',
-
-         //                 xAlign: 'center',
-
-         //                 bodyFontColor: '#000',
-
-         //                 bodyFontSize: 14,
-
-         //                 backgroundColor: 'transparent',
-
-         //                 custom: function (tooltip) {
-
-         //                     if (!tooltip) return;
-
-         //                     // disable displaying the color box;
-
-         //                     tooltip.displayColors = false;
-
-         //                 },
-
-         //                 callbacks: {
-
-         //                     label: function (tooltipItem, data) {
-
-         //                         var dataset = data.datasets[tooltipItem.datasetIndex];
-
-         //                         if (tooltipItem.datasetIndex > 0) {
-
-         //                             return dataset.data[tooltipItem.index];
-
-         //                         }
-
-         //                         var label = realLineData[tooltipItem.index];
+       //                 Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
 
      
 
-         //                         return label;
-
-         //                     },
-
-         //                     // remove title
-
-         //                     title: function (tooltipItem, data) {
-
-         //                         if (tooltipItem.datasetIndex > 0) {
-
-         //                             return dataset.data[tooltipItem.index];
-
-         //                         } else {
-
-         //                             return null
-
-         //                         }
-
-         //                     }
-
-         //                 }
-
-         //             },
-
-         //             showAllTooltips: true,
-
-         //             maintainAspectRatio: false,
-
-         //             responsive: true
-
-         //         },
+       //                     // if (tooltip._active[0]._datasetIndex > 0) return;
 
      
 
-         //     });
+       //                     tooltip.initialize();
 
-         // }
+       //                     tooltip.update();
 
-     
+       //                     // we don't actually need this since we are not animating tooltips
 
-         // var resizeId;
+       //                     tooltip.pivot();
 
-         // $(window).resize(function () {
+       //                     tooltip.transition(easing).draw();
 
-         //     clearTimeout(resizeId);
+       //                 });
 
-         //     resizeId = setTimeout(afterResizing, 100);
+       //                 chart.options.tooltips.enabled = false;
 
-         // });
+       //             }
 
-     
+       //         }
 
-         // afterResizing();
-
-     
-
-         // function afterResizing() {
-
-         //     if (resourceChartElement) {
-
-         //         var canvaswidth = resourceChartElement.width;
-
-         //         if (canvaswidth <= 500) {
+       //     })
 
      
 
-         //             mixedChart.options.legend.display = false;
-
-         //         } else {
-
-         //             mixedChart.options.legend.display = true;
-
-         //         }
-
-         //         mixedChart.update();
-
-         //     }
-
-         // }
+       //     var realLineData = [1.3, 1.08, 0.71, 0.98, 0.78, 0.38]
 
      
 
-         /* 
+       //     var mixedChart = new Chart(ctx, {
+
+       //         type: 'bar',
+
+       //         data: {
+
+       //             datasets: [{
+
+       //                     label: 'Доходность',
+
+       //                     data: [2100, 1700, 1200, 1600, 1250, 650],
+
+       //                     type: 'line',
+
+       //                     borderColor: '#ffd729',
+
+       //                     pointBackgroundColor: '#ffd729',
+
+       //                     fill: false,
+
+       //                 },
+
+       //                 {
+
+       //                     backgroundColor: '#3c7bd8',
+
+       //                     hoverBackgroundColor: '#3c7bd8',
+
+       //                     label: 'Сумма выплат',
+
+       //                     data: [2100, 1700, 1200, 1600, 1250, 650],
+
+       //                     borderWidth: 0
+
+       //                 },
+
+       //             ],
+
+       //             labels: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18']
+
+       //         },
+
+       //         options: {
+
+       //             scales: {
+
+       //                 yAxes: [{
+
+       //                     ticks: {
+
+       //                         fontColor: "rgba(0, 0, 0, 0.4)",
+
+       //                         fontSize: 9,
+
+       //                         padding: 10,
+
+       //                         beginAtZero: true,
+
+       //                     },
+
+       //                     gridLines: {
+
+       //                         drawBorder: false,
+
+       //                     }
+
+       //                 }],
+
+       //                 xAxes: [{
+
+       //                     barThickness: 45,
+
+       //                     gridLines: {
+
+       //                         display: false,
+
+       //                         drawBorder: false,
+
+       //                     },
+
+       //                     ticks: {
+
+       //                         fontColor: "rgba(0, 0, 0, 0.4)",
+
+       //                         fontSize: 9,
+
+       //                     }
+
+       //                 }]
+
+       //             },
+
+       //             legend: {
+
+       //                 display: true,
+
+       //                 position: 'right',
+
+       //                 labels: {
+
+       //                     boxWidth: 16,
+
+       //                     fontSize: 12,
+
+       //                     fontColor: '#000',
+
+       //                     padding: 15,
+
+       //                 }
+
+       //             },
+
+       //             elements: {
+
+       //                 line: {
+
+       //                     tension: 0
+
+       //                 }
+
+       //             },
+
+       //             tooltips: {
+
+       //                 mode: 'x',
+
+       //                 displayColors: false,
+
+       //                 yAlign: 'bottom',
+
+       //                 xAlign: 'center',
+
+       //                 bodyFontColor: '#000',
+
+       //                 bodyFontSize: 14,
+
+       //                 backgroundColor: 'transparent',
+
+       //                 custom: function (tooltip) {
+
+       //                     if (!tooltip) return;
+
+       //                     // disable displaying the color box;
+
+       //                     tooltip.displayColors = false;
+
+       //                 },
+
+       //                 callbacks: {
+
+       //                     label: function (tooltipItem, data) {
+
+       //                         var dataset = data.datasets[tooltipItem.datasetIndex];
+
+       //                         if (tooltipItem.datasetIndex > 0) {
+
+       //                             return dataset.data[tooltipItem.index];
+
+       //                         }
+
+       //                         var label = realLineData[tooltipItem.index];
+
+     
+
+       //                         return label;
+
+       //                     },
+
+       //                     // remove title
+
+       //                     title: function (tooltipItem, data) {
+
+       //                         if (tooltipItem.datasetIndex > 0) {
+
+       //                             return dataset.data[tooltipItem.index];
+
+       //                         } else {
+
+       //                             return null
+
+       //                         }
+
+       //                     }
+
+       //                 }
+
+       //             },
+
+       //             showAllTooltips: true,
+
+       //             maintainAspectRatio: false,
+
+       //             responsive: true
+
+       //         },
+
+     
+
+       //     });
+
+       // }
+
+     
+
+       // var resizeId;
+
+       // $(window).resize(function () {
+
+       //     clearTimeout(resizeId);
+
+       //     resizeId = setTimeout(afterResizing, 100);
+
+       // });
+
+     
+
+       // afterResizing();
+
+     
+
+       // function afterResizing() {
+
+       //     if (resourceChartElement) {
+
+       //         var canvaswidth = resourceChartElement.width;
+
+       //         if (canvaswidth <= 500) {
+
+     
+
+       //             mixedChart.options.legend.display = false;
+
+       //         } else {
+
+       //             mixedChart.options.legend.display = true;
+
+       //         }
+
+       //         mixedChart.update();
+
+       //     }
+
+       // }
+
+     
+
+       /* 
 
          --------------------------------------------------
 
@@ -3211,357 +3461,373 @@ jQuery(document).ready(function ($) {
 
      
 
-         (function() {
+       (function() {
 
-             var profitData = [
+         var profitData = [
 
-                 2100,
+           2100,
 
-                 1700,
+           1700,
 
-                 1200,
+           1200,
 
-                 1600,
+           1600,
 
-                 1250,
+           1250,
 
-                 650,
+           650,
 
-                 2100,
+           2100,
 
-                 1700,
+           1700,
 
-                 1200,
+           1200,
 
-                 1600,
+           1600,
 
-                 1250,
+           1250,
 
-                 650,
+           650,
 
-                 2100,
+           2100,
 
-                 1700,
+           1700,
 
-                 1200,
+           1200,
 
-                 1600,
+           1600,
 
-                 1250,
+           1250,
 
-                 650,
+           650,
 
-                 2100,
+           2100,
 
-                 1700
+           1700
 
-             ];
+         ];
 
-             var dividendsData = [
+         var dividendsData = [
 
-                 1.3,
+           1.3,
 
-                 1.08,
+           1.08,
 
-                 0.71,
+           0.71,
 
-                 0.98,
+           0.98,
 
-                 0.78,
+           0.78,
 
-                 0.38,
+           0.38,
 
-                 1.3,
+           1.3,
 
-                 1.08,
+           1.08,
 
-                 0.71,
+           0.71,
 
-                 0.98,
+           0.98,
 
-                 0.78,
+           0.78,
 
-                 0.38,
+           0.38,
 
-                 1.3,
+           1.3,
 
-                 1.08,
+           1.08,
 
-                 0.71,
+           0.71,
 
-                 0.98,
+           0.98,
 
-                 0.78,
+           0.78,
 
-                 0.38
+           0.38
 
-             ];
-
-     
-
-             var chart = $('#income-chart');
-
-             var columnWidth = 25;
-
-             var chartMinWidth = columnWidth * dividendsData.length * 1.5;
-
-             console.log(chartMinWidth);
+         ];
 
      
 
-             setTimeout(() => {
-
-                 new SimpleBar(chart.find('.highcharts-scrolling')[0], {
-
-                     autoHide: false
-
-                 });
-
-             }, 1000);
+         var chart = $("#income-chart");
 
      
 
-             if (chart.length) {
+         if (chart.length) {
 
-                 Highcharts.chart('income-chart', {
+           var columnWidth = 25;
 
-                     chart: {
+           var chartMinWidth = columnWidth * dividendsData.length * 1.5;
 
-                         zoomType: 'xy',
+           console.log(chartMinWidth);
 
-                         scrollablePlotArea: {
+     
 
-                             minWidth: chartMinWidth
+           setTimeout(() => {
 
-                         }
+             new SimpleBar(chart.find(".highcharts-scrolling")[0], {
 
-                     },
+               autoHide: false
 
-                     title: {
+             });
 
-                         text: ''
+           }, 1000);
 
-                     },
+     
 
-                     exporting: {
+           Highcharts.chart("income-chart", {
 
-                         enabled: false
+             chart: {
 
-                     },
+               zoomType: "xy",
 
-                     plotOptions: {
+               scrollablePlotArea: {
 
-                         line: {
+                 minWidth: chartMinWidth
 
-                             dataLabels: {
+               }
 
-                                 align: 'center',
+             },
 
-                                 enabled: true,
+             title: {
 
-                                 color: 'black',
+               text: ""
 
-                                 padding: 10,
+             },
 
-                                 style: {
+             exporting: {
 
-                                     textOutline: 'none',
+               enabled: false
 
-                                     fontSize: '14px',
+             },
 
-                                     fontWeight: '400'
+             plotOptions: {
 
-                                 }
+               line: {
 
-                             }
+                 dataLabels: {
 
-                         },
+                   align: "center",
 
-                         column: {
+                   enabled: true,
 
-                             pointWidth: columnWidth
+                   color: "black",
 
-                         }
+                   padding: 10,
 
-                     },
+                   style: {
 
-                     xAxis: [
+                     textOutline: "none",
 
-                         {
+                     fontSize: "14px",
 
-                             categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
+                     fontWeight: "400"
 
-                             crosshair: false,
+                   }
 
-                             labels: {
+                 }
 
-                                 style: {
+               }
 
-                                     color: 'rgba(0, 0, 0, 0.4)',
+               // column: {
 
-                                     fontSize: '9px'
+               //     pointWidth: columnWidth
 
-                                 }
+               // }
 
-                             },
+             },
 
-                             min: 0,
+             xAxis: [
 
-                             // max: 8,
+               {
 
-                             scrollbar: {
+                 categories: [
 
-                                 enabled: true,
+                   "Фев 18",
 
-                                 barBackgroundColor: '#ffd729',
+                   "Мар 18",
 
-                                 barBorderRadius: 2,
+                   "Апр 18",
 
-                                 barBorderWidth: 0,
+                   "Май 18",
 
-                                 buttonBackgroundColor: 'transparent',
+                   "Июн 18",
 
-                                 buttonBorderWidth: 0,
+                   "Июл 18"
 
-                                 buttonArrowColor: 'transparent',
+                 ],
 
-                                 buttonBorderRadius: 0,
+                 crosshair: false,
 
-                                 rifleColor: 'transparent',
+                 labels: {
 
-                                 trackBackgroundColor: '#e9e9e9',
+                   style: {
 
-                                 trackBorderWidth: 0,
+                     color: "rgba(0, 0, 0, 0.4)",
 
-                                 height: 4
+                     fontSize: "9px"
 
-                             }
+                   }
 
-                         }
+                 },
 
-                     ],
+                 min: 0,
 
-                     yAxis: [
+                 // max: 8,
 
-                         {
+                 scrollbar: {
 
-                             visible: false,
+                   enabled: true,
 
-                             softMax: 1.3
+                   barBackgroundColor: "#ffd729",
 
-                         },
+                   barBorderRadius: 2,
 
-                         {
+                   barBorderWidth: 0,
 
-                             title: {
+                   buttonBackgroundColor: "transparent",
 
-                                 text: ''
+                   buttonBorderWidth: 0,
 
-                             },
+                   buttonArrowColor: "transparent",
 
-                             labels: {
+                   buttonBorderRadius: 0,
 
-                                 style: {
+                   rifleColor: "transparent",
 
-                                     color: 'rgba(0, 0, 0, 0.4)',
+                   trackBackgroundColor: "#e9e9e9",
 
-                                     fontSize: '9px'
+                   trackBorderWidth: 0,
 
-                                 }
+                   height: 4
 
-                             },
+                 }
 
-                             opposite: false,
+               }
 
-                             visible: true,
+             ],
 
-                             tickInterval: 10,
+             yAxis: [
 
-                             softMax: 2200
+               {
 
-                         }
+                 visible: false,
 
-                     ],
+                 softMax: 1.3
 
-                     legend: {
+               },
 
-                         enabled: false
+               {
 
-                     },
+                 title: {
 
-                     credits: {
+                   text: ""
 
-                         enabled: false
+                 },
 
-                     },
+                 labels: {
 
-                     series: [
+                   style: {
 
-                         {
+                     color: "rgba(0, 0, 0, 0.4)",
 
-                             name: 'Сумма выплат',
+                     fontSize: "9px"
 
-                             type: 'column',
+                   }
 
-                             yAxis: 1,
+                 },
 
-                             data: profitData,
+                 opposite: false,
 
-                             color: '#3c7bd8',
+                 visible: true,
 
-                             tooltip: {
+                 tickInterval: 10,
 
-                                 valueSuffix: ' 000 руб'
+                 softMax: 2200
 
-                             },
+               }
 
-                             states: {
+             ],
 
-                                 inactive: {
+             legend: {
 
-                                     opacity: 0.8
+               enabled: false
 
-                                 }
+             },
 
-                             }
+             credits: {
 
-                         },
+               enabled: false
 
-                         {
+             },
 
-                             name: 'Доходность',
+             series: [
 
-                             type: 'line',
+               {
 
-                             data: dividendsData,
+                 name: "Сумма выплат",
 
-                             color: '#ffd729',
+                 type: "column",
 
-                             tooltip: {
+                 yAxis: 1,
 
-                                 valueSuffix: 'млн руб'
+                 data: profitData,
 
-                             },
+                 color: "#3c7bd8",
 
-                             states: {
+                 tooltip: {
 
-                                 inactive: {
+                   valueSuffix: " 000 руб"
 
-                                     opacity: 0.8
+                 },
 
-                                 }
+                 states: {
 
-                             }
+                   inactive: {
 
-                         }
+                     opacity: 0.8
 
-                     ]
+                   }
 
-                 });
+                 }
 
-             }
+               },
 
-         })();
+               {
+
+                 name: "Доходность",
+
+                 type: "line",
+
+                 data: dividendsData,
+
+                 color: "#ffd729",
+
+                 tooltip: {
+
+                   valueSuffix: "млн руб"
+
+                 },
+
+                 states: {
+
+                   inactive: {
+
+                     opacity: 0.8
+
+                   }
+
+                 }
+
+               }
+
+             ]
+
+           });
+
+         }
+
+       })();
 
      })();
 
@@ -3757,6 +4023,31 @@ jQuery(document).ready(function ($) {
 
      
      
+
+     
+     (function() {
+
+         var objectTable = $('.object-table__table');
+
+         if (objectTable.length === 0) return;
+
+     
+
+         console.log(objectTable.parent().width())
+
+     
+
+         if (objectTable.width() > objectTable.parent().width()) {
+
+             new SimpleBar(objectTable.parent()[0], {
+
+               autoHide: false
+
+             });
+
+         }
+
+     })();
 
      
      

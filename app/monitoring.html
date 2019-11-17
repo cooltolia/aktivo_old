@@ -162,6 +162,28 @@
               </div>
               <h2 class="monitoring-finances__title">Финансовые показатели
               </h2>
+              <div class="monitoring-finances__inputs-row">
+                <div class="monitoring-finances__radio-button"><!-- base-radio --> 
+                  <div class="base-radio"><input type="radio" id="graphTime" name="graph-time" value="last12" checked="true" required="undefined" class="base-radio__input"/>
+                    <label for="graphTime" class="base-radio__label">За последние 12 месяцев
+                    </label>
+                    <div class="base-radio__errors">
+                      <div class="base-radio__error-message">Текст ошибки
+                      </div>
+                    </div>
+                  </div><!--/ base-radio --> 
+                </div>
+                <div class="monitoring-finances__radio-button"><!-- base-radio --> 
+                  <div class="base-radio"><input type="radio" id="graphGroup" name="graph-group" value="groupMonthly" required="undefined" class="base-radio__input"/>
+                    <label for="graphGroup" class="base-radio__label">Группировка помесячно
+                    </label>
+                    <div class="base-radio__errors">
+                      <div class="base-radio__error-message">Текст ошибки
+                      </div>
+                    </div>
+                  </div><!--/ base-radio --> 
+                </div>
+              </div>
               <div class="monitoring-finances__graph">
                 <div class="monitoring-finances__graph-chart">
                   <div id="income-monitoring"></div>
@@ -172,6 +194,9 @@
                   <div class="monitoring-finances__legend-item monitoring-finances__legend-item--yellow">Сумма выплат
                   </div>
                 </div>
+              </div>
+              <div class="monitoring-finances__timeline">
+                <div id="timelinechart"></div>
               </div>
               <div class="monitoring-finances__data">
                 <div class="monitoring-finances__data-col">
@@ -471,7 +496,6 @@
     <script src="/libs/jquery.min.js"></script>
     <script src="/libs/bootstrap.min.js"></script>
     <script src="/libs/rangeslider.js"></script>
-    <script src="/libs/highcharts.js"></script>
     <script src="/libs/chartjs/chart.min.js"></script>
     <script src="/libs/wow.min.js"></script>
     <script src="/libs/slick/slick.min.js"></script>
@@ -484,6 +508,8 @@
     <script src="/js/bem.js"></script>
     <script src="/js/main.js"></script>
     <!-- endbuild-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/timeline.js"></script>
     
   </body>
 </html>

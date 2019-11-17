@@ -1,128 +1,181 @@
 .monitoring-finances {
-    padding: 40px 30px 30px 40px;
-    margin-bottom: 16px;
+  padding: 40px 30px 30px 40px;
+  margin-bottom: 16px;
 
-    box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
+  box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
 }
 
 .monitoring-finances__select {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .monitoring-finances__title {
-    margin: 0;
-    margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 30px;
 
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.monitoring-finances__inputs-row {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.monitoring-finances__radio-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .monitoring-finances__graph {
-    padding-right: 70px;
-    margin-bottom: 35px;
+  padding-right: 70px;
+  margin-bottom: 35px;
+}
+
+.monitoring-finances__timeline {
+  max-width: 740px;
+  height: 300px;
+  margin-bottom: 40px;
+
+  #timelinechart {
+    width: 100%;
+    height: 100%;
+
+    .simplebar-track {
+      width: 100%;
+
+      background-color: rgba(233, 233, 233, 0.582);
+
+      &.vertical {
+        display: none;
+      }
+    }
+
+    .simplebar-scrollbar {
+      width: 4px;
+      right: 0;
+
+      &::before {
+        opacity: 1;
+        background-color: $themecolor;
+      }
+    }
+
+    .simplebar-track.horizontal {
+      height: 7px;
+      border-radius: 4px;
+    }
+
+    .horizontal.simplebar-track .simplebar-scrollbar {
+      height: 7px;
+      border-radius: 4px;
+      top: 0;
+    }
+  }
 }
 
 .monitoring-finances__graph-chart {
-    height: 200px;
-    margin-bottom: 30px;
+  height: 200px;
+  margin-bottom: 30px;
 
-    #income-monitoring {
-        width: 100%;
-        height: 100%;
-    }
+  #income-monitoring {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .monitoring-finances__legend {
-    display: flex;
+  display: flex;
 }
 
 .monitoring-finances__legend-item {
-    position: relative;
-    padding-left: 30px;
-    margin-right: 35px;
-    font-size: 14px;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 35px;
+  font-size: 14px;
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: 18px;
-        height: 18px;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
-    &--blue::before {
-        background-color: #3c7bd8;
-    }
+  &--blue::before {
+    background-color: #3c7bd8;
+  }
 
-    &--yellow::before {
-        background-color: #ffd729;
-    }
+  &--yellow::before {
+    background-color: #ffd729;
+  }
 }
 
 .monitoring-finances__data {
-    display: flex;
-    margin-bottom: 35px;
+  display: flex;
+  margin-bottom: 35px;
 }
 
 .monitoring-finances__data-col {
-    flex: 0 1 auto;
-    margin-right: 10%;
+  flex: 0 1 auto;
+  margin-right: 10%;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .monitoring-finances__data-title {
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 
-    font-size: 14px;
-    font-weight: 400;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .monitoring-finances__data-text {
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .monitoring-finances__info {
-    margin: 0;
+  margin: 0;
 
-    font-size: 14px;
-    line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 @media (max-width: 480px) {
-    .monitoring-finances {
-        padding: 20px 15px;
-    }
+  .monitoring-finances {
+    padding: 20px 15px;
+  }
 
-    .monitoring-finances__tip {
-        margin-bottom: 30px;
-    }
+  .monitoring-finances__tip {
+    margin-bottom: 30px;
+  }
 
-    .monitoring-finances__graph {
-        padding-right: 0;
-    }
+  .monitoring-finances__graph {
+    padding-right: 0;
+  }
 
-    .monitoring-finances__graph-chart {
-        margin-bottom: 15px;
-    }
+  .monitoring-finances__graph-chart {
+    margin-bottom: 15px;
+  }
 
-    .monitoring-finances__data {
-        flex-wrap: wrap;
-        margin-bottom: 15px;
-    }
+  .monitoring-finances__data {
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
 
-    .monitoring-finances__data-col {
-        flex-shrink: 0;
-        margin-right: 5%;
-        margin-bottom: 15px;
+  .monitoring-finances__data-col {
+    flex-shrink: 0;
+    margin-right: 5%;
+    margin-bottom: 15px;
 
-        &:last-child {
-            margin-right: 0;
-        }
+    &:last-child {
+      margin-right: 0;
     }
+  }
 }
