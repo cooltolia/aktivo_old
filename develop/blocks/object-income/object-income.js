@@ -239,10 +239,15 @@
       console.log(chartMinWidth);
 
       setTimeout(() => {
-        new SimpleBar(chart.find(".highcharts-scrolling")[0], {
+        var scroll = new SimpleBar(chart.find(".highcharts-scrolling")[0], {
           autoHide: false
         });
-      }, 1000);
+        var scrolledContent = scroll.getContentElement();
+        scrolledContent.scrollLeft = scrolledContent.scrollWidth; // скролим в конец
+        // scrolledContent.scrollLeft =
+        //   (scrolledContent.scrollWidth - scrolledContent.clientWidth) / 2; 
+          // скролим на центр
+      }, 10);
 
       Highcharts.chart("income-chart", {
         chart: {

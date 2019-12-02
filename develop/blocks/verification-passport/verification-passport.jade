@@ -42,9 +42,9 @@ mixin verification-passport()
                         +base-input('text', 'addressAppartment', 'address_appartment', 'Квартира', false)
             +e.row
                 +e.toggler
-                            +e.LABEL.toggler-label(for="agreementCheckbox") 
-                                +e.INPUT.toggler-input(type="checkbox" name='agreement' id='agreementCheckbox' checked)
-                                +e.SPAN.toggler-icon
-                                +e.SPAN.toggler-text Совпадает с адресом проживания
+                    +e.LABEL.toggler-label(for="agreementCheckbox") 
+                        +e.INPUT.toggler-input(type="checkbox" name='agreement' id='agreementCheckbox' checked)
+                        +e.SPAN.toggler-icon
+                        +e.SPAN.toggler-text Совпадает с адресом проживания
             +e.row
                 +verification-continue

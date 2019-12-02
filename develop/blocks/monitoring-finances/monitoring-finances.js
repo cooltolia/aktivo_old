@@ -87,7 +87,19 @@
           data: profitData,
           color: "#3c7bd8",
           tooltip: {
-            valueSuffix: " 000 руб"
+            // valueSuffix: " 000 руб"
+            pointFormatter: function() {
+              return (
+                "Сумма выплат: <b>" +
+                this.y.toLocaleString() +
+                " 000 руб</b><br>" +
+                "Доля от общих выплат: <b>" +
+                Math.floor(
+                  (this.y / profitData.reduce((x, y) => x + y, 0)) * 100
+                ) +
+                "%</b>"
+              );
+            }
           }
         },
         {
@@ -107,61 +119,77 @@
   if (timeline.length) {
     setTimeout(() => {
       var scrolledArea = timeline.find(".highcharts-scrolling");
-      if (scrolledArea.length === 0) return
+      if (scrolledArea.length === 0) return;
       new SimpleBar(scrolledArea[0], {
         autoHide: false
       });
     }, 1000);
 
     var timelineData = [
+      { name: "Сбор средств на счет Активо", status: "finished" },
+      { name: "Формирование Фонда денежными средствами", status: "finished" },
       {
-        name: "First dogs",
-        label: "1951: First dogs in space",
-        description: "22 July 1951 First dogs in space (Dezik and Tsygan) "
+        name:
+          "Внесение Центральным Банком РФ изменений в ПДУ, связанных с формированием Фонда",
+        status: "finished"
       },
       {
-        name: "Sputnik 1",
-        label: "1957: First artificial satellite",
-        description:
-          "4 October 1957 First artificial satellite. First signals from space."
+        name:
+          "Предварительное согласование ДКП недвижимости Управляющей компанией и Специализированным депозитарием",
+        status: "finished"
       },
       {
-        name: "First human spaceflight",
-        label: "1961: First human spaceflight (Yuri Gagarin)",
-        description:
-          "First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight"
+        name: "Правка ДКП недвижимости банком-кредитором Продавца",
+        status: "finished"
       },
       {
-        name: "First human on the Moon",
-        label: "1969: First human on the Moon",
-        description:
-          "First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon"
+        name:
+          "Финальное согласование ДКП (полный пакет документов) Управляющей компанией и Специализированным депозитарием",
+        status: "progress"
       },
       {
-        name: "First space station",
-        label: "1971: First space station",
-        description:
-          "Salyut 1 was the first space station of any kind, launched into low Earth orbit by the Soviet Union on April 19, 1971."
+        name:
+          "Подписание ДКП и оплата необходимой для снятия обременения суммы Продавцу",
+        status: "future"
       },
       {
-        name: "Apollo–Soyuz Test Project",
-        label: "1975: First multinational manned mission",
-        description:
-          "The mission included both joint and separate scientific experiments, and provided useful engineering experience for future joint US–Russian space flights, such as the Shuttle–Mir Program and the International Space Station."
-      }
+        name: "Погашение кредита Продавцом и снятие обременения",
+        status: "future"
+      },
+      {
+        name: "Регистрация Росреестром права собственности на Фонд",
+        status: "future"
+      },
+      { name: "Передача паев инвесторам", status: "future" }
     ];
-    var changeColorStep = 100 / timelineData.length;
-    var startTimelineColor = "#3c7bd8";
-    var timelineColors = [startTimelineColor];
-    for (var i = 1; i < timelineData.length; i++) {
-        timelineColors.push(shadeColor(timelineColors[i-1], -changeColorStep));
+    var finishedColor = "#5fce67";
+    var progressColor = "#ffd729";
+    var futureColor = "#3c7bd8";
+
+    var timelineColors = [];
+    var futureEvents = timelineData.filter(function(event) {
+      return event.status === "future";
+    });
+    var futureColors = [futureColor];
+    var changeColorStep = 100 / futureEvents.length;
+
+    for (var i = 1; i < futureEvents.length; i++) {
+      futureColors.push(shadeColor(futureColors[i - 1], -changeColorStep));
     }
+
+    timelineData.map(function(event) {
+      if (event.status === "future") return;
+
+      var color = event.status === "finished" ? finishedColor : progressColor;
+      timelineColors.push(color);
+    });
+
+    timelineColors = timelineColors.concat(futureColors);
 
     var columnWidth = 120;
     var chartMinWidth = columnWidth * timelineData.length;
-    console.log(chartMinWidth);
 
-    var startColor = Highcharts.chart("timelinechart", {
+    Highcharts.chart("timelinechart", {
       chart: {
         type: "timeline",
         scrollablePlotArea: {
@@ -186,7 +214,7 @@
       ]
     });
   }
-  
+
   /** just a helper function to calc color for timeline */
   function shadeColor(color, percent) {
     var R = parseInt(color.substring(1, 3), 16);

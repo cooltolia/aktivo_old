@@ -13,62 +13,64 @@
 
         // Create the chart
         Highcharts.chart(chart, {
-            chart: {
-                type: "pie",
-                margin: [0, 0, 0, 0],
-                spacingTop: 0,
-                spacingBottom: 0,
-                spacingLeft: 0,
-                spacingRight: 0
-            },
-            credits: {
+          chart: {
+            type: "pie",
+            margin: [0, 0, 0, 0],
+            spacingTop: 0,
+            spacingBottom: 0,
+            spacingLeft: 0,
+            spacingRight: 0,
+            backgroundColor: "transparent"
+          },
+          credits: {
+            enabled: false
+          },
+          title: {
+            text: ""
+          },
+          plotOptions: {
+            pie: {
+              cursor: "pointer",
+              dataLabels: {
                 enabled: false
-            },
-            title: {
-                text: ""
-            },
-            plotOptions: {
-                pie: {
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: false,
-                    },
-                    startAngle: -45,
-                    borderColor: null,
-                    size: '100%'
+              },
+              startAngle: -45,
+              borderColor: null,
+              size: "100%"
+            }
+          },
+          tooltip: {
+            pointFormat: "<b>{point.y} руб</b>",
+            percentageDecimals: 2
+          },
+          series: [
+            {
+              name: "",
+              data: [
+                {
+                  name: objects[0].name,
+                  y: objects[0].data,
+                  color: objects[0].color
+                },
+                {
+                  name: objects[1].name,
+                  y: objects[1].data,
+                  color: objects[1].color
+                },
+                {
+                  name: objects[2].name,
+                  y: objects[2].data,
+                  color: objects[2].color
+                },
+                {
+                  name: objects[3].name,
+                  y: objects[3].data,
+                  color: objects[3].color
                 }
-            },
-            tooltip: {
-                pointFormat: '<b>{point.y} руб</b>',
-                percentageDecimals: 2,
-            },
-            series: [{
-                    name: "",
-                    data: [
-                        {
-                            name: objects[0].name,
-                            y: objects[0].data,
-                            color: objects[0].color
-                        },
-                        {
-                            name: objects[1].name,
-                            y: objects[1].data,
-                            color: objects[1].color
-                        },
-                        {
-                            name: objects[2].name,
-                            y: objects[2].data,
-                            color: objects[2].color
-                        },
-                        {
-                            name: objects[3].name,
-                            y: objects[3].data,
-                            color: objects[3].color
-                        },
-                    ],
-                    innerSize: '83%',
-                }
-            ]
+              ],
+              innerSize: "83%"
+            }
+          ]
         });
     }
 })();

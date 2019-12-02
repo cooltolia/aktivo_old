@@ -57,6 +57,36 @@ mixin partners-content()
             +e.inner
                 +e.col.--full
                     +e.block
+                        +e.title Рекомендовать друга
+                        +e.FORM.recommendation
+                            +e.inputs
+                                +e.input
+                                    +base-input('text', 'recommendationName', 'referral_name', 'Имя', false)
+                                +e.input
+                                    +base-input('text', 'recommendationSurname', 'referral_surname', 'Фамилия', false)
+                                +e.input
+                                    +base-input('email', 'recommendationEmail', 'referral_email', 'Почта', false)
+                                +e.input
+                                    +base-input('number', 'recommendationPhone', 'referral_phone', 'Телефон', false)
+                            +e.switchers
+                                +e.switcher
+                                    +e.LABEL.switcher-label(for="recommendationSwithcher1") 
+                                        +e.INPUT.switcher-input(type="checkbox" name='switcher1' id='recommendationSwithcher1' checked)
+                                        +e.SPAN.switcher-icon
+                                        +e.SPAN.switcher-text На меня можно ссылаться
+                                +e.switcher
+                                    +e.LABEL.switcher-label(for="recommendationSwithcher2") 
+                                        +e.INPUT.switcher-input(type="checkbox" name='switcher2' id='recommendationSwithcher2' checked)
+                                        +e.SPAN.switcher-icon
+                                        +e.SPAN.switcher-text Мне можно звонить
+                                +e.switcher
+                                    +e.LABEL.switcher-label(for="recommendationSwithcher3") 
+                                        +e.INPUT.switcher-input(type="checkbox" name='switcher3' id='recommendationSwithcher3' checked)
+                                        +e.SPAN.switcher-icon
+                                        +e.SPAN.switcher-text Подписать меня на рассылку
+            +e.inner
+                +e.col.--full
+                    +e.block
                         +e.title Завершенные сделки
                         +e.table-wrapper
                             +e.TABLE.table

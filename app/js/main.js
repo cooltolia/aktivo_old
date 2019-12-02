@@ -1771,7 +1771,31 @@ jQuery(document).ready(function ($) {
 
                tooltip: {
 
-                 valueSuffix: " 000 руб"
+                 // valueSuffix: " 000 руб"
+
+                 pointFormatter: function() {
+
+                   return (
+
+                     "Сумма выплат: <b>" +
+
+                     this.y.toLocaleString() +
+
+                     " 000 руб</b><br>" +
+
+                     "Доля от общих выплат: <b>" +
+
+                     Math.floor(
+
+                       (this.y / profitData.reduce((x, y) => x + y, 0)) * 100
+
+                     ) +
+
+                     "%</b>"
+
+                   );
+
+                 }
 
                }
 
@@ -1811,7 +1835,7 @@ jQuery(document).ready(function ($) {
 
            var scrolledArea = timeline.find(".highcharts-scrolling");
 
-           if (scrolledArea.length === 0) return
+           if (scrolledArea.length === 0) return;
 
            new SimpleBar(scrolledArea[0], {
 
@@ -1825,89 +1849,123 @@ jQuery(document).ready(function ($) {
 
          var timelineData = [
 
+           { name: "Сбор средств на счет Активо", status: "finished" },
+
+           { name: "Формирование Фонда денежными средствами", status: "finished" },
+
            {
 
-             name: "First dogs",
+             name:
 
-             label: "1951: First dogs in space",
+               "Внесение Центральным Банком РФ изменений в ПДУ, связанных с формированием Фонда",
 
-             description: "22 July 1951 First dogs in space (Dezik and Tsygan) "
+             status: "finished"
 
            },
 
            {
 
-             name: "Sputnik 1",
+             name:
 
-             label: "1957: First artificial satellite",
+               "Предварительное согласование ДКП недвижимости Управляющей компанией и Специализированным депозитарием",
 
-             description:
-
-               "4 October 1957 First artificial satellite. First signals from space."
+             status: "finished"
 
            },
 
            {
 
-             name: "First human spaceflight",
+             name: "Правка ДКП недвижимости банком-кредитором Продавца",
 
-             label: "1961: First human spaceflight (Yuri Gagarin)",
-
-             description:
-
-               "First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight"
+             status: "finished"
 
            },
 
            {
 
-             name: "First human on the Moon",
+             name:
 
-             label: "1969: First human on the Moon",
+               "Финальное согласование ДКП (полный пакет документов) Управляющей компанией и Специализированным депозитарием",
 
-             description:
-
-               "First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon"
+             status: "progress"
 
            },
 
            {
 
-             name: "First space station",
+             name:
 
-             label: "1971: First space station",
+               "Подписание ДКП и оплата необходимой для снятия обременения суммы Продавцу",
 
-             description:
-
-               "Salyut 1 was the first space station of any kind, launched into low Earth orbit by the Soviet Union on April 19, 1971."
+             status: "future"
 
            },
 
            {
 
-             name: "Apollo–Soyuz Test Project",
+             name: "Погашение кредита Продавцом и снятие обременения",
 
-             label: "1975: First multinational manned mission",
+             status: "future"
 
-             description:
+           },
 
-               "The mission included both joint and separate scientific experiments, and provided useful engineering experience for future joint US–Russian space flights, such as the Shuttle–Mir Program and the International Space Station."
+           {
 
-           }
+             name: "Регистрация Росреестром права собственности на Фонд",
+
+             status: "future"
+
+           },
+
+           { name: "Передача паев инвесторам", status: "future" }
 
          ];
 
-         var changeColorStep = 100 / timelineData.length;
+         var finishedColor = "#5fce67";
 
-         var startTimelineColor = "#3c7bd8";
+         var progressColor = "#ffd729";
 
-         var timelineColors = [startTimelineColor];
+         var futureColor = "#3c7bd8";
 
-         for (var i = 1; i < timelineData.length; i++) {
+     
 
-             timelineColors.push(shadeColor(timelineColors[i-1], -changeColorStep));
+         var timelineColors = [];
+
+         var futureEvents = timelineData.filter(function(event) {
+
+           return event.status === "future";
+
+         });
+
+         var futureColors = [futureColor];
+
+         var changeColorStep = 100 / futureEvents.length;
+
+     
+
+         for (var i = 1; i < futureEvents.length; i++) {
+
+           futureColors.push(shadeColor(futureColors[i - 1], -changeColorStep));
 
          }
+
+     
+
+         timelineData.map(function(event) {
+
+           if (event.status === "future") return;
+
+     
+
+           var color = event.status === "finished" ? finishedColor : progressColor;
+
+           timelineColors.push(color);
+
+         });
+
+     
+
+         timelineColors = timelineColors.concat(futureColors);
 
      
 
@@ -1915,11 +1973,9 @@ jQuery(document).ready(function ($) {
 
          var chartMinWidth = columnWidth * timelineData.length;
 
-         console.log(chartMinWidth);
-
      
 
-         var startColor = Highcharts.chart("timelinechart", {
+         Highcharts.chart("timelinechart", {
 
            chart: {
 
@@ -1969,7 +2025,7 @@ jQuery(document).ready(function ($) {
 
        }
 
-       
+     
 
        /** just a helper function to calc color for timeline */
 
@@ -2148,117 +2204,121 @@ jQuery(document).ready(function ($) {
 
              Highcharts.chart(chart, {
 
-                 chart: {
+               chart: {
 
-                     type: "pie",
+                 type: "pie",
 
-                     margin: [0, 0, 0, 0],
+                 margin: [0, 0, 0, 0],
 
-                     spacingTop: 0,
+                 spacingTop: 0,
 
-                     spacingBottom: 0,
+                 spacingBottom: 0,
 
-                     spacingLeft: 0,
+                 spacingLeft: 0,
 
-                     spacingRight: 0
+                 spacingRight: 0,
 
-                 },
+                 backgroundColor: "transparent"
 
-                 credits: {
+               },
+
+               credits: {
+
+                 enabled: false
+
+               },
+
+               title: {
+
+                 text: ""
+
+               },
+
+               plotOptions: {
+
+                 pie: {
+
+                   cursor: "pointer",
+
+                   dataLabels: {
 
                      enabled: false
 
-                 },
+                   },
 
-                 title: {
+                   startAngle: -45,
 
-                     text: ""
+                   borderColor: null,
 
-                 },
+                   size: "100%"
 
-                 plotOptions: {
+                 }
 
-                     pie: {
+               },
 
-                         cursor: 'pointer',
+               tooltip: {
 
-                         dataLabels: {
+                 pointFormat: "<b>{point.y} руб</b>",
 
-                             enabled: false,
+                 percentageDecimals: 2
 
-                         },
+               },
 
-                         startAngle: -45,
+               series: [
 
-                         borderColor: null,
+                 {
 
-                         size: '100%'
+                   name: "",
 
-                     }
+                   data: [
 
-                 },
+                     {
 
-                 tooltip: {
+                       name: objects[0].name,
 
-                     pointFormat: '<b>{point.y} руб</b>',
+                       y: objects[0].data,
 
-                     percentageDecimals: 2,
+                       color: objects[0].color
 
-                 },
+                     },
 
-                 series: [{
+                     {
 
-                         name: "",
+                       name: objects[1].name,
 
-                         data: [
+                       y: objects[1].data,
 
-                             {
+                       color: objects[1].color
 
-                                 name: objects[0].name,
+                     },
 
-                                 y: objects[0].data,
+                     {
 
-                                 color: objects[0].color
+                       name: objects[2].name,
 
-                             },
+                       y: objects[2].data,
 
-                             {
+                       color: objects[2].color
 
-                                 name: objects[1].name,
+                     },
 
-                                 y: objects[1].data,
+                     {
 
-                                 color: objects[1].color
+                       name: objects[3].name,
 
-                             },
+                       y: objects[3].data,
 
-                             {
-
-                                 name: objects[2].name,
-
-                                 y: objects[2].data,
-
-                                 color: objects[2].color
-
-                             },
-
-                             {
-
-                                 name: objects[3].name,
-
-                                 y: objects[3].data,
-
-                                 color: objects[3].color
-
-                             },
-
-                         ],
-
-                         innerSize: '83%',
+                       color: objects[3].color
 
                      }
 
-                 ]
+                   ],
+
+                   innerSize: "83%"
+
+                 }
+
+               ]
 
              });
 
@@ -3565,13 +3625,23 @@ jQuery(document).ready(function ($) {
 
            setTimeout(() => {
 
-             new SimpleBar(chart.find(".highcharts-scrolling")[0], {
+             var scroll = new SimpleBar(chart.find(".highcharts-scrolling")[0], {
 
                autoHide: false
 
              });
 
-           }, 1000);
+             var scrolledContent = scroll.getContentElement();
+
+             scrolledContent.scrollLeft = scrolledContent.scrollWidth; // скролим в конец
+
+             // scrolledContent.scrollLeft =
+
+             //   (scrolledContent.scrollWidth - scrolledContent.clientWidth) / 2; 
+
+               // скролим на центр
+
+           }, 10);
 
      
 

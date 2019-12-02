@@ -1,199 +1,207 @@
 .base-input {
-    position: relative;
-    width: 100%;
-    
-    font-size: 24px;
-    font-weight: 400;
-    line-height: normal;
+  position: relative;
+  width: 100%;
 
-    -webkit-tap-highlight-color: transparent;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
 
-    &.no-label {
-        .base-input__label {
-            display: none;
-        }
+  -webkit-tap-highlight-color: transparent;
+
+  &.no-label {
+    .base-input__label {
+      display: none;
     }
+  }
 }
 
 .base-input__input {
-    width: 100%;
-    padding: 9px 0;
-    border: none;
-    outline: none;
+  width: 100%;
+  padding: 9px 0;
+  border: none;
+  outline: none;
 
-    border-bottom: 1px solid #9b9b9b;
+  border-bottom: 1px solid #9b9b9b;
 
-    transition: border-color 300ms ease;
+  transition: border-color 300ms ease;
 
-    &:focus {
-        border-bottom-color: $themecolor;
+  &:focus {
+    border-bottom-color: $themecolor;
 
-        ~ .base-input__label {
-            transform: scale(0.5) translateY(-200%);
-            color: #000;
-            left: 0;
-        }
+    ~ .base-input__label {
+      transform: scale(0.5) translateY(-200%);
+      color: #000;
+      left: 0;
     }
+  }
 
-    &.hasValue {
-        ~ .base-input__label {
-            transform: scale(0.5) translateY(-200%);
-            color: #000;
-            left: 0;
-        }
+  &.hasValue {
+    ~ .base-input__label {
+      transform: scale(0.5) translateY(-200%);
+      color: #000;
+      left: 0;
     }
+  }
 
-    &::placeholder {
-        color: #d7d7d8;
-    }
+  &::placeholder {
+    color: #d7d7d8;
+  }
 
-    &:disabled {
-        background-color: #fff;
-        opacity: 0.5;
-    }
+  &:disabled {
+    background-color: #fff;
+    opacity: 0.5;
+  }
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  &[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
 }
 
 .base-input__label {
-    position: absolute;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-size: 24px;
+  color: #d7d7d8;
+
+  transition: transform 200ms ease, color 200ms ease;
+  transform-origin: left center;
+
+  pointer-events: none;
+
+  &.js-focus {
+    transform: scale(0.5) translateY(-200%);
+    color: #000;
     left: 0;
-    top: 12px;
-    font-size: 24px;
-    color: #d7d7d8;
-
-    transition: transform 200ms ease, color 200ms ease;
-    transform-origin: left center;
-
-    pointer-events: none;
-
-    &.js-focus {
-        transform: scale(0.5) translateY(-200%);
-        color: #000;
-        left: 0;
-    }
+  }
 }
 
 .base-input.has-error {
-    .base-input__input {
-        border-bottom-color: #f52f4b;
-    }
+  .base-input__input {
+    border-bottom-color: #f52f4b;
+  }
 
-    .base-input__label {
-        color: #f52f4b;
-    }
+  .base-input__label {
+    color: #f52f4b;
+  }
 }
 
 .base-input__errors {
-    display: none;
-    position: relative;
-    margin-top: 5px;
+  display: none;
+  position: relative;
+  margin-top: 5px;
 
-    font-size: 14px;
-    color: #f52f4b;
+  font-size: 14px;
+  color: #f52f4b;
 }
 
 @media (max-width: 1240px) {
-    .base-input__label {
-        top: 16px;
-        
-        font-size: 18px;
-    }
+  .base-input__label {
+    top: 16px;
+
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
-    .base-input {
-        font-size: 16px;
+  .base-input {
+    font-size: 16px;
+  }
+
+  .base-input__input {
+    padding: 4px;
+
+    &:focus {
+      + .base-input__label {
+        transform: scale(0.7) translateY(-150%);
+      }
     }
 
-    .base-input__input {
-        padding: 4px;
-
-        &:focus {
-            +.base-input__label {
-                transform: scale(0.7) translateY(-150%);
-            }
-        }
-
-        &.hasValue {
-            +.base-input__label {
-                transform: scale(0.7) translateY(-150%);
-            }
-        }
+    &.hasValue {
+      + .base-input__label {
+        transform: scale(0.7) translateY(-150%);
+      }
     }
+  }
 
-    .base-input__label {
-        top: 4px;
+  .base-input__label {
+    top: 4px;
 
-        font-size: 16px;
-    }
+    font-size: 16px;
+  }
 
-    .base-input__errors {
-        font-size: 12px;
-    }
+  .base-input__errors {
+    font-size: 12px;
+  }
 }
 
 /* additional styles for input with autocomplete functionality */
 
 .base-input-autocomplete {
-    .tt-dropdown-menu {
-        position: absolute;
-        top: 100%;
-        z-index: 100;
-        width: 100%;
-        max-height: 300px;
-        overflow: auto;
+  .tt-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    z-index: 100;
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
 
-        box-shadow: 0 3px 20px 0 #f5f7f9;
-        background-color: #ffffff;
+    box-shadow: 0 3px 20px 0 #f5f7f9;
+    background-color: #ffffff;
 
-        .simplebar-track {
-            width: 4px;
+    .simplebar-track {
+      width: 4px;
 
-            background-color: rgba(233, 233, 233, 0.582);
+      background-color: rgba(233, 233, 233, 0.582);
 
-            &.horizontal {
-                display: none;
-            }
-        }
-
-        .simplebar-scrollbar {
-            width: 4px;
-            right: 0;
-
-            &::before {
-                opacity: 1;
-                background-color: $themecolor;
-            }
-        }
+      &.horizontal {
+        display: none;
+      }
     }
 
-    .tt-suggestion {
-        position: relative;
-        padding: 12px 24px;
+    .simplebar-scrollbar {
+      width: 4px;
+      right: 0;
 
-        font-size: 16px;
+      &::before {
+        opacity: 1;
+        background-color: $themecolor;
+      }
+    }
+  }
 
-        background-color: #fff;
+  .tt-suggestion {
+    position: relative;
+    padding: 12px 24px;
 
-        cursor: pointer;
+    font-size: 16px;
 
-        transition: color 300ms ease,
-            background-color 300ms ease;
+    background-color: #fff;
 
-        &:hover,
-        &:active,
-        &:focus {
-            color: $themecolor;
-            background-color: rgba(#f5f7f9, 0.2);
-        }
+    cursor: pointer;
 
-        .value {
-            font-weight: 600;
+    transition: color 300ms ease, background-color 300ms ease;
 
-            +div {
-                font-size: 14px;
-            }
-        }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $themecolor;
+      background-color: rgba(#f5f7f9, 0.2);
     }
 
+    .value {
+      font-weight: 600;
+
+      + div {
+        font-size: 14px;
+      }
+    }
+  }
 }

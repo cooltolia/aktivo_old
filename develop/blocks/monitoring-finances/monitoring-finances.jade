@@ -3,11 +3,9 @@ mixin monitoring-finances()
         +e.select
             +monitoring-select
         +e.H2.title Финансовые показатели
-        +e.inputs-row
-            +e.radio-button
-                +base-radio('graphTime', 'graph-time', 'last12', 'За последние 12 месяцев', true)
-            +e.radio-button
-                +base-radio('graphGroup', 'graph-group', 'groupMonthly', 'Группировка помесячно')
+        +e.links-row
+            +e.A.chart-link(href='#') За последние 12 месяцев
+            +e.A.chart-link(href='#') Группировка помесячно
         +e.graph
             +e.graph-chart
                 #income-monitoring
