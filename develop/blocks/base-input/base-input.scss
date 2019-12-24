@@ -100,6 +100,10 @@
 
   font-size: 14px;
   color: #f52f4b;
+
+  &.has-error {
+    display: block;
+  }
 }
 
 @media (max-width: 1240px) {

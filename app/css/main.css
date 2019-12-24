@@ -1749,6 +1749,8 @@ th {
   margin-top: 5px;
   font-size: 14px;
   color: #f52f4b; }
+  .base-input__errors.has-error {
+    display: block; }
 
 @media (max-width: 1240px) {
   .base-input__label {
@@ -9403,22 +9405,50 @@ body.modal-open {
        -moz-animation: bounce 500ms ease;
             animation: bounce 500ms ease; }
 
+.partners-content__table-wrapper {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-bottom: 10px; }
+  .partners-content__table-wrapper .table-header {
+    background-color: #fff; }
+  .partners-content__table-wrapper .simplebar-track {
+    background-color: rgba(233, 233, 233, 0.582); }
+  .partners-content__table-wrapper .simplebar-track.vertical {
+    width: 6px;
+    border-radius: 4px; }
+    .partners-content__table-wrapper .simplebar-track.vertical .simplebar-scrollbar {
+      width: 4px;
+      border-radius: 4px;
+      top: 0;
+      right: 1px; }
+      .partners-content__table-wrapper .simplebar-track.vertical .simplebar-scrollbar::before {
+        opacity: 1;
+        background-color: #ffd729; }
+  .partners-content__table-wrapper .simplebar-track.horizontal {
+    height: 6px;
+    border-radius: 4px; }
+    .partners-content__table-wrapper .simplebar-track.horizontal .simplebar-scrollbar {
+      height: 4px;
+      border-radius: 4px;
+      top: 1px; }
+      .partners-content__table-wrapper .simplebar-track.horizontal .simplebar-scrollbar::before {
+        opacity: 1;
+        background-color: #ffd729; }
+
 .partners-content__table {
   width: 100%;
   border-collapse: collapse;
   margin-left: -32px;
-  table-layout: fixed; }
+  table-layout: auto; }
 
 .partners-content__table-row {
   width: 100%; }
   .partners-content__table-row:nth-child(2n) {
     background-color: rgba(245, 247, 249, 0.5); }
   .partners-content__table-row td {
-    width: 10%; }
-    .partners-content__table-row td:first-child {
-      width: 25%; }
-  .partners-content__table-row th:first-child {
-    width: 25%; }
+    max-width: 300px; }
+    .partners-content__table-row td.email {
+      word-break: break-word; }
   .partners-content__table-row.table-footer {
     background-color: #fff; }
     .partners-content__table-row.table-footer td {
