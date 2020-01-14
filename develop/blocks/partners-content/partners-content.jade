@@ -68,6 +68,8 @@ mixin partners-content()
                                     +base-input('email', 'recommendationEmail', 'referral_email', 'Почта', false)
                                 +e.input
                                     +base-input('number', 'recommendationPhone', 'referral_phone', 'Телефон', false)
+                                +e.input
+                                    +base-select('text', 'recommendation_select', 'recommendation-select', 'Выберите что-то:', true)
                             +e.switchers
                                 +e.switcher
                                     +e.LABEL.switcher-label(for="recommendationSwithcher1") 

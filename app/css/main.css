@@ -1898,6 +1898,7 @@ th {
   position: relative;
   width: 100%;
   padding: 9px 0;
+  padding-right: 35px;
   border: none;
   outline: none;
   border-bottom: 1px solid #9b9b9b;
