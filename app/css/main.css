@@ -1979,7 +1979,8 @@ th {
   .base-select {
     font-size: 16px; }
   .base-select__input {
-    padding: 4px; }
+    padding: 4px;
+    padding-right: 35px; }
     .base-select__input:focus + .base-select__label {
       -webkit-transform: scale(0.7) translateY(-150%);
          -moz-transform: scale(0.7) translateY(-150%);

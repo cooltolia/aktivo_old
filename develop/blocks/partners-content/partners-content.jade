@@ -37,6 +37,8 @@ mixin partners-content()
                                 +e.input
                                     +base-input('text', 'referralComment0', 'referral_comment0', 'Комментарий к ссылке', false)(value='Ссылка для обеспеченных' class='no-label' placeholder='Комментарий к ссылке' disabled='')
                                     +e.BUTTON.copy
+                                +e.input
+                                    +base-select('text', 'referral_select1', 'referral-select1', 'Выберите что-то:', true)
                             +e.chart-wrapper
                                 +e.chart#referralChart0(data-values='[80, 20, 10]')
             +e.inner
@@ -51,6 +53,8 @@ mixin partners-content()
                                 +e.input
                                     +base-input('text', 'referralComment1', 'referral_comment1', 'Комментарий к ссылке', false)(class='no-label' placeholder='Комментарий к ссылке' disabled='')
                                     +e.BUTTON.copy
+                                +e.input
+                                    +base-select('text', 'referral_select2', 'referral-select2', 'Выберите то-то:', true)
                             +e.chart-wrapper
                                 +e.chart#referralChart1(data-values='[60, 40, 25]')
             +e.BUTTON.add-link(type='button') Добавить новую ссылку
@@ -68,8 +72,6 @@ mixin partners-content()
                                     +base-input('email', 'recommendationEmail', 'referral_email', 'Почта', false)
                                 +e.input
                                     +base-input('number', 'recommendationPhone', 'referral_phone', 'Телефон', false)
-                                +e.input
-                                    +base-select('text', 'recommendation_select', 'recommendation-select', 'Выберите что-то:', true)
                             +e.switchers
                                 +e.switcher
                                     +e.LABEL.switcher-label(for="recommendationSwithcher1") 

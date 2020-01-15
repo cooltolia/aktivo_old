@@ -132,6 +132,7 @@
 
     .base-select__input {
         padding: 4px;
+        padding-right: 35px;
 
         &:focus {
             +.base-select__label {
