@@ -38,12 +38,18 @@
   flex: 1 1 auto;
 
   display: flex;
-  justify-content: flex-end;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .partners-content__chart {
   width: 240px;
   height: 160px;
+}
+
+.partners-content__chart-tip {
+  font-size: 14px;
 }
 
 .partners-content__block {
@@ -422,7 +428,7 @@
 
   .partners-content__chart-wrapper {
     width: 100%;
-    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .partners-content__recommendation {
