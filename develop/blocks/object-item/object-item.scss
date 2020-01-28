@@ -28,35 +28,47 @@
 }
 
 .object-item:hover {
-   img {
-       filter: none;
-       filter: grayscale(0)
-   }
+    img {
+        filter: none;
+        filter: grayscale(0);
+    }
 
-   .object-item__title {
-       color: $themecolor;
-   }
+    .object-item__title {
+        color: $themecolor;
+    }
+}
+
+.object-item__banners {
+    position: absolute;
+    top: 10px;
+    right: -1px;
+    z-index: 1;
 }
 
 .object-item__banner {
-    position: absolute;
+    position: relative;
+    min-width: 160px;
+    margin-bottom: 10px;
     padding: 5px 22px;
-    top: 48px;
-    right: -1px;
-    z-index: 1;
+
+    text-align: right;
+    font-size: 16px;
+    font-weight: 600;
 
     &--new {
-        width: 112px;
         background-color: #5fce67;
 
         color: #fff;
-        text-align: right;
-        font-size: 16px;
-        font-weight: 600;
     }
 
+    &--soon {
+        background-color: #3c7bd8;
+
+        color: #fff;
+    } 
+    
     &--club {
-        width: 160px;
+        margin-top: 25px;
 
         background-color: $themecolor;
         color: $darktext;
@@ -68,14 +80,13 @@
     z-index: 1;
     width: 16px;
     height: 18px;
-    top: 15px;
+    top: -25px;
     right: 16px;
     background-image: url('../images/objects/lock.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 .object-item__title {
     margin-bottom: 5px;
@@ -127,7 +138,7 @@
 }
 
 .object-item__footer {
-    padding-top: 30px
+    padding-top: 30px;
 }
 
 .object-item__footer-text {
@@ -151,6 +162,17 @@
 @media (max-width: 768px) {
     .object-item {
         padding: 0 20px 25px;
+    }
+
+    .object-item__banner {
+        &--club {
+            margin-top: 0;
+        }
+    }
+
+    .object-item__lock {
+        right: -20px;
+        top: 0;
     }
 }
 

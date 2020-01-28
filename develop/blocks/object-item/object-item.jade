@@ -1,11 +1,14 @@
-mixin object-item(id, newObject, club)
+mixin object-item(id, newObject, club, soon)
     +b.object-item
         +e.A.link(href='#')
-        if (newObject) 
-            +e.banner.--new Скоро
-        if (club)
-            +e.banner.--club Клубная сделка
-            +e.lock
+        +e.banners
+            if (club)
+                +e.banner.--club Клубная сделка
+                    +e.lock
+            if (newObject) 
+                +e.banner.--new Новое предпритие
+            if (soon) 
+                +e.banner.--soon Скоро
         +e.image
             img(src='images/objects/object' + id + '.jpg')
         +e.title Супермаркет «Пятерочка»
