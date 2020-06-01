@@ -1,139 +1,202 @@
 .monitoring-sidebar {
-  padding: 40px;
+    padding: 40px;
 
-  box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
-  background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(60, 123, 216, 0.1);
+    background-color: #ffffff;
 }
 
 .monitoring-sidebar__title {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .monitoring-sidebar__info-block {
-  margin-bottom: 45px;
+    margin-bottom: 45px;
 }
 
 .monitoring-sidebar__info-text {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .monitoring-sidebar__documents {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .monitoring-sidebar__documents-link {
-  display: block;
-  margin-bottom: 30px;
+    display: block;
+    margin-bottom: 30px;
 
-  font-size: 16px;
-  color: #3c7bd8;
-  text-decoration: none;
+    font-size: 16px;
+    color: #3c7bd8;
+    text-decoration: none;
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: darken($color: #3c7bd8, $amount: 15%);
-  }
+    &:hover,
+    &:focus,
+    &:active {
+        color: darken($color: #3c7bd8, $amount: 15%);
+    }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .monitoring-sidebar__chart-body {
-  position: relative;
-  width: 260px;
-  height: 260px;
+    position: relative;
+    width: 260px;
+    height: 260px;
 
-  #monitoring-finances {
-    width: 100%;
-    height: 100%;
+    #monitoring-finances {
+        width: 100%;
+        height: 100%;
 
-    .highcharts-container  {
-        z-index: 1 !important;
+        .highcharts-container {
+            z-index: 1 !important;
+        }
     }
-  }
 }
 
 .monitoring-sidebar__summary {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-  font-size: 24px;
-  text-align: center;
-  background-color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background-color: #fff;
 }
 
 .monitoring-sidebar__legend {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .monitoring-sidebar__legend-item {
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 30px;
-  font-size: 14px;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    font-size: 14px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-  &--green::before {
-    background-color: #5fce67;
-  }
+    &--green::before {
+        background-color: #5fce67;
+    }
 
-  &--blue::before {
-    background-color: #3c7bd8;
-  }
+    &--blue::before {
+        background-color: #3c7bd8;
+    }
 
-  &--red::before {
-    background-color: #f52f4b;
-  }
+    &--red::before {
+        background-color: #f52f4b;
+    }
 
-  &--yellow::before {
-    background-color: #ffd729;
-  }
+    &--yellow::before {
+        background-color: #ffd729;
+    }
+}
+
+.monitoring-sidebar__table {
+    overflow-y: auto;
+    margin-top: 12px;
+    
+    table {
+        table-layout: fixed;
+    }
+
+    .no-wrap {
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    th {
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    td {
+        border-bottom: 1px solid #eee;
+
+        &:first-child {
+            position: relative;
+            padding-left: 25px;
+
+            font-size: 12px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &.green::before {
+            background-color: #5fce67;
+        }
+
+        &.blue::before {
+            background-color: #3c7bd8;
+        }
+
+        &.red::before {
+            background-color: #f52f4b;
+        }
+
+        &.yellow::before {
+            background-color: #ffd729;
+        }
+    }
 }
 
 @media (max-width: 1024px) {
-  .monitoring-sidebar {
-    display: flex;
-  }
+    .monitoring-sidebar {
+        display: flex;
+    }
 
-  .monitoring-sidebar__col {
-    width: 50%;
-    flex: 0 1 auto;
-  }
+    .monitoring-sidebar__col {
+        width: 50%;
+        flex: 0 1 auto;
+    }
 
-  .monitoring-sidebar__chart {
-    position: relative;
-    width: 260px;
-    margin-left: auto;
-  }
+    .monitoring-sidebar__chart {
+        position: relative;
+        width: 260px;
+        margin-left: auto;
+    }
 }
 
 @media (max-width: 480px) {
-  .monitoring-sidebar {
-    display: block;
-    padding: 20px 15px;
-  }
+    .monitoring-sidebar {
+        display: block;
+        padding: 20px 15px;
+    }
 
-  .monitoring-sidebar__col {
-    width: 100%;
-  }
+    .monitoring-sidebar__col {
+        width: 100%;
+    }
 
-  .monitoring-sidebar__chart {
-    width: 100%;
-    margin: 0 auto;
-  }
+    .monitoring-sidebar__chart {
+        width: 100%;
+        margin: 0 auto;
+    }
 }

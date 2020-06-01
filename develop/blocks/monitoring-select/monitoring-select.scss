@@ -10,13 +10,13 @@
 
     .base-select__input {
         &:focus {
-            +.base-select__label {
+            + .base-select__label {
                 transform: scale(0.75) translateY(-200%);
             }
         }
 
         &.hasValue {
-            +.base-select__label {
+            + .base-select__label {
                 transform: scale(0.75) translateY(-200%);
             }
         }
@@ -25,4 +25,24 @@
 
 .monitoring-select__input {
     margin-bottom: 24px;
+}
+
+@media (max-width: 480px) {
+    .monitoring-select {
+        padding-right: 0;
+
+        .base-select__input {
+            &:focus {
+                + .base-select__label {
+                    transform: scale(0.75) translateY(-130%);
+                }
+            }
+
+            &.hasValue {
+                + .base-select__label {
+                    transform: scale(0.75) translateY(-130%);
+                }
+            }
+        }
+    }
 }

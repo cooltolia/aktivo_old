@@ -17,11 +17,33 @@ mixin monitoring-sidebar()
                 +e.chart-body
                     #monitoring-finances
                     +e.summary 1 999 645.70 ₽
-                +e.legend
-                    +e.legend-item.--green Супермаркет Пятерочка
-                    +e.legend-item.--blue Супермаркет Десяточка
-                    +e.legend-item.--yellow Минимаркет Двоечка
-                    +e.legend-item.--red Микромаркет Нулевочка
+                //- +e.legend
+                //-     +e.legend-item.--green Супермаркет Пятерочка
+                //-     +e.legend-item.--blue Супермаркет Десяточка
+                //-     +e.legend-item.--yellow Минимаркет Двоечка
+                //-     +e.legend-item.--red Микромаркет Нулевочка
+                +e.table
+                    table
+                        tr
+                            th Объект
+                            th Сумма инвестиций
+                            th Доля в портфеле
+                        tr
+                            td.green Супермаркет Пятерочка
+                            td.no-wrap 5 200 000 ₽
+                            td 11%
+                        tr
+                            td.blue Супермаркет Десяточка
+                            td.no-wrap 15 190 000 ₽
+                            td 11%
+                        tr
+                            td.yellow Минимаркет Двоечка
+                            td.no-wrap 5 200 000 ₽
+                            td 28%
+                        tr
+                            td.red Микромаркет Нулевочка
+                            td.no-wrap 200 000 ₽
+                            td 1%
 
 
 

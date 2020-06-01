@@ -1593,479 +1593,477 @@ jQuery(document).ready(function ($) {
      
 
      
-     (function() {
+     (function () {
 
-       var profitData = [2500, 1700, 1200, 1600, 1250, 650];
+         var profitData = [2500, 1700, 1200, 1600, 1250, 650];
 
-       var dividendsData = [5, 10, 20, 30, 20, 15];
+         var dividendsData = [5, 10, 20, 30, 20, 15];
 
-       var dividendsMax = 35;
+         var dividendsMax = 35;
 
-       var profitMax = 2500;
-
-     
-
-       var chart = $("#income-monitoring");
+         var profitMax = 2500;
 
      
 
-       if (chart.length) {
+         var chart = $('#income-monitoring');
 
-         Highcharts.chart("income-monitoring", {
+     
 
-           chart: {
+         if (chart.length) {
 
-             zoomType: "xy"
+             Highcharts.chart('income-monitoring', {
 
-           },
+                 chart: {
 
-           title: {
-
-             text: ""
-
-           },
-
-           exporting: {
-
-             enabled: false
-
-           },
-
-           plotOptions: {
-
-             line: {
-
-               dataLabels: {
-
-                 align: "center",
-
-                 enabled: true,
-
-                 color: "black",
-
-                 padding: 10,
-
-                 style: {
-
-                   textOutline: "none",
-
-                   fontSize: "14px",
-
-                   fontWeight: "400"
+                     zoomType: 'xy',
 
                  },
 
-                 formatter: function() {
+                 title: {
 
-                   return this.y + "%";
+                     text: '',
 
-                 }
+                 },
 
-               }
+                 exporting: {
 
-             }
+                     enabled: false,
 
-           },
+                 },
 
-           xAxis: [
+                 plotOptions: {
 
-             {
+                     line: {
 
-               categories: [
+                         dataLabels: {
 
-                 "Фев 18",
+                             align: 'center',
 
-                 "Мар 18",
+                             enabled: true,
 
-                 "Апр 18",
+                             color: 'black',
 
-                 "Май 18",
+                             padding: 10,
 
-                 "Июн 18",
+                             style: {
 
-                 "Июл 18"
+                                 textOutline: 'none',
 
-               ],
+                                 fontSize: '14px',
 
-               crosshair: false,
+                                 fontWeight: '400',
 
-               labels: {
+                             },
 
-                 style: {
+                             formatter: function () {
 
-                   color: "rgba(0, 0, 0, 0.4)",
+                                 return this.y + '%';
 
-                   fontSize: "9px"
+                             },
 
-                 }
+                         },
 
-               }
+                     },
 
-             }
+                 },
 
-           ],
+                 xAxis: [
 
-           yAxis: [
+                     {
 
-             {
+                         categories: ['Фев 18', 'Мар 18', 'Апр 18', 'Май 18', 'Июн 18', 'Июл 18'],
 
-               visible: false,
+                         crosshair: false,
 
-               min: 0,
+                         labels: {
 
-               max: dividendsMax
+                             style: {
 
-             },
+                                 color: 'rgba(0, 0, 0, 0.4)',
 
-             {
+                                 fontSize: '9px',
 
-               max: profitMax,
+                             },
 
-               title: {
+                         },
 
-                 text: ""
+                     },
 
-               },
+                 ],
 
-               labels: {
+                 yAxis: [
 
-                 style: {
+                     {
 
-                   color: "rgba(0, 0, 0, 0.4)",
+                         visible: true,
 
-                   fontSize: "9px"
+                         min: 0,
 
-                 }
+                         max: dividendsMax,
 
-               }
+                         title: {
 
-             }
+                             text: '',
 
-           ],
+                         },
 
-           legend: {
+                         opposite: true,
 
-             enabled: false
+                         labels: {
 
-           },
+                             style: {
 
-           credits: {
+                                 color: 'rgba(0, 0, 0, 0.4)',
 
-             enabled: false
+                                 fontSize: '9px',
 
-           },
+                             },
 
-           series: [
+                         },
 
-             {
+                     },
 
-               name: "Сумма выплат",
+                     {
 
-               type: "column",
+                         max: profitMax,
 
-               yAxis: 1,
+                         title: {
 
-               data: profitData,
+                             text: '',
 
-               color: "#3c7bd8",
+                         },
 
-               tooltip: {
+                         labels: {
 
-                 // valueSuffix: " 000 руб"
+                             style: {
 
-                 pointFormatter: function() {
+                                 color: 'rgba(0, 0, 0, 0.4)',
 
-                   return (
+                                 fontSize: '9px',
 
-                     "Сумма выплат: <b>" +
+                             },
 
-                     this.y.toLocaleString() +
+                         },
 
-                     " 000 руб</b><br>" +
+                     },
 
-                     "Доля от общих выплат: <b>" +
+                 ],
 
-                     Math.floor(
+                 legend: {
 
-                       (this.y / profitData.reduce((x, y) => x + y, 0)) * 100
+                     enabled: false,
 
-                     ) +
+                 },
 
-                     "%</b>"
+                 credits: {
 
-                   );
+                     enabled: false,
 
-                 }
+                 },
 
-               }
+                 series: [
 
-             },
+                     {
 
-             {
+                         name: 'Сумма выплат',
 
-               name: "Доходность",
+                         type: 'column',
 
-               type: "line",
+                         yAxis: 1,
 
-               data: dividendsData,
+                         data: profitData,
 
-               color: "#ffd729",
+                         color: '#3c7bd8',
 
-               tooltip: {
+                         tooltip: {
 
-                 valueSuffix: "%"
+                             // valueSuffix: " 000 руб"
 
-               }
+                             pointFormatter: function () {
 
-             }
+                                 return (
 
-           ]
+                                     'Сумма выплат: <b>' +
 
-         });
+                                     this.y.toLocaleString() +
 
-       }
+                                     ' 000 руб</b><br>' +
 
-     
+                                     'Доля от общих выплат: <b>' +
 
-       var timeline = $("#timelinechart");
+                                     Math.floor((this.y / profitData.reduce((x, y) => x + y, 0)) * 100) +
 
-       if (timeline.length) {
+                                     '%</b>'
 
-         setTimeout(() => {
+                                 );
 
-           var scrolledArea = timeline.find(".highcharts-scrolling");
+                             },
 
-           if (scrolledArea.length === 0) return;
+                         },
 
-           new SimpleBar(scrolledArea[0], {
+                     },
 
-             autoHide: false
+                     {
 
-           });
+                         name: 'Доходность',
 
-         }, 1000);
+                         type: 'line',
 
-     
+                         data: dividendsData,
 
-         var timelineData = [
+                         color: '#ffd729',
 
-           { name: "Сбор средств на счет Активо", status: "finished" },
+                         tooltip: {
 
-           { name: "Формирование Фонда денежными средствами", status: "finished" },
+                             valueSuffix: '%',
 
-           {
+                         },
 
-             name:
+                     },
 
-               "Внесение Центральным Банком РФ изменений в ПДУ, связанных с формированием Фонда",
+                 ],
 
-             status: "finished"
-
-           },
-
-           {
-
-             name:
-
-               "Предварительное согласование ДКП недвижимости Управляющей компанией и Специализированным депозитарием",
-
-             status: "finished"
-
-           },
-
-           {
-
-             name: "Правка ДКП недвижимости банком-кредитором Продавца",
-
-             status: "finished"
-
-           },
-
-           {
-
-             name:
-
-               "Финальное согласование ДКП (полный пакет документов) Управляющей компанией и Специализированным депозитарием",
-
-             status: "progress"
-
-           },
-
-           {
-
-             name:
-
-               "Подписание ДКП и оплата необходимой для снятия обременения суммы Продавцу",
-
-             status: "future"
-
-           },
-
-           {
-
-             name: "Погашение кредита Продавцом и снятие обременения",
-
-             status: "future"
-
-           },
-
-           {
-
-             name: "Регистрация Росреестром права собственности на Фонд",
-
-             status: "future"
-
-           },
-
-           { name: "Передача паев инвесторам", status: "future" }
-
-         ];
-
-         var finishedColor = "#5fce67";
-
-         var progressColor = "#ffd729";
-
-         var futureColor = "#3c7bd8";
-
-     
-
-         var timelineColors = [];
-
-         var futureEvents = timelineData.filter(function(event) {
-
-           return event.status === "future";
-
-         });
-
-         var futureColors = [futureColor];
-
-         var changeColorStep = 100 / futureEvents.length;
-
-     
-
-         for (var i = 1; i < futureEvents.length; i++) {
-
-           futureColors.push(shadeColor(futureColors[i - 1], -changeColorStep));
+             });
 
          }
 
      
 
-         timelineData.map(function(event) {
+         var timeline = $('#timelinechart');
 
-           if (event.status === "future") return;
+         if (timeline.length) {
 
-     
+             setTimeout(() => {
 
-           var color = event.status === "finished" ? finishedColor : progressColor;
+                 var scrolledArea = timeline.find('.highcharts-scrolling');
 
-           timelineColors.push(color);
+                 if (scrolledArea.length === 0) return;
 
-         });
+                 new SimpleBar(scrolledArea[0], {
 
-     
+                     autoHide: false,
 
-         timelineColors = timelineColors.concat(futureColors);
+                 });
 
-     
-
-         var columnWidth = 120;
-
-         var chartMinWidth = columnWidth * timelineData.length;
+             }, 1000);
 
      
 
-         Highcharts.chart("timelinechart", {
+             var timelineData = [
 
-           chart: {
+                 { name: 'Сбор средств на счет Активо', status: 'finished' },
 
-             type: "timeline",
+                 { name: 'Формирование Фонда денежными средствами', status: 'finished' },
 
-             scrollablePlotArea: {
+                 {
 
-               minWidth: chartMinWidth
+                     name: 'Внесение Центральным Банком РФ изменений в ПДУ, связанных с формированием Фонда',
+
+                     status: 'finished',
+
+                 },
+
+                 {
+
+                     name:
+
+                         'Предварительное согласование ДКП недвижимости Управляющей компанией и Специализированным депозитарием',
+
+                     status: 'finished',
+
+                 },
+
+                 {
+
+                     name: 'Правка ДКП недвижимости банком-кредитором Продавца',
+
+                     status: 'finished',
+
+                 },
+
+                 {
+
+                     name:
+
+                         'Финальное согласование ДКП (полный пакет документов) Управляющей компанией и Специализированным депозитарием',
+
+                     status: 'progress',
+
+                 },
+
+                 {
+
+                     name: 'Подписание ДКП и оплата необходимой для снятия обременения суммы Продавцу',
+
+                     status: 'future',
+
+                 },
+
+                 {
+
+                     name: 'Погашение кредита Продавцом и снятие обременения',
+
+                     status: 'future',
+
+                 },
+
+                 {
+
+                     name: 'Регистрация Росреестром права собственности на Фонд',
+
+                     status: 'future',
+
+                 },
+
+                 { name: 'Передача паев инвесторам', status: 'future' },
+
+             ];
+
+             var finishedColor = '#5fce67';
+
+             var progressColor = '#ffd729';
+
+             var futureColor = '#3c7bd8';
+
+     
+
+             var timelineColors = [];
+
+             var futureEvents = timelineData.filter(function (event) {
+
+                 return event.status === 'future';
+
+             });
+
+             var futureColors = [futureColor];
+
+             var changeColorStep = 100 / futureEvents.length;
+
+     
+
+             for (var i = 1; i < futureEvents.length; i++) {
+
+                 futureColors.push(shadeColor(futureColors[i - 1], -changeColorStep));
 
              }
 
-           },
+     
 
-           xAxis: {
+             timelineData.map(function (event) {
 
-             visible: false
-
-           },
-
-           yAxis: {
-
-             visible: false
-
-           },
-
-           title: "none",
-
-           colors: timelineColors,
-
-           credits: {
-
-             enabled: false
-
-           },
-
-           series: [
-
-             {
-
-               data: timelineData
-
-             }
-
-           ]
-
-         });
-
-       }
+                 if (event.status === 'future') return;
 
      
 
-       /** just a helper function to calc color for timeline */
+                 var color = event.status === 'finished' ? finishedColor : progressColor;
 
-       function shadeColor(color, percent) {
+                 timelineColors.push(color);
 
-         var R = parseInt(color.substring(1, 3), 16);
-
-         var G = parseInt(color.substring(3, 5), 16);
-
-         var B = parseInt(color.substring(5, 7), 16);
+             });
 
      
 
-         R = parseInt((R * (100 + percent)) / 100);
-
-         G = parseInt((G * (100 + percent)) / 100);
-
-         B = parseInt((B * (100 + percent)) / 100);
+             timelineColors = timelineColors.concat(futureColors);
 
      
 
-         R = R < 255 ? R : 255;
+             var columnWidth = 120;
 
-         G = G < 255 ? G : 255;
-
-         B = B < 255 ? B : 255;
+             var chartMinWidth = columnWidth * timelineData.length;
 
      
 
-         var RR = R.toString(16).length == 1 ? "0" + R.toString(16) : R.toString(16);
+             Highcharts.chart('timelinechart', {
 
-         var GG = G.toString(16).length == 1 ? "0" + G.toString(16) : G.toString(16);
+                 chart: {
 
-         var BB = B.toString(16).length == 1 ? "0" + B.toString(16) : B.toString(16);
+                     type: 'timeline',
+
+                     scrollablePlotArea: {
+
+                         minWidth: chartMinWidth,
+
+                     },
+
+                 },
+
+                 xAxis: {
+
+                     visible: false,
+
+                 },
+
+                 yAxis: {
+
+                     visible: false,
+
+                 },
+
+                 title: 'none',
+
+                 colors: timelineColors,
+
+                 credits: {
+
+                     enabled: false,
+
+                 },
+
+                 series: [
+
+                     {
+
+                         data: timelineData,
+
+                     },
+
+                 ],
+
+             });
+
+         }
 
      
 
-         return "#" + RR + GG + BB;
+         /** just a helper function to calc color for timeline */
 
-       }
+         function shadeColor(color, percent) {
+
+             var R = parseInt(color.substring(1, 3), 16);
+
+             var G = parseInt(color.substring(3, 5), 16);
+
+             var B = parseInt(color.substring(5, 7), 16);
+
+     
+
+             R = parseInt((R * (100 + percent)) / 100);
+
+             G = parseInt((G * (100 + percent)) / 100);
+
+             B = parseInt((B * (100 + percent)) / 100);
+
+     
+
+             R = R < 255 ? R : 255;
+
+             G = G < 255 ? G : 255;
+
+             B = B < 255 ? B : 255;
+
+     
+
+             var RR = R.toString(16).length == 1 ? '0' + R.toString(16) : R.toString(16);
+
+             var GG = G.toString(16).length == 1 ? '0' + G.toString(16) : G.toString(16);
+
+             var BB = B.toString(16).length == 1 ? '0' + B.toString(16) : B.toString(16);
+
+     
+
+             return '#' + RR + GG + BB;
+
+         }
 
      })();
 
