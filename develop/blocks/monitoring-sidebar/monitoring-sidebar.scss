@@ -108,7 +108,7 @@
 .monitoring-sidebar__table {
     overflow-y: auto;
     margin-top: 12px;
-    
+
     table {
         table-layout: fixed;
     }
@@ -123,6 +123,10 @@
         text-align: left;
         font-size: 14px;
         font-weight: 400;
+
+        &:last-child {
+            text-align: right;
+        }
     }
 
     th {
@@ -165,6 +169,13 @@
         &.yellow::before {
             background-color: #ffd729;
         }
+    }
+
+    .result td {
+        padding-left: 5px;
+
+        font-size: 14px;
+        font-weight: 700;
     }
 }
 

@@ -6057,6 +6057,9 @@ body.modal-open {
     text-align: left;
     font-size: 14px;
     font-weight: 400; }
+    .monitoring-sidebar__table th:last-child,
+    .monitoring-sidebar__table td:last-child {
+      text-align: right; }
   .monitoring-sidebar__table th {
     font-weight: 600;
     font-size: 12px; }
@@ -6085,6 +6088,10 @@ body.modal-open {
       background-color: #f52f4b; }
     .monitoring-sidebar__table td.yellow::before {
       background-color: #ffd729; }
+  .monitoring-sidebar__table .result td {
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: 700; }
 
 @media (max-width: 1024px) {
   .monitoring-sidebar {
