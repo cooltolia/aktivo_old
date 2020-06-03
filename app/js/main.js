@@ -2172,11 +2172,9 @@ jQuery(document).ready(function ($) {
      })();
 
      
-     ;
-
      (function () {
 
-         var chart = document.getElementById("monitoring-finances");
+         var chart = document.getElementById('monitoring-finances');
 
      
 
@@ -2184,17 +2182,15 @@ jQuery(document).ready(function ($) {
 
              var objects = [
 
-                 {name: 'Супермаркет Пятерочка', data: 100, color: '#5fce67'},
+                 { name: 'Супермаркет Пятерочка', data: 100, color: '#5fce67' },
 
-                 {name: 'Супермаркет Десяточка', data: 30, color: '#3c7bd8'},
+                 { name: 'Супермаркет Десяточка', data: 30, color: '#3c7bd8' },
 
-                 {name: 'Минимаркет Двоечка', data: 50, color: '#ffd729'},
+                 { name: 'Минимаркет Двоечка', data: 50, color: '#ffd729' },
 
-                 {name: 'Минимаркет Нулевочка', data: 10, color: '#f52f4b'}
+                 { name: 'Минимаркет Нулевочка', data: 10, color: '#f52f4b' },
 
-             ]
-
-     
+             ];
 
      
 
@@ -2202,127 +2198,139 @@ jQuery(document).ready(function ($) {
 
              Highcharts.chart(chart, {
 
-               chart: {
+                 chart: {
 
-                 type: "pie",
+                     type: 'pie',
 
-                 margin: [0, 0, 0, 0],
+                     margin: [0, 0, 0, 0],
 
-                 spacingTop: 0,
+                     spacingTop: 0,
 
-                 spacingBottom: 0,
+                     spacingBottom: 0,
 
-                 spacingLeft: 0,
+                     spacingLeft: 0,
 
-                 spacingRight: 0,
+                     spacingRight: 0,
 
-                 backgroundColor: "transparent"
+                     backgroundColor: 'transparent',
 
-               },
+                 },
 
-               credits: {
+                 credits: {
 
-                 enabled: false
+                     enabled: false,
 
-               },
+                 },
 
-               title: {
+                 title: {
 
-                 text: ""
+                     text: '',
 
-               },
+                 },
 
-               plotOptions: {
+                 plotOptions: {
 
-                 pie: {
+                     pie: {
 
-                   cursor: "pointer",
+                         cursor: 'pointer',
 
-                   dataLabels: {
+                         events: {
 
-                     enabled: false
+                             click: function (event) {
 
-                   },
+                                 console.log(`${event.point.name} — ${event.point.y}руб.`);
 
-                   startAngle: -45,
+                             },
 
-                   borderColor: null,
+                         },
 
-                   size: "100%"
+                         dataLabels: {
 
-                 }
+                             enabled: false,
 
-               },
+                         },
 
-               tooltip: {
+                         startAngle: -45,
 
-                 pointFormat: "<b>{point.y} руб</b>",
+                         borderColor: null,
 
-                 percentageDecimals: 2
-
-               },
-
-               series: [
-
-                 {
-
-                   name: "",
-
-                   data: [
-
-                     {
-
-                       name: objects[0].name,
-
-                       y: objects[0].data,
-
-                       color: objects[0].color
+                         size: '100%',
 
                      },
 
+                 },
+
+                 tooltip: {
+
+                     pointFormat: '<b>{point.y} руб</b>',
+
+                     percentageDecimals: 2,
+
+                 },
+
+                 series: [
+
                      {
 
-                       name: objects[1].name,
+                         name: '',
 
-                       y: objects[1].data,
+                         data: [
 
-                       color: objects[1].color
+                             {
+
+                                 name: objects[0].name,
+
+                                 y: objects[0].data,
+
+                                 color: objects[0].color,
+
+                             },
+
+                             {
+
+                                 name: objects[1].name,
+
+                                 y: objects[1].data,
+
+                                 color: objects[1].color,
+
+                             },
+
+                             {
+
+                                 name: objects[2].name,
+
+                                 y: objects[2].data,
+
+                                 color: objects[2].color,
+
+                             },
+
+                             {
+
+                                 name: objects[3].name,
+
+                                 y: objects[3].data,
+
+                                 color: objects[3].color,
+
+                             },
+
+                         ],
+
+                         innerSize: '83%',
 
                      },
 
-                     {
-
-                       name: objects[2].name,
-
-                       y: objects[2].data,
-
-                       color: objects[2].color
-
-                     },
-
-                     {
-
-                       name: objects[3].name,
-
-                       y: objects[3].data,
-
-                       color: objects[3].color
-
-                     }
-
-                   ],
-
-                   innerSize: "83%"
-
-                 }
-
-               ]
+                 ],
 
              });
 
          }
 
      })();
+
+     
 
      
      ; (function () {
