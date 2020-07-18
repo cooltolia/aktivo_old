@@ -1,6 +1,6 @@
 (function () {
     var profitData = [2500, 1700, 1200, 1600, 1250, 650];
-    var dividendsData = [5, 10, 20, 30, 20, 15];
+    var dividendsData = [5, 10, 20, 35, 20, 15];
     var dividendsMax = 35;
     var profitMax = 2500;
 
@@ -10,6 +10,7 @@
         Highcharts.chart('income-monitoring', {
             chart: {
                 zoomType: 'xy',
+                marginTop: 20,
             },
             title: {
                 text: '',
@@ -23,7 +24,9 @@
                         align: 'center',
                         enabled: true,
                         color: 'black',
-                        padding: 10,
+                        padding: 5,
+                        crop: false,
+                        overflow: 'none',
                         style: {
                             textOutline: 'none',
                             fontSize: '14px',
@@ -161,6 +164,7 @@
             },
             { name: 'Передача паев инвесторам', status: 'future' },
         ];
+
         var finishedColor = '#5fce67';
         var progressColor = '#ffd729';
         var futureColor = '#3c7bd8';
@@ -234,4 +238,17 @@
 
         return '#' + RR + GG + BB;
     }
+
+    var monitoringTable = $('.monitoring-finances__table-wrapper');
+
+    monitoringTable.each(function (_, table) {
+        var scroll = new SimpleBar(table, {
+            autoHide: false,
+        });
+        var scrolledContent = scroll.getScrollElement();
+        $(scrolledContent).on('scroll', function () {
+            var translate = 'translate(0,' + scrolledContent.scrollTop + 'px)';
+            $(table).find('.table-header').css('transform', translate);
+        });
+    });
 })();

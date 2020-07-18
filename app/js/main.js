@@ -1597,7 +1597,7 @@ jQuery(document).ready(function ($) {
 
          var profitData = [2500, 1700, 1200, 1600, 1250, 650];
 
-         var dividendsData = [5, 10, 20, 30, 20, 15];
+         var dividendsData = [5, 10, 20, 35, 20, 15];
 
          var dividendsMax = 35;
 
@@ -1616,6 +1616,8 @@ jQuery(document).ready(function ($) {
                  chart: {
 
                      zoomType: 'xy',
+
+                     marginTop: 20,
 
                  },
 
@@ -1643,7 +1645,11 @@ jQuery(document).ready(function ($) {
 
                              color: 'black',
 
-                             padding: 10,
+                             padding: 5,
+
+                             crop: false,
+
+                             overflow: 'none',
 
                              style: {
 
@@ -1919,6 +1925,8 @@ jQuery(document).ready(function ($) {
 
              ];
 
+     
+
              var finishedColor = '#5fce67';
 
              var progressColor = '#ffd729';
@@ -2064,6 +2072,32 @@ jQuery(document).ready(function ($) {
              return '#' + RR + GG + BB;
 
          }
+
+     
+
+         var monitoringTable = $('.monitoring-finances__table-wrapper');
+
+     
+
+         monitoringTable.each(function (_, table) {
+
+             var scroll = new SimpleBar(table, {
+
+                 autoHide: false,
+
+             });
+
+             var scrolledContent = scroll.getScrollElement();
+
+             $(scrolledContent).on('scroll', function () {
+
+                 var translate = 'translate(0,' + scrolledContent.scrollTop + 'px)';
+
+                 $(table).find('.table-header').css('transform', translate);
+
+             });
+
+         });
 
      })();
 

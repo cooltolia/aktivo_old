@@ -4,14 +4,23 @@ mixin monitoring-finances()
             +monitoring-select
         +e.H2.title Финансовые показатели
         +e.links-row
-            +e.A.chart-link(href='#') За последние 12 месяцев
-            +e.A.chart-link(href='#') Группировка помесячно
+            +e.links-group
+                +e.A.chart-link(href='#') 12 месяцев
+                +e.A.chart-link(href='#') Все время
+            +e.links-group
+                +e.A.chart-link(href='#') Месяц
+                +e.A.chart-link(href='#') Квартал
+                +e.A.chart-link(href='#') Год
         +e.graph
             +e.graph-chart
                 #income-monitoring
             +e.legend
-                +e.legend-item.--blue Выплаты инвестору
-                +e.legend-item.--yellow Сумма выплат
+                +e.legend-item
+                    span.indicator(style='background-color: #3c7bd8;')
+                    | Выплаты инвестору
+                +e.legend-item
+                    span.indicator(style='background-color: #ffd729;')
+                    |  Сумма выплат
         +e.timeline
             #timelinechart
         +e.data
@@ -28,3 +37,144 @@ mixin monitoring-finances()
             | Отчет подготовлен аналитическим способом. Возможны отклонения. <br>
             | За точными данными Вы можете обратиться в офис управляющей компании <br>
             | ООО «КСП Капитал Управление Активами» или по номеру +7 (495) 649-88-37
+        +e.table-wrapper
+            +e.TABLE.table
+                tr.table-header
+                    th Период
+                    th Инвестиции
+                    th Выплаты
+                    th Доходность за период, % годовых
+                    th аннуализированная доходность, % годовых
+                    th Отчет
+                tr
+                    td 2020-06
+                    td 4,258,240 ₽
+                    td 44,444 ₽
+                    td 12.52%
+                    td 10.95%
+                    td 
+                        a(href='') Ссылка 1
+                tr
+                    td 2020-05
+                    td 4,258,240 ₽
+                    td 34,027 ₽
+                    td 4.20%
+                    td 12.43%
+                    td -
+                tr
+                    td 2020-04
+                    td 2,476,600 ₽
+                    td 14,895 ₽
+                    td 12.52%
+                    td 11.70%
+                    td -
+                tr
+                    td 2020-03
+                    td 4,258,240 ₽
+                    td 37,185 ₽
+                    td 12.07%
+                    td 12.85%
+                    td 
+                        a(href='') Ссылка 2
+                tr
+                    td 2020-02
+                    td 2,476,600 ₽
+                    td 37,923 ₽
+                    td 12.52%
+                    td 11.65%
+                    td -
+                tr
+                    td 2020-01
+                    td 4,258,240 ₽
+                    td 31,942 ₽
+                    td 10.35%
+                    td 12.75%
+                    td -
+                tr
+                    td 2020-06
+                    td 4,258,240 ₽
+                    td 44,444 ₽
+                    td 12.52%
+                    td 10.95%
+                    td 
+                        a(href='') Ссылка 1
+                tr
+                    td 2020-05
+                    td 4,258,240 ₽
+                    td 34,027 ₽
+                    td 4.20%
+                    td 12.43%
+                    td -
+                tr
+                    td 2020-04
+                    td 2,476,600 ₽
+                    td 14,895 ₽
+                    td 12.52%
+                    td 11.70%
+                    td -
+                tr
+                    td 2020-03
+                    td 4,258,240 ₽
+                    td 37,185 ₽
+                    td 12.07%
+                    td 12.85%
+                    td 
+                        a(href='') Ссылка 2
+                tr
+                    td 2020-02
+                    td 2,476,600 ₽
+                    td 37,923 ₽
+                    td 12.52%
+                    td 11.65%
+                    td -
+                tr
+                    td 2020-01
+                    td 4,258,240 ₽
+                    td 31,942 ₽
+                    td 10.35%
+                    td 12.75%
+                    td -
+                tr
+                    td 2020-06
+                    td 4,258,240 ₽
+                    td 44,444 ₽
+                    td 12.52%
+                    td 10.95%
+                    td 
+                        a(href='') Очень длинная ссылка
+                tr
+                    td 2020-05
+                    td 4,258,240 ₽
+                    td 34,027 ₽
+                    td 4.20%
+                    td 12.43%
+                    td -
+                tr
+                    td 2020-04
+                    td 2,476,600 ₽
+                    td 14,895 ₽
+                    td 12.52%
+                    td 11.70%
+                    td -
+                tr
+                    td 2020-03
+                    td 4,258,240 ₽
+                    td 37,185 ₽
+                    td 12.07%
+                    td 12.85%
+                    td 
+                        a(href='') Ссылка 2
+                tr
+                    td 2020-02
+                    td 2,476,600 ₽
+                    td 37,923 ₽
+                    td 12.52%
+                    td 11.65%
+                    td -
+                tr
+                    td 2020-01
+                    td 4,258,240 ₽
+                    td 31,942 ₽
+                    td 10.35%
+                    td 12.75%
+                    td -

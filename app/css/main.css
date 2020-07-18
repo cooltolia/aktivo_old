@@ -5639,17 +5639,29 @@ body.modal-open {
   font-weight: 700; }
 
 .monitoring-finances__links-row {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 20px; }
+  -webkit-box-pack: justify;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.monitoring-finances__links-group {
+  margin-right: 25px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .monitoring-finances__links-group:last-child {
+    margin-right: 0; }
 
 .monitoring-finances__chart-link {
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: block;
   position: relative;
   padding: 10px 22px;
@@ -5742,8 +5754,7 @@ body.modal-open {
   margin-right: 35px;
   margin-bottom: 15px;
   font-size: 14px; }
-  .monitoring-finances__legend-item::before {
-    content: "";
+  .monitoring-finances__legend-item .indicator {
     position: absolute;
     width: 18px;
     height: 18px;
@@ -5753,10 +5764,6 @@ body.modal-open {
        -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .monitoring-finances__legend-item--blue::before {
-    background-color: #3c7bd8; }
-  .monitoring-finances__legend-item--yellow::before {
-    background-color: #ffd729; }
 
 .monitoring-finances__data {
   display: -webkit-box;
@@ -5788,6 +5795,70 @@ body.modal-open {
   font-size: 14px;
   line-height: 1.5; }
 
+.monitoring-finances__table-wrapper {
+  max-height: 450px;
+  overflow-y: auto;
+  padding-bottom: 10px;
+  margin-top: 24px; }
+  .monitoring-finances__table-wrapper .table-header {
+    background-color: #fff; }
+  .monitoring-finances__table-wrapper .simplebar-track {
+    background-color: rgba(233, 233, 233, 0.582); }
+  .monitoring-finances__table-wrapper .simplebar-track.vertical {
+    width: 6px;
+    border-radius: 4px; }
+    .monitoring-finances__table-wrapper .simplebar-track.vertical .simplebar-scrollbar {
+      width: 4px;
+      border-radius: 4px;
+      top: 0;
+      right: 1px; }
+      .monitoring-finances__table-wrapper .simplebar-track.vertical .simplebar-scrollbar::before {
+        opacity: 1;
+        background-color: #fed63f; }
+  .monitoring-finances__table-wrapper .simplebar-track.horizontal {
+    height: 6px;
+    border-radius: 4px; }
+    .monitoring-finances__table-wrapper .simplebar-track.horizontal .simplebar-scrollbar {
+      height: 4px;
+      border-radius: 4px;
+      top: 1px; }
+      .monitoring-finances__table-wrapper .simplebar-track.horizontal .simplebar-scrollbar::before {
+        opacity: 1;
+        background-color: #fed63f; }
+
+.monitoring-finances__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: -32px;
+  table-layout: auto; }
+  .monitoring-finances__table tr {
+    width: 100%; }
+    .monitoring-finances__table tr:nth-child(2n) {
+      background-color: rgba(245, 247, 249, 0.5); }
+    .monitoring-finances__table tr td {
+      max-width: 300px; }
+      .monitoring-finances__table tr td.email {
+        word-break: break-word; }
+    .monitoring-finances__table tr.table-footer {
+      background-color: #fff; }
+      .monitoring-finances__table tr.table-footer td {
+        padding-top: 24px;
+        font-weight: 700; }
+    .monitoring-finances__table tr.table-header th {
+      font-size: 12px;
+      text-align: left; }
+  .monitoring-finances__table th,
+  .monitoring-finances__table td {
+    padding: 12px 32px;
+    font-size: 16px;
+    font-weight: 400; }
+  .monitoring-finances__table td {
+    white-space: nowrap; }
+    .monitoring-finances__table td a {
+      font-size: 14px;
+      color: #3c7bd8;
+      text-decoration: none; }
+
 @media (max-width: 1280px) {
   .monitoring-finances__timeline,
   .monitoring-finances__graph {
@@ -5797,6 +5868,10 @@ body.modal-open {
   .monitoring-finances__timeline,
   .monitoring-finances__graph {
     width: 100%; } }
+
+@media (max-width: 768px) {
+  .monitoring-finances__table-wrapper {
+    overflow-x: auto; } }
 
 @media (max-width: 480px) {
   .monitoring-finances {
