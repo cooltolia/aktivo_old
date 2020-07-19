@@ -5590,14 +5590,17 @@ body.modal-open {
 .monitoring-content__main {
   -webkit-box-flex: 1;
      -moz-box-flex: 1;
-      -ms-flex: 1 1 66.2%;
-          flex: 1 1 66.2%; }
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 70%; }
 
 .monitoring-content__sidebar {
   -webkit-box-flex: 1;
      -moz-box-flex: 1;
-      -ms-flex: 1 1 32.5%;
-          flex: 1 1 32.5%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 30%;
+  min-width: 340px;
   margin-right: 1.3%; }
 
 @media (max-width: 1024px) {
@@ -5614,6 +5617,7 @@ body.modal-open {
     max-width: none; }
   .monitoring-content__sidebar {
     margin: 0 0 16px;
+    width: 100%;
     -webkit-box-ordinal-group: 0;
        -moz-box-ordinal-group: 0;
         -ms-flex-order: -1;
@@ -5685,11 +5689,11 @@ body.modal-open {
     text-decoration: none; }
 
 .monitoring-finances__graph {
-  width: 700px;
+  width: 100%;
   margin-bottom: 35px; }
 
 .monitoring-finances__timeline {
-  width: 700px;
+  width: 100%;
   height: 300px;
   margin-bottom: 40px; }
   .monitoring-finances__timeline #timelinechart {
@@ -5859,11 +5863,6 @@ body.modal-open {
       color: #3c7bd8;
       text-decoration: none; }
 
-@media (max-width: 1280px) {
-  .monitoring-finances__timeline,
-  .monitoring-finances__graph {
-    width: 650px; } }
-
 @media (max-width: 1024px) {
   .monitoring-finances__timeline,
   .monitoring-finances__graph {
@@ -6006,8 +6005,7 @@ body.modal-open {
 
 .monitoring-select {
   position: relative;
-  z-index: 2;
-  padding-right: 70px; }
+  z-index: 2; }
   .monitoring-select .base-select__input,
   .monitoring-select .base-select__label {
     font-size: 16px; }
