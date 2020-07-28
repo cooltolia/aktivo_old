@@ -59,14 +59,21 @@
 }
 
 .monitoring-sidebar__summary {
-    width: 100%;
     position: absolute;
+    z-index: 9;
+    width: 70%;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-50%);
 
     font-size: 24px;
     text-align: center;
     background-color: #fff;
+
+    text-decoration: underline;
+    color: #3c7bd8;
+
+    cursor: pointer;
 }
 
 .monitoring-sidebar__legend {
@@ -169,6 +176,10 @@
 
         &.yellow::before {
             background-color: #ffd729;
+        }
+
+        &.chart-toggle {
+            cursor: pointer;
         }
     }
 

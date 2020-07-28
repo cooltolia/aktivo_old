@@ -3,14 +3,37 @@ mixin monitoring-finances()
         +e.select
             +monitoring-select
         +e.H2.title Финансовые показатели
-        +e.links-row
-            +e.links-group
-                +e.A.chart-link(href='#') 12 месяцев
-                +e.A.chart-link(href='#') Все время
-            +e.links-group
-                +e.A.chart-link(href='#') Месяц
-                +e.A.chart-link(href='#') Квартал
-                +e.A.chart-link(href='#') Год
+        +e.toggles
+            +e.toggles-block
+                +e.H4.toggles-title Подзаголовок 1
+                +e.toggles-group
+                    +e.BUTTON.toggle(type='button') 12 месяцев
+                    +e.BUTTON.toggle(type='button') Все время
+            +e.toggles-block
+                +e.toggles-group
+                    +e.BUTTON.toggle(type='button') Месяц
+                    +e.BUTTON.toggle(type='button') Квартал
+                    +e.BUTTON.toggle(type='button') Год
+            +e.toggles-block
+                +e.H4.toggles-title Подзаголовок 2
+                +e.toggles-group
+                    +e.BUTTON.toggle(type='button') Месяц
+                    +e.BUTTON.toggle(type='button') Квартал
+                    +e.BUTTON.toggle(type='button') Год
+            +e.toggles-block
+                +e.H4.toggles-title Подзаголовок 3
+                +e.toggles-group
+                    +e.BUTTON.toggle(type='button') Месяц
+                    +e.BUTTON.toggle(type='button') Квартал
+                    +e.BUTTON.toggle(type='button') Год
+        //- +e.links-row
+        //-     +e.links-group
+        //-         +e.A.chart-link(href='#') 12 месяцев
+        //-         +e.A.chart-link(href='#') Все время
+        //-     +e.links-group
+        //-         +e.A.chart-link(href='#') Месяц
+        //-         +e.A.chart-link(href='#') Квартал
+        //-         +e.A.chart-link(href='#') Год
         +e.graph
             +e.graph-chart
                 #income-monitoring

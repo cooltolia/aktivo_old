@@ -5625,7 +5625,9 @@ body.modal-open {
 
 @media (max-width: 480px) {
   .monitoring-content {
-    padding-bottom: 70px; } }
+    padding-bottom: 70px; }
+  .monitoring-content__sidebar {
+    min-width: auto; } }
 
 .monitoring-finances {
   padding: 40px 30px 30px 40px;
@@ -5642,30 +5644,49 @@ body.modal-open {
   font-size: 16px;
   font-weight: 700; }
 
-.monitoring-finances__links-row {
+.monitoring-finances__toggles {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: end;
+     -moz-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.monitoring-finances__links-group {
+.monitoring-finances__toggles-block {
   margin-right: 25px;
+  margin-bottom: 25px; }
+  .monitoring-finances__toggles-block:last-child {
+    margin-right: 0; }
+
+.monitoring-finances__toggles-group {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex; }
-  .monitoring-finances__links-group:last-child {
-    margin-right: 0; }
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-bottom: -10px; }
 
-.monitoring-finances__chart-link {
+.monitoring-finances__toggles-title {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700; }
+
+.monitoring-finances__toggle {
   margin-right: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: block;
   position: relative;
   padding: 10px 22px;
@@ -5676,6 +5697,7 @@ body.modal-open {
   line-height: normal;
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
   border-radius: 4px;
   border: 1px solid #3c7bd8;
   background-color: #fff;
@@ -5683,7 +5705,7 @@ body.modal-open {
   -webkit-transition: color 300ms ease, background-color 300ms ease;
   -moz-transition: color 300ms ease, background-color 300ms ease;
   transition: color 300ms ease, background-color 300ms ease; }
-  .monitoring-finances__chart-link:hover, .monitoring-finances__chart-link:active, .monitoring-finances__chart-link:focus, .monitoring-finances__chart-link.active {
+  .monitoring-finances__toggle:hover, .monitoring-finances__toggle:active, .monitoring-finances__toggle:focus, .monitoring-finances__toggle.active {
     background-color: #3c7bd8;
     color: #fff;
     text-decoration: none; }
@@ -5892,8 +5914,11 @@ body.modal-open {
     margin-bottom: 15px; }
     .monitoring-finances__data-col:last-child {
       margin-right: 0; }
-  .monitoring-finances__chart-link {
-    min-width: 45px;
+  .monitoring-finances__toggles {
+    display: block; }
+  .monitoring-finances__toggles-block {
+    margin-right: 0; }
+  .monitoring-finances__toggle {
     padding: 7px 12px; } }
 
 .monitoring-objects {
@@ -6079,16 +6104,21 @@ body.modal-open {
       z-index: 1 !important; }
 
 .monitoring-sidebar__summary {
-  width: 100%;
   position: absolute;
+  z-index: 9;
+  width: 70%;
+  left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+     -moz-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   font-size: 24px;
   text-align: center;
-  background-color: #fff; }
+  background-color: #fff;
+  text-decoration: underline;
+  color: #3c7bd8;
+  cursor: pointer; }
 
 .monitoring-sidebar__legend {
   margin-top: 30px; }
@@ -6162,6 +6192,8 @@ body.modal-open {
       background-color: #f52f4b; }
     .monitoring-sidebar__table td.yellow::before {
       background-color: #ffd729; }
+    .monitoring-sidebar__table td.chart-toggle {
+      cursor: pointer; }
   .monitoring-sidebar__table .result td {
     padding-left: 5px;
     font-size: 14px;

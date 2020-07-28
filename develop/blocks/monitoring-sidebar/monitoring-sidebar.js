@@ -1,5 +1,7 @@
 (function () {
     var chart = document.getElementById('monitoring-finances');
+    var chartSummary = document.querySelector('.monitoring-sidebar__summary');
+    var chartToggleCells = Array.from(document.querySelectorAll('.monitoring-sidebar__table .chart-toggle'));
 
     if (chart) {
         var objects = [
@@ -74,6 +76,16 @@
                     innerSize: '83%',
                 },
             ],
+        });
+
+        chartSummary.addEventListener('click', function () {
+            // do something
+        });
+
+        chartToggleCells.forEach(function (cell) {
+            cell.addEventListener('click', function () {
+                // do something
+            });
         });
     }
 })();

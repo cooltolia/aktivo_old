@@ -2210,6 +2210,10 @@ jQuery(document).ready(function ($) {
 
          var chart = document.getElementById('monitoring-finances');
 
+         var chartSummary = document.querySelector('.monitoring-sidebar__summary');
+
+         var chartToggleCells = Array.from(document.querySelectorAll('.monitoring-sidebar__table .chart-toggle'));
+
      
 
          if (chart) {
@@ -2357,6 +2361,26 @@ jQuery(document).ready(function ($) {
                      },
 
                  ],
+
+             });
+
+     
+
+             chartSummary.addEventListener('click', function () {
+
+                 // do something
+
+             });
+
+     
+
+             chartToggleCells.forEach(function (cell) {
+
+                 cell.addEventListener('click', function () {
+
+                     // do something
+
+                 });
 
              });
 
